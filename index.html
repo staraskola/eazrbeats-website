@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EAZr Beats Collective</title>
+<meta name="description" content="Munich house &amp; techno collective — new sets, sessions and shows dropping soon.">
+<meta name="theme-color" content="#050403">
+<link rel="canonical" href="https://eazrbeats.de/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eazrbeats.de/">
+<meta property="og:site_name" content="EAZr Beats Collective">
+<meta property="og:title" content="EAZr Beats Collective">
+<meta property="og:description" content="Munich house &amp; techno collective — new sets, sessions and shows dropping soon.">
+<meta property="og:image" content="https://eazrbeats.de/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Space Mono, self-hosted (SIL OFL, see fonts/OFL.txt) — no requests to Google. Latin subset. */
+  @font-face {
+    font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap;
+    src: url(fonts/space-mono-400.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap;
+    src: url(fonts/space-mono-700.woff2) format('woff2');
+  }
+  /* Ice: pale lilac-white like the logo letters, with a pink glow. */
+  :root {
+    color-scheme: dark;
+    --accent: #EFE9FF;
+    --accent-rgb: 239,233,255;
+    --accent-hover: #ffffff;
+    --glow: rgba(255,79,216,0.9);
+    --panel: rgba(5,3,4,0.5);
+    --header-bg: rgba(5,3,4,0.45);
+    --footer-alpha: 0.7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #050403; }
+  body { font-family: 'Space Mono', monospace; color: #f4f1ea; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-hover); }
+
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .cursor { display: inline-block; animation: blink 1s steps(1) infinite; }
+
+  /* ---- shared fixed background: video + scrim + CRT texture, for the whole page ---- */
+  .bg-video {
+    position: fixed; inset: 0; z-index: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    background: #050403;
+  }
+  .page-scrim {
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(180deg, rgba(5,3,4,0.5) 0%, rgba(5,3,4,0.75) 45%, rgba(5,3,4,0.94) 100%);
+  }
+  .scanlines {
+    position: fixed; inset: 0; z-index: 5; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0.16) 3px);
+    mix-blend-mode: multiply;
+  }
+  .vignette {
+    position: fixed; inset: 0; z-index: 5; pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45) 100%);
+  }
+  .flicker {
+    position: fixed; inset: 0; z-index: 5; pointer-events: none;
+    background: rgba(var(--accent-rgb),0.02);
+    animation: flicker 6s infinite;
+  }
+  @keyframes flicker {
+    0%, 92%, 100% { opacity: 0; }
+    93% { opacity: 1; }
+    95% { opacity: 0; }
+    96% { opacity: 0.6; }
+    97% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flicker { display: none; }
+    .cursor, .signup input::placeholder { animation: none; }
+    .bg-video { display: none; }
+  }
+
+  /* ---- terminal chrome bar ---- */
+  .chrome {
+    position: sticky; top: 0; z-index: 20;
+    height: 34px;
+    background: #100d0a;
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.18);
+    display: flex; align-items: center;
+    padding: 0 16px;
+  }
+  .dots { display: flex; gap: 7px; }
+  .dot-btn { width: 9px; height: 9px; border-radius: 50%; }
+  .dot-btn.r { background: #ff5f56; }
+  .dot-btn.y { background: #ffbd2e; }
+  .dot-btn.g { background: #27c93f; }
+  .chrome-title {
+    position: absolute; left: 0; right: 0; text-align: center;
+    font-size: clamp(9px, 1.4vw, 11px); letter-spacing: 1px; color: rgba(244,241,234,0.42);
+  }
+  .lang-toggle {
+    position: relative; z-index: 1; margin-left: auto;
+    display: flex; gap: 2px; font-size: 10px; letter-spacing: 1px;
+  }
+  .lang-toggle button {
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 10px; letter-spacing: 1px;
+    background: transparent; border: 1px solid rgba(var(--accent-rgb),0.3); color: rgba(244,241,234,0.5);
+    padding: 3px 8px; cursor: pointer; border-radius: 3px;
+  }
+  .lang-toggle button.active {
+    color: var(--accent); border-color: var(--accent); text-shadow: 0 0 6px var(--glow);
+  }
+
+  /* ---- hero (coming soon) ---- */
+  .hero {
+    position: relative; z-index: 2;
+    min-height: calc(100svh - 34px);
+    width: 100%;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .site-header {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 3;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+    padding: 18px 20px 14px;
+    background: var(--header-bg);
+  }
+  .site-header img { height: clamp(34px, 4.5vw, 46px); width: auto; display: block; }
+  .brand-sub {
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(8px, 1vw, 10px); letter-spacing: 4px;
+    color: var(--accent); text-shadow: 0 0 6px var(--glow); text-transform: uppercase;
+  }
+
+  .content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    padding: 24px 20px clamp(32px, 5.5vh, 56px);
+    text-align: center;
+  }
+  .badge {
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 5px;
+    color: var(--accent); border: 1px solid rgba(var(--accent-rgb),0.55); padding: 8px 18px; border-radius: 4px;
+    background: rgba(0,0,0,0.45); text-shadow: 0 0 6px var(--glow);
+  }
+  .tagline {
+    font-family: 'Space Mono', monospace; font-size: clamp(11px, 1.4vw, 13px); font-weight: 400;
+    color: var(--accent); text-shadow: 0 0 6px var(--glow); letter-spacing: clamp(1.5px, 0.2vw, 2px);
+    text-transform: uppercase;
+    max-width: 500px; line-height: 1.9; text-wrap: pretty; margin: 0;
+    background: var(--panel); padding: 14px 20px; border-radius: 8px;
+  }
+  .prompt-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .prompt-row .prompt {
+    font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700;
+    color: var(--accent); text-shadow: 0 0 6px var(--glow); white-space: nowrap;
+  }
+  .signup { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; width: 100%; max-width: 380px; }
+  .signup input {
+    font-family: 'Space Mono', monospace; font-size: 14px; color: var(--accent); background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(var(--accent-rgb),0.4); padding: 14px 16px; flex: 1 1 200px; letter-spacing: 1px;
+    min-width: 0;
+  }
+  .signup input::placeholder {
+    color: var(--accent); font-weight: 700; text-shadow: 0 0 6px var(--glow); opacity: 1;
+    animation: blink 1s steps(1) infinite;
+  }
+  .signup input:focus { outline: none; border-color: var(--accent); }
+  .signup button {
+    font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 2px;
+    color: var(--accent); background: transparent; border: 1px solid var(--accent); padding: 14px 22px; cursor: pointer;
+    flex: 0 0 auto; text-shadow: 0 0 6px var(--glow);
+  }
+  .signup button:hover { background: var(--accent); color: #050403; text-shadow: none; }
+  .footer {
+    display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
+    font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: rgba(var(--accent-rgb),var(--footer-alpha));
+  }
+  .footer .flinks { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; }
+  .footer a { color: inherit; text-decoration: none; }
+  .footer a:hover { color: var(--accent); text-shadow: 0 0 6px var(--glow); }
+  .footer .fdot { width: 3px; height: 3px; border-radius: 50%; background: rgba(var(--accent-rgb),0.4); }
+  .footer .fsep { color: rgba(var(--accent-rgb),0.25); }
+
+  @media (max-width: 760px) {
+    .footer { flex-direction: column; gap: 8px; }
+    .footer .fsep { display: none; }
+  }
+  @media (max-width: 480px) {
+    .footer .flinks { display: grid; grid-template-columns: auto auto; gap: 6px 18px; }
+    .footer .fdot { display: none; }
+    .signup { flex-direction: column; max-width: 300px; }
+    .signup input { flex: 0 0 auto; }
+    .signup button { width: 100%; }
+  }
+
+  /* ---- section divider between hero and The Crate ---- */
+  .section-divider {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; gap: 16px;
+    max-width: 900px; margin: 0 auto; padding: 34px 24px 0;
+  }
+  .section-divider .dl {
+    flex: 1 1 auto; height: 1px;
+    background: linear-gradient(90deg, rgba(var(--accent-rgb),0) 0%, rgba(var(--accent-rgb),0.4) 50%, rgba(var(--accent-rgb),0) 100%);
+  }
+  .section-divider .dtag {
+    flex: 0 0 auto; font-size: 11px; letter-spacing: 2px; white-space: nowrap;
+    color: var(--accent); text-shadow: 0 0 6px var(--glow);
+  }
+
+  /* ---- The Crate section ---- */
+  .crate-panel {
+    position: relative; z-index: 2;
+    background: rgba(5,3,4,0.55);
+    border-top: 1px solid rgba(var(--accent-rgb),0.3);
+    box-shadow: 0 -30px 50px -30px rgba(0,0,0,0.6) inset;
+    margin-top: 24px;
+  }
+  .wrap { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  .masthead { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; padding-bottom: 32px; border-bottom: 1px solid rgba(var(--accent-rgb),0.18); margin-bottom: 40px; }
+  .masthead .crate-logo { height: clamp(34px, 4.5vw, 46px); width: auto; display: block; }
+  h1.wordmark {
+    margin: 0; font-size: clamp(48px, 8vw, 84px); font-weight: 700; letter-spacing: 4px;
+    color: var(--accent); text-shadow: 0 0 24px var(--glow), 0 0 60px var(--glow);
+  }
+  .sub {
+    max-width: 62ch; font-size: 13px; line-height: 1.9; letter-spacing: 1px;
+    color: var(--accent); text-shadow: 0 0 6px var(--glow); text-transform: uppercase;
+    background: rgba(5,3,4,0.3); padding: 16px 20px; border-radius: 8px;
+  }
+
+  .genre-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 6px; }
+  .genre-nav a {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    border: 1px solid rgba(var(--accent-rgb),0.35); padding: 6px 14px; border-radius: 4px;
+    color: rgba(244,241,234,0.7); text-decoration: none;
+  }
+  .genre-nav a:hover { color: var(--accent); border-color: var(--accent); text-shadow: 0 0 6px var(--glow); }
+
+  .genre-block { padding-top: 56px; }
+  .genre-title { font-size: 26px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; color: #f4f1ea; }
+
+  .section { margin-bottom: 30px; }
+  .prompt-line { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .prompt-line .prompt { font-size: 13px; }
+  .cmd { font-size: 13px; color: rgba(244,241,234,0.85); }
+  .section-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(244,241,234,0.4); margin-left: 6px; }
+
+  .week-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(244,241,234,0.4); margin: 18px 0 8px; }
+
+  .track {
+    border: 1px solid rgba(var(--accent-rgb),0.25);
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  .track.hot {
+    border-color: var(--accent);
+    background: rgba(255,79,216,0.06);
+    box-shadow: 0 0 18px -6px var(--glow);
+  }
+  .track-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .track-name { font-weight: 700; font-size: 14px; color: #f4f1ea; }
+  .track-artist { color: rgba(244,241,234,0.55); font-weight: 400; }
+  .track-source { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+  .track-note { font-size: 12px; color: rgba(244,241,234,0.6); font-style: italic; line-height: 1.5; }
+  .track-name a { color: inherit; text-decoration-color: rgba(var(--accent-rgb),0.3); }
+  .confirms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+  .confirm-chip { font-size: 9px; letter-spacing: 0.5px; color: #050403; background: var(--accent); padding: 2px 8px; border-radius: 100px; white-space: nowrap; }
+  .confirm-chip a { color: inherit; text-decoration: none; }
+
+  .empty {
+    border: 1px dashed rgba(var(--accent-rgb),0.3);
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 20px 18px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .empty-title { font-weight: 700; font-size: 13px; color: #f4f1ea; }
+  .empty p { color: rgba(244,241,234,0.5); font-size: 12px; line-height: 1.5; margin: 0; }
+
+  footer.meta {
+    margin-top: 56px; padding-top: 18px; border-top: 1px solid rgba(var(--accent-rgb),0.18);
+    font-size: 10px; letter-spacing: 1px; color: rgba(244,241,234,0.4); line-height: 1.7;
+    display: flex; justify-content: center; text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 28px 16px 60px; }
+    .track-top { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline poster="hero-bg.jpg" aria-hidden="true">
+  <source src="hero-bg.mp4" type="video/mp4">
+</video>
+<div class="page-scrim"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="flicker"></div>
+
+<div class="chrome">
+  <div class="dots">
+    <span class="dot-btn r"></span>
+    <span class="dot-btn y"></span>
+    <span class="dot-btn g"></span>
+  </div>
+  <span class="chrome-title">eazr@collective: ~/coming-soon</span>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" data-lang="de" class="active">DE</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+</div>
+
+<div class="hero">
+  <header class="site-header">
+    <img src="logo-mark.png" alt="EAZr Beats Collective">
+    <span class="brand-sub">BEATS COLLECTIVE</span>
+  </header>
+  <div class="content">
+    <div class="badge"><span data-i18n="badgeComingSoon">BALD VERFÜGBAR</span><span class="cursor">_</span></div>
+    <p class="tagline" data-i18n="heroTagline">MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.</p>
+    <div class="prompt-row">
+      <span class="prompt">eazr@beats:~$</span>
+      <div class="signup">
+        <input type="email" placeholder="user email=_" aria-label="Email address" autocomplete="email" />
+        <button type="button" data-i18n="enterBtn">ENTER</button>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="flinks">
+      <a href="#">[INSTAGRAM]</a>
+      <span class="fdot"></span>
+      <a href="#">[SOUNDCLOUD]</a>
+      <span class="fdot"></span>
+      <a href="#">[TIKTOK]</a>
+      <span class="fdot"></span>
+      <a href="mailto:booking@eazrbeats.de?subject=Booking%20EAZr%20Beats%20Collective">[BOOKING]</a>
+      <span class="fdot"></span>
+      <a href="#crate">[ THE CRATE ]</a>
+      </span>
+      <span class="fsep">|</span>
+      <span>© 2026 EAZR BEATS COLLECTIVE · MÜNCHEN</span>
+      <span class="fsep">|</span>
+      <a href="impressum.html">IMPRESSUM</a>
+      <a href="datenschutz.html">DATENSCHUTZ</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">
+  <span class="dl"></span>
+  <span class="dtag">eazr@collective:~$ cd ./the-crate</span>
+  <span class="dl"></span>
+</div>
+
+<div class="crate-panel">
+<div class="wrap" id="crate">
+  <header class="masthead">
+    <img src="logo-mark.png" alt="EAZr Beats Collective" class="crate-logo">
+    <span class="brand-sub">BEATS COLLECTIVE</span>
+    <div class="badge"><span data-i18n="crateBadge">AUSWAHL-LOG</span><span class="cursor">_</span></div>
+    <h1 class="wordmark">THE CRATE</h1>
+    <p class="sub" data-i18n="crateSub">Kuratierte Tracks, die gerade in DJ-Sets laufen und in der Community gut ankommen — nach Genre sortiert, jeweils mit Daily Hot (täglich, harte Schwelle) und Weekly Hot (wöchentlich neu kuratiert). Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.</p>
+    <nav class="genre-nav" id="genre-nav"></nav>
+  </header>
+
+  <div id="genres"></div>
+
+  <footer class="meta"><span data-i18n="crateFooter">Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert</span> · <span data-i18n="crateUpdatedLabel">zuletzt aktualisiert:</span> <span id="updated">–</span></footer>
+</div>
+</div>
+
+<script>
+  // ---------------------------------------------------------------------
+  // i18n
+  // ---------------------------------------------------------------------
+  const T = {
+    de: {
+      badgeComingSoon: 'COMING SOON',
+      heroTagline: 'MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.',
+      enterBtn: 'ENTER',
+      crateBadge: "SELECTOR'S LOG",
+      crateSub: 'Kuratierte Tracks, die gerade in DJ-Sets laufen und in der Community gut ankommen — nach Genre sortiert, jeweils mit Daily Hot (täglich, harte Schwelle) und Weekly Hot (wöchentlich neu kuratiert). Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
+      crateFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
+      crateUpdatedLabel: 'zuletzt aktualisiert:',
+      weeklyTag: 'kuratierte Wochen-Highlights',
+      dailyTag: 'täglich, mit harter Schwelle',
+      weeklyEmptyTitle: 'Noch keine Weekly-Highlights',
+      weeklyEmptyText: 'Die wöchentliche Kuratierung läuft sonntags. Schau danach wieder vorbei.',
+      dailyEmptyTitle: 'Noch nichts, das die Schwelle genommen hat',
+      dailyEmptyText: 'Die tägliche Recherche läuft, trägt aber nur ein, was von mindestens zwei unabhängigen Quellen bestätigt wird.',
+      locale: 'de-DE',
+      unbenannt: 'Unbenannt',
+      quelle: 'Quelle',
+    },
+    en: {
+      badgeComingSoon: 'COMING SOON',
+      heroTagline: 'MUNICH HOUSE &amp; TECHNO — NEW SETS, SESSIONS AND SHOWS DROPPING SOON.',
+      enterBtn: 'ENTER',
+      crateBadge: "SELECTOR'S LOG",
+      crateSub: "Curated tracks currently running in DJ sets and landing well with the community — sorted by genre, each with Daily Hot (daily, hard threshold) and Weekly Hot (curated fresh weekly). Every entry is confirmed by at least two independent sources.",
+      crateFooter: 'Automatically maintained · Daily Hot checked daily · Weekly Hot curated fresh every Sunday',
+      crateUpdatedLabel: 'last updated:',
+      weeklyTag: 'curated weekly highlights',
+      dailyTag: 'daily, with a hard threshold',
+      weeklyEmptyTitle: 'No Weekly Highlights yet',
+      weeklyEmptyText: 'The weekly curation runs on Sundays. Check back after that.',
+      dailyEmptyTitle: "Nothing has cleared the bar yet",
+      dailyEmptyText: 'The daily research runs every day, but only logs a track confirmed by at least two independent sources.',
+      locale: 'en-GB',
+      unbenannt: 'Untitled',
+      quelle: 'Source',
+    },
+  };
+  let lang = 'de';
+  let lastDocs = [];
+
+  function applyStaticI18n() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (T[lang][key] != null) el.innerHTML = T[lang][key];
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.lang === lang) return;
+      lang = btn.dataset.lang;
+      applyStaticI18n();
+      render(lastDocs);
+    });
+  });
+  applyStaticI18n();
+
+  // ---------------------------------------------------------------------
+  // The Crate — live data
+  // ---------------------------------------------------------------------
+  const genresEl = document.getElementById('genres');
+  const navEl = document.getElementById('genre-nav');
+  const updatedEl = document.getElementById('updated');
+
+  const GENRES = [
+    { key: 'house', label: 'House' },
+    { key: 'melodic-house-techno', label: 'Melodic House & Techno' },
+    { key: 'afro-house', label: 'Afro House' },
+    { key: 'latin-house', label: 'Latin House' },
+  ];
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  function parseISODate(s) {
+    const parts = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s || ''));
+    if (!parts) return null;
+    return new Date(Date.UTC(+parts[1], +parts[2] - 1, +parts[3]));
+  }
+
+  function startOfWeek(d) {
+    const day = d.getUTCDay();
+    const diff = (day === 0 ? -6 : 1) - day;
+    const monday = new Date(d);
+    monday.setUTCDate(d.getUTCDate() + diff);
+    return monday;
+  }
+
+  function fmts() {
+    return {
+      date: new Intl.DateTimeFormat(T[lang].locale, { day: 'numeric', month: 'long', timeZone: 'UTC' }),
+      day: new Intl.DateTimeFormat(T[lang].locale, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' }),
+    };
+  }
+
+  function confirmChips(t) {
+    const confirms = Array.isArray(t.confirmations) ? t.confirmations : null;
+    if (!confirms || !confirms.length) return '';
+    return `<div class="confirms">${confirms.map(c => {
+      const label = escapeHtml(c.source || T[lang].quelle);
+      return c.sourceUrl
+        ? `<span class="confirm-chip"><a href="${escapeHtml(c.sourceUrl)}" target="_blank" rel="noopener">${label}</a></span>`
+        : `<span class="confirm-chip">${label}</span>`;
+    }).join('')}</div>`;
+  }
+
+  function trackCard(t, hot) {
+    const title = escapeHtml(t.title || T[lang].unbenannt);
+    const artist = escapeHtml(t.artist || '');
+    const link = t.sourceUrl ? `<a href="${escapeHtml(t.sourceUrl)}" target="_blank" rel="noopener">${title}</a>` : title;
+    return `
+      <div class="track${hot ? ' hot' : ''}">
+        <div class="track-top">
+          <div class="track-name">${link}${artist ? ` <span class="track-artist">— ${artist}</span>` : ''}</div>
+          ${t.source ? `<div class="track-source">${escapeHtml(t.source)}</div>` : ''}
+        </div>
+        ${t.note ? `<div class="track-note">${escapeHtml(t.note)}</div>` : ''}
+        ${confirmChips(t)}
+      </div>
+    `;
+  }
+
+  function emptyBlock(title, text) {
+    return `
+      <div class="empty">
+        <div class="empty-title">${escapeHtml(title)}</div>
+        <p>${escapeHtml(text)}</p>
+      </div>
+    `;
+  }
+
+  function renderWeeklyHtml(docs) {
+    if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang].weeklyEmptyText);
+    const sorted = docs
+      .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
+      .filter(d => d._date)
+      .sort((a, b) => b._date - a._date);
+    return sorted.map(t => trackCard(t, true)).join('');
+  }
+
+  function renderDailyHtml(docs) {
+    if (!docs.length) return emptyBlock(T[lang].dailyEmptyTitle, T[lang].dailyEmptyText);
+    const { day: dayFmt } = fmts();
+    const withDates = docs
+      .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
+      .filter(d => d._date)
+      .sort((a, b) => b._date - a._date);
+
+    const weeks = new Map();
+    for (const t of withDates) {
+      const monday = startOfWeek(t._date);
+      const key = monday.toISOString().slice(0, 10);
+      if (!weeks.has(key)) weeks.set(key, { monday, tracks: [] });
+      weeks.get(key).tracks.push(t);
+    }
+
+    const weekKeys = [...weeks.keys()].sort().reverse();
+    return weekKeys.map(wk => {
+      const { tracks } = weeks.get(wk);
+      const days = new Map();
+      for (const t of tracks) {
+        const dk = t.dateAdded;
+        if (!days.has(dk)) days.set(dk, []);
+        days.get(dk).push(t);
+      }
+      const dayKeys = [...days.keys()].sort().reverse();
+      return dayKeys.map(dk => `
+          <div class="week-label">${dayFmt.format(parseISODate(dk))}</div>
+          ${days.get(dk).map(t => trackCard(t, false)).join('')}
+        `).join('');
+    }).join('');
+  }
+
+  function render(docs) {
+    lastDocs = docs;
+    const { date: dateFmt } = fmts();
+
+    navEl.innerHTML = GENRES.map(g => `<a href="#genre-${g.key}">[ ${escapeHtml(g.label)} ]</a>`).join('');
+
+    genresEl.innerHTML = GENRES.map(g => {
+      const genreDocs = docs.filter(d => (d.genre || 'house') === g.key);
+      const weekly = genreDocs.filter(d => d.tier === 'weekly');
+      const daily = genreDocs.filter(d => d.tier !== 'weekly');
+      return `
+        <div class="genre-block" id="genre-${g.key}">
+          <h2 class="genre-title">${escapeHtml(g.label)}</h2>
+
+          <div class="section">
+            <div class="prompt-line">
+              <span class="prompt">eazr@crate:~$</span><span class="cmd">cat ${g.key}/weekly-hot</span>
+              <span class="section-tag">${escapeHtml(T[lang].weeklyTag)}</span>
+            </div>
+            ${renderWeeklyHtml(weekly)}
+          </div>
+
+          <div class="section">
+            <div class="prompt-line">
+              <span class="prompt">eazr@crate:~$</span><span class="cmd">cat ${g.key}/daily-hot</span>
+              <span class="section-tag">${escapeHtml(T[lang].dailyTag)}</span>
+            </div>
+            ${renderDailyHtml(daily)}
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    const withDates = docs.map(d => parseISODate(d.dateAdded)).filter(Boolean).sort((a, b) => b - a);
+    updatedEl.textContent = withDates.length ? dateFmt.format(withDates[0]) : '–';
+  }
+
+  async function boot() {
+    try {
+      const res = await fetch('crate.json', { cache: 'no-cache' });
+      const data = await res.json();
+      render(Array.isArray(data.tracks) ? data.tracks : []);
+    } catch (e) {
+      render([]);
+    }
+  }
+
+  boot();
+</script>
+
+</body></html>
