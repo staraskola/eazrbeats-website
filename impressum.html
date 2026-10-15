@@ -35,5 +35,10 @@
   <h2>Haftung für Links</h2>
   <p>Diese Seite enthält Links zu externen Websites (z. B. Beatport, DJ Mag). Auf deren Inhalte haben wir keinen Einfluss, dafür ist der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen entfernen wir solche Links umgehend.</p>
 </div>
+<script>
+function toTop() { window.scrollTo(0, 0); try { document.body.scrollIntoView({ block: 'start', behavior: 'instant' }); } catch (e) { document.body.scrollIntoView(true); } }
+const navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+if (!navEntry || navEntry.type !== 'back_forward') toTop();
+</script>
 </body>
 </html>

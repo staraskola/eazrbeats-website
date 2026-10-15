@@ -342,3 +342,14 @@ if (/(^|\.)eazrbeats\.de$/.test(location.hostname)) {
   gc.dataset.goatcounter = 'https://eazrbeats.goatcounter.com/count';
   document.head.appendChild(gc);
 }
+
+// Every new page starts at the top (unless a link points to a section with #)
+function toTop() {
+  if (location.hash) return;
+  window.scrollTo(0, 0);
+  const first = document.body;
+  // also moves the outer page when the site is shown inside a preview frame
+  try { first.scrollIntoView({ block: 'start', behavior: 'instant' }); } catch (e) { first.scrollIntoView(true); }
+}
+const navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+if (!navEntry || navEntry.type !== 'back_forward') toTop();
