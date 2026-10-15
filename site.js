@@ -87,7 +87,12 @@ const T = {
     // booking
     bookingText: 'Club, Bar, Open Air oder Privat: Schreib uns kurz, wann, wo und was du dir vorstellst. Wir melden uns.',
     bookingBtn: 'Anfrage senden',
-    bookingOther: 'Nur für Booking-Anfragen. Alles andere bitte an <a href="mailto:kontakt@eazrbeats.de">kontakt@eazrbeats.de</a>.',
+    kontaktText: 'Fragen, Ideen, Kooperationen, Presse: Schreib uns.',
+    kontaktBtn: 'Mail schreiben',
+    kontaktCopy: 'Adresse kopieren',
+    kontaktCopied: 'Kopiert ✓',
+    kontaktBooking: 'Du willst uns buchen? Dafür gibt es die <a href="booking.html">Booking-Seite</a>.',
+    bookingOther: 'Nur für Booking-Anfragen. Alles andere bitte über <a href="kontakt.html">Kontakt</a>.',
     bookingWhat: 'Was wir mitbringen',
     bookingWhatText: 'House, Melodic House, Afro und Latin House. DJ-Sets mit Host und MC, auf Wunsch gefilmt.',
     bookingInfo: 'Was in die Mail gehört',
@@ -185,7 +190,12 @@ const T = {
 
     bookingText: 'Club, bar, open air or private: tell us when, where and what you have in mind. We will get back to you.',
     bookingBtn: 'Send request',
-    bookingOther: 'Booking requests only. For anything else, write to <a href="mailto:kontakt@eazrbeats.de">kontakt@eazrbeats.de</a>.',
+    kontaktText: 'Questions, ideas, collaborations, press: drop us a line.',
+    kontaktBtn: 'Write us',
+    kontaktCopy: 'Copy address',
+    kontaktCopied: 'Copied ✓',
+    kontaktBooking: 'Want to book us? Use the <a href="booking.html">booking page</a>.',
+    bookingOther: 'Booking requests only. For anything else, use <a href="kontakt.html">contact</a>.',
     bookingWhat: 'What we bring',
     bookingWhatText: 'House, melodic house, afro and latin house. DJ sets with host and MC, filmed on request.',
     bookingInfo: 'What to include',
@@ -265,3 +275,26 @@ const GENRES = [
   { key: 'afro-house', label: 'Afro House' },
   { key: 'latin-house', label: 'Latin House' },
 ];
+
+// Contact page: copy the address (works even without a mail app)
+const copyBtn = document.getElementById('copy-mail');
+if (copyBtn) {
+  copyBtn.addEventListener('click', async () => {
+    const addr = copyBtn.dataset.copy;
+    let ok = false;
+    try { await navigator.clipboard.writeText(addr); ok = true; } catch (e) {}
+    if (!ok) {
+      const el = document.getElementById('kontakt-mail');
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      try { ok = document.execCommand('copy'); } catch (e) {}
+    }
+    if (ok) {
+      copyBtn.textContent = T[lang].kontaktCopied;
+      setTimeout(() => { copyBtn.textContent = T[lang].kontaktCopy; }, 2000);
+    }
+  });
+}
