@@ -43,6 +43,7 @@ function confirmChips(t) {
 function trackCard(t, hot) {
   const title = escapeHtml(t.title || T[lang].unbenannt);
   const artist = escapeHtml(t.artist || '');
+  const note = (lang === 'en' && t.noteEn) ? t.noteEn : t.note;
   const link = t.sourceUrl ? `<a href="${escapeHtml(t.sourceUrl)}" target="_blank" rel="noopener">${title}</a>` : title;
   return `
     <div class="track${hot ? ' hot' : ''}">
@@ -50,7 +51,7 @@ function trackCard(t, hot) {
         <div class="track-name">${link}${artist ? ` <span class="track-artist">— ${artist}</span>` : ''}</div>
         ${t.source ? `<div class="track-source">${escapeHtml(t.source)}</div>` : ''}
       </div>
-      ${t.note ? `<div class="track-note">${escapeHtml(t.note)}</div>` : ''}
+      ${note ? `<div class="track-note">${escapeHtml(note)}</div>` : ''}
       ${confirmChips(t)}
     </div>
   `;
