@@ -8,19 +8,6 @@ const tabsEl = document.getElementById('genre-tabs');
 let activeGenre = 'house';
 const updatedEl = document.getElementById('updated');
 
-const GENRES = [
-  { key: 'house', label: 'House' },
-  { key: 'melodic-house-techno', label: 'Melodic House & Techno' },
-  { key: 'afro-house', label: 'Afro House' },
-  { key: 'latin-house', label: 'Latin House' },
-];
-
-function escapeHtml(str) {
-  return String(str ?? '').replace(/[&<>"']/g, (c) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[c]));
-}
-
 function parseISODate(s) {
   const parts = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s || ''));
   if (!parts) return null;
