@@ -103,6 +103,18 @@ const T = {
     bookingWhatText: 'House, Melodic House, Afro und Latin House. DJ-Sets mit Host und MC, auf Wunsch gefilmt.',
     bookingInfo: 'Was in die Mail gehört',
     bookingInfoText: 'Datum, Ort, ungefähre Gästezahl, Spielzeit und ob Technik vor Ort ist.',
+    pressTitle: 'Pressekit',
+    pressText: 'Für Venues, Veranstalter und Presse: Logo und Kurzbio zum Mitnehmen.',
+    pressLogo: 'Logo',
+    pressLogoText: 'Auf dunklem Grund (1080 × 1080) und freigestellt mit transparentem Hintergrund.',
+    pressLogoDark: 'Logo dunkel ↓',
+    pressLogoClear: 'Logo freigestellt ↓',
+    pressBio: 'Kurzbio',
+    pressBioText: 'EAZr Beats Collective ist ein House- und Techno-Kollektiv aus München, gegründet von Noah und Laura. Die Crew spielt House, Melodic House & Techno, Afro und Latin House, mit Wiktor als Host und MC. In Arbeit: eine eigene Open-Air-Reihe ab Sommer 2027 und gefilmte Sessions mit der Crowd direkt ums Pult.',
+    pressCopy: 'Bio kopieren',
+    pressPhotosText: 'Crew- und Eventfotos folgen.',
+    notFoundText: 'Diese Seite gibt es nicht (mehr). Vielleicht ein alter Link?',
+    notFoundHome: 'Zur Startseite',
 
     // crate
     crateSub: 'Tracks, die gerade in DJ-Sets laufen. Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
@@ -212,6 +224,18 @@ const T = {
     bookingWhatText: "House, melodic, afro and latin house. DJ sets with host and MC, filmed on request.",
     bookingInfo: 'What to include',
     bookingInfoText: "Date, venue, expected crowd size, set length and whether there's gear on site.",
+    pressTitle: 'Press kit',
+    pressText: 'For venues, promoters and press: logo and short bio, ready to use.',
+    pressLogo: 'Logo',
+    pressLogoText: 'On a dark background (1080 × 1080) and cut out with a transparent background.',
+    pressLogoDark: 'Logo dark ↓',
+    pressLogoClear: 'Logo transparent ↓',
+    pressBio: 'Short bio',
+    pressBioText: "EAZr Beats Collective is a house and techno collective from Munich, founded by Noah and Laura. The crew plays house, melodic house & techno, afro and latin house, with Wiktor on the mic as host and MC. In the works: an open-air series from summer 2027 and filmed sessions with the crowd right around the decks.",
+    pressCopy: 'Copy bio',
+    pressPhotosText: 'Crew and event photos coming soon.',
+    notFoundText: "This page doesn't exist (anymore). Maybe an old link?",
+    notFoundHome: 'Back to home',
 
     crateSub: "Tracks getting played in DJ sets right now. Every entry is backed by at least two independent sources.",
     crateFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
@@ -288,15 +312,14 @@ const GENRES = [
   { key: 'latin-house', label: 'Latin House' },
 ];
 
-// Contact page: copy the address (works even without a mail app)
-const copyBtn = document.getElementById('copy-mail');
-if (copyBtn) {
-  copyBtn.addEventListener('click', async () => {
-    const addr = copyBtn.dataset.copy;
+// Copy buttons (contact address, press bio): work even without a mail app
+document.querySelectorAll('[data-copy-from]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const el = document.getElementById(btn.dataset.copyFrom);
+    const label = btn.dataset.i18n;
     let ok = false;
-    try { await navigator.clipboard.writeText(addr); ok = true; } catch (e) {}
+    try { await navigator.clipboard.writeText(el.textContent.trim()); ok = true; } catch (e) {}
     if (!ok) {
-      const el = document.getElementById('kontakt-mail');
       const range = document.createRange();
       range.selectNodeContents(el);
       const sel = window.getSelection();
@@ -305,8 +328,17 @@ if (copyBtn) {
       try { ok = document.execCommand('copy'); } catch (e) {}
     }
     if (ok) {
-      copyBtn.textContent = T[lang].kontaktCopied;
-      setTimeout(() => { copyBtn.textContent = T[lang].kontaktCopy; }, 2000);
+      btn.textContent = T[lang].kontaktCopied;
+      setTimeout(() => { btn.textContent = T[lang][label]; }, 2000);
     }
   });
+});
+
+// Visitor counts without cookies (GoatCounter), only on the live domain
+if (/(^|\.)eazrbeats\.de$/.test(location.hostname)) {
+  const gc = document.createElement('script');
+  gc.async = true;
+  gc.src = 'https://gc.zgo.at/count.js';
+  gc.dataset.goatcounter = 'https://eazrbeats.goatcounter.com/count';
+  document.head.appendChild(gc);
 }
