@@ -349,3 +349,4 @@
   font-size: 14px; letter-spacing: 3px; color: rgba(var(--accent-rgb),0.5);
 }
 .cards.four { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.booking-note { margin: 0; font-size: 11px; line-height: 1.7; color: rgba(244,241,234,0.5); }
