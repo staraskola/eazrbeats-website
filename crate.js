@@ -44,7 +44,7 @@ function trackCard(t, hot) {
   const title = escapeHtml(t.title || T[lang].unbenannt);
   const artist = escapeHtml(t.artist || '');
   const note = (lang === 'en' && t.noteEn) ? t.noteEn : t.note;
-  const link = t.sourceUrl ? `<a href="${escapeHtml(t.sourceUrl)}" target="_blank" rel="noopener">${title}</a>` : title;
+  const link = `<a href="${SPOTIFY_PLAYLIST}" target="_blank" rel="noopener">${title}</a>`;
   return `
     <div class="track${hot ? ' hot' : ''}">
       <div class="track-top">

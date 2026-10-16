@@ -16,9 +16,7 @@ function genreLabel(key) {
 function pickCard(t, extraClass) {
   const title = escapeHtml(t.title || T[lang].unbenannt);
   const artist = escapeHtml(t.artist || '');
-  const listen = t.sourceUrl
-    ? `<a class="pick-listen" href="${escapeHtml(t.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(T[lang].digListen)}</a>`
-    : '';
+  const listen = `<a class="pick-listen" href="${SPOTIFY_PLAYLIST}" target="_blank" rel="noopener">${escapeHtml(T[lang].digListen)}</a>`;
   return `
     <div class="pick${extraClass ? ' ' + extraClass : ''}">
       <span class="kicker">${escapeHtml(genreLabel(t.genre || 'house'))}</span>
