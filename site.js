@@ -309,6 +309,8 @@ function escapeHtml(str) {
   }[c]));
 }
 
+// Every "listen" link on the site points to our playlist; source pages stay in the source chips.
+const SPOTIFY_PLAYLIST = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K';
 const GENRES = [
   { key: 'house', label: 'House' },
   { key: 'melodic-house-techno', label: 'Melodic House & Techno' },
