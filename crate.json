@@ -1,8 +1,163 @@
 {
- "exported": "2026-10-14",
+ "exported": "2026-10-18",
  "tracks": [
   {
+   "title": "Think of You (Extended)",
+   "artist": "Prospa, Kettama, Rohan Pinnock-Hamilton",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-18",
+   "source": "Beatport House Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Prospa und Kettama, sofort auf Platz 1.",
+   "noteEn": "Prospa and Kettama, straight in at number one.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/prospa-and-kettama-set-release-long-awaited-collaboration-think-of-you"
+    }
+   ]
+  },
+  {
+   "title": "Flashing Lights (Extended Mix)",
+   "artist": "DANIS (TS), Trace (UZ), DISLA (UZ)",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-18",
+   "source": "Beatport House Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Neu eingestiegen, direkt auf Platz 3 im House.",
+   "noteEn": "A new entry, straight in at number three in house.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "Traxsource House Top 100 (#18)",
+     "sourceUrl": "https://www.traxsource.com/genre/4/house/top"
+    }
+   ]
+  },
+  {
+   "title": "Mi Sueño (feat. Leli Hernandez) (Extended Mix)",
+   "artist": "Renate, Spijker, UsAndThem, Leli Hernandez",
+   "genre": "latin-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-18",
+   "source": "Beatport Latin Electronic Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Latin House, gleich doppelt in den Beatport-Charts.",
+   "noteEn": "Latin house, in the Beatport charts twice over.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100"
+    },
+    {
+     "source": "Traxsource Afro/Latin/Brazilian Top 100 (#16)",
+     "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
+    }
+   ]
+  },
+  {
+   "title": "H.O.U.S.E.",
+   "artist": "HUGEL, Snoop Dogg",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-18",
+   "source": "Beatport House Top 100 (#8)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "HUGEL und Snoop Dogg machen zusammen House.",
+   "noteEn": "HUGEL and Snoop Dogg making house together.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#8)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "We Rave You",
+     "sourceUrl": "https://weraveyou.com/2026/10/hugel-snoop-dogg-house"
+    }
+   ]
+  },
+  {
+   "title": "Let the Drums Talk (Extended Mix)",
+   "artist": "Hemel",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-17",
+   "source": "Beatport Afro House Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House, bei dem die Drums das Reden übernehmen.",
+   "noteEn": "Afro house where the drums do the talking.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    },
+    {
+     "source": "1001Tracklists – Dor Dekel, 100FM Line Out Radioshow 903 (2026-10-09)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/15wbj399/dor-dekel-100fm-line-out-radioshow-903-2026-10-09.html"
+    }
+   ]
+  },
+  {
+   "title": "I See U (Original Mix)",
+   "artist": "HotLap",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-17",
+   "source": "Beatport Melodic House & Techno Chart (via BeatStats 3-Monats-Ranking)",
+   "sourceUrl": "https://www.beatstats.com/tracks/home/list?genre=90&period=1",
+   "note": "HotLap in Sunset-Sets, auch bei Miss Monique.",
+   "noteEn": "HotLap in sunset sets, Miss Monique included.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Chart (via BeatStats 3-Monats-Ranking)",
+     "sourceUrl": "https://www.beatstats.com/tracks/home/list?genre=90&period=1"
+    },
+    {
+     "source": "1001Tracklists – Sagia, Flight Mode Rooftop Edition (2026-10-09)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/2c4dzu41/sagia-flight-mode-rooftop-edition-doki1-gdansk-poland-2026-10-09.html"
+    }
+   ]
+  },
+  {
+   "title": "Scream & Shout (Extended Mix)",
+   "artist": "Jewel Kid",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-17",
+   "source": "Traxsource House Top 100 (#1)",
+   "sourceUrl": "https://www.traxsource.com/genre/4/house/top",
+   "note": "Jewel Kid ganz oben bei Traxsource.",
+   "noteEn": "Jewel Kid at the top of Traxsource.",
+   "confirmations": [
+    {
+     "source": "Traxsource House Top 100 (#1)",
+     "sourceUrl": "https://www.traxsource.com/genre/4/house/top"
+    },
+    {
+     "source": "voizzmagazine (Premiere)",
+     "sourceUrl": "https://soundcloud.com/voizzmagazine/jewel-kid-scream-shout"
+    }
+   ]
+  },
+  {
+   "title": "Guaro (Extended Mix)",
    "artist": "Josio, KIKEH",
+   "genre": "latin-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-11",
+   "source": "Beatport Latin Electronic Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Latin-House-Groove, der seit Wochen oben bleibt.",
+   "noteEn": "Latin house groove that's been holding up for weeks.",
    "confirmations": [
     {
      "source": "Beatport Latin Electronic Top 100 (#3)",
@@ -12,18 +167,18 @@
      "source": "Traxsource Afro/Latin/Brazilian Top 100 (#12)",
      "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
     }
-   ],
-   "dateAdded": "2026-10-11",
-   "genre": "latin-house",
-   "note": "Hält sich auch in der aktuellen Beatport Latin Electronic Top 5 und bleibt zugleich in Traxsources Afro/Latin/Brazilian-Charts vertreten – zwei unabhängige Plattformen bestätigen den anhaltenden Zuspruch über die Woche.",
-   "noteEn": "Still in the current Beatport Latin Electronic top 5 and in Traxsource's Afro/Latin/Brazilian chart. Two independent platforms confirm it's holding up all week.",
-   "source": "Beatport Latin Electronic Top 100 (#3)",
-   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
-   "tier": "weekly",
-   "title": "Guaro (Extended Mix)"
+   ]
   },
   {
+   "title": "Fancy Footwork (Extended Mix)",
    "artist": "Chromeo, Chris Lorenzo",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-10",
+   "source": "Beatport House Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Chromeo-Klassiker als House-Edit, gerade die Nummer 1.",
+   "noteEn": "A Chromeo classic turned house edit, currently number one.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#1)",
@@ -33,18 +188,18 @@
      "source": "1001Tracklists Media (X/Twitter)",
      "sourceUrl": "https://x.com/1001TLtv/status/2072032565196738609"
     }
-   ],
-   "dateAdded": "2026-10-10",
-   "genre": "house",
-   "note": "Chris Lorenzos House-Edit des Chromeo-Klassikers hält sich auch eine Woche nach Release auf Platz 1 der Beatport House Charts und wird weiterhin von 1001Tracklists Media als Favorit hervorgehoben – Weekly-Hot-Bestätigung über zwei unabhängige Quellen.",
-   "noteEn": "Chris Lorenzo's house edit of the Chromeo classic is still No. 1 on the Beatport House chart a week after release, and 1001Tracklists Media keeps highlighting it as a favourite.",
-   "source": "Beatport House Top 100 (#1)",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Fancy Footwork (Extended Mix)"
+   ]
   },
   {
+   "title": "Duro",
    "artist": "Skrillex, Young Miko",
+   "genre": "latin-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-08",
+   "source": "Beatport Latin Electronic Top 100 (#10)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Skrillex trifft Latin: lange ID, jetzt endlich raus.",
+   "noteEn": "Skrillex goes Latin: a long-played ID, finally out.",
    "confirmations": [
     {
      "source": "Beatport Latin Electronic Top 100 (#10)",
@@ -54,18 +209,18 @@
      "source": "Beatportal",
      "sourceUrl": "https://www.beatportal.com/articles/1341292-skrillex-young-mikos-viral-id-duro-officially-lands"
     }
-   ],
-   "dateAdded": "2026-10-08",
-   "genre": "latin-house",
-   "note": "Bleibt auch diese Woche in den Top 15 der Beatport Latin Electronic Charts und wird weiterhin von Beatportal als virale Skrillex/Young-Miko-ID mit langer Vorgeschichte (Lollapalooza 2024, Ultra Miami 2025) besprochen – zwei unabhängige Quellen bestätigen den Weekly-Hot-Status.",
-   "noteEn": "Still in the Beatport Latin Electronic top 15 this week, and Beatportal keeps covering it as a viral Skrillex/Young Miko ID with a long backstory (Lollapalooza 2024, Ultra Miami 2025).",
-   "source": "Beatport Latin Electronic Top 100 (#10)",
-   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
-   "tier": "weekly",
-   "title": "Duro"
+   ]
   },
   {
+   "title": "How Far (Chalé)",
    "artist": "SOLTO (FR), Bellil Brothers",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-02",
+   "source": "Beatport Afro House Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House mit Zug, auch in den deutschen DJ-Charts.",
+   "noteEn": "Driving afro house, also climbing the German DJ charts.",
    "confirmations": [
     {
      "source": "Beatport Afro House Top 100 (#5)",
@@ -75,18 +230,18 @@
      "source": "German Top 100 DJ Charts (2026-09-25, #76)",
      "sourceUrl": "https://post.rlsbb.to/german-top-100-dj-charts-2026-09-25/"
     }
-   ],
-   "dateAdded": "2026-10-02",
-   "genre": "afro-house",
-   "note": "Steigt parallel zu Platz 5 der Beatport Afro-House-Charts auch in die German Top 100 DJ Charts ein – echte DJ-Chart-Bestätigung unabhängig von Beatports eigenem Ranking.",
-   "noteEn": "Alongside No. 5 on the Beatport Afro House chart, it also entered the German Top 100 DJ Charts. Real DJ chart confirmation outside Beatport's own ranking.",
-   "source": "Beatport Afro House Top 100 (#5)",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "How Far (Chalé)"
+   ]
   },
   {
+   "title": "Little More (Body Action)",
    "artist": "Sean Doron",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-01",
+   "source": "Beatport House Top 100 (#13)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Läuft gerade bei Keinemusik und Rüfüs Du Sol in den Sets.",
+   "noteEn": "In current sets from Keinemusik and Rüfüs Du Sol.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#13)",
@@ -96,18 +251,18 @@
      "source": "Audiojacked (Review, DJ-Support-Nachweis)",
      "sourceUrl": "https://www.audiojacked.com/music-news/sean-doron-little-more-body-action-you-and-me-records-review"
     }
-   ],
-   "dateAdded": "2026-10-01",
-   "genre": "house",
-   "note": "Platz 13 der Beatport House Charts; laut Audiojacked bereits mit starker DJ-Rotation von Keinemusik, Rufus Du Sol und Sosa sowie Aufnahme in große Spotify-Playlists kurz nach Release.",
-   "noteEn": "No. 13 on the Beatport House chart. According to Audiojacked it already has heavy DJ rotation from Keinemusik, Rüfüs Du Sol and Sosa, and landed on major Spotify playlists right after release.",
-   "source": "Beatport House Top 100 (#13)",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Little More (Body Action)"
+   ]
   },
   {
+   "title": "Echoes From The 90s",
    "artist": "Atlantic Ocean, Desmond, Summum",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-30",
+   "source": "Beatport House Top 100 (#12)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "90er-House-Feeling mit treibender Percussion.",
+   "noteEn": "90s house feel with driving percussion.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#12)",
@@ -117,18 +272,39 @@
      "source": "Audiojacked (redaktionelles Feature)",
      "sourceUrl": "https://audiojacked.com/music-news/desmond-summum-atlantic-ocean-echoes-from-the-90s-house-news"
     }
-   ],
-   "dateAdded": "2026-09-30",
-   "genre": "house",
-   "note": "Nostalgischer 90s-Housesound mit treibender Tech-House-Percussion, laut Audiojacked mit breiter Tastemaker-Unterstützung rasant in die Beatport-Charts aufgestiegen.",
-   "noteEn": "Nostalgic 90s house sound over driving tech house percussion. According to Audiojacked it shot up the Beatport charts on the back of wide tastemaker support.",
-   "source": "Beatport House Top 100 (#12)",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Echoes From The 90s"
+   ]
   },
   {
+   "title": "SAME MAN (Extended Mix)",
+   "artist": "Yulia Niko, Prana Flow, True Motion",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-28",
+   "source": "Beatport Melodic House & Techno Top 100 (#17)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Melodische Neuauflage eines alten Club-Klassikers.",
+   "noteEn": "A melodic remake of an old club classic.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#17)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "Beatportal (Curation Picks)",
+     "sourceUrl": "https://www.beatportal.com/tracks/1490906-yulia-niko-prana-flow-true-motion-same-man"
+    }
+   ]
+  },
+  {
+   "title": "Come Get Up (Extended Mix)",
    "artist": "Butch, Santos (IT)",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-28",
+   "source": "Beatport House Top 100 (#16)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Butchs eigener Floor-Track, live auf Ibiza getestet.",
+   "noteEn": "Butch's own floor track, road-tested in Ibiza.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#16)",
@@ -142,18 +318,18 @@
      "source": "Essential House",
      "sourceUrl": "https://essentialhouse.club/2026/09/santos-butch-come-get-up-on-saved-records/"
     }
-   ],
-   "dateAdded": "2026-09-28",
-   "genre": "house",
-   "note": "Aktuell Platz 16 der Beatport House Charts; von Butch selbst live bei Destino Ibiza und beim Sandbox Festival Egypt gespielt (dokumentiert via 1001Tracklists/YouTube) und zusätzlich von Essential House redaktionell vorgestellt.",
-   "noteEn": "Currently No. 16 on the Beatport House chart. Butch played it live at Destino Ibiza and Sandbox Festival Egypt (logged on 1001Tracklists/YouTube), and Essential House featured it too.",
-   "source": "Beatport House Top 100 (#16)",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Come Get Up (Extended Mix)"
+   ]
   },
   {
+   "title": "Say What (feat. Chuala)",
    "artist": "Keinemusik (Rampa, &ME, Adam Port)",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-28",
+   "source": "Beatport Afro House Top 100 (#16)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Der Keinemusik-Sommer-ID, jetzt offiziell und mit Remixen.",
+   "noteEn": "Keinemusik's summer ID, now official with remixes.",
    "confirmations": [
     {
      "source": "Beatport Afro House Top 100 (#16)",
@@ -167,39 +343,18 @@
      "source": "1001Tracklists (offizielle Remixe aktuell in Sets, u.a. Franky Rizardo Remix)",
      "sourceUrl": "https://www.1001tracklists.com/track/43bszxdx/keinemusik-say-what/index.html"
     }
-   ],
-   "dateAdded": "2026-09-28",
-   "genre": "afro-house",
-   "note": "Platz 16 im Afro-House-Chart; laut Beatportal ein 'virales' Sommer-ID, das monatelang in Keinemusik-Sets lief, bevor es offiziell erschien – inzwischen mit mehreren offiziellen Remixen (u.a. Franky Rizardo) aktuell in DJ-Sets über 1001Tracklists dokumentiert.",
-   "noteEn": "No. 16 on the Afro House chart. Beatportal calls it a 'viral' summer ID that ran in Keinemusik sets for months before release. Now out with several official remixes (Franky Rizardo among them) and logged in DJ sets on 1001Tracklists.",
-   "source": "Beatport Afro House Top 100 (#16)",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "Say What (feat. Chuala)"
+   ]
   },
   {
-   "artist": "Yulia Niko, Prana Flow, True Motion",
-   "confirmations": [
-    {
-     "source": "Beatport Melodic House & Techno Top 100 (#17)",
-     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
-    },
-    {
-     "source": "Beatportal (Curation Picks)",
-     "sourceUrl": "https://www.beatportal.com/tracks/1490906-yulia-niko-prana-flow-true-motion-same-man"
-    }
-   ],
-   "dateAdded": "2026-09-28",
-   "genre": "melodic-house-techno",
-   "note": "Platz 17 im Melodic House & Techno Chart; von Beatportal redaktionell als Curation Pick vorgestellt – gefeierte Neuinterpretation eines fast zwei Jahrzehnte alten Club-Klassikers.",
-   "noteEn": "No. 17 on the Melodic House & Techno chart. Featured by Beatportal as a Curation Pick: a celebrated new take on a club classic from almost two decades ago.",
-   "source": "Beatport Melodic House & Techno Top 100 (#17)",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "SAME MAN (Extended Mix)"
-  },
-  {
+   "title": "Stay",
    "artist": "Bipolar Sunshine, Hardt Antoine, Nariman",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-27",
+   "source": "Beatport Melodic House & Techno Top 100 (#9)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Melodic House mit Gesang, gerade in vielen Radio-Sets.",
+   "noteEn": "Vocal melodic house, all over the radio sets right now.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#9)",
@@ -213,18 +368,18 @@
      "source": "1001Tracklists – David Mayer, Balance Selections 384 (2026-09-18)",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/gm3fl3k/david-mayer-balance-selections-384-2026-09-18.html"
     }
-   ],
-   "dateAdded": "2026-09-27",
-   "genre": "melodic-house-techno",
-   "note": "Platz 9 im Melodic House & Techno Chart; zusätzlich auf Traxsource gelistet und in mehreren aktuellen DJ-Sets über 1001Tracklists dokumentiert (u.a. David Mayer/Balance Selections 384, The Magician/Radiate Radio Show 001, MOGUAI & Adriatique & Marten Hørger/1LIVE DJ Session).",
-   "noteEn": "No. 9 on the Melodic House & Techno chart, also on Traxsource and logged in several recent DJ sets on 1001Tracklists (David Mayer/Balance Selections 384, The Magician/Radiate Radio Show 001, MOGUAI & Adriatique & Marten Hørger/1LIVE DJ Session).",
-   "source": "Beatport Melodic House & Techno Top 100 (#9)",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Stay"
+   ]
   },
   {
+   "title": "Warehouse",
    "artist": "HotLap, Yanick",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-27",
+   "source": "Beatport Melodic House & Techno Top 100 (#4)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Melodic Techno, gerade in vielen Radio-Shows.",
+   "noteEn": "Melodic techno, in lots of radio shows right now.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#4)",
@@ -238,18 +393,18 @@
      "source": "1001Tracklists – Aaron Herzog, Lake of Fire 4 (2026-09-26)",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/1zypz169/aaron-herzog-lake-of-fire-4-2026-09-26.html"
     }
-   ],
-   "dateAdded": "2026-09-27",
-   "genre": "melodic-house-techno",
-   "note": "Platz 4 im Melodic House & Techno Chart; aktuell in mehreren unabhängigen DJ-Sets/Radio-Shows über 1001Tracklists nachgewiesen (u.a. The Journey/UGENIUS Radio 192 und Aaron Herzog/Lake of Fire 4).",
-   "noteEn": "No. 4 on the Melodic House & Techno chart, logged in several independent DJ sets and radio shows on 1001Tracklists (The Journey/UGENIUS Radio 192, Aaron Herzog/Lake of Fire 4).",
-   "source": "Beatport Melodic House & Techno Top 100 (#4)",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Warehouse"
+   ]
   },
   {
+   "title": "Loca (Extended Mix)",
    "artist": "Shadu",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-26",
+   "source": "Beatport Afro House Top 100 (#2)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House auf Platz 2, läuft gerade in vielen Sets.",
+   "noteEn": "Afro house at number two, in lots of sets right now.",
    "confirmations": [
     {
      "source": "Beatport Afro House Top 100 (#2)",
@@ -263,18 +418,18 @@
      "source": "1001Tracklists – Mairee, Maireeton 133 (2026-09-18)",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/hjx2vu9/mairee-maireeton-133-2026-09-18.html"
     }
-   ],
-   "dateAdded": "2026-09-26",
-   "genre": "afro-house",
-   "note": "Platz 2 der Beatport Afro-House-Charts, zusätzlich in mehreren aktuellen DJ-Sets/Radio-Shows unabhängiger DJs (u.a. m2o Morning Show, Maireeton) über 1001Tracklists nachgewiesen.",
-   "noteEn": "No. 2 on the Beatport Afro House chart, also logged in several recent sets and radio shows by independent DJs (m2o Morning Show, Maireeton) on 1001Tracklists.",
-   "source": "Beatport Afro House Top 100 (#2)",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "Loca (Extended Mix)"
+   ]
   },
   {
+   "title": "Science Fiction",
    "artist": "Brunello",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-25",
+   "source": "Beatport Melodic House & Techno Top 100 (#12)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Brunello, schon live von Tiga gespielt.",
+   "noteEn": "Brunello, already played live by Tiga.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#12)",
@@ -284,18 +439,18 @@
      "source": "1001Tracklists – Tiga & Brunello @ ARC Music Festival (2026-09-04)",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/1ddqzug9/tiga-brunello-expansions-stage-arc-music-festival-united-states-2026-09-04.html"
     }
-   ],
-   "dateAdded": "2026-09-25",
-   "genre": "melodic-house-techno",
-   "note": "Dritter Brunello-Track mit aktueller Chart-Präsenz; laut 1001Tracklists u.a. von Tiga live auf dem Expansions Stage des ARC Music Festivals gespielt.",
-   "noteEn": "Brunello's third track in the charts right now. According to 1001Tracklists, Tiga played it live on the Expansions Stage at ARC Music Festival.",
-   "source": "Beatport Melodic House & Techno Top 100 (#12)",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Science Fiction"
+   ]
   },
   {
+   "title": "Beauty In Us (Club Mix)",
    "artist": "Robbie Williams, Miss Monique",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-25",
+   "source": "Beatport Melodic House & Techno Top 100 (#13)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Überraschung: Robbie Williams im Melodic-Club-Mix.",
+   "noteEn": "Surprise: Robbie Williams in a melodic club mix.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#13)",
@@ -309,18 +464,39 @@
      "source": "xsnoize",
      "sourceUrl": "https://www.xsnoize.com/robbie-williams-miss-monique-beauty-in-us/"
     }
-   ],
-   "dateAdded": "2026-09-25",
-   "genre": "melodic-house-techno",
-   "note": "Mainstream-Crossover-Kollab schlägt hohe Wellen: Top 13 im Melodic House & Techno Chart und breit von der internationalen Musikpresse aufgegriffen.",
-   "noteEn": "A mainstream crossover collab making waves: top 13 on the Melodic House & Techno chart and picked up widely by the international music press.",
-   "source": "Beatport Melodic House & Techno Top 100 (#13)",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Beauty In Us (Club Mix)"
+   ]
   },
   {
+   "title": "ESPERA (Extended Mix)",
+   "artist": "Divolly & Markward, Quentro, Jamy Nox",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-24",
+   "source": "Beatport Afro House Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House, den DJs gerade gern in Blends nutzen.",
+   "noteEn": "Afro house DJs keep using in their blends right now.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    },
+    {
+     "source": "RemixBanger – Quick Hits (18. September 2026)",
+     "sourceUrl": "https://remixbanger.com/quick-hits-18-september-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Chulo",
    "artist": "AMÉMÉ",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-24",
+   "source": "Beatport Afro House Top 100 (#8)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Warmer Afro-House direkt aus AMÉMÉs Ibiza-Sommer.",
+   "noteEn": "Warm afro house straight out of AMÉMÉ's Ibiza summer.",
    "confirmations": [
     {
      "source": "Beatport Afro House Top 100 (#8)",
@@ -334,39 +510,60 @@
      "source": "EDMNOMAD",
      "sourceUrl": "https://edmnomad.com/ameme-releases-chulo-as-one-tribe-wraps-landmark-ibiza-residency-at-cova-santa/"
     }
-   ],
-   "dateAdded": "2026-09-24",
-   "genre": "afro-house",
-   "note": "Platz 8 der Beatport Afro-House-Charts; Release begleitet den Abschluss von AMÉMÉs gefeierter fünfwöchiger Ibiza-Residency bei Cova Santa und wird von mehreren Fachmedien besprochen.",
-   "noteEn": "No. 8 on the Beatport Afro House chart. Out to mark the end of AMÉMÉ's celebrated five-week Ibiza residency at Cova Santa, with coverage across several outlets.",
-   "source": "Beatport Afro House Top 100 (#8)",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "Chulo"
+   ]
   },
   {
-   "artist": "Divolly & Markward, Quentro, Jamy Nox",
+   "title": "PYHU (Put Your Hands Up)",
+   "artist": "HUGEL, Kurd Maverick",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-22",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House zum Hände-hoch, genau wie der Titel sagt.",
+   "noteEn": "Hands-up afro house, just like the title says.",
    "confirmations": [
     {
-     "source": "Beatport Afro House Top 100 (#5)",
+     "source": "Beatport Afro House Top 100 (#9)",
      "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
     },
     {
-     "source": "RemixBanger – Quick Hits (18. September 2026)",
-     "sourceUrl": "https://remixbanger.com/quick-hits-18-september-2026/"
+     "source": "Cr2 Records (offizieller Repost/Edit)",
+     "sourceUrl": "https://soundcloud.com/cr2records/hugel-kurd-maverick-pyhu-put-your-hands-up"
     }
-   ],
-   "dateAdded": "2026-09-24",
-   "genre": "afro-house",
-   "note": "Platz 5 der Beatport Afro-House-Charts, zusätzlich von RemixBanger als DJ-Empfehlung ('Quick Hit') in aktuellen Blends aufgegriffen.",
-   "noteEn": "No. 5 on the Beatport Afro House chart, and picked by RemixBanger as a 'Quick Hit' DJ recommendation for current blends.",
-   "source": "Beatport Afro House Top 100 (#5)",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "ESPERA (Extended Mix)"
+   ]
   },
   {
+   "title": "Control",
+   "artist": "Joseph Capriati, GENNARO",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-22",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Capriati-Groove, direkt nach Release überall besprochen.",
+   "noteEn": "A Capriati groove, talked about everywhere since release.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#12)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/09/joseph-capriati-and-gennaro-unite-for-control-on-metamorfosi/"
+    }
+   ]
+  },
+  {
+   "title": "Palm Of Your Hands",
    "artist": "Adriatique",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-22",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Adriatique-Hymne, zuerst auf Coachella gespielt.",
+   "noteEn": "An Adriatique anthem, first played at Coachella.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#9)",
@@ -380,81 +577,18 @@
      "source": "Pulso Mag (Coachella-Premiere)",
      "sourceUrl": "https://www.pulsomag.com/2026/09/19/adriatique-publica-palm-of-your-hands-tras-presentarla-en-coachella/"
     }
-   ],
-   "dateAdded": "2026-09-22",
-   "genre": "melodic-house-techno",
-   "note": "Platz 9 im Melodic House & Techno Chart; nach Coachella-Premiere jetzt offiziell veröffentlicht und von mehreren internationalen EDM-Portalen aufgegriffen.",
-   "noteEn": "No. 9 on the Melodic House & Techno chart. Premiered at Coachella, now officially out and picked up by several international dance music sites.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Palm Of Your Hands"
+   ]
   },
   {
-   "artist": "HUGEL, Kurd Maverick",
-   "confirmations": [
-    {
-     "source": "Beatport Afro House Top 100 (#9)",
-     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
-    },
-    {
-     "source": "Cr2 Records (offizieller Repost/Edit)",
-     "sourceUrl": "https://soundcloud.com/cr2records/hugel-kurd-maverick-pyhu-put-your-hands-up"
-    }
-   ],
-   "dateAdded": "2026-09-22",
-   "genre": "afro-house",
-   "note": "Platz 9 der Beatport Afro House Charts, zusätzlich von mehreren DJs (u.a. Cr2 Records offiziell) mit eigenen Edits/Reposts aufgegriffen.",
-   "noteEn": "No. 9 on the Beatport Afro House chart, with several DJs (Cr2 Records officially among them) sharing their own edits and reposts.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "PYHU (Put Your Hands Up)"
-  },
-  {
-   "artist": "Joseph Capriati, GENNARO",
-   "confirmations": [
-    {
-     "source": "Beatport House Top 100 (#12)",
-     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
-    },
-    {
-     "source": "EDMTunes",
-     "sourceUrl": "https://www.edmtunes.com/2026/09/joseph-capriati-and-gennaro-unite-for-control-on-metamorfosi/"
-    }
-   ],
-   "dateAdded": "2026-09-22",
-   "genre": "house",
-   "note": "Aktuell Platz 12 der Beatport House Charts, direkt nach Release breit besprochen in der House-/Techno-Fachpresse (u.a. EDMTunes, Dance Rebels).",
-   "noteEn": "Currently No. 12 on the Beatport House chart, widely covered by the house and techno press right after release (EDMTunes, Dance Rebels and others).",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Control"
-  },
-  {
-   "artist": "Adam Port, Keinemusik, Stryv, Malachiii",
-   "confirmations": [
-    {
-     "source": "Beatport Melodic House & Techno Top 100 (#20)",
-     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
-    },
-    {
-     "source": "1001Tracklists (mehrere aktuelle Remix-Plays)",
-     "sourceUrl": "https://www.1001tracklists.com/artist/46fqw1w/adam-port/index.html"
-    }
-   ],
-   "dateAdded": "2026-09-21",
-   "genre": "melodic-house-techno",
-   "note": "Aktuell Platz 20 im Melodic House & Techno Chart; breite Remix-Serie (u.a. Anyma & Cassian, Javi Reina, HILLS, Danny Avila) aktuell in zahlreichen DJ-Sets über 1001Tracklists dokumentiert.",
-   "noteEn": "Currently No. 20 on the Melodic House & Techno chart. The big remix series (Anyma & Cassian, Javi Reina, HILLS, Danny Avila and more) shows up in plenty of DJ sets on 1001Tracklists.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "daily",
-   "title": "Move"
-  },
-  {
+   "title": "The Rapture Pt.III",
    "artist": "&ME, Black Coffee, Keinemusik",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-09-21",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Black Coffee und Keinemusik in einem Track.",
+   "noteEn": "Black Coffee and Keinemusik in one track.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#18)",
@@ -464,36 +598,78 @@
      "source": "1001Tracklists",
      "sourceUrl": "https://www.1001tracklists.com/track/ndgz2f5/andme-black-coffee-the-rapture-pt.iii/index.html"
     }
-   ],
-   "dateAdded": "2026-09-21",
+   ]
+  },
+  {
+   "title": "Move",
+   "artist": "Adam Port, Keinemusik, Stryv, Malachiii",
    "genre": "melodic-house-techno",
-   "note": "Kollab von &ME, Black Coffee und Keinemusik, aktuell Platz 18 im Melodic House & Techno Chart und zusätzlich über 1001Tracklists in DJ-Sets nachgewiesen.",
-   "noteEn": "&ME, Black Coffee and Keinemusik together. Currently No. 18 on the Melodic House & Techno chart and logged in DJ sets on 1001Tracklists.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
    "tier": "daily",
-   "title": "The Rapture Pt.III"
-  },
-  {
-   "artist": "Brunello",
-   "dateAdded": "2026-09-20",
-   "note": "Platz 4 im Melodic House & Techno Chart, Brunello ist aktuell mit zwei Tracks in den Top 10 vertreten.",
-   "noteEn": "No. 4 on the Melodic House & Techno chart. Brunello currently has two tracks in the top 10.",
+   "dateAdded": "2026-09-21",
    "source": "Beatport Melodic House & Techno Top 100",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "title": "Ghost Dance"
+   "note": "Keinemusik-Hit mit einer ganzen Reihe starker Remixe.",
+   "noteEn": "A Keinemusik hit with a whole run of strong remixes.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#20)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "1001Tracklists (mehrere aktuelle Remix-Plays)",
+     "sourceUrl": "https://www.1001tracklists.com/artist/46fqw1w/adam-port/index.html"
+    }
+   ]
   },
   {
+   "title": "Circus",
+   "artist": "Jemi (CA)",
+   "dateAdded": "2026-09-20",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Melodic House von einem Act, der gerade hochkommt.",
+   "noteEn": "Melodic house from an act on the way up."
+  },
+  {
+   "title": "The 11th Hour",
    "artist": "Celia Babini, Brunello",
    "dateAdded": "2026-09-20",
-   "note": "Platz 8 im Melodic House & Techno Chart, zweiter Charteintrag für Brunello in dieser Woche.",
-   "noteEn": "No. 8 on the Melodic House & Techno chart, Brunello's second chart entry this week.",
    "source": "Beatport Melodic House & Techno Top 100",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "title": "The 11th Hour"
+   "note": "Brunellos zweiter Chart-Track, mit Celia Babini.",
+   "noteEn": "Brunello's second chart track, with Celia Babini."
   },
   {
+   "title": "Hey Everybody (Extended Mix)",
+   "artist": "Kolter",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-20",
+   "source": "Beatport House Top 100 (#10)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Treibender House-Groove, läuft viel in Sets.",
+   "noteEn": "Driving house groove, getting lots of plays in sets.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#10)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "1001Tracklists – Franky Rizardo @ Music On, Pacha NYC (2026-10-16)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/27f7fnd1/franky-rizardo-music-on-pacha-nyc-united-states-2026-10-16.html"
+    }
+   ]
+  },
+  {
+   "title": "Shinjuku (Extended Mix)",
    "artist": "Franky Rizardo",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-20",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Der Sommer-Track für viele, läuft immer noch.",
+   "noteEn": "Track of the summer for many, still going.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#8)",
@@ -503,36 +679,27 @@
      "source": "RaveJungle",
      "sourceUrl": "https://www.ravejungle.com/2026/03/22/franky-rizardo-shinjuku/"
     }
-   ],
-   "dateAdded": "2026-09-20",
-   "genre": "house",
-   "note": "Hält sich weiterhin in den Top 10 der Beatport House Charts (Platz 8); von RaveJungle bereits als 'Track of the Summer' gefeiert und seither anhaltend in DJ-Sets/Remixen präsent (u.a. DJ KUBA & NEITAN Remix).",
-   "noteEn": "Holding in the Beatport House top 10 (No. 8). RaveJungle already called it 'Track of the Summer', and it keeps turning up in DJ sets and remixes (including a DJ KUBA & NEITAN remix).",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Shinjuku (Extended Mix)"
+   ]
   },
   {
-   "artist": "Jemi (CA)",
+   "title": "Ghost Dance",
+   "artist": "Brunello",
    "dateAdded": "2026-09-20",
-   "note": "Platz 6 im Melodic House & Techno Chart, aufsteigender Act mit deutlichem Chart-Momentum.",
-   "noteEn": "No. 6 on the Melodic House & Techno chart. A rising act with real chart momentum.",
    "source": "Beatport Melodic House & Techno Top 100",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "title": "Circus"
+   "note": "Brunello gleich zweimal in den Top 10.",
+   "noteEn": "Brunello twice in the top 10."
   },
   {
-   "artist": "Kolter",
+   "title": "Legacy (Assanssan)",
+   "artist": "Rooléh",
+   "genre": "house",
+   "tier": "weekly",
    "dateAdded": "2026-09-20",
-   "note": "Platz 7 der Beatport House Charts, treibender Groove sorgt für viel Airplay in aktuellen Sets.",
-   "noteEn": "No. 7 on the Beatport House chart. Its driving groove is getting a lot of play in current sets.",
    "source": "Beatport House Top 100",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "title": "Hey Everybody (Extended Mix)"
-  },
-  {
-   "artist": "Rooléh",
+   "note": "Rooléh, gerade in den großen Radio-Shows gespielt.",
+   "noteEn": "Rooléh, currently in the big radio shows.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#4)",
@@ -542,63 +709,63 @@
      "source": "1001Tracklists – Defected Radio Show 532",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/1w7fkgnk/rimarkable-defected-radio-show-532-2026-09-18.html"
     }
-   ],
-   "dateAdded": "2026-09-20",
-   "genre": "house",
-   "note": "Aktuell Platz 4 der Beatport House Charts und diese Woche gleich in mehreren großen Radio-Shows gespielt (Defected Radio Show, Pete Tong's Global Dance HQ, BBC Radio 1's Future Dance) – zweiter Rooléh-Track mit Chart-Präsenz in kurzer Zeit.",
-   "noteEn": "Currently No. 4 on the Beatport House chart and played on several big radio shows this week (Defected Radio Show, Pete Tong's Global Dance HQ, BBC Radio 1's Future Dance). Rooléh's second charting track in a short time.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Legacy (Assanssan)"
+   ]
   },
   {
-   "artist": "Armin van Buuren, Silver Panda",
-   "dateAdded": "2026-09-19",
-   "note": "Melodic-Techno-Rework des Depeche-Mode-Klassikers 'Enjoy The Silence', live gespielt u.a. bei EDC Las Vegas, aktuell Top 10 im Chart.",
-   "noteEn": "Melodic techno rework of Depeche Mode's classic 'Enjoy The Silence'. Played live at EDC Las Vegas and others, currently top 10 on the chart.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "title": "Here In My Arms (Enjoy The Silence)"
-  },
-  {
-   "artist": "Route 94, Mellizos",
-   "dateAdded": "2026-09-19",
-   "note": "Aktuell Top 15 der Beatport House Charts, gefeierter Defected-Remix mit viel Zuspruch in DJ-Sets.",
-   "noteEn": "Currently top 15 on the Beatport House chart. A well-loved Defected remix that's getting a lot of DJ support.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "title": "4Get The Girl (Mellizos Extended Remix)"
-  },
-  {
+   "title": "Funky Feeling (Extended Mix)",
    "artist": "Simes",
    "dateAdded": "2026-09-19",
-   "note": "Aktuell Top 10 der Beatport House Charts, grooviger Funky-House-Track mit steigender Präsenz in Sets.",
-   "noteEn": "Currently top 10 on the Beatport House chart. A groovy funky house track turning up in more and more sets.",
    "source": "Beatport House Top 100",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "title": "Funky Feeling (Extended Mix)"
+   "note": "Funky House, genau wie der Name verspricht.",
+   "noteEn": "Funky house, exactly what the name promises."
   },
   {
-   "artist": "Volkoder, Anyma (ofc)",
+   "title": "Here In My Arms (Enjoy The Silence)",
+   "artist": "Armin van Buuren, Silver Panda",
    "dateAdded": "2026-09-19",
-   "note": "Debütsingle auf Anymas neuem ÆDEN-Label, aktuell Top 10 im Melodic House & Techno Chart.",
-   "noteEn": "Debut single on Anyma's new ÆDEN label, currently top 10 on the Melodic House & Techno chart.",
    "source": "Beatport Melodic House & Techno Top 100",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "title": "Other Dimension (Extended Mix)"
+   "note": "Enjoy The Silence als Melodic-Techno-Rework.",
+   "noteEn": "Enjoy The Silence as a melodic techno rework."
   },
   {
+   "title": "4Get The Girl (Mellizos Extended Remix)",
+   "artist": "Route 94, Mellizos",
+   "dateAdded": "2026-09-19",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Defected-Remix mit viel Liebe in den Sets.",
+   "noteEn": "A Defected remix that DJs love right now."
+  },
+  {
+   "title": "Other Dimension (Extended Mix)",
+   "artist": "Volkoder, Anyma (ofc)",
+   "dateAdded": "2026-09-19",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Erster Release auf Anymas neuem Label ÆDEN.",
+   "noteEn": "First release on Anyma's new ÆDEN label."
+  },
+  {
+   "title": "Movin' To The Sun",
    "artist": "Ultra Naté, HUGEL & Imael Angel",
    "dateAdded": "2026-09-18",
-   "note": "Premiere bei Coachella, laut EDM All Day einer der meistgeshazamten Songs weltweit – Lead-Single von HUGELs Debütalbum und fester Bestandteil aktueller Sommersets.",
-   "noteEn": "Premiered at Coachella and, according to EDM All Day, one of the most Shazamed songs worldwide. Lead single from HUGEL's debut album and a fixture in this summer's sets.",
    "source": "EDM All Day (Beatport Chart Recap)",
    "sourceUrl": "https://edmallday.com/inside-the-beatport-top-10-hugel-cloonee-prospa-and-wu-tang-clan-rule-august/",
-   "title": "Movin' To The Sun"
+   "note": "Sonniger House mit Ultra Natés Stimme, Sommer pur.",
+   "noteEn": "Sunny house with Ultra Naté's voice, pure summer."
   },
   {
+   "title": "Come To Life",
    "artist": "Cassian, AR/CO",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-17",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Großer Melodic-Sommer-ID, jetzt offiziell draußen.",
+   "noteEn": "A big melodic summer ID, now officially out.",
    "confirmations": [
     {
      "source": "Beatport Melodic House & Techno Top 100 (#3)",
@@ -608,18 +775,40 @@
      "source": "EDMTunes",
      "sourceUrl": "https://www.edmtunes.com/2026/07/cassian-and-ar-co-finally-drop-their-massive-summer-id-come-to-life/"
     }
-   ],
-   "dateAdded": "2026-09-17",
-   "genre": "melodic-house-techno",
-   "note": "Top 5 im Melodic House & Techno Chart, von EDMTunes als 'massive summer ID' gefeiert und in mehreren DJ-Tracklists dokumentiert.",
-   "noteEn": "Top 5 on the Melodic House & Techno chart, hailed by EDMTunes as a 'massive summer ID' and logged in several DJ tracklists.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Come To Life"
+   ]
   },
   {
+   "title": "Good Girl",
+   "artist": "Tristan Henry, Cloonee, Prospa",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-09-16",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Cloonee und Prospa wieder zusammen: Sommer-Floorfiller.",
+   "noteEn": "Cloonee and Prospa again: a summer floor filler."
+  },
+  {
+   "title": "Mundian To Bach Ke (Dario Nunez & Juany Bravo Extended Remix)",
+   "artist": "Panjabi MC, Dario Nunez, Juany Bravo",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-09-16",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Bhangra-Klassiker als Afro-House, holt jeden ab.",
+   "noteEn": "A bhangra classic as afro house; gets everyone moving."
+  },
+  {
+   "title": "Champagne",
    "artist": "Francis Mercier, MASSALA, LexBlaze",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-16",
+   "source": "Beatport Afro House / DJ-Pool Recap",
+   "sourceUrl": "https://edmidentity.com/2026/06/20/francis-champagne-lakay-home/",
+   "note": "Afro-House-Vorbote von Francis Merciers Debütalbum.",
+   "noteEn": "Afro house teaser for Francis Mercier's debut album.",
    "confirmations": [
     {
      "source": "EDM Identity",
@@ -629,125 +818,18 @@
      "source": "Electronic Groove",
      "sourceUrl": "https://electronicgroove.com/francis-mercier-introduces-debut-album-lakay-with-new-single-champagne/"
     }
-   ],
-   "dateAdded": "2026-09-16",
-   "genre": "afro-house",
-   "note": "Von mehreren Fachmedien (EDM Identity, Electronic Groove, Unorthodox Reviews) als starker Vorbote von Merciers Debütalbum 'Lakay' gefeiert – viel Community-Talk trotz fehlender Top-Chart-Platzierung.",
-   "noteEn": "Praised by EDM Identity, Electronic Groove and Unorthodox Reviews as a strong taster for Mercier's debut album 'Lakay'. Lots of community buzz despite no top chart spot.",
-   "source": "Beatport Afro House / DJ-Pool Recap",
-   "sourceUrl": "https://edmidentity.com/2026/06/20/francis-champagne-lakay-home/",
-   "tier": "weekly",
-   "title": "Champagne"
+   ]
   },
   {
-   "artist": "Panjabi MC, Dario Nunez, Juany Bravo",
-   "dateAdded": "2026-09-16",
-   "genre": "afro-house",
-   "note": "Bhangra-Klassiker als Afro-House-Rework, Nostalgie-Faktor sorgt für starke Floor-Reaktionen in aktuellen Sets.",
-   "noteEn": "Bhangra classic reworked as afro house. The nostalgia factor gets big reactions on the floor right now.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "daily",
-   "title": "Mundian To Bach Ke (Dario Nunez & Juany Bravo Extended Remix)"
-  },
-  {
-   "artist": "Tristan Henry, Cloonee, Prospa",
-   "dateAdded": "2026-09-16",
-   "genre": "house",
-   "note": "Platz 7 der Beatport House Charts, direktes Wiedersehen von Cloonee & Prospa nach 'Free Your Mind' – als Sommer-Floorfiller gefeiert.",
-   "noteEn": "No. 7 on the Beatport House chart. Cloonee & Prospa again right after 'Free Your Mind', celebrated as a summer floor filler.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "daily",
-   "title": "Good Girl"
-  },
-  {
-   "artist": "Âme, RY X",
-   "confirmations": [
-    {
-     "source": "Beatport Melodic House & Techno Top 100 (#5)",
-     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
-    },
-    {
-     "source": "Electronic Groove",
-     "sourceUrl": "https://electronicgroove.com/ivory-reworks-ame-and-ry-xs-love-is-the-dance/"
-    }
-   ],
-   "dateAdded": "2026-09-15",
-   "genre": "melodic-house-techno",
-   "note": "Top 5 im Melodic House & Techno Chart, zusätzlich von Electronic Groove redaktionell vorgestellt.",
-   "noteEn": "Top 5 on the Melodic House & Techno chart and featured by Electronic Groove.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Love Is The Dance (Ivory Remix)"
-  },
-  {
-   "artist": "Jimi Jules, Modern Tales",
-   "confirmations": [
-    {
-     "source": "Beatport Melodic House & Techno Top 100 (#1)",
-     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
-    },
-    {
-     "source": "1001Tracklists",
-     "sourceUrl": "https://www.1001tracklists.com/track/gw07r9v5/jimi-jules-whisper-to-me/index.html"
-    }
-   ],
-   "dateAdded": "2026-09-15",
-   "genre": "melodic-house-techno",
-   "note": "Aktuell Platz 1 im Melodic House & Techno Chart und bereits in mehreren DJ-Sets über 1001Tracklists dokumentiert.",
-   "noteEn": "Currently No. 1 on the Melodic House & Techno chart and already logged in several DJ sets on 1001Tracklists.",
-   "source": "Beatport Melodic House & Techno Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Whisper To Me"
-  },
-  {
-   "artist": "Lizwi, Aaron Sevilla, Brøder, SENATVS",
-   "confirmations": [
-    {
-     "source": "Beatport Afro House Top 100 (#3)",
-     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
-    },
-    {
-     "source": "Traxsource Afro House Top",
-     "sourceUrl": "https://www.traxsource.com/genre/27/afro-house/top"
-    }
-   ],
-   "dateAdded": "2026-09-15",
-   "genre": "afro-house",
-   "note": "Platz 3 der Beatport Afro House Charts und ebenfalls hoch in den Traxsource Afro House Charts platziert – über zwei unabhängige Plattformen bestätigt.",
-   "noteEn": "No. 3 on the Beatport Afro House chart and high up the Traxsource Afro House chart too. Confirmed on two independent platforms.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "weekly",
-   "title": "Pump up the Jam"
-  },
-  {
-   "artist": "Lost Desert",
-   "dateAdded": "2026-09-15",
-   "genre": "afro-house",
-   "note": "Platz 3 der Afro House Charts.",
-   "noteEn": "No. 3 on the Afro House chart.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "daily",
-   "title": "Ngai"
-  },
-  {
-   "artist": "Rooléh",
-   "dateAdded": "2026-09-15",
-   "genre": "house",
-   "note": "Platz 4 der Beatport House Charts.",
-   "noteEn": "No. 4 on the Beatport House chart.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "daily",
-   "title": "Want To Know"
-  },
-  {
+   "title": "Sun is Shining (Lovelee Dae)",
    "artist": "Tommy Phillips",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-15",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Gute-Laune-House, seit Wochen in den Top 2.",
+   "noteEn": "Feel-good house, in the top 2 for weeks.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#2)",
@@ -757,72 +839,114 @@
      "source": "EDM Sauce",
      "sourceUrl": "https://www.edmsauce.com/2026/08/30/tommy-phillips-sun-is-shining-lovelee-dae-is-the-new-beatport-no-1/"
     }
-   ],
-   "dateAdded": "2026-09-15",
-   "genre": "house",
-   "note": "Hält sich seit Wochen in den Top 2 der Beatport House Charts und wurde von EDM Sauce mehrfach als Chart-Shooting-Star begleitet.",
-   "noteEn": "Holding in the top 2 of the Beatport House chart for weeks, with EDM Sauce repeatedly flagging it as a chart riser.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Sun is Shining (Lovelee Dae)"
+   ]
   },
   {
-   "artist": "Adam Beyer, Argy, Alok",
+   "title": "Want To Know",
+   "artist": "Rooléh",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-09-15",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Der zweite Rooléh-Track in den Top 5.",
+   "noteEn": "The second Rooléh track in the top 5."
+  },
+  {
+   "title": "Whisper To Me",
+   "artist": "Jimi Jules, Modern Tales",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-15",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Aktuell die Nummer 1 im Melodic House & Techno.",
+   "noteEn": "Currently number one in melodic house & techno.",
    "confirmations": [
     {
-     "source": "Beatport Melodic House & Techno Top 100 (#2)",
+     "source": "Beatport Melodic House & Techno Top 100 (#1)",
      "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
     },
     {
-     "source": "DJ Mag",
-     "sourceUrl": "https://djmag.com/news/alok-adam-beyer-and-argy-link-new-single-keep"
+     "source": "1001Tracklists",
+     "sourceUrl": "https://www.1001tracklists.com/track/gw07r9v5/jimi-jules-whisper-to-me/index.html"
     }
-   ],
-   "dateAdded": "2026-09-14",
+   ]
+  },
+  {
+   "title": "Love Is The Dance (Ivory Remix)",
+   "artist": "Âme, RY X",
    "genre": "melodic-house-techno",
-   "note": "Platz 2 im Melodic House & Techno Chart, ausführlich besprochen von DJ Mag und EDMTunes – eine der meistdiskutierten Kollabs der Woche.",
-   "noteEn": "No. 2 on the Melodic House & Techno chart and covered in depth by DJ Mag and EDMTunes. One of the most talked-about collabs of the week.",
+   "tier": "weekly",
+   "dateAdded": "2026-09-15",
    "source": "Beatport Melodic House & Techno Top 100",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
-   "tier": "weekly",
-   "title": "Keep Up"
+   "note": "Âme und RY X im Ivory-Remix.",
+   "noteEn": "Âme and RY X, remixed by Ivory.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "Electronic Groove",
+     "sourceUrl": "https://electronicgroove.com/ivory-reworks-ame-and-ry-xs-love-is-the-dance/"
+    }
+   ]
   },
   {
-   "artist": "Aldo, 4Step, Ochok",
-   "dateAdded": "2026-09-14",
+   "title": "Pump up the Jam",
+   "artist": "Lizwi, Aaron Sevilla, Brøder, SENATVS",
    "genre": "afro-house",
-   "note": "Top 5 der Beatport Afro-House-Charts, Zeichen für die anhaltende Stärke des Genres.",
-   "noteEn": "Top 5 on the Beatport Afro House chart, more proof the genre is still going strong.",
+   "tier": "weekly",
+   "dateAdded": "2026-09-15",
    "source": "Beatport Afro House Top 100",
    "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "daily",
-   "title": "wtf"
+   "note": "Pump up the Jam als Afro-House-Version.",
+   "noteEn": "Pump up the Jam in an afro house version.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    },
+    {
+     "source": "Traxsource Afro House Top",
+     "sourceUrl": "https://www.traxsource.com/genre/27/afro-house/top"
+    }
+   ]
   },
   {
-   "artist": "Avicii",
-   "dateAdded": "2026-09-14",
-   "genre": "house",
-   "note": "Laut Tracklist-Auswertung meistgespielter Track auf Tomorrowland 2026 Weekend 1 – Progressive-House-Klassiker bleibt Festival-Standard.",
-   "noteEn": "Most played track of Tomorrowland 2026 weekend 1 according to tracklist data. The progressive house classic is still a festival staple.",
-   "source": "1001Tracklists (via Tomorrowland 2026 W1 Recap)",
-   "sourceUrl": "https://edmhousenetwork.com/the-most-played-tracks-from-tomorrowland-2026-weekend-1/",
+   "title": "Ngai",
+   "artist": "Lost Desert",
+   "genre": "afro-house",
    "tier": "daily",
-   "title": "Levels"
+   "dateAdded": "2026-09-15",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House von Lost Desert, ganz oben in den Charts.",
+   "noteEn": "Afro house from Lost Desert, high in the charts."
   },
   {
+   "title": "Woops (Dimitri Vegas & Junkie Kid Remix / BRANDON Remix)",
    "artist": "Bountyhunter",
-   "dateAdded": "2026-09-14",
    "genre": "house",
-   "note": "Ebenfalls unter den meistgespielten Tracks von Tomorrowland 2026 W1 – Remix eines 1993er Rave-Klassikers als Mainstage-Tool.",
-   "noteEn": "Another of the most played tracks at Tomorrowland 2026 W1. A remix of a 1993 rave classic, built as a main stage tool.",
+   "tier": "daily",
+   "dateAdded": "2026-09-14",
    "source": "1001Tracklists (via Tomorrowland 2026 W1 Recap)",
    "sourceUrl": "https://edmhousenetwork.com/the-most-played-tracks-from-tomorrowland-2026-weekend-1/",
-   "tier": "daily",
-   "title": "Woops (Dimitri Vegas & Junkie Kid Remix / BRANDON Remix)"
+   "note": "Rave-Klassiker von 1993 als Mainstage-Remix.",
+   "noteEn": "A 1993 rave classic as a main stage remix."
   },
   {
+   "title": "Jamaican (Bam Bam)",
    "artist": "HUGEL, SOLTO",
+   "genre": "afro-house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-14",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Der Afro-House-Track der Woche, auch im Radio.",
+   "noteEn": "The afro house track of the week, on the radio too.",
    "confirmations": [
     {
      "source": "Beatport Afro House Top 100 (#1)",
@@ -832,61 +956,83 @@
      "source": "Official Charts",
      "sourceUrl": "https://www.officialcharts.com/songs/hugelsolto-fr-jamaican-bam-bam/"
     }
-   ],
-   "dateAdded": "2026-09-14",
-   "genre": "afro-house",
-   "note": "Seit einer Woche unangefochten auf Platz 1 der Beatport Afro House Charts, plus Mainstream-Crossover in die Official Charts und breite Community-Diskussion (u.a. BuzzJack-Forum) – der Afro-House-Track der Woche.",
-   "noteEn": "Undisputed No. 1 on the Beatport Afro House chart for a week, plus a mainstream crossover into the Official Charts and plenty of community talk (BuzzJack forum and more). The afro house track of the week.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   ]
+  },
+  {
+   "title": "Keep Up",
+   "artist": "Adam Beyer, Argy, Alok",
+   "genre": "melodic-house-techno",
    "tier": "weekly",
-   "title": "Jamaican (Bam Bam)"
-  },
-  {
-   "artist": "Rivo, Disclosure, Eliza Doolittle",
    "dateAdded": "2026-09-14",
-   "genre": "afro-house",
-   "note": "Disclosure-Track neu gechartet durch Afro-House-Rework, genreübergreifend beliebt.",
-   "noteEn": "The Disclosure track is back in the charts thanks to an afro house rework that works across genres.",
-   "source": "Beatport Afro House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
-   "tier": "daily",
-   "title": "You & Me (Rivo Extended Mix)"
-  },
-  {
-   "artist": "Adam Ten",
-   "dateAdded": "2026-09-13",
-   "genre": "house",
-   "note": "Als \"Disco-House-Heater\" mit Piano-Elementen empfohlen, guter Floor-Filler.",
-   "noteEn": "Tipped as a piano-driven disco house heater. A reliable floor filler.",
-   "source": "BPM Bulletin",
-   "sourceUrl": "https://bpmbulletin.substack.com/p/2202026",
-   "tier": "daily",
-   "title": "Million Pieces (Malive Remix)"
-  },
-  {
-   "artist": "ANOTR & 54 Ultra",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Beyer, Argy und Alok: Techno-Kollab der Woche.",
+   "noteEn": "Beyer, Argy and Alok: the techno collab of the week.",
    "confirmations": [
     {
-     "source": "Beatport House Top 100 (#5)",
-     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+     "source": "Beatport Melodic House & Techno Top 100 (#2)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
     },
     {
-     "source": "The Singles Jukebox",
-     "sourceUrl": "https://thesinglesjukebox.com/anotr-ft-54-ultra-talk-to-you/"
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/alok-adam-beyer-and-argy-link-new-single-keep"
     }
-   ],
-   "dateAdded": "2026-09-13",
-   "genre": "house",
-   "note": "Top 5 der Beatport House Charts, zusätzlich von der Musikpresse besprochen (u.a. The Singles Jukebox, The Groove Cartel).",
-   "noteEn": "Top 5 on the Beatport House chart, with press coverage from The Singles Jukebox and The Groove Cartel among others.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Talk To You"
+   ]
   },
   {
+   "title": "You & Me (Rivo Extended Mix)",
+   "artist": "Rivo, Disclosure, Eliza Doolittle",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-09-14",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Disclosure-Song neu als Afro-House-Rework.",
+   "noteEn": "A Disclosure song reworked as afro house."
+  },
+  {
+   "title": "Levels",
+   "artist": "Avicii",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-09-14",
+   "source": "1001Tracklists (via Tomorrowland 2026 W1 Recap)",
+   "sourceUrl": "https://edmhousenetwork.com/the-most-played-tracks-from-tomorrowland-2026-weekend-1/",
+   "note": "Der Festival-Klassiker schlechthin, immer noch.",
+   "noteEn": "The festival classic, still going strong."
+  },
+  {
+   "title": "wtf",
+   "artist": "Aldo, 4Step, Ochok",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-09-14",
+   "source": "Beatport Afro House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Afro-House mit frechem Titel, top 5 in den Charts.",
+   "noteEn": "Afro house with a cheeky title, top 5 in the charts."
+  },
+  {
+   "title": "Million Pieces (Malive Remix)",
+   "artist": "Adam Ten",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-09-13",
+   "source": "BPM Bulletin",
+   "sourceUrl": "https://bpmbulletin.substack.com/p/2202026",
+   "note": "Disco-House mit Piano, macht die Tanzfläche voll.",
+   "noteEn": "Disco house with piano that fills the floor."
+  },
+  {
+   "title": "1997",
    "artist": "Beave",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-13",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Seit einer Woche die Nummer 1 im House.",
+   "noteEn": "Number one in house for a week now.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#1)",
@@ -896,18 +1042,29 @@
      "source": "EDM Sauce",
      "sourceUrl": "https://www.edmsauce.com/2026/09/02/beaves-long-teased-1997-storms-into-the-beatport-top-three/"
     }
-   ],
-   "dateAdded": "2026-09-13",
-   "genre": "house",
-   "note": "Seit einer Woche ungeschlagen auf Platz 1 der Beatport House Charts – zusätzlich von der Fachpresse (EDM Sauce) mehrfach als Chart-Shooting-Star begleitet.",
-   "noteEn": "Unbeaten at No. 1 on the Beatport House chart for a week, with EDM Sauce repeatedly flagging it as a chart riser.",
-   "source": "Beatport House Top 100",
-   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "1997"
+   ]
   },
   {
+   "title": "Never Alone",
+   "artist": "Odd Mob",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-09-13",
+   "source": "BPM Bulletin",
+   "sourceUrl": "https://bpmbulletin.substack.com/p/2202026",
+   "note": "Tech House, wie er sein soll.",
+   "noteEn": "Tech house the way it should be."
+  },
+  {
+   "title": "Free Your Mind",
    "artist": "Cloonee & Prospa",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-09-13",
+   "source": "Beatport House Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Cloonee und Prospa, gerade auch bei Circoloco.",
+   "noteEn": "Cloonee and Prospa, heard at Circoloco too.",
    "confirmations": [
     {
      "source": "Beatport House Top 100 (#3)",
@@ -917,37 +1074,39 @@
      "source": "1001Tracklists (gespielt bei Circoloco)",
      "sourceUrl": "https://www.1001tracklists.com/track/ffh0prbx/cloonee-prospa-free-your-mind/index.html"
     }
-   ],
-   "dateAdded": "2026-09-13",
+   ]
+  },
+  {
+   "title": "Talk To You",
+   "artist": "ANOTR & 54 Ultra",
    "genre": "house",
-   "note": "Top 3 der Beatport House Charts und bereits mehrfach in DJ-Sets dokumentiert (u.a. Circoloco) – klarer Wochen-Favorit von Cloonee & Prospa.",
-   "noteEn": "Top 3 on the Beatport House chart and already logged in multiple DJ sets (Circoloco among them). A clear favourite of the week from Cloonee & Prospa.",
+   "tier": "weekly",
+   "dateAdded": "2026-09-13",
    "source": "Beatport House Top 100",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
-   "tier": "weekly",
-   "title": "Free Your Mind"
+   "note": "ANOTR-Groove, gerade in den House-Top-5.",
+   "noteEn": "An ANOTR groove, in the house top 5 right now.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "The Singles Jukebox",
+     "sourceUrl": "https://thesinglesjukebox.com/anotr-ft-54-ultra-talk-to-you/"
+    }
+   ]
   },
   {
-   "artist": "Odd Mob",
-   "dateAdded": "2026-09-13",
-   "genre": "house",
-   "note": "Beschrieben als \"Tech House at its finest\", aktuell als Set-Empfehlung genannt.",
-   "noteEn": "Described as 'tech house at its finest' and currently recommended as a set pick.",
-   "source": "BPM Bulletin",
-   "sourceUrl": "https://bpmbulletin.substack.com/p/2202026",
-   "tier": "daily",
-   "title": "Never Alone"
-  },
-  {
+   "title": "Opalite (Chris Lake Remix)",
    "artist": "Taylor Swift",
-   "dateAdded": "2026-09-13",
    "genre": "house",
-   "note": "Funky House-Remix eines Mainstream-Hits, macht aktuell in Sets die Runde wegen Wiedererkennungswert plus Groove.",
-   "noteEn": "Funky house remix of a mainstream hit, doing the rounds in sets thanks to instant recognition plus groove.",
+   "tier": "daily",
+   "dateAdded": "2026-09-13",
    "source": "BPM Bulletin",
    "sourceUrl": "https://bpmbulletin.substack.com/p/2202026",
-   "tier": "daily",
-   "title": "Opalite (Chris Lake Remix)"
+   "note": "Taylor Swift als Chris-Lake-Remix: funky und erkennbar.",
+   "noteEn": "Taylor Swift via Chris Lake: funky and instantly recognisable."
   }
  ]
 }

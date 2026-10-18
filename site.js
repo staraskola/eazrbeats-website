@@ -8,6 +8,7 @@ const T = {
     navAbout: 'About',
     navEvents: 'Events',
     navMixes: 'Mixes',
+    navNext: 'Next',
     navKontakt: 'Kontakt',
     menu: 'Menü',
     footerDatenschutz: "DATENSCHUTZ",
@@ -45,6 +46,7 @@ const T = {
     teaserAboutBtn: 'Über uns →',
     teaserEventsText: 'Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.',
     teaserEventsBtn: 'Zu den Events →',
+    teaserNextBtn: 'Was kommt →',
 
     // about
     aboutText: 'EAZr Beats Collective ist ein Münchner House- und Techno-Kollektiv. Wir spielen House, Melodic House, Afro und Latin House, bauen eigene Formate auf und arbeiten an eigenen Tracks. Kein Label, keine Agentur, sondern Leute, die Bock auf gute Abende haben.',
@@ -83,6 +85,8 @@ const T = {
     eventsPastEmptyText: 'Hier landen Fotos, Videos und Tracklists, sobald die ersten Abende gelaufen sind.',
     eventsNotify: 'Keine Termine verpassen: Neue Events kündigen wir zuerst auf Instagram an.',
 
+    // next (events + mixes)
+    nextText: 'Was als Nächstes kommt: unsere eigenen Abende und die ersten Mixes.',
     // mixes
     mixesText: 'Sets, Mitschnitte und Studio-Sessions. Die ersten Mixes sind in Arbeit.',
     mixesSoonTitle: 'Mix 01 · in Arbeit',
@@ -136,6 +140,7 @@ const T = {
     navAbout: 'About',
     navEvents: 'Events',
     navMixes: 'Mixes',
+    navNext: 'Next',
     navKontakt: 'Contact',
     menu: 'Menu',
     footerDatenschutz: "PRIVACY",
@@ -172,6 +177,7 @@ const T = {
     teaserAboutBtn: 'About us →',
     teaserEventsText: 'Our own open air series from summer 2027, plus filmed sessions.',
     teaserEventsBtn: 'See events →',
+    teaserNextBtn: "What's next →",
 
     aboutText: "EAZr Beats Collective is a house and techno collective from Munich. We play house, melodic, afro and latin house, build our own formats and work on our own music. No label, no agency, just people who care about a good night out.",
     aboutWhatTitle: 'What we do',
@@ -208,6 +214,7 @@ const T = {
     eventsPastEmptyText: "Photos, videos and tracklists will land here after our first nights.",
     eventsNotify: "Don't miss a date: new events go up on Instagram first.",
 
+    nextText: "What's coming up: our own nights and the first mixes.",
     mixesText: 'Sets, recordings and studio sessions. The first mixes are in the works.',
     mixesSoonTitle: 'Mix 01 · in the works',
     mixesSoonText: "Our first mix lands here once it's done. Until then, catch Road to Live on Instagram.",
