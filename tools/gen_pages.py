@@ -17,6 +17,22 @@ INSTA = 'https://www.instagram.com/eazrbeats/'
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
+# Brevo signup form (list "Newsletter", double opt-in). Only the action URL is used;
+# the form itself is ours, so no Brevo script or styles load until someone signs up.
+BREVO_FORM = 'https://271e78d8.sibforms.com/serve/MUIFAJSYStwrJDqLy42Ecrc5qfbu952H3tunCLqEOj2qNEo-uMQXekhmfnDc89IZYDDQvP3DT4KTqPFPZoBFeAFUcrWhE9eK-rjQWXlJhWRLPuFXXxIVjP0kBSRK1CL7qstSoJLpIOjHAXKMxRgxGYDAiAdfOyD74gIofvVEdhAnrJvCYAsvdI4UVkxunpNlYs7gao6sTT03_pbjiA=='
+
+def news_form(uid):
+    return f'''<form class="news-form" action="{BREVO_FORM}" method="POST" data-news-form>
+        <label class="sr-only" for="news-{uid}" data-i18n="newsLabel">E-Mail-Adresse</label>
+        <div class="news-row">
+          <input type="email" id="news-{uid}" name="EMAIL" required autocomplete="email" placeholder="name@mail.de">
+          <button class="btn" type="submit" data-i18n="joinNewsBtn">Anmelden</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="de">
+        <p class="news-msg" role="status" aria-live="polite"></p>
+        <p class="news-note" data-i18n="newsNote"></p>
+      </form>'''
 
 def page(name, title, desc, canon, body, scripts=()):
     nav = [('about', 'about.html', 'navAbout', 'About')]
@@ -171,7 +187,7 @@ start = f'''<section class="hero" id="top">
       <span class="kicker">04</span>
       <h3>Newsletter</h3>
       <p data-i18n="joinNewsText"></p>
-      <a class="btn ghost" href="mailto:{NEWS}?subject=Newsletter%20anmelden" data-i18n="joinNewsBtn">Anmelden</a>
+      {news_form('home')}
     </div>
   </div>
 </section>
@@ -426,7 +442,7 @@ kontakt = f'''<div class="band first">
     <p class="booking-note" data-i18n="kontaktBooking"></p>
   </div>
   <div class="cards" style="margin-top:14px">
-    <div class="card"><span class="kicker">newsletter</span><h3>News</h3><p data-i18n="joinNewsText"></p><a class="btn ghost" href="mailto:{NEWS}?subject=Newsletter%20anmelden" data-i18n="joinNewsBtn">Anmelden</a></div>
+    <div class="card"><span class="kicker">newsletter</span><h3>News</h3><p data-i18n="joinNewsText"></p>{news_form('kontakt')}</div>
     <div class="card"><span class="kicker">instagram</span><h3>@eazrbeats</h3><p data-i18n="joinFollowText"></p><a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">Instagram ↗</a></div>
   </div>
 </section>

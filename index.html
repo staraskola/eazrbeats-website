@@ -129,7 +129,17 @@
       <span class="kicker">04</span>
       <h3>Newsletter</h3>
       <p data-i18n="joinNewsText">Neue Events, Mixes und Crate-Highlights direkt ins Postfach.</p>
-      <a class="btn ghost" href="mailto:news@eazrbeats.de?subject=Newsletter%20anmelden" data-i18n="joinNewsBtn">Anmelden</a>
+      <form class="news-form" action="https://271e78d8.sibforms.com/serve/MUIFAJSYStwrJDqLy42Ecrc5qfbu952H3tunCLqEOj2qNEo-uMQXekhmfnDc89IZYDDQvP3DT4KTqPFPZoBFeAFUcrWhE9eK-rjQWXlJhWRLPuFXXxIVjP0kBSRK1CL7qstSoJLpIOjHAXKMxRgxGYDAiAdfOyD74gIofvVEdhAnrJvCYAsvdI4UVkxunpNlYs7gao6sTT03_pbjiA==" method="POST" data-news-form>
+        <label class="sr-only" for="news-home" data-i18n="newsLabel">E-Mail-Adresse</label>
+        <div class="news-row">
+          <input type="email" id="news-home" name="EMAIL" required autocomplete="email" placeholder="name@mail.de">
+          <button class="btn" type="submit" data-i18n="joinNewsBtn">Anmelden</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="de">
+        <p class="news-msg" role="status" aria-live="polite"></p>
+        <p class="news-note" data-i18n="newsNote">Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz.html#newsletter">Datenschutz</a></p>
+      </form>
     </div>
   </div>
 </section>

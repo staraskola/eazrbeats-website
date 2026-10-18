@@ -42,6 +42,11 @@ const T = {
     joinMixBtn: 'Mix schicken',
     joinNewsText: 'Neue Events, Mixes und Crate-Highlights direkt ins Postfach.',
     joinNewsBtn: 'Anmelden',
+    newsLabel: 'E-Mail-Adresse',
+    newsNote: 'Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz.html#newsletter">Datenschutz</a>',
+    newsOk: 'Fast geschafft: Bitte bestätige die Mail in deinem Postfach.',
+    newsErr: 'Das hat nicht geklappt. Versuch es nochmal oder schreib an news@eazrbeats.de.',
+    newsSending: 'Wird gesendet …',
     teaserAboutText: 'Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.',
     teaserAboutBtn: 'Über uns →',
     teaserEventsText: 'Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.',
@@ -173,6 +178,11 @@ const T = {
     joinMixBtn: 'Send your mix',
     joinNewsText: "New events, mixes and Crate highlights, straight to your inbox.",
     joinNewsBtn: 'Sign up',
+    newsLabel: 'Email address',
+    newsNote: 'No spam, unsubscribe anytime. You will get an email to confirm first. <a href="datenschutz.html#newsletter">Privacy</a>',
+    newsOk: 'Almost there: please confirm the email in your inbox.',
+    newsErr: "That didn't work. Try again or write to news@eazrbeats.de.",
+    newsSending: 'Sending …',
     teaserAboutText: "A house collective from Munich. Who we are and what we're building.",
     teaserAboutBtn: 'About us →',
     teaserEventsText: 'Our own open air series from summer 2027, plus filmed sessions.',
@@ -366,3 +376,20 @@ function toTop() {
 }
 const navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
 if (!navEntry || navEntry.type !== 'back_forward') toTop();
+
+// Newsletter: send the form to Brevo in the background and answer on the page.
+// The response is opaque (no-cors), so success means "sent"; Brevo then mails the confirmation link.
+document.querySelectorAll('[data-news-form]').forEach(form => {
+  const msg = form.querySelector('.news-msg');
+  const btn = form.querySelector('button');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (form.email_address_check.value) return;
+    form.locale.value = lang;
+    btn.disabled = true;
+    msg.textContent = T[lang].newsSending;
+    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+      .then(() => { msg.textContent = T[lang].newsOk; form.EMAIL.value = ''; form.classList.add('sent'); })
+      .catch(() => { msg.textContent = T[lang].newsErr; btn.disabled = false; });
+  });
+});
