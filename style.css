@@ -128,7 +128,8 @@
 
   @media (max-width: 760px) {
     .nav { position: relative; padding: 0 12px; }
-    .nav .brand span { display: none; }
+    .nav .brand { gap: 8px; }
+    .nav .brand span { font-size: 8px; letter-spacing: 2px; white-space: nowrap; }
     .menu-btn { display: inline-block; }
     .nav-links {
       display: none; position: absolute; top: 100%; left: 0; right: 0;
