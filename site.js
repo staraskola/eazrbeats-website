@@ -8,6 +8,7 @@ const T = {
     navAbout: 'About',
     navEvents: 'Events',
     navMixes: 'Mixes',
+    navNext: 'Next',
     navKontakt: 'Kontakt',
     menu: 'Menü',
     footerDatenschutz: "DATENSCHUTZ",
@@ -41,10 +42,16 @@ const T = {
     joinMixBtn: 'Mix schicken',
     joinNewsText: 'Neue Events, Mixes und Crate-Highlights direkt ins Postfach.',
     joinNewsBtn: 'Anmelden',
+    newsLabel: 'E-Mail-Adresse',
+    newsNote: 'Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz.html#newsletter">Datenschutz</a>',
+    newsOk: 'Fast geschafft: Bitte bestätige die Mail in deinem Postfach.',
+    newsErr: 'Das hat nicht geklappt. Versuch es nochmal oder schreib an news@eazrbeats.de.',
+    newsSending: 'Wird gesendet …',
     teaserAboutText: 'Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.',
     teaserAboutBtn: 'Über uns →',
     teaserEventsText: 'Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.',
     teaserEventsBtn: 'Zu den Events →',
+    teaserNextBtn: 'Was kommt →',
 
     // about
     aboutText: 'EAZr Beats Collective ist ein Münchner House- und Techno-Kollektiv. Wir spielen House, Melodic House, Afro und Latin House, bauen eigene Formate auf und arbeiten an eigenen Tracks. Kein Label, keine Agentur, sondern Leute, die Bock auf gute Abende haben.',
@@ -83,6 +90,8 @@ const T = {
     eventsPastEmptyText: 'Hier landen Fotos, Videos und Tracklists, sobald die ersten Abende gelaufen sind.',
     eventsNotify: 'Keine Termine verpassen: Neue Events kündigen wir zuerst auf Instagram an.',
 
+    // next (events + mixes)
+    nextText: 'Was als Nächstes kommt: unsere eigenen Abende und die ersten Mixes.',
     // mixes
     mixesText: 'Sets, Mitschnitte und Studio-Sessions. Die ersten Mixes sind in Arbeit.',
     mixesSoonTitle: 'Mix 01 · in Arbeit',
@@ -136,6 +145,7 @@ const T = {
     navAbout: 'About',
     navEvents: 'Events',
     navMixes: 'Mixes',
+    navNext: 'Next',
     navKontakt: 'Contact',
     menu: 'Menu',
     footerDatenschutz: "PRIVACY",
@@ -168,10 +178,16 @@ const T = {
     joinMixBtn: 'Send your mix',
     joinNewsText: "New events, mixes and Crate highlights, straight to your inbox.",
     joinNewsBtn: 'Sign up',
+    newsLabel: 'Email address',
+    newsNote: 'No spam, unsubscribe anytime. You will get an email to confirm first. <a href="datenschutz.html#newsletter">Privacy</a>',
+    newsOk: 'Almost there: please confirm the email in your inbox.',
+    newsErr: "That didn't work. Try again or write to news@eazrbeats.de.",
+    newsSending: 'Sending …',
     teaserAboutText: "A house collective from Munich. Who we are and what we're building.",
     teaserAboutBtn: 'About us →',
     teaserEventsText: 'Our own open air series from summer 2027, plus filmed sessions.',
     teaserEventsBtn: 'See events →',
+    teaserNextBtn: "What's next →",
 
     aboutText: "EAZr Beats Collective is a house and techno collective from Munich. We play house, melodic, afro and latin house, build our own formats and work on our own music. No label, no agency, just people who care about a good night out.",
     aboutWhatTitle: 'What we do',
@@ -208,6 +224,7 @@ const T = {
     eventsPastEmptyText: "Photos, videos and tracklists will land here after our first nights.",
     eventsNotify: "Don't miss a date: new events go up on Instagram first.",
 
+    nextText: "What's coming up: our own nights and the first mixes.",
     mixesText: 'Sets, recordings and studio sessions. The first mixes are in the works.',
     mixesSoonTitle: 'Mix 01 · in the works',
     mixesSoonText: "Our first mix lands here once it's done. Until then, catch Road to Live on Instagram.",
@@ -359,3 +376,20 @@ function toTop() {
 }
 const navEntry = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
 if (!navEntry || navEntry.type !== 'back_forward') toTop();
+
+// Newsletter: send the form to Brevo in the background and answer on the page.
+// The response is opaque (no-cors), so success means "sent"; Brevo then mails the confirmation link.
+document.querySelectorAll('[data-news-form]').forEach(form => {
+  const msg = form.querySelector('.news-msg');
+  const btn = form.querySelector('button');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (form.email_address_check.value) return;
+    form.locale.value = lang;
+    btn.disabled = true;
+    msg.textContent = T[lang].newsSending;
+    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+      .then(() => { msg.textContent = T[lang].newsOk; form.EMAIL.value = ''; form.classList.add('sent'); })
+      .catch(() => { msg.textContent = T[lang].newsErr; btn.disabled = false; });
+  });
+});
