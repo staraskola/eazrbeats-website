@@ -15,7 +15,7 @@ crate_sec = re.search(r'<div class="band first">\n<section class="sec" id="crate
 
 INSTA = 'https://www.instagram.com/eazrbeats/'
 SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crate playlist
-TIKTOK = ''  # profile URL, goes into the search-engine profile list once set
+TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
