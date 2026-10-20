@@ -159,6 +159,7 @@ def head(cmd, h1):
 
 # ---------------- start ----------------
 start = f'''<section class="hero" id="top">
+  <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
   <div class="badge"><span data-i18n="badgeComingSoon">COMING SOON</span><span class="cursor">_</span></div>
   <p class="tagline" data-i18n="heroTagline">MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.</p>
   <span class="prompt">eazr@beats:~$ follow --instagram</span>
