@@ -14,6 +14,8 @@ crate_sec = open('crate.html').read()
 crate_sec = re.search(r'<div class="band first">\n<section class="sec" id="crate">.*?</section>\n</div>\n', crate_sec, re.S).group(0)
 
 INSTA = 'https://www.instagram.com/eazrbeats/'
+SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crate playlist
+TIKTOK = ''  # profile URL, goes into the search-engine profile list once set
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -33,6 +35,41 @@ def news_form(uid):
         <p class="news-msg" role="status" aria-live="polite"></p>
         <p class="news-note" data-i18n="newsNote"></p>
       </form>'''
+
+# Structured data for search engines (start page only): who we are and where else we are.
+# Google uses sameAs to connect the site with the social profiles.
+SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY) if u]
+SCHEMA = '''<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://eazrbeats.de/#website",
+      "url": "https://eazrbeats.de/",
+      "name": "EAZr Beats Collective",
+      "alternateName": ["EAZr Beats", "EAZr"],
+      "inLanguage": ["de", "en"],
+      "publisher": {"@id": "https://eazrbeats.de/#collective"}
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "https://eazrbeats.de/#collective",
+      "name": "EAZr Beats Collective",
+      "alternateName": ["EAZr Beats", "EAZr"],
+      "url": "https://eazrbeats.de/",
+      "logo": "https://eazrbeats.de/icon-512.png",
+      "image": "https://eazrbeats.de/og-image.jpg",
+      "description": "House- und Techno-Kollektiv aus München.",
+      "genre": ["House", "Melodic House & Techno", "Afro House", "Latin House"],
+      "foundingLocation": {"@type": "Place", "name": "München, Deutschland"},
+      "email": "''' + KONTAKT + '''",
+      "sameAs": ''' + '[' + ', '.join(f'"{u}"' for u in SAME_AS) + ']' + '''
+    }
+  ]
+}
+</script>
+'''
 
 def page(name, title, desc, canon, body, scripts=()):
     nav = [('about', 'about.html', 'navAbout', 'About')]
@@ -70,7 +107,7 @@ def page(name, title, desc, canon, body, scripts=()):
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
-</head>
+{SCHEMA if name == 'start' else ''}</head>
 <body data-page="{name}">
 
 <video class="bg-video" autoplay muted loop playsinline poster="hero-bg.jpg" aria-hidden="true">
@@ -451,7 +488,7 @@ kontakt = f'''<div class="band first">
 
 D = 'Munich house &amp; techno collective — new sets, sessions and shows dropping soon.'
 files = {
-  'index.html': page('start', 'EAZr Beats Collective', D, '', start, ['home.js']),
+  'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
@@ -481,3 +518,10 @@ for f in files:
     s = re.sub(r'data-i18n="(\w+)"></', lambda m: f'data-i18n="{m.group(1)}">{DE.get(m.group(1), "")}</', s)
     open(f, 'w').write(s)
 print('filled', len(DE))
+
+# sitemap + robots for search engines: every real page (no redirects, 404, or the noindex legal pages)
+SITEMAP = [''] + [f for f in files if f not in ('index.html', '404.html') and 'noindex' not in files[f]]
+open('sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + ''.join(f'  <url><loc>https://eazrbeats.de/{u}</loc></url>\n' for u in SITEMAP) + '</urlset>\n')
+open('robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://eazrbeats.de/sitemap.xml\n')
+print('sitemap', len(SITEMAP))

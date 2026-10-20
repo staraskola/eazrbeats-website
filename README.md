@@ -16,4 +16,5 @@ Website des EAZr Beats Collective (München) inkl. **The Crate**.
 ## Pressekit, 404, Besucherzahlen
 - `press/` enthält die Logo-Downloads fürs Pressekit (Booking-Seite). Fotos dort ablegen und auf `booking.html` verlinken, sobald es welche gibt.
 - `404.html` zeigt GitHub Pages automatisch bei falschen Links.
+- Suchmaschinen: `robots.txt` und `sitemap.xml` schreibt der Generator mit. Die Startseite enthält Schema-Daten (MusicGroup) mit Links zu Instagram, Spotify und TikTok (`TIKTOK` in `tools/gen_pages.py` eintragen).
 - Besucherzahlen über GoatCounter (ohne Cookies), Code `eazrbeats`, Dashboard unter https://eazrbeats.goatcounter.com. Das Zählskript lädt nur auf eazrbeats.de (siehe Ende von `site.js`).
