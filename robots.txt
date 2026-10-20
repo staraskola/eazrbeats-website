@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eazrbeats.de/sitemap.xml
