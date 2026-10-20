@@ -238,9 +238,9 @@ about = f'''<div class="band first">
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
   <div class="cards four">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '')}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB')}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI')}{crew(4, 'Lisa', 'roleLisa', '', 'bioLisa', '')}    <div class="card crew">
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '')}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB')}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI')}    <div class="card crew">
       <div class="avatar open" aria-hidden="true">?</div>
-      <span class="kicker">crew/05</span>
+      <span class="kicker">crew/04</span>
       <h3 data-i18n="crewOpenTitle">Du?</h3>
       <p data-i18n="crewOpenText"></p>
     </div>
