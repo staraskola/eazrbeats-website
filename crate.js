@@ -68,11 +68,31 @@ function emptyBlock(title, text) {
 
 function renderWeeklyHtml(docs) {
   if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang].weeklyEmptyText);
+  const { date: dateFmt } = fmts();
   const sorted = docs
     .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
     .filter(d => d._date)
     .sort((a, b) => b._date - a._date);
-  return sorted.map(t => trackCard(t, true)).join('');
+
+  // group by week; only the newest week stays open, older ones fold away
+  const weeks = new Map();
+  for (const t of sorted) {
+    const key = startOfWeek(t._date).toISOString().slice(0, 10);
+    if (!weeks.has(key)) weeks.set(key, []);
+    weeks.get(key).push(t);
+  }
+  const [current, ...past] = [...weeks.keys()].sort().reverse().map(k => weeks.get(k));
+  const currentHtml = current.map(t => trackCard(t, true)).join('');
+  if (!past.length) return currentHtml;
+  const pastHtml = past.map(tracks => `
+        <div class="week-label">${escapeHtml(T[lang].weekOf)} ${dateFmt.format(startOfWeek(tracks[0]._date))}</div>
+        ${tracks.map(t => trackCard(t, true)).join('')}
+      `).join('');
+  return `${currentHtml}
+    <details class="past-weeks">
+      <summary>${escapeHtml(T[lang].pastWeeks)} (${past.length})</summary>
+      ${pastHtml}
+    </details>`;
 }
 
 function renderDailyHtml(docs) {
