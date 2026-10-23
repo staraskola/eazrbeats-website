@@ -237,6 +237,15 @@
   .section-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(244,241,234,0.4); margin-left: 6px; }
 
   .week-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(244,241,234,0.4); margin: 18px 0 8px; }
+  .past-weeks { margin-top: 16px; }
+  .past-weeks summary {
+    cursor: pointer; list-style: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(244,241,234,0.6); padding: 8px 0;
+  }
+  .past-weeks summary::-webkit-details-marker { display: none; }
+  .past-weeks summary::before { content: '> '; color: var(--accent); }
+  .past-weeks[open] summary::before { content: 'v '; }
+  .past-weeks summary:hover { color: var(--accent); }
 
   .track {
     border: 1px solid rgba(var(--accent-rgb),0.25);
