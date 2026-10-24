@@ -72,6 +72,12 @@ SCHEMA = '''<script type="application/ld+json">
 </script>
 '''
 
+# Cache busting: browsers keep style.css and scripts for a while, so new pages could
+# load with old CSS. Each reference gets ?v=<content hash> and changes with the file.
+import hashlib
+def v(f):
+    return f + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
+
 def page(name, title, desc, canon, body, scripts=()):
     nav = [('about', 'about.html', 'navAbout', 'About')]
     nav += ([('events', 'events.html', 'navEvents', 'Events'),
@@ -84,7 +90,7 @@ def page(name, title, desc, canon, body, scripts=()):
     links = '\n'.join(
         f'      <a href="{h}" data-page="{k}"' + (f' data-i18n="{i}"' if i else '') + f'>{l}</a>'
         for k, h, i, l in nav)
-    sc = ''.join(f'<script src="{s}"></script>\n' for s in ('site.js',) + tuple(scripts))
+    sc = ''.join(f'<script src="{v(s)}"></script>\n' for s in ('site.js',) + tuple(scripts))
     return f'''<!doctype html>
 <html lang="de">
 <head>
@@ -108,7 +114,7 @@ def page(name, title, desc, canon, body, scripts=()):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{v('style.css')}">
 {SCHEMA if name == 'start' else ''}</head>
 <body data-page="{name}">
 
