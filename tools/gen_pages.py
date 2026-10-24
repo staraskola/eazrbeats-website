@@ -1,4 +1,4 @@
-# Builds the generated pages (index, about, next, crate, booking, kontakt, 404) and the
+# Builds the generated pages (index, about, next, crate, void, booking, kontakt, 404) and the
 # events/mixes redirect stubs. Run from anywhere: python3 tools/gen_pages.py
 # impressum.html and datenschutz.html are hand-written and not touched here.
 import os, re, sys
@@ -77,6 +77,7 @@ def page(name, title, desc, canon, body, scripts=()):
              ('mixes', 'mixes.html', 'navMixes', 'Mixes')] if SPLIT_NEXT else
             [('next', 'next.html', 'navNext', 'Next')])
     nav += [('crate', 'crate.html', None, 'Crate'),
+           ('void', 'void.html', None, 'Void'),
            ('booking', 'booking.html', None, 'Booking'),
            ('kontakt', 'kontakt.html', 'navKontakt', 'Kontakt')]
     links = '\n'.join(
@@ -157,6 +158,25 @@ def head(cmd, h1):
   </div>
 '''
 
+# ---------------- void ----------------
+# Techno sister of the Crate; crate.js renders it from void.json.
+void_sec = '''<div class="band first">
+<section class="sec" id="void">
+  <header class="masthead">
+    <div class="void-ring" aria-hidden="true"></div>
+    <div class="badge"><span>SIGNAL LOG</span><span class="cursor">_</span></div>
+    <h1 class="wordmark">THE <span class="hollow">VOID</span></h1>
+    <p class="sub" data-i18n="voidSub"></p>
+    <div class="genre-tabs" id="genre-tabs" role="tablist" aria-label="Genre"></div>
+  </header>
+
+  <div id="genres"></div>
+
+  <div class="meta"><span data-i18n="voidFooter"></span> · <span data-i18n="crateUpdatedLabel">zuletzt aktualisiert:</span> <span id="updated">–</span></div>
+</section>
+</div>
+'''
+
 # ---------------- start ----------------
 start = f'''<section class="hero" id="top">
   <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
@@ -166,6 +186,7 @@ start = f'''<section class="hero" id="top">
   <div class="cta-row">
     <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
     <a class="btn ghost" href="crate.html" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="void.html" data-i18n="ctaVoid">The Void →</a>
   </div>
 </section>
 
@@ -492,6 +513,7 @@ files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
+  'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),

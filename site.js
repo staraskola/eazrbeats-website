@@ -129,6 +129,9 @@ const T = {
     crateFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
     crateUpdatedLabel: 'zuletzt aktualisiert:',
     crateSpotify: '▶ Playlist auf Spotify hören',
+    voidSub: 'Die dunkle Seite der Crate: Techno, der gerade in DJ-Sets läuft. Peak Time, Raw, Hypnotic, Hard. Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
+    voidFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
+    ctaVoid: 'The Void →',
     weeklyTag: 'kuratierte Wochen-Highlights',
     dailyTag: 'täglich, mit harter Schwelle',
     weeklyEmptyTitle: 'Noch keine Weekly-Highlights',
@@ -257,6 +260,9 @@ const T = {
     crateFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
     crateUpdatedLabel: 'last updated:',
     crateSpotify: '▶ Listen on Spotify',
+    voidSub: "The dark side of the Crate: techno getting played in DJ sets right now. Peak time, raw, hypnotic, hard. Every entry is backed by at least two independent sources.",
+    voidFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
+    ctaVoid: 'The Void →',
     weeklyTag: "hand-picked weekly highlights",
     dailyTag: "daily, strict threshold",
     weeklyEmptyTitle: 'No Weekly Highlights yet',
@@ -329,6 +335,15 @@ const GENRES = [
   { key: 'melodic-house-techno', label: 'Melodic House & Techno' },
   { key: 'afro-house', label: 'Afro House' },
   { key: 'latin-house', label: 'Latin House' },
+];
+
+// THE VOID: the techno sister of the Crate (void.html, data in void.json).
+// Set VOID_SPOTIFY once the playlist exists; until then track titles link to their source.
+const VOID_SPOTIFY = '';
+const VOID_GENRES = [
+  { key: 'peak-time-driving', label: 'Peak Time / Driving' },
+  { key: 'raw-deep-hypnotic', label: 'Raw / Deep / Hypnotic' },
+  { key: 'hard-techno', label: 'Hard Techno' },
 ];
 
 // Copy buttons (contact address, press bio): work even without a mail app
