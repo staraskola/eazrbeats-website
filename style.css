@@ -375,3 +375,21 @@
 .news-form.sent .news-row { display: none; }
 .news-note { margin: 8px 0 0; font-size: 11px; opacity: 0.6; }
 .news-note a { color: inherit; }
+
+  /* ---- THE VOID: colder, darker Crate. Ice on black, pink only for the cursor. ---- */
+  body[data-page="void"] { --glow: rgba(160,140,255,0.75); }
+  body[data-page="void"] .bg-video { display: none; }
+  body[data-page="void"] .page-scrim { background: radial-gradient(circle at 50% 22%, #000 0 120px, #0b0a14 260px, #050408 640px, #020203 100%); }
+  body[data-page="void"] .band { background: rgba(2,2,3,0.55); }
+  body[data-page="void"] .masthead { position: relative; }
+  body[data-page="void"] .masthead > *:not(.void-ring) { position: relative; }
+  .void-ring {
+    position: absolute; left: 50%; top: 50%; width: min(78vw, 420px); aspect-ratio: 1; transform: translate(-50%, -50%);
+    border-radius: 50%; border: 2px solid rgba(var(--accent-rgb),0.35); pointer-events: none;
+    box-shadow: 0 0 40px -6px var(--glow), inset 0 0 50px -10px var(--glow);
+  }
+  body[data-page="void"] .badge .cursor { color: #FF4FD8; text-shadow: 0 0 8px rgba(255,79,216,0.9); }
+  body[data-page="void"] .wordmark { text-shadow: 0 0 22px var(--glow); }
+  .wordmark .hollow { color: transparent; -webkit-text-stroke: 2px var(--accent); text-shadow: none; filter: drop-shadow(0 0 14px var(--glow)); }
+  body[data-page="void"] .track.hot { background: rgba(160,140,255,0.05); }
+  body[data-page="void"] .card.hot { background: rgba(160,140,255,0.05); }
