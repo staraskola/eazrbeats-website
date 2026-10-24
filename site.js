@@ -338,8 +338,7 @@ const GENRES = [
 ];
 
 // THE VOID: the techno sister of the Crate (void.html, data in void.json).
-// Set VOID_SPOTIFY once the playlist exists; until then track titles link to their source.
-const VOID_SPOTIFY = '';
+const VOID_SPOTIFY = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl';
 const VOID_GENRES = [
   { key: 'peak-time-driving', label: 'Peak Time / Driving' },
   { key: 'raw-deep-hypnotic', label: 'Raw / Deep / Hypnotic' },

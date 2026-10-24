@@ -15,6 +15,7 @@ crate_sec = re.search(r'<div class="band first">\n<section class="sec" id="crate
 
 INSTA = 'https://www.instagram.com/eazrbeats/'
 SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crate playlist
+SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE VOID playlist
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
@@ -38,7 +39,7 @@ def news_form(uid):
 
 # Structured data for search engines (start page only): who we are and where else we are.
 # Google uses sameAs to connect the site with the social profiles.
-SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY) if u]
+SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY, SPOTIFY_VOID) if u]
 SCHEMA = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,13 +161,14 @@ def head(cmd, h1):
 
 # ---------------- void ----------------
 # Techno sister of the Crate; crate.js renders it from void.json.
-void_sec = '''<div class="band first">
+void_sec = f'''<div class="band first">
 <section class="sec" id="void">
   <header class="masthead">
     <div class="void-ring" aria-hidden="true"></div>
     <div class="badge"><span>SIGNAL LOG</span><span class="cursor">_</span></div>
     <h1 class="wordmark">THE <span class="hollow">VOID</span></h1>
     <p class="sub" data-i18n="voidSub"></p>
+    <a class="btn ghost spotify-link" href="{SPOTIFY_VOID}" target="_blank" rel="noopener" data-i18n="crateSpotify">▶ Playlist auf Spotify hören</a>
     <div class="genre-tabs" id="genre-tabs" role="tablist" aria-label="Genre"></div>
   </header>
 
