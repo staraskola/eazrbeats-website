@@ -161,10 +161,12 @@ def head(cmd, h1):
 
 # ---------------- void ----------------
 # Techno sister of the Crate; crate.js renders it from void.json.
-void_sec = f'''<div class="band first">
+void_sec = f'''<div class="void-bg" aria-hidden="true">
+  <div class="vb-stars"></div><div class="vb-halo"></div><div class="vb-disk"></div><div class="vb-lens"></div><div class="vb-horizon"></div><div class="vb-disk front"></div>
+</div>
+<div class="band first">
 <section class="sec" id="void">
   <header class="masthead">
-    <div class="void-ring" aria-hidden="true"></div>
     <div class="badge"><span>SIGNAL LOG</span><span class="cursor">_</span></div>
     <h1 class="wordmark">THE <span class="hollow">VOID</span></h1>
     <p class="sub" data-i18n="voidSub"></p>
