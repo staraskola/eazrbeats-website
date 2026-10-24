@@ -125,6 +125,69 @@
      "sourceUrl": "https://boomkat.com/artists/robert-hood-radio-slave/releases/hf2pgohz/radio-hood"
     }
    ]
+  },
+  {
+   "title": "Hurt You",
+   "artist": "Vlace, KSN",
+   "genre": "hard-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Hard Techno Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "160 BPM, Schranz-Druck ohne Gnade.",
+   "noteEn": "160 BPM, schranz pressure, no mercy.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "KAMI @ Insomniac Radio DISTORTED 002 (12.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/140qx58k/kami-insomniac-radio-distorted-002-2026-10-12.html"
+    }
+   ]
+  },
+  {
+   "title": "300G",
+   "artist": "Kobosil",
+   "genre": "hard-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Hard Techno Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Berliner Härte, kalt und stur nach vorn.",
+   "noteEn": "Berlin hardness, cold and relentless.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#5)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "SODABASS @ HIVE Festival 2026",
+     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/sodabass/hive-festival-2026-sodabass"
+    }
+   ]
+  },
+  {
+   "title": "Staub (Extended Version)",
+   "artist": "KUKO",
+   "genre": "hard-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Hard Techno Top 100 (#8)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Dunkle Stimme über hartem Kick, Katharsis pur.",
+   "noteEn": "Dark vocal over a hard kick, pure catharsis.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#8)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "EDMTunes: KUKO – Debütalbum CATHARSIS (KRACH)",
+     "sourceUrl": "https://www.edmtunes.com/2026/10/02/kuko-debut-album-catharsis/"
+    }
+   ]
   }
  ]
 }
