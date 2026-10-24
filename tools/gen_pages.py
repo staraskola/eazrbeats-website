@@ -78,7 +78,7 @@ def page(name, title, desc, canon, body, scripts=()):
              ('mixes', 'mixes.html', 'navMixes', 'Mixes')] if SPLIT_NEXT else
             [('next', 'next.html', 'navNext', 'Next')])
     nav += [('crate', 'crate.html', None, 'Crate'),
-           ('void', 'void.html', None, 'Void'),
+           ('void', 'void.html', None, 'VOID'),
            ('booking', 'booking.html', None, 'Booking'),
            ('kontakt', 'kontakt.html', 'navKontakt', 'Kontakt')]
     links = '\n'.join(
