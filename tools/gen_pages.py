@@ -79,14 +79,14 @@ def v(f):
     return f + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
 
 def page(name, title, desc, canon, body, scripts=()):
-    nav = [('about', 'about.html', 'navAbout', 'About')]
-    nav += ([('events', 'events.html', 'navEvents', 'Events'),
-             ('mixes', 'mixes.html', 'navMixes', 'Mixes')] if SPLIT_NEXT else
-            [('next', 'next.html', 'navNext', 'Next')])
-    nav += [('crate', 'crate.html', None, 'Crate'),
-           ('void', 'void.html', None, 'VOID'),
-           ('booking', 'booking.html', None, 'Booking'),
-           ('kontakt', 'kontakt.html', 'navKontakt', 'Kontakt')]
+    nav = [('about', 'about', 'navAbout', 'About')]
+    nav += ([('events', 'events', 'navEvents', 'Events'),
+             ('mixes', 'mixes', 'navMixes', 'Mixes')] if SPLIT_NEXT else
+            [('next', 'next', 'navNext', 'Next')])
+    nav += [('crate', 'crate', None, 'Crate'),
+           ('void', 'void', None, 'VOID'),
+           ('booking', 'booking', None, 'Booking'),
+           ('kontakt', 'kontakt', 'navKontakt', 'Kontakt')]
     links = '\n'.join(
         f'      <a href="{h}" data-page="{k}"' + (f' data-i18n="{i}"' if i else '') + f'>{l}</a>'
         for k, h, i, l in nav)
@@ -140,7 +140,7 @@ def page(name, title, desc, canon, body, scripts=()):
     </div>
   </div>
   <nav class="nav" aria-label="Menü">
-    <a class="brand" href="index.html" aria-label="EAZr Beats Collective, Startseite">
+    <a class="brand" href="/" aria-label="EAZr Beats Collective, Startseite">
       <img src="logo-mark.png" alt="EAZr">
       <span>BEATS COLLECTIVE</span>
     </a>
@@ -195,8 +195,8 @@ start = f'''<section class="hero" id="top">
   <span class="prompt">eazr@beats:~$ follow --instagram</span>
   <div class="cta-row">
     <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
-    <a class="btn ghost" href="crate.html" data-i18n="ctaCrate">The Crate →</a>
-    <a class="btn ghost" href="void.html" data-i18n="ctaVoid">The Void →</a>
+    <a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
   </div>
 </section>
 
@@ -223,7 +223,7 @@ start = f'''<section class="hero" id="top">
   </div>
   <p class="lead" data-i18n="freshText">Die neuesten Weekly-Hot-Picks aus allen vier Genres.</p>
   <div class="picks" id="fresh"></div>
-  <a class="btn ghost more" href="crate.html" data-i18n="freshAll">Ganze Crate →</a>
+  <a class="btn ghost more" href="crate" data-i18n="freshAll">Ganze Crate →</a>
 </section>
 </div>
 
@@ -269,13 +269,13 @@ start = f'''<section class="hero" id="top">
       <span class="kicker">whoami</span>
       <h3>About</h3>
       <p data-i18n="teaserAboutText">Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.</p>
-      <a class="btn ghost" href="about.html" data-i18n="teaserAboutBtn">Über uns →</a>
+      <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
     </div>
     <div class="card">
       <span class="kicker">{'ls ./events' if SPLIT_NEXT else 'ls ./next'}</span>
       <h3>{'Events' if SPLIT_NEXT else 'Next'}</h3>
       <p data-i18n="teaserEventsText">Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.</p>
-      <a class="btn ghost" href="{'events.html' if SPLIT_NEXT else 'next.html'}" data-i18n="{'teaserEventsBtn' if SPLIT_NEXT else 'teaserNextBtn'}"></a>
+      <a class="btn ghost" href="{'events' if SPLIT_NEXT else 'next'}" data-i18n="{'teaserEventsBtn' if SPLIT_NEXT else 'teaserNextBtn'}"></a>
     </div>
   </div>
 </section>
@@ -302,7 +302,7 @@ about = f'''<div class="band first">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
     <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutFormatsTitle">Eigene Formate</h3><p data-i18n="aboutFormatsText"></p></div>
     <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
-    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate</h3><p data-i18n="aboutCrateText"></p><a class="btn ghost" href="crate.html" data-i18n="teaserCrateBtn">Zur Crate →</a></div>
+    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate</h3><p data-i18n="aboutCrateText"></p><a class="btn ghost" href="crate" data-i18n="teaserCrateBtn">Zur Crate →</a></div>
   </div>
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
@@ -490,8 +490,8 @@ notfound = '''<div class="band first">
   <p class="cmd-line" style="margin-bottom:14px">bash: cd: ./page: No such file or directory</p>
   <p class="lead" data-i18n="notFoundText"></p>
   <div class="cta-row" style="justify-content:flex-start">
-    <a class="btn" href="index.html" data-i18n="notFoundHome"></a>
-    <a class="btn ghost" href="crate.html">The Crate →</a>
+    <a class="btn" href="/" data-i18n="notFoundHome"></a>
+    <a class="btn ghost" href="crate">The Crate →</a>
   </div>
 </section>
 </div>
@@ -531,11 +531,11 @@ files = {
 if SPLIT_NEXT:
     files['events.html'] = page('events', 'Events · EAZr Beats Collective', 'Upcoming and past EAZr Beats Collective events in Munich.', 'events', events)
     files['mixes.html'] = page('mixes', 'Mixes · EAZr Beats Collective', 'Sets, recordings and studio sessions by EAZr Beats Collective.', 'mixes', mixes)
-    files['next.html'] = redirect('events.html', 'Events · EAZr Beats Collective')
+    files['next.html'] = redirect('events', 'Events · EAZr Beats Collective')
 else:
     files['next.html'] = page('next', 'Next · EAZr Beats Collective', 'What is next for EAZr Beats Collective: our own events in Munich and the first mixes.', 'next', nextpage)
-    files['events.html'] = redirect('next.html', 'Next · EAZr Beats Collective')
-    files['mixes.html'] = redirect('next.html', 'Next · EAZr Beats Collective')
+    files['events.html'] = redirect('next', 'Next · EAZr Beats Collective')
+    files['mixes.html'] = redirect('next', 'Next · EAZr Beats Collective')
 for f, c in files.items():
     open(f, 'w').write(c)
 print('ok')
@@ -553,7 +553,7 @@ for f in files:
 print('filled', len(DE))
 
 # sitemap + robots for search engines: every real page (no redirects, 404, or the noindex legal pages)
-SITEMAP = [''] + [f for f in files if f not in ('index.html', '404.html') and 'noindex' not in files[f]]
+SITEMAP = [''] + [f[:-5] for f in files if f not in ('index.html', '404.html') and 'noindex' not in files[f]]
 open('sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + ''.join(f'  <url><loc>https://eazrbeats.de/{u}</loc></url>\n' for u in SITEMAP) + '</urlset>\n')
 open('robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://eazrbeats.de/sitemap.xml\n')
