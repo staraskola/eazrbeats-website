@@ -74,7 +74,7 @@ function emptyBlock(title, text) {
 }
 
 function renderWeeklyHtml(docs) {
-  if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang].weeklyEmptyText);
+  if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang][IS_VOID ? 'voidWeeklyEmptyText' : 'weeklyEmptyText']);
   const sorted = docs
     .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
     .filter(d => d._date)
