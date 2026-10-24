@@ -1,4 +1,130 @@
 {
  "exported": "2026-10-24",
- "tracks": []
+ "tracks": [
+  {
+   "title": "We Come 1 (Adam Beyer Remix)",
+   "artist": "Faithless, Adam Beyer",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Peak Time Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Ein Klassiker im Drumcode-Gewand, der jeden Peak trägt.",
+   "noteEn": "A classic in Drumcode clothing that carries any peak.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 100 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "1001Tracklists DJ Charts KW 43 (#7)",
+     "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html"
+    },
+    {
+     "source": "Beatportal: Drumcode 30 Jahre / Faithless Reworks",
+     "sourceUrl": "https://www.beatportal.com/articles/1651238-drumcode-celebrates-30-years-with-adam-beyer-and-kasia-remixes-of-faithless-classics"
+    }
+   ]
+  },
+  {
+   "title": "God Gave Us Techno",
+   "artist": "Sarah de Warren, Tao Andra",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Peak Time Top 100 (#2)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Große Stimme, harter Groove, pure Hände-hoch-Energie.",
+   "noteEn": "Big vocal, hard groove, pure hands-up energy.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 100 (#2)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "EDM.com Fresh Picks (02.10.)",
+     "sourceUrl": "https://edm.com/?p=271285"
+    },
+    {
+     "source": "Beatportal: God Gave Us Techno EP",
+     "sourceUrl": "https://www.beatportal.com/articles/1638872-sarah-de-warren-and-tao-andra-deliver-a-divine-dose-of-peak-time-techno-with-their-two-track-god-gave-us-techno-ep-landing-on-arcane-music-on-2-october"
+    }
+   ]
+  },
+  {
+   "title": "The Resistance",
+   "artist": "Charlotte de Witte, Theo Nasa",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Peak Time Top 100 (#18)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Dunkel, stur und auf Haltung gebaut, ein KNTXT-Statement.",
+   "noteEn": "Dark, stubborn and built on attitude, a KNTXT statement.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 100 (#18)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "DJ Mag News",
+     "sourceUrl": "https://djmag.com/news/charlotte-de-witte-donates-all-proceeds-resistance-ep-nightlife-advocacy-foundation"
+    },
+    {
+     "source": "EDM Identity",
+     "sourceUrl": "https://edmidentity.com/2026/09/25/charlotte-de-witte-the-resistance-ep/"
+    }
+   ]
+  },
+  {
+   "title": "Wisdom To The Wise (Joris Voorn Remix)",
+   "artist": "Dave Clarke, Joris Voorn",
+   "genre": "raw-deep-hypnotic",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Raw/Deep/Hypnotic Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92/top-100",
+   "note": "Baron-of-Techno-Klassiker, von Voorn hypnotisch neu verdrahtet.",
+   "noteEn": "A Baron of Techno classic, rewired hypnotically by Voorn.",
+   "confirmations": [
+    {
+     "source": "Beatport Raw/Deep/Hypnotic Top 100 (#1)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "909originals",
+     "sourceUrl": "https://909originals.com/2026/09/24/joris-voorn-remixes-dave-clarkes-wisdom-to-the-wise/"
+    },
+    {
+     "source": "Dance Rebels (12.10.)",
+     "sourceUrl": "https://www.dancerebels.com/2026/10/12/dave-clarke-joris-voorn-wisdom-to-the-wise-joris-voorn-remix-spectrum/"
+    }
+   ]
+  },
+  {
+   "title": "Radio Hood",
+   "artist": "Robert Hood, Radio Slave",
+   "genre": "raw-deep-hypnotic",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport Raw/Deep/Hypnotic Top 100 (#2)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92/top-100",
+   "note": "Detroit trifft Rekids: Minimal-Druck mit breiten Synth-Flächen.",
+   "noteEn": "Detroit meets Rekids: minimal pressure with wide synth washes.",
+   "confirmations": [
+    {
+     "source": "Beatport Raw/Deep/Hypnotic Top 100 (#2)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "Resident Advisor News",
+     "sourceUrl": "https://ra.co/news/86062"
+    },
+    {
+     "source": "Boomkat",
+     "sourceUrl": "https://boomkat.com/artists/robert-hood-radio-slave/releases/hf2pgohz/radio-hood"
+    }
+   ]
+  }
+ ]
 }
