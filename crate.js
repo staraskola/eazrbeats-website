@@ -1,11 +1,17 @@
 // The Crate page: loads crate.json and renders one genre per tab.
+// THE VOID (void.html) uses the same code with its own data, genres and playlist.
+const IS_VOID = document.body.dataset.page === 'void';
+const PAGE_GENRES = IS_VOID ? VOID_GENRES : GENRES;
+const DATA_URL = IS_VOID ? 'void.json' : 'crate.json';
+const LISTEN_URL = IS_VOID ? VOID_SPOTIFY : SPOTIFY_PLAYLIST;
+const PROMPT = IS_VOID ? 'eazr@void:~$' : 'eazr@crate:~$';
 let lastDocs = [];
 // ---------------------------------------------------------------------
 // The Crate — live data
 // ---------------------------------------------------------------------
 const genresEl = document.getElementById('genres');
 const tabsEl = document.getElementById('genre-tabs');
-let activeGenre = 'house';
+let activeGenre = PAGE_GENRES[0].key;
 const updatedEl = document.getElementById('updated');
 
 function parseISODate(s) {
@@ -44,7 +50,8 @@ function trackCard(t, hot) {
   const title = escapeHtml(t.title || T[lang].unbenannt);
   const artist = escapeHtml(t.artist || '');
   const note = (lang === 'en' && t.noteEn) ? t.noteEn : t.note;
-  const link = `<a href="${SPOTIFY_PLAYLIST}" target="_blank" rel="noopener">${title}</a>`;
+  const href = LISTEN_URL || t.sourceUrl;
+  const link = href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${title}</a>` : title;
   return `
     <div class="track${hot ? ' hot' : ''}">
       <div class="track-top">
@@ -67,7 +74,7 @@ function emptyBlock(title, text) {
 }
 
 function renderWeeklyHtml(docs) {
-  if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang].weeklyEmptyText);
+  if (!docs.length) return emptyBlock(T[lang].weeklyEmptyTitle, T[lang][IS_VOID ? 'voidWeeklyEmptyText' : 'weeklyEmptyText']);
   const { date: dateFmt } = fmts();
   const sorted = docs
     .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
@@ -133,7 +140,7 @@ function render(docs) {
   lastDocs = docs;
   const { date: dateFmt } = fmts();
 
-  tabsEl.innerHTML = GENRES.map(g => `<button type="button" role="tab" id="tab-${g.key}" aria-controls="genre-panel" aria-selected="${g.key === activeGenre}" data-genre="${g.key}">${escapeHtml(g.label)}</button>`).join('');
+  tabsEl.innerHTML = PAGE_GENRES.map(g => `<button type="button" role="tab" id="tab-${g.key}" aria-controls="genre-panel" aria-selected="${g.key === activeGenre}" data-genre="${g.key}">${escapeHtml(g.label)}</button>`).join('');
   tabsEl.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
       activeGenre = btn.dataset.genre;
@@ -141,15 +148,15 @@ function render(docs) {
     });
   });
 
-  const g = GENRES.find(x => x.key === activeGenre) || GENRES[0];
-  const genreDocs = docs.filter(d => (d.genre || 'house') === g.key);
+  const g = PAGE_GENRES.find(x => x.key === activeGenre) || PAGE_GENRES[0];
+  const genreDocs = docs.filter(d => (d.genre || PAGE_GENRES[0].key) === g.key);
   const weekly = genreDocs.filter(d => d.tier === 'weekly');
   const daily = genreDocs.filter(d => d.tier !== 'weekly');
   genresEl.innerHTML = `
     <div class="genre-block" id="genre-panel" role="tabpanel" aria-labelledby="tab-${g.key}">
       <div class="section">
         <div class="prompt-line">
-          <span class="prompt">eazr@crate:~$</span><span class="cmd">cat ${g.key}/weekly-hot</span>
+          <span class="prompt">${PROMPT}</span><span class="cmd">cat ${g.key}/weekly-hot</span>
           <span class="section-tag">${escapeHtml(T[lang].weeklyTag)}</span>
         </div>
         ${renderWeeklyHtml(weekly)}
@@ -157,7 +164,7 @@ function render(docs) {
 
       <div class="section">
         <div class="prompt-line">
-          <span class="prompt">eazr@crate:~$</span><span class="cmd">cat ${g.key}/daily-hot</span>
+          <span class="prompt">${PROMPT}</span><span class="cmd">cat ${g.key}/daily-hot</span>
           <span class="section-tag">${escapeHtml(T[lang].dailyTag)}</span>
         </div>
         ${renderDailyHtml(daily)}
@@ -171,7 +178,7 @@ function render(docs) {
 
 async function boot() {
   try {
-    const res = await fetch('crate.json', { cache: 'no-cache' });
+    const res = await fetch(DATA_URL, { cache: 'no-cache' });
     const data = await res.json();
     render(Array.isArray(data.tracks) ? data.tracks : []);
   } catch (e) {

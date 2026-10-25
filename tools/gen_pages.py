@@ -1,4 +1,4 @@
-# Builds the generated pages (index, about, next, crate, booking, kontakt, 404) and the
+# Builds the generated pages (index, about, next, crate, void, booking, kontakt, 404) and the
 # events/mixes redirect stubs. Run from anywhere: python3 tools/gen_pages.py
 # impressum.html and datenschutz.html are hand-written and not touched here.
 import os, re, sys
@@ -15,6 +15,7 @@ crate_sec = re.search(r'<div class="band first">\n<section class="sec" id="crate
 
 INSTA = 'https://www.instagram.com/eazrbeats/'
 SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crate playlist
+SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE VOID playlist
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
@@ -38,7 +39,7 @@ def news_form(uid):
 
 # Structured data for search engines (start page only): who we are and where else we are.
 # Google uses sameAs to connect the site with the social profiles.
-SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY) if u]
+SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY, SPOTIFY_VOID) if u]
 SCHEMA = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,18 +72,25 @@ SCHEMA = '''<script type="application/ld+json">
 </script>
 '''
 
+# Cache busting: browsers keep style.css and scripts for a while, so new pages could
+# load with old CSS. Each reference gets ?v=<content hash> and changes with the file.
+import hashlib
+def v(f):
+    return f + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
+
 def page(name, title, desc, canon, body, scripts=()):
-    nav = [('about', 'about.html', 'navAbout', 'About')]
-    nav += ([('events', 'events.html', 'navEvents', 'Events'),
-             ('mixes', 'mixes.html', 'navMixes', 'Mixes')] if SPLIT_NEXT else
-            [('next', 'next.html', 'navNext', 'Next')])
-    nav += [('crate', 'crate.html', None, 'Crate'),
-           ('booking', 'booking.html', None, 'Booking'),
-           ('kontakt', 'kontakt.html', 'navKontakt', 'Kontakt')]
+    nav = [('about', 'about', 'navAbout', 'About')]
+    nav += ([('events', 'events', 'navEvents', 'Events'),
+             ('mixes', 'mixes', 'navMixes', 'Mixes')] if SPLIT_NEXT else
+            [('next', 'next', 'navNext', 'Next')])
+    nav += [('crate', 'crate', None, 'Crate'),
+           ('void', 'void', None, 'VOID'),
+           ('booking', 'booking', None, 'Booking'),
+           ('kontakt', 'kontakt', 'navKontakt', 'Kontakt')]
     links = '\n'.join(
         f'      <a href="{h}" data-page="{k}"' + (f' data-i18n="{i}"' if i else '') + f'>{l}</a>'
         for k, h, i, l in nav)
-    sc = ''.join(f'<script src="{s}"></script>\n' for s in ('site.js',) + tuple(scripts))
+    sc = ''.join(f'<script src="{v(s)}"></script>\n' for s in ('site.js',) + tuple(scripts))
     return f'''<!doctype html>
 <html lang="de">
 <head>
@@ -106,7 +114,7 @@ def page(name, title, desc, canon, body, scripts=()):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{v('style.css')}">
 {SCHEMA if name == 'start' else ''}</head>
 <body data-page="{name}">
 
@@ -132,7 +140,7 @@ def page(name, title, desc, canon, body, scripts=()):
     </div>
   </div>
   <nav class="nav" aria-label="Menü">
-    <a class="brand" href="index.html" aria-label="EAZr Beats Collective, Startseite">
+    <a class="brand" href="/" aria-label="EAZr Beats Collective, Startseite">
       <img src="logo-mark.png" alt="EAZr">
       <span>BEATS COLLECTIVE</span>
     </a>
@@ -157,6 +165,28 @@ def head(cmd, h1):
   </div>
 '''
 
+# ---------------- void ----------------
+# Techno sister of the Crate; crate.js renders it from void.json.
+void_sec = f'''<div class="void-bg" aria-hidden="true">
+  <div class="vb-stars"></div><div class="vb-halo"></div><div class="vb-disk"></div><div class="vb-lens"></div><div class="vb-horizon"></div><div class="vb-disk front"></div>
+</div>
+<div class="band first">
+<section class="sec" id="void">
+  <header class="masthead">
+    <div class="badge"><span>SIGNAL LOG</span><span class="cursor">_</span></div>
+    <h1 class="wordmark">THE <span class="hollow">VOID</span></h1>
+    <p class="sub" data-i18n="voidSub"></p>
+    <a class="btn ghost spotify-link" href="{SPOTIFY_VOID}" target="_blank" rel="noopener" data-i18n="crateSpotify">▶ Playlist auf Spotify hören</a>
+    <div class="genre-tabs" id="genre-tabs" role="tablist" aria-label="Genre"></div>
+  </header>
+
+  <div id="genres"></div>
+
+  <div class="meta"><span data-i18n="voidFooter"></span> · <span data-i18n="crateUpdatedLabel">zuletzt aktualisiert:</span> <span id="updated">–</span></div>
+</section>
+</div>
+'''
+
 # ---------------- start ----------------
 start = f'''<section class="hero" id="top">
   <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
@@ -165,7 +195,8 @@ start = f'''<section class="hero" id="top">
   <span class="prompt">eazr@beats:~$ follow --instagram</span>
   <div class="cta-row">
     <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
-    <a class="btn ghost" href="crate.html" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
   </div>
 </section>
 
@@ -192,7 +223,7 @@ start = f'''<section class="hero" id="top">
   </div>
   <p class="lead" data-i18n="freshText">Die neuesten Weekly-Hot-Picks aus allen vier Genres.</p>
   <div class="picks" id="fresh"></div>
-  <a class="btn ghost more" href="crate.html" data-i18n="freshAll">Ganze Crate →</a>
+  <a class="btn ghost more" href="crate" data-i18n="freshAll">Ganze Crate →</a>
 </section>
 </div>
 
@@ -238,13 +269,13 @@ start = f'''<section class="hero" id="top">
       <span class="kicker">whoami</span>
       <h3>About</h3>
       <p data-i18n="teaserAboutText">Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.</p>
-      <a class="btn ghost" href="about.html" data-i18n="teaserAboutBtn">Über uns →</a>
+      <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
     </div>
     <div class="card">
       <span class="kicker">{'ls ./events' if SPLIT_NEXT else 'ls ./next'}</span>
       <h3>{'Events' if SPLIT_NEXT else 'Next'}</h3>
       <p data-i18n="teaserEventsText">Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.</p>
-      <a class="btn ghost" href="{'events.html' if SPLIT_NEXT else 'next.html'}" data-i18n="{'teaserEventsBtn' if SPLIT_NEXT else 'teaserNextBtn'}"></a>
+      <a class="btn ghost" href="{'events' if SPLIT_NEXT else 'next'}" data-i18n="{'teaserEventsBtn' if SPLIT_NEXT else 'teaserNextBtn'}"></a>
     </div>
   </div>
 </section>
@@ -271,7 +302,7 @@ about = f'''<div class="band first">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
     <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutFormatsTitle">Eigene Formate</h3><p data-i18n="aboutFormatsText"></p></div>
     <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
-    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate</h3><p data-i18n="aboutCrateText"></p><a class="btn ghost" href="crate.html" data-i18n="teaserCrateBtn">Zur Crate →</a></div>
+    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate</h3><p data-i18n="aboutCrateText"></p><a class="btn ghost" href="crate" data-i18n="teaserCrateBtn">Zur Crate →</a></div>
   </div>
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
@@ -459,8 +490,8 @@ notfound = '''<div class="band first">
   <p class="cmd-line" style="margin-bottom:14px">bash: cd: ./page: No such file or directory</p>
   <p class="lead" data-i18n="notFoundText"></p>
   <div class="cta-row" style="justify-content:flex-start">
-    <a class="btn" href="index.html" data-i18n="notFoundHome"></a>
-    <a class="btn ghost" href="crate.html">The Crate →</a>
+    <a class="btn" href="/" data-i18n="notFoundHome"></a>
+    <a class="btn ghost" href="crate">The Crate →</a>
   </div>
 </section>
 </div>
@@ -492,6 +523,7 @@ files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
+  'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
@@ -499,11 +531,11 @@ files = {
 if SPLIT_NEXT:
     files['events.html'] = page('events', 'Events · EAZr Beats Collective', 'Upcoming and past EAZr Beats Collective events in Munich.', 'events', events)
     files['mixes.html'] = page('mixes', 'Mixes · EAZr Beats Collective', 'Sets, recordings and studio sessions by EAZr Beats Collective.', 'mixes', mixes)
-    files['next.html'] = redirect('events.html', 'Events · EAZr Beats Collective')
+    files['next.html'] = redirect('events', 'Events · EAZr Beats Collective')
 else:
     files['next.html'] = page('next', 'Next · EAZr Beats Collective', 'What is next for EAZr Beats Collective: our own events in Munich and the first mixes.', 'next', nextpage)
-    files['events.html'] = redirect('next.html', 'Next · EAZr Beats Collective')
-    files['mixes.html'] = redirect('next.html', 'Next · EAZr Beats Collective')
+    files['events.html'] = redirect('next', 'Next · EAZr Beats Collective')
+    files['mixes.html'] = redirect('next', 'Next · EAZr Beats Collective')
 for f, c in files.items():
     open(f, 'w').write(c)
 print('ok')
@@ -521,7 +553,7 @@ for f in files:
 print('filled', len(DE))
 
 # sitemap + robots for search engines: every real page (no redirects, 404, or the noindex legal pages)
-SITEMAP = [''] + [f for f in files if f not in ('index.html', '404.html') and 'noindex' not in files[f]]
+SITEMAP = [''] + [f[:-5] for f in files if f not in ('index.html', '404.html') and 'noindex' not in files[f]]
 open('sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + ''.join(f'  <url><loc>https://eazrbeats.de/{u}</loc></url>\n' for u in SITEMAP) + '</urlset>\n')
 open('robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://eazrbeats.de/sitemap.xml\n')

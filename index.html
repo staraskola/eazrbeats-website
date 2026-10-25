@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=76773c04">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,7 +47,7 @@
       "genre": ["House", "Melodic House & Techno", "Afro House", "Latin House"],
       "foundingLocation": {"@type": "Place", "name": "München, Deutschland"},
       "email": "kontakt@eazrbeats.de",
-      "sameAs": ["https://www.instagram.com/eazrbeats/", "https://www.tiktok.com/@eazrbeats", "https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K"]
+      "sameAs": ["https://www.instagram.com/eazrbeats/", "https://www.tiktok.com/@eazrbeats", "https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K", "https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl"]
     }
   ]
 }
@@ -77,17 +77,18 @@
     </div>
   </div>
   <nav class="nav" aria-label="Menü">
-    <a class="brand" href="index.html" aria-label="EAZr Beats Collective, Startseite">
+    <a class="brand" href="/" aria-label="EAZr Beats Collective, Startseite">
       <img src="logo-mark.png" alt="EAZr">
       <span>BEATS COLLECTIVE</span>
     </a>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="nav-links"><span data-i18n="menu">Menü</span> <span aria-hidden="true">≡</span></button>
     <div class="nav-links" id="nav-links">
-      <a href="about.html" data-page="about" data-i18n="navAbout">About</a>
-      <a href="next.html" data-page="next" data-i18n="navNext">Next</a>
-      <a href="crate.html" data-page="crate">Crate</a>
-      <a href="booking.html" data-page="booking">Booking</a>
-      <a href="kontakt.html" data-page="kontakt" data-i18n="navKontakt">Kontakt</a>
+      <a href="about" data-page="about" data-i18n="navAbout">About</a>
+      <a href="next" data-page="next" data-i18n="navNext">Next</a>
+      <a href="crate" data-page="crate">Crate</a>
+      <a href="void" data-page="void">VOID</a>
+      <a href="booking" data-page="booking">Booking</a>
+      <a href="kontakt" data-page="kontakt" data-i18n="navKontakt">Kontakt</a>
     </div>
   </nav>
 </div>
@@ -100,7 +101,8 @@
   <span class="prompt">eazr@beats:~$ follow --instagram</span>
   <div class="cta-row">
     <a class="btn" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@eazrbeats</a>
-    <a class="btn ghost" href="crate.html" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a>
+    <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
   </div>
 </section>
 
@@ -127,7 +129,7 @@
   </div>
   <p class="lead" data-i18n="freshText">Die neuesten Weekly-Hot-Picks aus allen vier Genres.</p>
   <div class="picks" id="fresh"></div>
-  <a class="btn ghost more" href="crate.html" data-i18n="freshAll">Ganze Crate →</a>
+  <a class="btn ghost more" href="crate" data-i18n="freshAll">Ganze Crate →</a>
 </section>
 </div>
 
@@ -169,7 +171,7 @@
         <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <input type="hidden" name="locale" value="de">
         <p class="news-msg" role="status" aria-live="polite"></p>
-        <p class="news-note" data-i18n="newsNote">Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz.html#newsletter">Datenschutz</a></p>
+        <p class="news-note" data-i18n="newsNote">Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz#newsletter">Datenschutz</a></p>
       </form>
     </div>
   </div>
@@ -183,13 +185,13 @@
       <span class="kicker">whoami</span>
       <h3>About</h3>
       <p data-i18n="teaserAboutText">Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.</p>
-      <a class="btn ghost" href="about.html" data-i18n="teaserAboutBtn">Über uns →</a>
+      <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
     </div>
     <div class="card">
       <span class="kicker">ls ./next</span>
       <h3>Next</h3>
       <p data-i18n="teaserEventsText">Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.</p>
-      <a class="btn ghost" href="next.html" data-i18n="teaserNextBtn">Was kommt →</a>
+      <a class="btn ghost" href="next" data-i18n="teaserNextBtn">Was kommt →</a>
     </div>
   </div>
 </section>
@@ -200,12 +202,12 @@
   <a href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">[INSTAGRAM]</a>
   <a href="https://www.tiktok.com/@eazrbeats" target="_blank" rel="noopener">[TIKTOK]</a>
   <a href="https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K" target="_blank" rel="noopener">[SPOTIFY]</a>
-  <a href="kontakt.html" data-i18n="footerKontakt">[KONTAKT]</a>
+  <a href="kontakt" data-i18n="footerKontakt">[KONTAKT]</a>
   <span data-i18n="footerCopy">© 2026 EAZR BEATS COLLECTIVE · MÜNCHEN</span>
-  <a href="impressum.html" data-i18n="footerImpressum">IMPRESSUM</a>
-  <a href="datenschutz.html" data-i18n="footerDatenschutz">DATENSCHUTZ</a>
+  <a href="impressum" data-i18n="footerImpressum">IMPRESSUM</a>
+  <a href="datenschutz" data-i18n="footerDatenschutz">DATENSCHUTZ</a>
 </footer>
 
-<script src="site.js"></script>
-<script src="home.js"></script>
+<script src="site.js?v=889a2043"></script>
+<script src="home.js?v=38e1cd8b"></script>
 </body></html>

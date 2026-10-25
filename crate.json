@@ -1,11 +1,95 @@
 {
- "exported": "2026-10-23",
+ "exported": "2026-10-25",
  "tracks": [
+  {
+   "title": "Vamos Bailar",
+   "artist": "PHARRÖ",
+   "genre": "latin-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-25",
+   "source": "Traxsource Afro/Latin/Brazilian Top 100 (#4)",
+   "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top",
+   "note": "Verspielter Latin-House, jetzt auf Nervous Records.",
+   "noteEn": "Playful Latin house, now out on Nervous Records.",
+   "confirmations": [
+    {
+     "source": "Traxsource Afro/Latin/Brazilian Top 100 (#4)",
+     "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
+    },
+    {
+     "source": "MN2S",
+     "sourceUrl": "https://mn2s.com/news/label-services/pharro-lands-on-nervous-records-with-vamos-bailar/"
+    }
+   ]
+  },
+  {
+   "title": "Magalenha (Extended Mix)",
+   "artist": "Simon Fava, Sergio Mendes",
+   "genre": "latin-house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-25",
+   "source": "Traxsource Afro/Latin/Brazilian Top 100 (#6)",
+   "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top",
+   "note": "Karneval-Hymne neu interpretiert, Favas Toolroom-Debüt.",
+   "noteEn": "A carnival anthem reimagined, Fava's Toolroom debut.",
+   "confirmations": [
+    {
+     "source": "Traxsource Afro/Latin/Brazilian Top 100 (#6)",
+     "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
+    },
+    {
+     "source": "Beatportal",
+     "sourceUrl": "https://www.beatportal.com/articles/1594102-simon-fava-makes-his-long-awaited-toolroom-debut-with-a-fresh-take-on-the-iconic-latin-anthem-magalenha"
+    }
+   ]
+  },
+  {
+   "title": "Burnin' Deep (Extended Mix)",
+   "artist": "Wh0",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-25",
+   "source": "Traxsource House Top 100 (#7)",
+   "sourceUrl": "https://www.traxsource.com/genre/4/house/top",
+   "note": "Toolroom-Groover von Wh0, läuft auf beiden Shops oben.",
+   "noteEn": "Wh0 on Toolroom, riding high on both big stores.",
+   "confirmations": [
+    {
+     "source": "Traxsource House Top 100 (#7)",
+     "sourceUrl": "https://www.traxsource.com/genre/4/house/top"
+    },
+    {
+     "source": "Beatport House Top 100 (#22)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Whole Room Dancing",
+   "artist": "Riva Starr, Adam Port, JRM",
+   "genre": "house",
+   "tier": "weekly",
+   "dateAdded": "2026-10-24",
+   "source": "Beatport House Top 100 (#14)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Funky Soul-Groove von Riva Starr, Adam Port und JRM.",
+   "noteEn": "A funky, soulful groove from Riva Starr, Adam Port and JRM.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#14)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "Beatportal",
+     "sourceUrl": "https://www.beatportal.com/articles/1682979-riva-starr-adam-port-jrm-whole-room-dancing"
+    }
+   ]
+  },
   {
    "title": "Banga Banga",
    "artist": "Space Motion",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-22",
    "source": "Beatport Melodic House & Techno Top 100 (#6)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -26,7 +110,7 @@
    "title": "Deep Breath",
    "artist": "Jamek Ortega, JUNO (DE)",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-22",
    "source": "Beatport Melodic House & Techno Top 100 (#4)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -47,7 +131,7 @@
    "title": "Feeling It",
    "artist": "Ivory (IT), Julia Linkogel",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-22",
    "source": "Beatport Melodic House & Techno Top 100 (#8)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -68,7 +152,7 @@
    "title": "Ay Sí (Extended Mix)",
    "artist": "Melé, RIA",
    "genre": "latin-house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-22",
    "source": "Traxsource Afro/Latin/Brazilian Top 100 (#9)",
    "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top",
@@ -110,7 +194,7 @@
    "title": "17",
    "artist": "Miss Monique, Henri Bergmann, Mario Eighta",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-21",
    "source": "Beatport Melodic House & Techno Top 100 (#13)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -152,7 +236,7 @@
    "title": "Madan",
    "artist": "Caiiro, Salif Keita",
    "genre": "afro-house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-19",
    "source": "Beatport Afro House Top 100 (#3)",
    "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
@@ -173,7 +257,7 @@
    "title": "Out of My Head",
    "artist": "ANOTR",
    "genre": "house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-10-19",
    "source": "Beatport House Top 100 (#11)",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
@@ -181,7 +265,7 @@
    "noteEn": "Disco riff and live strings, ANOTR back on the floor.",
    "confirmations": [
     {
-     "source": "Beatport House Top 100 (#11)",
+     "source": "Beatport House Top 100 (#13, 25.10.)",
      "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
     },
     {
