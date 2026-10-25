@@ -1,6 +1,35 @@
 {
- "exported": "2026-10-24",
+ "exported": "2026-10-25",
  "tracks": [
+  {
+   "title": "Tarantula (KASIA Remix)",
+   "artist": "Faithless, KASIA",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-10-25",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Der Faithless-Klassiker, von KASIA auf Peak-Time-Druck gedreht – Hände hoch, Bass rein.",
+   "noteEn": "The Faithless classic, cranked to peak-time pressure by KASIA – hands up, bass in.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "1001Tracklists: KASIA @ Resistance, Ergo Arena Gdańsk (10.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/hk270s1/kasia-resistance-ergo-arena-gdansk-poland-2026-10-10.html"
+    },
+    {
+     "source": "1001Tracklists: Tim Clark – Inspire Radio 199 (22.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/12559y9t/tim-clark-inspire-radio-199-2026-10-22.html"
+    },
+    {
+     "source": "1001Tracklists: Reprobeater – Generation Rave 91 (08.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/1pqyh3xt/reprobeater-generation-rave-91-2026-10-08.html"
+    }
+   ]
+  },
   {
    "title": "We Come 1 (Adam Beyer Remix)",
    "artist": "Faithless, Adam Beyer",
