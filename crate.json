@@ -1,6 +1,48 @@
 {
- "exported": "2026-10-24",
+ "exported": "2026-10-25",
  "tracks": [
+  {
+   "title": "Vamos Bailar",
+   "artist": "PHARRÖ",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-10-25",
+   "source": "Traxsource Afro/Latin/Brazilian Top 100 (#4)",
+   "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top",
+   "note": "Verspielter Latin-House, jetzt auf Nervous Records.",
+   "noteEn": "Playful Latin house, now out on Nervous Records.",
+   "confirmations": [
+    {
+     "source": "Traxsource Afro/Latin/Brazilian Top 100 (#4)",
+     "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
+    },
+    {
+     "source": "MN2S",
+     "sourceUrl": "https://mn2s.com/news/label-services/pharro-lands-on-nervous-records-with-vamos-bailar/"
+    }
+   ]
+  },
+  {
+   "title": "Magalenha (Extended Mix)",
+   "artist": "Simon Fava, Sergio Mendes",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-10-25",
+   "source": "Traxsource Afro/Latin/Brazilian Top 100 (#6)",
+   "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top",
+   "note": "Karneval-Hymne neu interpretiert, Favas Toolroom-Debüt.",
+   "noteEn": "A carnival anthem reimagined, Fava's Toolroom debut.",
+   "confirmations": [
+    {
+     "source": "Traxsource Afro/Latin/Brazilian Top 100 (#6)",
+     "sourceUrl": "https://www.traxsource.com/genre/23/afro-latin-brazilian/top"
+    },
+    {
+     "source": "Beatportal",
+     "sourceUrl": "https://www.beatportal.com/articles/1594102-simon-fava-makes-his-long-awaited-toolroom-debut-with-a-fresh-take-on-the-iconic-latin-anthem-magalenha"
+    }
+   ]
+  },
   {
    "title": "Whole Room Dancing",
    "artist": "Riva Starr, Adam Port, JRM",
