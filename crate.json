@@ -1,6 +1,27 @@
 {
- "exported": "2026-10-28",
+ "exported": "2026-10-30",
  "tracks": [
+  {
+   "title": "Disappear",
+   "artist": "Adriatique",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-10-30",
+   "source": "RaveJungle",
+   "sourceUrl": "https://www.ravejungle.com/2026/10/23/adriatique-disappear-x-recordings/",
+   "note": "Melodic Techno zur ADE, läuft schon in vielen DJ-Sets.",
+   "noteEn": "Melodic techno from ADE, already spinning in DJ sets.",
+   "confirmations": [
+    {
+     "source": "RaveJungle",
+     "sourceUrl": "https://www.ravejungle.com/2026/10/23/adriatique-disappear-x-recordings/"
+    },
+    {
+     "source": "1001Tracklists (u.a. Brian Laruso, Solardo, Matys, Joan Cases, DJs From Mars)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/1qnvmgd1/brian-laruso-magic-island-deep-session-097-2026-10-29.html"
+    }
+   ]
+  },
   {
    "title": "Kaleido",
    "artist": "Arodes",
