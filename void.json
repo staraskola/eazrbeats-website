@@ -1,6 +1,106 @@
 {
- "exported": "2026-10-25",
+ "exported": "2026-10-31",
  "tracks": [
+  {
+   "title": "Easy A",
+   "artist": "Kaufmann (DE)",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatport Peak Time Top 10 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6",
+   "note": "Rollendes DJ-Tool von Drumcode, baut die Spannung langsam auf.",
+   "noteEn": "Rolling Drumcode tool, tension that builds slow.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 10 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6"
+    },
+    {
+     "source": "1001Tracklists: Hof Contact Radio 021 (02.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/1g8hl339/hof-contact-radio-021-2026-10-02.html"
+    },
+    {
+     "source": "Beatportal: Kaufmann – Easy A (Drumcode)",
+     "sourceUrl": "https://www.beatportal.com/articles/1638622-kaufmann-lands-first-standalone-drumcode-release-with-easy-a"
+    }
+   ]
+  },
+  {
+   "title": "Crusher Wheels",
+   "artist": "Disguised",
+   "genre": "raw-deep-hypnotic",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatport R/D/H Shortlist Oktober 2026 (#2)",
+   "sourceUrl": "https://www.beatport.com/track/t/28519881",
+   "note": "142 BPM, roh und hypnotisch, läuft seit Monaten in Berliner Sets.",
+   "noteEn": "142 BPM of raw hypnosis. Berlin floors keep it on rotation.",
+   "confirmations": [
+    {
+     "source": "Beatport R/D/H Shortlist Oktober 2026 (#2)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "BeatTracker R/D/H Top Results (#1)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "set79: Live at Sisyphos Hammahalle (Juni 2026)",
+     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/adishdj/live-at-sisyphos-hammahalle-june-2026"
+    }
+   ]
+  },
+  {
+   "title": "Dārin",
+   "artist": "Phil Berg",
+   "genre": "raw-deep-hypnotic",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatport R/D/H Shortlist Oktober 2026 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92",
+   "note": "Dunkel und treibend, der härteste Moment der Mutual-Rytm-Platte.",
+   "noteEn": "Dark and driving, the heaviest cut on the Mutual Rytm wax.",
+   "confirmations": [
+    {
+     "source": "Beatport R/D/H Shortlist Oktober 2026 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "set79: AW26 Techno Showcase",
+     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/valenfys/aw26-techno-showcase"
+    },
+    {
+     "source": "Tobira Records: Phil Berg – Dārin 12\" (Mutual Rytm MR047)",
+     "sourceUrl": "https://tobirarecords.com/collections/new/products/phil-berg-darin-12inch"
+    }
+   ]
+  },
+  {
+   "title": "Reeky",
+   "artist": "Luciid",
+   "genre": "hard-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatport Hard Techno Shortlist Oktober 2026",
+   "sourceUrl": "https://www.beatport.com/track/reeky/29874836",
+   "note": "160 BPM, kompromisslos, Material für die letzte Stunde.",
+   "noteEn": "160 BPM, no mercy. Last-hour material.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Shortlist Oktober 2026",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2"
+    },
+    {
+     "source": "1001Tracklists: D-wayne – Gym Sessions 127 (28.10.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/2gvqtksk/d-wayne-gym-sessions-127-2026-10-28.html"
+    },
+    {
+     "source": "1001Tracklists: AZYR @ Gotec Club Karlsruhe (21.08.2026)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/lbldwlk/azyr-gotec-club-karlsruhe-germany-2026-08-21.html"
+    }
+   ]
+  },
   {
    "title": "Tarantula (KASIA Remix)",
    "artist": "Faithless, KASIA",
