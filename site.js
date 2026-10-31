@@ -129,7 +129,7 @@ const T = {
     crateFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
     crateUpdatedLabel: 'zuletzt aktualisiert:',
     crateSpotify: '▶ Playlist auf Spotify hören',
-    voidSub: 'Die dunkle Seite der Crate: Techno, der gerade in DJ-Sets läuft. Peak Time, Raw, Hypnotic, Hard. Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
+    voidSub: 'Die dunkle Seite der Crate: Techno, der gerade in DJ-Sets läuft. Peak Time, Melodic, Raw, Hypnotic, Hard. Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
     voidFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Samstag neu kuratiert',
     ctaVoid: 'The Void →',
     weeklyTag: 'kuratierte Wochen-Highlights',
@@ -263,7 +263,7 @@ const T = {
     crateFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
     crateUpdatedLabel: 'last updated:',
     crateSpotify: '▶ Listen on Spotify',
-    voidSub: "The dark side of the Crate: techno getting played in DJ sets right now. Peak time, raw, hypnotic, hard. Every entry is backed by at least two independent sources.",
+    voidSub: "The dark side of the Crate: techno getting played in DJ sets right now. Peak time, melodic, raw, hypnotic, hard. Every entry is backed by at least two independent sources.",
     voidFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Saturday",
     ctaVoid: 'The Void →',
     weeklyTag: "hand-picked weekly highlights",
@@ -347,6 +347,7 @@ const GENRES = [
 const VOID_SPOTIFY = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl';
 const VOID_GENRES = [
   { key: 'peak-time-driving', label: 'Peak Time / Driving' },
+  { key: 'melodic-techno', label: 'Melodic Techno' },
   { key: 'raw-deep-hypnotic', label: 'Raw / Deep / Hypnotic' },
   { key: 'hard-techno', label: 'Hard Techno' },
 ];
