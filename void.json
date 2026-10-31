@@ -2,6 +2,52 @@
  "exported": "2026-10-31",
  "tracks": [
   {
+   "title": "Oh Baby",
+   "artist": "Mathame",
+   "genre": "melodic-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Erste Single auf Mathames neuem Label NEO, dunkel und mit großem Bogen.",
+   "noteEn": "First drop on Mathame's own NEO imprint, dark and widescreen.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "DJ Mag: Mathame launch NEO Records (26.10.2026)",
+     "sourceUrl": "https://djmag.com/news/mathame-launch-new-label-neo-records-share-single-listen"
+    }
+   ]
+  },
+  {
+   "title": "Obsidian",
+   "artist": "Kevin de Vries, Juan Elvadin",
+   "genre": "melodic-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-10-31",
+   "source": "Beatportal: Obsidian EP auf Drumcode",
+   "sourceUrl": "https://www.beatportal.com/articles/1675117-kevin-de-vries-juan-elvadin-join-forces-for-obsidian-ep-on-drumcode",
+   "note": "Melodisch, aber mit Drumcode-Druck, entstanden aus einem einminütigen Loop.",
+   "noteEn": "Melodic lead with Drumcode weight, grown out of a one-minute loop.",
+   "confirmations": [
+    {
+     "source": "Beatportal: Obsidian EP auf Drumcode",
+     "sourceUrl": "https://www.beatportal.com/articles/1675117-kevin-de-vries-juan-elvadin-join-forces-for-obsidian-ep-on-drumcode"
+    },
+    {
+     "source": "Perfil: Juan Elvadin debütiert auf Drumcode",
+     "sourceUrl": "https://www.perfil.com/noticias/musica/juan-elvadin-debuta-en-drumcode-junto-a-kevin-de-vries-y-marca-un-hito-para-el-techno-argentino.phtml"
+    },
+    {
+     "source": "Beatport: Kevin de Vries Releases",
+     "sourceUrl": "https://www.beatport.com/artist/kevin-de-vries/393873/releases?page=1&per_page=100"
+    }
+   ]
+  },
+  {
    "title": "Easy A",
    "artist": "Kaufmann (DE)",
    "genre": "peak-time-driving",
