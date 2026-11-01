@@ -18,6 +18,7 @@ SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crat
 SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE VOID playlist
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
+INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'  # EMBERS sub-account, linked on /live
 # Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
 LIVE_NEXT = ''
@@ -547,6 +548,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
     <div class="cta-row" style="justify-content:flex-start">
       <a class="btn" href="{TWITCH}" target="_blank" rel="noopener" data-i18n="liveWatch">▶ Auf Twitch ansehen</a>
       <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
+      <a class="btn ghost" href="{INSTA_EMBERS}" target="_blank" rel="noopener">@eazrembers ↗</a>
     </div>
     <p class="booking-note" data-i18n="livePlanB"></p>
   </div>
