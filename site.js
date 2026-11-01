@@ -90,7 +90,7 @@ const T = {
 
     // live (EMBERS)
     liveBtn: 'Zur Live-Seite →',
-    liveText: 'EMBERS ist unser Live-Format: echte DJ-Sets, direkt vom Pult, live aus München gestreamt. Jede Session bekommt eine Nummer.',
+    liveText: 'EMBERS ist unser Live-Format: DJ-Sessions mit Host, direkt vom Pult, live aus München gestreamt. Jede Session bekommt eine Nummer.',
     liveNextKicker: 'Nächste Session',
     liveNextTba: 'EMBERS 001 · SOON',
     liveNextText: 'Der genaue Termin kommt zuerst auf Instagram und im Newsletter.',
@@ -241,7 +241,7 @@ const T = {
 
     // live (EMBERS)
     liveBtn: 'To the live page →',
-    liveText: 'EMBERS is our live format: real DJ sets, straight from the decks, streamed live from Munich. Every session gets a number.',
+    liveText: 'EMBERS is our live format: hosted live DJ sessions, straight from the decks, streamed from Munich. Every session gets a number.',
     liveNextKicker: 'Next session',
     liveNextTba: 'EMBERS 001 · SOON',
     liveNextText: 'The exact date goes out first on Instagram and in the newsletter.',
