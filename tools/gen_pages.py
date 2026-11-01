@@ -533,7 +533,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
 <section class="sec" id="live">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./stream --live</span>
-    <h1 class="sr-only">EMBERS by EAZr · Live DJ sets from Munich</h1>
+    <h1 class="sr-only">EMBERS by EAZr · Hosted live DJ sessions from Munich</h1>
   </div>
   <div class="embers-head">
     <img class="embers-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167">
@@ -568,7 +568,7 @@ files = {
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
-  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: live DJ sets from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, og='og-live.jpg'),
+  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, og='og-live.jpg'),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
