@@ -448,6 +448,11 @@
   body[data-page="live"] .band { background: transparent; }
   .embers-bg { position: fixed; inset: 0; z-index: 1; pointer-events: none;
     background: radial-gradient(ellipse 120% 45% at 50% 115%, rgba(255,120,30,0.55), rgba(200,40,10,0.28) 40%, rgba(80,10,4,0.12) 65%, transparent 82%); }
+  /* glowing cracks, pulsing slowly; dimmed at the top so text stays readable */
+  .embers-bg::before { content: ""; position: absolute; inset: 0; background: url(embers-cracks.jpg) center / cover; opacity: 0.32; animation: embers-pulse 4s ease-in-out infinite alternate; }
+  .embers-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,4,3,0.82) 0%, rgba(5,4,3,0.55) 40%, rgba(5,4,3,0.2) 100%); }
+  @keyframes embers-pulse { from { opacity: 0.32; } to { opacity: 0.58; } }
+  @media (prefers-reduced-motion: reduce) { .embers-bg::before { animation: none; opacity: 0.45; } }
   .embers-head { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin: 6px 0 18px; }
   .embers-logo { width: min(560px, 100%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 22px rgba(255,122,31,0.35)); }
   .embers-by { color: #FF7A1F; letter-spacing: 0.14em; font-size: 15px; }
