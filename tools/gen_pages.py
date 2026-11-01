@@ -82,7 +82,7 @@ import hashlib
 def v(f):
     return f + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
 
-def page(name, title, desc, canon, body, scripts=()):
+def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg'):
     nav = [('about', 'about', 'navAbout', 'About')]
     nav += ([('events', 'events', 'navEvents', 'Events'),
              ('mixes', 'mixes', 'navMixes', 'Mixes')] if SPLIT_NEXT else
@@ -113,7 +113,7 @@ def page(name, title, desc, canon, body, scripts=()):
 <meta property="og:site_name" content="EAZr Beats Collective">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://eazrbeats.de/og-image.jpg">
+<meta property="og:image" content="https://eazrbeats.de/{og}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -566,7 +566,7 @@ files = {
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
-  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: live DJ sets from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live),
+  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: live DJ sets from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, og='og-live.jpg'),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
