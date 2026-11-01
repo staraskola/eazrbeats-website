@@ -17,6 +17,10 @@ INSTA = 'https://www.instagram.com/eazrbeats/'
 SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crate playlist
 SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE VOID playlist
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
+TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
+# Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
+# Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
+LIVE_NEXT = ''
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -39,7 +43,7 @@ def news_form(uid):
 
 # Structured data for search engines (start page only): who we are and where else we are.
 # Google uses sameAs to connect the site with the social profiles.
-SAME_AS = [u for u in (INSTA, TIKTOK, SPOTIFY, SPOTIFY_VOID) if u]
+SAME_AS = [u for u in (INSTA, TIKTOK, TWITCH, SPOTIFY, SPOTIFY_VOID) if u]
 SCHEMA = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,6 +89,7 @@ def page(name, title, desc, canon, body, scripts=()):
             [('next', 'next', 'navNext', 'Next')])
     nav += [('crate', 'crate', None, 'Crate'),
            ('void', 'void', None, 'VOID'),
+           ('live', 'live', None, 'Live'),
            ('booking', 'booking', None, 'Booking'),
            ('kontakt', 'kontakt', 'navKontakt', 'Kontakt')]
     links = '\n'.join(
@@ -337,8 +342,9 @@ events = f'''<div class="band first">
     </div>
     <div class="card">
       <span class="kicker" data-i18n="sessionsKicker">Format · in Arbeit</span>
-      <h3>EAZr Sessions</h3>
+      <h3>EMBERS by EAZr</h3>
       <p data-i18n="sessionsText"></p>
+      <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
     </div>
   </div>
 
@@ -392,8 +398,9 @@ nextpage = f'''<div class="band first">
     </div>
     <div class="card">
       <span class="kicker" data-i18n="sessionsKicker">Format · in Arbeit</span>
-      <h3>EAZr Sessions</h3>
+      <h3>EMBERS by EAZr</h3>
       <p data-i18n="sessionsText"></p>
+      <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
     </div>
     <div class="card">
       <span class="kicker">mix/01</span>
@@ -518,12 +525,48 @@ kontakt = f'''<div class="band first">
 </div>
 '''
 
+# ---------------- live (EMBERS) ----------------
+live_next = f'<h2 class="live-next">{LIVE_NEXT}</h2>' if LIVE_NEXT else '<h2 class="live-next" data-i18n="liveNextTba"></h2>'
+live = f'''<div class="embers-bg" aria-hidden="true"></div>
+<div class="band first">
+<section class="sec" id="live">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./stream --live</span>
+    <h1 class="sr-only">EMBERS by EAZr · Live DJ sets from Munich</h1>
+  </div>
+  <div class="embers-head">
+    <img class="embers-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167">
+    <span class="embers-by">by EAZr</span>
+  </div>
+  <p class="lead" data-i18n="liveText"></p>
+
+  <div class="booking-box live-box">
+    <span class="kicker"><span class="live-dot" aria-hidden="true"></span><span data-i18n="liveNextKicker">Nächste Session</span></span>
+    {live_next}
+    <p style="margin:0" data-i18n="liveNextText"></p>
+    <div class="cta-row" style="justify-content:flex-start">
+      <a class="btn" href="{TWITCH}" target="_blank" rel="noopener" data-i18n="liveWatch">▶ Auf Twitch ansehen</a>
+      <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
+    </div>
+    <p class="booking-note" data-i18n="livePlanB"></p>
+  </div>
+
+  <div class="cards" style="margin-top:14px">
+    <div class="card"><span class="kicker">01</span><h3 data-i18n="liveHowTitle">So bist du dabei</h3><p data-i18n="liveHowText"></p><a class="btn ghost" href="{TWITCH}" target="_blank" rel="noopener">twitch.tv/eazrbeats ↗</a></div>
+    <div class="card"><span class="kicker">02</span><h3>Crew</h3><p><b>NMB</b> · DJ<br><b>WIVI</b> · Host · MC</p><p data-i18n="liveCrewText"></p></div>
+    <div class="card"><span class="kicker">03</span><h3 data-i18n="liveArchiveTitle">Archiv</h3><p data-i18n="liveArchiveText"></p></div>
+  </div>
+</section>
+</div>
+'''
+
 D = 'Munich house &amp; techno collective — new sets, sessions and shows dropping soon.'
 files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
+  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: live DJ sets from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
