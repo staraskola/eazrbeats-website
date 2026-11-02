@@ -511,3 +511,12 @@
 body[data-page="start"] .bg-video { animation: hack-jitter 7s infinite; }
 @keyframes hack-jitter { 0%, 96%, 100% { transform: none; filter: none; } 97% { transform: translateX(-6px) skewX(-1deg); filter: hue-rotate(40deg) saturate(1.4); } 98% { transform: translateX(5px); filter: none; } }
 @media (prefers-reduced-motion: reduce) { body[data-page="start"] .bg-video { animation: none; } .hack-glitch .slice, .hack-glitch .tint, .hack-glitch .ember, .hack-glitch .elogo { display: none; } }
+
+/* ---- /live: countdown + (optional) embedded Twitch player ---- */
+.countdown { margin: 2px 0 4px; font-size: clamp(18px, 3vw, 24px); letter-spacing: 0.12em; color: #FFE7D2; }
+.countdown .cd-label { color: #FF7A1F; font-size: 0.7em; letter-spacing: 0.24em; margin-right: 6px; }
+.countdown .cd-val { font-weight: 700; text-shadow: 0 0 6px rgba(255,122,31,0.8), 0 0 18px rgba(255,122,31,0.35); }
+.countdown .cursor { color: #FF7A1F; animation: live-blink 1s steps(2, start) infinite; margin-left: 2px; }
+@media (prefers-reduced-motion: reduce) { .countdown .cursor { animation: none; } }
+.twitch-player { margin-top: 14px; position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(255,122,31,0.55); box-shadow: 0 0 24px rgba(255,122,31,0.15); background: #050403; }
+.twitch-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
