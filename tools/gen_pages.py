@@ -21,7 +21,7 @@ TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
 INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'  # EMBERS sub-account, linked on /live
 # Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
-LIVE_NEXT = 'EMBERS 001 · XX.01.2027'
+LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -213,12 +213,12 @@ start = f'''<section class="hero" id="top">
     <h2>EMBERS 001</h2>
   </div>
   <div class="event-promo">
-    <a class="event-poster" href="live" aria-label="EMBERS 001 · Januar 2027 · Zur Live-Seite">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, Januar 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
+    <a class="event-poster" href="live" aria-label="EMBERS 001 · KW 1 2027 · Zur Live-Seite">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
     </a>
     <div class="event-info">
       <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
-      <h3 class="event-date" data-i18n="eventDate">XX.01.2027 · München</h3>
+      <h3 class="event-date" data-i18n="eventDate">KW 1 · 2027 · München</h3>
       <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
       <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
       <div class="cta-row" style="justify-content:flex-start">
@@ -366,7 +366,7 @@ events = f'''<div class="band first">
       <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
-      <span class="kicker">XX.01.2027 · München</span>
+      <span class="kicker">KW 1 · 2027 · München</span>
       <h3>EMBERS 001</h3>
       <p data-i18n="sessionsText"></p>
       <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
@@ -551,7 +551,7 @@ kontakt = f'''<div class="band first">
 '''
 
 # ---------------- live (EMBERS) ----------------
-live_next = f'<h2 class="live-next">{LIVE_NEXT}</h2>' if LIVE_NEXT else '<h2 class="live-next" data-i18n="liveNextTba"></h2>'
+live_next = f'<h2 class="live-next" data-i18n="liveNextDate">{LIVE_NEXT}</h2>' if LIVE_NEXT else '<h2 class="live-next" data-i18n="liveNextTba"></h2>'
 live = f'''<div class="embers-bg" aria-hidden="true"></div>
 <div class="band first">
 <section class="sec" id="live">
@@ -567,7 +567,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
 
   <div class="booking-box live-box event-promo">
     <a class="event-poster" href="embers-001-poster.jpg" target="_blank" rel="noopener" aria-label="Plakat EMBERS 001 groß öffnen">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, Januar 2027, Doors 20:00, Stream 21:30, München" width="640" height="904">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904">
     </a>
     <div class="event-info">
     <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
