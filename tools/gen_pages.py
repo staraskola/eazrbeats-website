@@ -76,7 +76,7 @@ SCHEMA = '''<script type="application/ld+json">
       "logo": "https://eazrbeats.de/icon-512.png",
       "image": "https://eazrbeats.de/og-image.jpg",
       "description": "House- und Techno-Kollektiv aus München.",
-      "genre": ["House", "Melodic House & Techno", "Afro House", "Latin House"],
+      "genre": ["House", "Melodic House & Techno", "Afro House", "Latin House", "Techno", "Melodic Techno"],
       "foundingLocation": {"@type": "Place", "name": "München, Deutschland"},
       "email": "''' + KONTAKT + '''",
       "sameAs": ''' + '[' + ', '.join(f'"{u}"' for u in SAME_AS) + ']' + '''
@@ -289,7 +289,7 @@ start = f'''<section class="hero" id="top">
     <div class="card">
       <span class="kicker">03</span>
       <h3 data-i18n="joinMixTitle">Mix einschicken</h3>
-      <p data-i18n="joinMixText">Du legst House auf und kommst aus München? Wir wollen deinen Mix hören.</p>
+      <p data-i18n="joinMixText">Du legst House oder Techno auf und kommst aus München? Wir wollen deinen Mix hören.</p>
       <a class="btn ghost" href="mailto:{KONTAKT}?subject=Mix-Einsendung" data-i18n="joinMixBtn">Mix schicken</a>
     </div>
     <div class="card">
@@ -308,7 +308,7 @@ start = f'''<section class="hero" id="top">
     <div class="card">
       <span class="kicker">whoami</span>
       <h3>About</h3>
-      <p data-i18n="teaserAboutText">Münchner House-Kollektiv. Wer wir sind und was wir vorhaben.</p>
+      <p data-i18n="teaserAboutText">Münchner House- und Techno-Kollektiv. Wer wir sind und was wir vorhaben.</p>
       <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
     </div>
     <div class="card">
