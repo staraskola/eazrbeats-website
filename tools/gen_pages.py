@@ -131,6 +131,7 @@ def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg'):
 <div class="scanlines"></div>
 <div class="vignette"></div>
 <div class="flicker"></div>
+{'<div class="hack-glitch" aria-hidden="true"><canvas></canvas><div class="slice s1"></div><div class="slice s2"></div><div class="slice s3"></div><div class="slice s4"></div><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""><div class="tint"></div></div>' if name == 'start' else ''}
 
 <div class="topbar">
   <div class="chrome">
@@ -594,7 +595,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
 
 D = 'Munich house &amp; techno collective — new sets, sessions and shows dropping soon.'
 files = {
-  'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js']),
+  'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js', 'glitch.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
