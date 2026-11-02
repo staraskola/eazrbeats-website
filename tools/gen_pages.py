@@ -22,6 +22,12 @@ INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'  # EMBERS sub-account, li
 # Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
 LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
+# Countdown on /live. Until the exact day is public it counts down to the start of KW 1.
+# Once the date is announced, set the exact start, e.g. '2027-01-08T21:30:00+01:00'.
+LIVE_COUNTDOWN = '2027-01-04T00:00:00+01:00'
+LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
+# Embedded Twitch player on /live. Keep False until the Twitch channel is fully set up.
+TWITCH_EMBED = False
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -553,6 +559,12 @@ kontakt = f'''<div class="band first">
 
 # ---------------- live (EMBERS) ----------------
 live_next = f'<h2 class="live-next" data-i18n="liveNextDate">{LIVE_NEXT}</h2>' if LIVE_NEXT else '<h2 class="live-next" data-i18n="liveNextTba"></h2>'
+live_countdown = (f'<p class="countdown" data-target="{LIVE_COUNTDOWN}" data-exact="{1 if LIVE_COUNTDOWN_EXACT else 0}" aria-live="off">'
+                  '<span class="cd-label">T-MINUS</span> <span class="cd-val">··</span><span class="cursor">_</span></p>') if LIVE_COUNTDOWN else ''
+twitch_player = ('''
+  <div class="twitch-player">
+    <iframe src="https://player.twitch.tv/?channel=eazrbeats&amp;parent=eazrbeats.de&amp;parent=www.eazrbeats.de&amp;muted=true" title="EMBERS live on Twitch" allowfullscreen loading="lazy"></iframe>
+  </div>''') if TWITCH_EMBED else ''
 live = f'''<div class="embers-bg" aria-hidden="true"></div>
 <div class="band first">
 <section class="sec" id="live">
@@ -573,6 +585,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
     <div class="event-info">
     <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
     {live_next}
+    {live_countdown}
     <p style="margin:0" data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
     <p style="margin:0" data-i18n="liveNextText"></p>
     <div class="cta-row" style="justify-content:flex-start">
@@ -583,7 +596,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
     <p class="booking-note" data-i18n="livePlanB"></p>
     </div>
   </div>
-
+{twitch_player}
   <div class="cards" style="margin-top:14px">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="liveHowTitle">So bist du dabei</h3><p data-i18n="liveHowText"></p><a class="btn ghost" href="{TWITCH}" target="_blank" rel="noopener">twitch.tv/eazrbeats ↗</a></div>
     <div class="card"><span class="kicker">02</span><h3>Crew</h3><p><b>NMB</b> · DJ<br><b>WIVI</b> · Host · MC</p><p data-i18n="liveCrewText"></p></div>
@@ -599,7 +612,7 @@ files = {
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
-  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, og='og-embers.jpg'),
+  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, ['live.js'], og='og-embers.jpg'),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
