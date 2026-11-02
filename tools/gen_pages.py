@@ -21,7 +21,7 @@ TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
 INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'  # EMBERS sub-account, linked on /live
 # Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
-LIVE_NEXT = ''
+LIVE_NEXT = 'EMBERS 001 · 08.01.2027'
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -196,7 +196,7 @@ void_sec = f'''<div class="void-bg" aria-hidden="true">
 # ---------------- start ----------------
 start = f'''<section class="hero" id="top">
   <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
-  <div class="badge"><span data-i18n="badgeComingSoon">COMING SOON</span><span class="cursor">_</span></div>
+  <div class="badge"><span data-i18n="badgeComingSoon">LIVE LOADING</span><span class="cursor">_</span></div>
   <p class="tagline" data-i18n="heroTagline">MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.</p>
   <span class="prompt">eazr@beats:~$ follow --instagram</span>
   <div class="cta-row">
@@ -205,6 +205,30 @@ start = f'''<section class="hero" id="top">
     <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
   </div>
 </section>
+
+<div class="band">
+<section class="sec" id="embers-001">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./next --session 001</span>
+    <h2>EMBERS 001</h2>
+  </div>
+  <div class="event-promo">
+    <a class="event-poster" href="live" aria-label="EMBERS 001 · 08.01.2027 · Zur Live-Seite">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, 08.01.2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
+    </a>
+    <div class="event-info">
+      <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
+      <h3 class="event-date" data-i18n="eventDate">Fr 08.01.2027 · München</h3>
+      <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
+      <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
+        <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
 
 <div class="band">
 <section class="sec" id="dig">
@@ -342,8 +366,8 @@ events = f'''<div class="band first">
       <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
-      <span class="kicker" data-i18n="sessionsKicker">Format · in Arbeit</span>
-      <h3>EMBERS by EAZr</h3>
+      <span class="kicker">08.01.2027 · München</span>
+      <h3>EMBERS 001</h3>
       <p data-i18n="sessionsText"></p>
       <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
     </div>
@@ -541,9 +565,14 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
   </div>
   <p class="lead" data-i18n="liveText"></p>
 
-  <div class="booking-box live-box">
-    <span class="kicker"><span class="live-dot" aria-hidden="true"></span><span data-i18n="liveNextKicker">Nächste Session</span></span>
+  <div class="booking-box live-box event-promo">
+    <a class="event-poster" href="embers-001-poster.jpg" target="_blank" rel="noopener" aria-label="Plakat EMBERS 001 groß öffnen">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, 08.01.2027, Doors 20:00, Stream 21:30, München" width="640" height="904">
+    </a>
+    <div class="event-info">
+    <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
     {live_next}
+    <p style="margin:0" data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
     <p style="margin:0" data-i18n="liveNextText"></p>
     <div class="cta-row" style="justify-content:flex-start">
       <a class="btn" href="{TWITCH}" target="_blank" rel="noopener" data-i18n="liveWatch">▶ Auf Twitch ansehen</a>
@@ -551,6 +580,7 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
       <a class="btn ghost" href="{INSTA_EMBERS}" target="_blank" rel="noopener">@eazrembers ↗</a>
     </div>
     <p class="booking-note" data-i18n="livePlanB"></p>
+    </div>
   </div>
 
   <div class="cards" style="margin-top:14px">
