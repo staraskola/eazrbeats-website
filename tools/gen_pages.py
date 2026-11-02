@@ -19,7 +19,9 @@ SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
 INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'
-INSTA_NMB = 'https://www.instagram.com/nmb.muc/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /live
+INSTA_LAURA = 'https://www.instagram.com/laurajanevucak/'
+INSTA_NMB = 'https://www.instagram.com/nmb.muc/'
+INSTA_WIVI = 'https://www.instagram.com/_wjackowsky/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /live
 # Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
 LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
@@ -346,7 +348,7 @@ about = f'''<div class="band first">
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
   <div class="cards four">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '')}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI')}    <div class="card crew">
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI)}    <div class="card crew">
       <div class="avatar open" aria-hidden="true">?</div>
       <span class="kicker">crew/04</span>
       <h3 data-i18n="crewOpenTitle">Du?</h3>
