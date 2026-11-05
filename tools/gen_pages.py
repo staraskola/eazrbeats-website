@@ -140,7 +140,7 @@ def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg'):
 <div class="scanlines"></div>
 <div class="vignette"></div>
 <div class="flicker"></div>
-{'<div class="hack-glitch" aria-hidden="true"><canvas></canvas><div class="slice s1"></div><div class="slice s2"></div><div class="slice s3"></div><div class="slice s4"></div><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""><div class="tint"></div></div>' if name == 'start' else ''}
+{'<div class="hack-glitch" aria-hidden="true"><div class="grain"></div><canvas></canvas><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""></div>' if name == 'start' else ''}
 
 <div class="topbar">
   <div class="chrome">
