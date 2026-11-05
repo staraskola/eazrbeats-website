@@ -491,28 +491,20 @@
 .booking-box.event-promo .event-poster { width: 300px; }
 @media (max-width: 700px) { .booking-box.event-promo { flex-direction: column; } .booking-box.event-promo .event-poster { width: 100%; } }
 
-/* ---- start page: hacked background (noise + glitch bursts) ---- */
+/* ---- start page: hacked background (calm grain + rare RGB-split glitch bursts) ---- */
 .hack-glitch { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
-.hack-glitch canvas { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; opacity: 0.09; mix-blend-mode: screen; }
-.hack-glitch .slice { position: absolute; left: -4%; right: -4%; background: url(embers-cracks.jpg) center / cover; opacity: 0; mix-blend-mode: screen; }
+.hack-glitch .grain { position: absolute; inset: -192px; background-size: 192px 192px; opacity: 0.045; mix-blend-mode: screen; animation: grain-drift 48s linear infinite; }
+.hack-glitch.no-grain .grain { display: none; }
+@keyframes grain-drift { from { transform: translate(0, 0); } to { transform: translate(192px, 96px); } }
+.hack-glitch canvas { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; opacity: 0.6; }
 .hack-glitch .ember { position: absolute; inset: 0; background: url(embers-cracks.jpg) center / cover; opacity: 0; mix-blend-mode: screen; }
 .hack-glitch .elogo { position: absolute; left: 50%; top: 38%; width: min(70vw, 760px); transform: translate(-50%, -50%); opacity: 0; filter: drop-shadow(0 0 24px rgba(255,110,20,.7)); }
-.hack-glitch .s1 { top: 18%; height: 7%; }
-.hack-glitch .s2 { top: 41%; height: 3%; }
-.hack-glitch .s3 { top: 63%; height: 11%; }
-.hack-glitch .s4 { top: 82%; height: 2%; }
-.hack-glitch .tint { position: absolute; inset: 0; background: rgba(255,122,31,0.08); opacity: 0; mix-blend-mode: screen; }
-.hack-glitch.on canvas { opacity: 0.22; }
-.hack-glitch.on .slice { opacity: 0.55; animation: hack-shift .12s steps(2) infinite; }
-.hack-glitch.on .s2, .hack-glitch.on .s4 { animation-direction: reverse; }
-.hack-glitch.on .tint { opacity: 1; }
-.hack-glitch.on .ember { opacity: 0.35; animation: hack-shift .1s steps(2) infinite; }
+.hack-glitch.big .ember { opacity: 0.25; animation: hack-shift .1s steps(2) infinite; }
 .hack-glitch.big .elogo { opacity: 0.9; animation: hack-logo .14s steps(2) infinite; }
 @keyframes hack-logo { 0% { transform: translate(-51%, -50%); clip-path: inset(0 0 55% 0); } 50% { transform: translate(-49%, -50%); clip-path: inset(30% 0 0 0); } 100% { transform: translate(-50%, -50%); clip-path: inset(0); } }
 @keyframes hack-shift { 0% { transform: translateX(-3%); } 50% { transform: translateX(4%); } 100% { transform: translateX(-1%); } }
-body[data-page="start"] .bg-video { animation: hack-jitter 7s infinite; }
-@keyframes hack-jitter { 0%, 96%, 100% { transform: none; filter: none; } 97% { transform: translateX(-6px) skewX(-1deg); filter: hue-rotate(40deg) saturate(1.4); } 98% { transform: translateX(5px); filter: none; } }
-@media (prefers-reduced-motion: reduce) { body[data-page="start"] .bg-video { animation: none; } .hack-glitch .slice, .hack-glitch .tint, .hack-glitch .ember, .hack-glitch .elogo { display: none; } }
+body[data-page="start"]:has(.hack-glitch.big) .bg-video { transform: translateX(-5px) skewX(-1deg); filter: hue-rotate(40deg) saturate(1.4); }
+@media (prefers-reduced-motion: reduce) { .hack-glitch .grain { animation: none; } .hack-glitch .ember, .hack-glitch .elogo { display: none; } }
 
 /* ---- /live: countdown + (optional) embedded Twitch player ---- */
 .countdown { margin: 2px 0 4px; font-size: clamp(18px, 3vw, 24px); letter-spacing: 0.12em; color: #FFE7D2; }
