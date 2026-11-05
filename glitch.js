@@ -82,8 +82,8 @@
   let timer = 0, running = true;
   function burst() {
     if (!running) return;
-    const big = Math.random() < 0.25;
-    const dur = big ? 360 + Math.random() * 200 : 110 + Math.random() * 170;
+    const big = Math.random() < 0.5;
+    const dur = big ? 480 + Math.random() * 280 : 110 + Math.random() * 170;
     const strength = big ? 1.4 : 0.8;
     const end = performance.now() + dur;
     wrap.classList.add('on');
@@ -92,9 +92,9 @@
       if (performance.now() < end) { frame(strength); setTimeout(tick, 55 + Math.random() * 40); }
       else { ctx.clearRect(0, 0, fx.width, fx.height); wrap.classList.remove('on', 'big'); }
     })();
-    timer = setTimeout(burst, 3500 + Math.random() * 5500);
+    timer = setTimeout(burst, 2000 + Math.random() * 3000);
   }
-  timer = setTimeout(burst, 1500);
+  timer = setTimeout(burst, 1000);
 
   // hook for the preview page
   window.eazrGlitch = {
