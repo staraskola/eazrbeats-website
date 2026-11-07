@@ -21,17 +21,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=3eb04ae4">
+<link rel="stylesheet" href="style.css?v=62d7a300">
+<link rel="stylesheet" href="embers.css?v=7797d5ee">
 </head>
 <body data-page="embers">
-
-<video class="bg-video" autoplay muted loop playsinline poster="hero-bg.jpg" aria-hidden="true">
-  <source src="hero-bg.mp4" type="video/mp4">
-</video>
-<div class="page-scrim"></div>
-<div class="scanlines"></div>
-<div class="vignette"></div>
-<div class="flicker"></div>
 
 
 <div class="topbar">
@@ -66,46 +59,67 @@
 </div>
 
 <main>
-<div class="embers-bg" aria-hidden="true"></div>
-<div class="band first">
-<section class="sec" id="embers">
-  <a class="back-link" href="live" data-i18n="backLive">← Live</a>
-  <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./stream --live</span>
-    <h1 class="sr-only">EMBERS by EAZr · Hosted live DJ sessions from Munich</h1>
-  </div>
-  <div class="embers-head">
-    <img class="embers-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167">
-    <span class="embers-by">by EAZr</span>
-  </div>
-  <p class="lead" data-i18n="liveText">EMBERS ist unsere House-Reihe: DJ-Sessions mit Host, direkt vom Pult, live aus München gestreamt. House in allen Spielarten, jede Session bekommt eine Nummer.</p>
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="emx-heat" aria-hidden="true"></div>
+<div class="emx-sub"><a href="live" data-i18n="emBack">← ALLE LIVE-REIHEN</a><span class="temp">HEAT <b id="temp">0600</b> °C</span></div>
+<div class="emx">
+  <section class="layer" id="ignite">
+    <span class="lbl series-line">HOSTED LIVE DJ SESSIONS · BY EAZr · MUNICH</span>
+    <h1 style="margin:0"><img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167"></h1>
+    <span class="claim">ALL THINGS HOUSE.</span>
+    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b>KW 1 · 2027</b></span><span><i data-i18n="emVenue">ORT</i><b>TBA</b></span></div>
+    <span class="down" data-i18n="emDown">↓ KOMM NÄHER</span>
+  </section>
 
-  <div class="booking-box live-box event-promo">
-    <a class="event-poster" href="embers-001-poster.jpg" target="_blank" rel="noopener" aria-label="Plakat EMBERS 001 groß öffnen">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904">
-    </a>
-    <div class="event-info">
-    <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
-    <h2 class="live-next" data-i18n="liveNextDate">EMBERS 001 · KW 1 · 2027</h2>
-    <p class="countdown" data-target="2027-01-04T00:00:00+01:00" data-exact="0" aria-live="off"><span class="cd-label">T-MINUS</span> <span class="cd-val">··</span><span class="cursor">_</span></p>
-    <p style="margin:0" data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
-    <p style="margin:0" data-i18n="liveNextText">Der genaue Tag, Location, Tickets und Gästeliste folgen zuerst auf Instagram und im Newsletter.</p>
-    <div class="cta-row" style="justify-content:flex-start">
-      <a class="btn" href="https://www.twitch.tv/eazrbeats" target="_blank" rel="noopener" data-i18n="liveWatch">▶ Auf Twitch ansehen</a>
-      <a class="btn ghost" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@eazrbeats ↗</a>
-      <a class="btn ghost" href="https://www.instagram.com/eazrembers/" target="_blank" rel="noopener">@eazrembers ↗</a>
-    </div>
-    <p class="booking-note" data-i18n="livePlanB">Falls der Stream mal hakt: Updates gibt es immer in der Instagram-Story von @eazrbeats.</p>
-    </div>
-  </div>
+  <section class="layer" id="gather">
+    <span class="lbl">01 · GATHER</span>
+    <h2 class="big">COME<br>CLOSER.</h2>
+    <p class="txt" data-i18n="emGather">Ein Raum, ein DJ, ein Host. House in allen Spielarten, vom ersten warmen Groove bis zum letzten Track, der nicht enden soll.</p>
+    <ul class="rules">
+      <li><b data-i18n="emDoors">EINLASS</b> 20:00</li>
+      <li><b>STREAM</b> <span data-i18n="emStreamAt">21:30 AUF TWITCH</span></li>
+      <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
+    </ul>
+  </section>
 
-  <div class="cards" style="margin-top:14px">
-    <div class="card"><span class="kicker">01</span><h3 data-i18n="liveHowTitle">So bist du dabei</h3><p data-i18n="liveHowText">Folge eazrbeats auf Twitch, dann bekommst du eine Nachricht, sobald wir live gehen. Ohne Account kannst du auch einfach zuschauen.</p><a class="btn ghost" href="https://www.twitch.tv/eazrbeats" target="_blank" rel="noopener">twitch.tv/eazrbeats ↗</a></div>
-    <div class="card"><span class="kicker">02</span><h3>Crew</h3><p><b>NMB</b> · DJ<br><b>WIVI</b> · Host · MC</p><p data-i18n="liveCrewText">Gast-DJs kommen ab und zu dazu.</p></div>
-    <div class="card"><span class="kicker">03</span><h3 data-i18n="liveArchiveTitle">Archiv</h3><p data-i18n="liveArchiveText">Jede Session wird aufgenommen. Die ganzen Sets und Clips landen nach und nach hier.</p></div>
+  <section class="layer" id="glow">
+    <span class="lbl">02 · GLOW</span>
+    <h2 class="big">KEEP IT<br>BURNING.</h2>
+    <p class="txt" data-i18n="emGlow">Jede Session bekommt eine Nummer. Jede Nummer ist eine Nacht, direkt von den Decks, warm vom ersten bis zum letzten Track.</p>
+    <div class="facts">
+      <div><span>SOUND</span><b data-i18n="emSound">House in allen Spielarten</b></div>
+      <div><span>FORMAT</span><b data-i18n="emFormat">DJ-Session mit Host</b></div>
+      <div><span>STREAM</span><b>twitch.tv/eazrbeats</b></div>
+    </div>
+  </section>
+
+  <section class="layer" id="stream">
+    <span class="lbl">03 · STREAM</span>
+    <h2 class="big">CAN'T BE<br>THERE?</h2>
+    <p class="txt" data-i18n="emStream">90 Minuten vom Set laufen live auf Twitch. Der Rest der Nacht bleibt im Raum. Datum, Ort und Gästeliste gibt es zuerst im Newsletter.</p>
+    <form class="news-form" action="https://271e78d8.sibforms.com/serve/MUIFAJSYStwrJDqLy42Ecrc5qfbu952H3tunCLqEOj2qNEo-uMQXekhmfnDc89IZYDDQvP3DT4KTqPFPZoBFeAFUcrWhE9eK-rjQWXlJhWRLPuFXXxIVjP0kBSRK1CL7qstSoJLpIOjHAXKMxRgxGYDAiAdfOyD74gIofvVEdhAnrJvCYAsvdI4UVkxunpNlYs7gao6sTT03_pbjiA==" method="POST" data-news-form>
+        <label class="sr-only" for="news-embers" data-i18n="newsLabel">E-Mail-Adresse</label>
+        <div class="news-row">
+          <input type="email" id="news-embers" name="EMAIL" required autocomplete="email" placeholder="name@mail.de">
+          <button class="btn" type="submit" data-i18n="joinNewsBtn">Anmelden</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="de">
+        <p class="news-msg" role="status" aria-live="polite"></p>
+        <p class="news-note" data-i18n="newsNote">Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz#newsletter">Datenschutz</a></p>
+      </form>
+    <div class="cta">
+      <a class="ebtn" href="https://www.twitch.tv/eazrbeats" target="_blank" rel="noopener">▶ TWITCH ↗</a>
+      <a class="ebtn" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@EAZRBEATS ↗</a>
+    </div>
+  </section>
+
+  <div class="emx-foot" id="foot">
+    <span class="cool" aria-hidden="true"></span>
+    <span class="fbox" data-i18n="emFoot">DAS FEUER GEHT AUS · DIE GLUT BLEIBT<br>EMBERS IST EINE REIHE VON EAZr BEATS COLLECTIVE · MÜNCHEN</span>
   </div>
-</section>
 </div>
+<button class="emx-snd" id="snd" type="button" aria-pressed="false"><i aria-hidden="true"><b></b><b></b><b></b></i><span id="sndl">TAP FOR SOUND</span></button>
 </main>
 
 <footer class="site-footer">
@@ -128,6 +142,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=3c4637cc"></script>
-<script src="live.js?v=bedca3c9"></script>
+<script src="site.js?v=8a6ea298"></script>
+<script src="embers.js?v=e176d48e"></script>
 </body></html>

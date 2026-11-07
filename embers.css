@@ -1,0 +1,71 @@
+/* /embers: immersive page. One fixed WebGL world (the poster's ember texture as breathing, flowing magma)
+   behind a slow vertical descent: IGNITE -> GATHER -> GLOW -> STREAM. Sound: "Fire in the Soul" (Pixabay
+   Content License) with a pre-computed beat grid. Everything is scoped to .emx so the rest of the site is untouched. */
+body[data-page="embers"]{--bg:#050403;--core:#FFE7C2;--glut:#FF7A1F;--red:#C42A0A;--deep:#5A0F02;--muted:#9A7A62;--line:rgba(255,122,31,.22);--mono:"Space Mono",ui-monospace,Menlo,monospace;background:#050403;overflow-x:hidden}
+body[data-page="embers"] main{position:static}
+body[data-page="embers"] .site-footer{position:relative;z-index:2;padding-bottom:84px}
+#world{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+.emx-heat{position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(ellipse at 50% 120%,rgba(255,90,20,.18),transparent 60%),radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.8) 100%)}
+.emx-sub{position:fixed;left:0;right:0;top:87px;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none;
+  padding:12px 16px 0;font-size:11px;letter-spacing:.2em;color:var(--muted);text-shadow:0 0 10px var(--bg)}
+.emx-sub a{color:#C9A68A;text-decoration:none;pointer-events:auto}.emx-sub a:hover,.emx-sub a:focus-visible{color:var(--glut)}
+.emx-sub .temp{font-variant-numeric:tabular-nums}
+.emx-sub .temp b{color:var(--glut);font-weight:700;text-shadow:0 0 8px rgba(255,122,31,.6)}
+@media (max-width:560px){.emx-sub{font-size:10px;letter-spacing:.14em}}
+.emx{color:var(--core);font-family:var(--mono);font-size:15px;line-height:1.7}
+.emx .news-form{width:min(460px,100%);margin:0}
+.emx .news-row{gap:0;flex-wrap:nowrap}
+.emx .news-row input{flex:1;min-width:0;font:14px var(--mono);color:var(--core);background:rgba(5,4,3,.7);border:1px solid var(--line);border-right:0;border-radius:0;padding:14px}
+.emx .news-row input:focus{border-color:var(--glut);box-shadow:none}
+.emx .news-row .btn{margin:0;border-radius:0;background:var(--glut);color:var(--bg);border:1px solid var(--glut);font:700 13px var(--mono);letter-spacing:.16em;padding:14px 22px}
+.emx .news-msg{color:var(--glut);font-size:12px;margin:8px 0 0}
+.emx .news-note{color:var(--muted);font-size:11px;margin:8px 0 0}.emx .news-note a{color:#C9A68A}
+.emx{position:relative;z-index:2;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.emx .layer{min-height:100vh;display:grid;align-content:center;justify-items:center;text-align:center;gap:22px;padding-block:120px;
+  background:radial-gradient(ellipse 70% 42% at 50% 50%,rgba(5,4,3,.62),rgba(5,4,3,.25) 60%,transparent 80%)}
+.emx .lbl{font-size:11px;letter-spacing:.3em;color:var(--glut);opacity:.9;text-shadow:0 0 10px var(--bg)}
+.emx .series-line{white-space:nowrap}
+@media (max-width:480px){.emx .series-line{letter-spacing:.16em;font-size:10px}.emx .next span{padding:10px 12px;letter-spacing:.18em;font-size:10px}.emx .next b{white-space:nowrap;font-size:14px;letter-spacing:.06em}}
+.emx .logo{width:min(760px,88vw);height:auto;display:block;filter:drop-shadow(0 0 12px rgba(255,122,31,.65)) drop-shadow(0 0 40px rgba(196,42,10,.55));animation:breathe 4s ease-in-out infinite alternate}
+@keyframes breathe{to{filter:drop-shadow(0 0 18px rgba(255,150,60,.85)) drop-shadow(0 0 60px rgba(196,42,10,.7))}}
+.emx .by{font-size:14px;letter-spacing:.3em;color:var(--glut);margin-top:-8px}
+.emx .claim{font-size:clamp(13px,1.7vw,16px);font-weight:700;letter-spacing:.4em;color:var(--core);text-shadow:0 0 14px rgba(255,122,31,.8)}
+.emx .next{display:flex;flex-wrap:nowrap;max-width:100%;justify-content:center;gap:1px;border:1px solid var(--line);margin-top:6px}
+.emx .next i{font-style:normal}
+.emx .next span{display:grid;gap:2px;padding:12px 22px;background:rgba(5,4,3,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);font-size:11px;letter-spacing:.26em;color:#C9A68A}
+.emx .next b{color:var(--core);font-weight:700;font-size:clamp(15px,2vw,19px);letter-spacing:.12em;text-shadow:0 0 12px rgba(255,122,31,.7)}
+.emx .big{margin:0;font-weight:700;font-size:clamp(46px,10vw,128px);line-height:.95;letter-spacing:-.01em;text-wrap:balance;
+  color:transparent;-webkit-text-stroke:1.5px var(--glut);text-shadow:0 0 30px rgba(196,42,10,.55)}
+.emx .txt{max-width:44ch;color:#E2CBB4;font-size:15px;margin:0;text-shadow:0 0 10px var(--bg),0 0 22px var(--bg)}
+.emx .rules{text-shadow:0 0 10px var(--bg),0 0 20px var(--bg);list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:13px;letter-spacing:.14em;color:#C9A68A}
+.emx .rules li b{color:var(--core);font-weight:700}
+.emx .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;width:min(760px,100%);border:1px solid var(--line)}
+.emx .facts div{background:rgba(5,4,3,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);padding:18px 16px;display:grid;gap:4px;text-align:left;min-width:0}
+.emx .facts span{font-size:10px;letter-spacing:.28em;color:var(--muted)}
+.emx .facts b{font-weight:700;font-size:14px;color:var(--core)}
+.emx .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.emx .ebtn{font:700 13px var(--mono);letter-spacing:.16em;text-decoration:none;padding:14px 22px;border:1px solid var(--glut);color:var(--glut);background:rgba(5,4,3,.6);cursor:pointer}
+.emx .ebtn:hover,.emx .ebtn:focus-visible{background:var(--glut);color:var(--bg);box-shadow:0 0 30px rgba(255,122,31,.55);outline:none}
+.emx .ebtn.main{background:var(--glut);color:var(--bg)}
+.emx .mail{display:flex;width:min(460px,100%)}
+.emx .mail input{flex:1;min-width:0;font:14px var(--mono);color:var(--core);background:rgba(5,4,3,.7);border:1px solid var(--line);border-right:0;padding:14px}
+.emx .mail input:focus{outline:none;border-color:var(--glut)}
+.emx .note{font-size:11px;color:var(--muted);letter-spacing:.1em;min-height:1em}
+.emx .down{font-size:11px;letter-spacing:.3em;color:var(--muted);animation:sink 2.4s ease-in-out infinite}
+@keyframes sink{50%{transform:translateY(8px);opacity:.4}}
+.emx-foot{position:relative;z-index:2;text-align:center;padding:40px 16px 96px;font-size:11px;letter-spacing:.2em;color:var(--glut);line-height:2}
+.emx-foot .fbox{display:inline-block;max-width:100%;padding:14px 20px;background:rgba(5,4,3,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border:1px solid var(--line);text-shadow:0 0 12px rgba(255,122,31,.35)}
+.emx .cool{display:block;margin:0 auto 26px;height:3px;width:min(420px,70%);border-radius:3px;background:linear-gradient(90deg,transparent,var(--glut),#FFD9A0,var(--glut),transparent);box-shadow:0 0 18px 3px rgba(255,122,31,.55);transition:filter 3s,opacity 3s}
+.emx-foot.on .cool{filter:saturate(.3) brightness(.45);opacity:.6}
+
+.emx-snd{position:fixed;z-index:6;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;
+  font:700 11px var(--mono);letter-spacing:.2em;color:var(--glut);background:rgba(5,4,3,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border:1px solid var(--line);padding:10px 14px;cursor:pointer}
+.emx-snd:hover,.emx-snd:focus-visible{border-color:var(--glut);outline:none}
+.emx-snd i{display:flex;gap:2px;align-items:flex-end;height:12px}
+.emx-snd i b{width:2px;height:3px;background:var(--glut);transition:height .1s}
+.emx-snd.on i b{animation:eq .5s ease-in-out infinite alternate}
+.emx-snd.on i b:nth-child(2){animation-delay:.16s}.emx-snd.on i b:nth-child(3){animation-delay:.32s}
+@keyframes eq{to{height:12px}}
+@media (prefers-reduced-motion:reduce){.emx .down,.emx .logo{animation:none}}
+

@@ -92,7 +92,17 @@ import hashlib
 def v(f):
     return f + '?v=' + hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
 
-def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg'):
+BG_LAYERS = '''
+<video class="bg-video" autoplay muted loop playsinline poster="hero-bg.jpg" aria-hidden="true">
+  <source src="hero-bg.mp4" type="video/mp4">
+</video>
+<div class="page-scrim"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="flicker"></div>
+'''
+def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg', css=(), immersive=False):
+    # immersive=True: the page brings its own full-screen background (e.g. /embers), so the site's video/scanline layers are left out.
     nav = [('about', 'about', 'navAbout', 'About')]
     nav += ([('events', 'events', 'navEvents', 'Events'),
              ('mixes', 'mixes', 'navMixes', 'Mixes')] if SPLIT_NEXT else
@@ -130,17 +140,9 @@ def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg'):
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{v('style.css')}">
-{SCHEMA if name == 'start' else ''}</head>
+{''.join(f'<link rel="stylesheet" href="{v(c)}">' + chr(10) for c in css)}{SCHEMA if name == 'start' else ''}</head>
 <body data-page="{name}">
-
-<video class="bg-video" autoplay muted loop playsinline poster="hero-bg.jpg" aria-hidden="true">
-  <source src="hero-bg.mp4" type="video/mp4">
-</video>
-<div class="page-scrim"></div>
-<div class="scanlines"></div>
-<div class="vignette"></div>
-<div class="flicker"></div>
-{'<div class="hack-glitch" aria-hidden="true"><div class="grain"></div><canvas></canvas><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""></div>' if name == 'start' else ''}
+{'' if immersive else BG_LAYERS}{'<div class="hack-glitch" aria-hidden="true"><div class="grain"></div><canvas></canvas><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""></div>' if name == 'start' else ''}
 
 <div class="topbar">
   <div class="chrome">
@@ -569,46 +571,61 @@ twitch_player = ('''
   <div class="twitch-player">
     <iframe src="https://player.twitch.tv/?channel=eazrbeats&amp;parent=eazrbeats.de&amp;parent=www.eazrbeats.de&amp;muted=true" title="EMBERS live on Twitch" allowfullscreen loading="lazy"></iframe>
   </div>''') if TWITCH_EMBED else ''
-embers = f'''<div class="embers-bg" aria-hidden="true"></div>
-<div class="band first">
-<section class="sec" id="embers">
-  <a class="back-link" href="live" data-i18n="backLive">← Live</a>
-  <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./stream --live</span>
-    <h1 class="sr-only">EMBERS by EAZr · Hosted live DJ sessions from Munich</h1>
-  </div>
-  <div class="embers-head">
-    <img class="embers-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167">
-    <span class="embers-by">by EAZr</span>
-  </div>
-  <p class="lead" data-i18n="liveText"></p>
+# Immersive page: fixed WebGL magma (embers.js) + a slow descent IGNITE -> GATHER -> GLOW -> STREAM.
+# Sound: "Fire in the Soul" by DreamsMaker (Pixabay Content License), loops after the first tap.
+EMBERS_DATE = 'KW 1 · 2027'   # DATE box on /embers
+EMBERS_VENUE = 'TBA'          # VENUE box on /embers
+embers = f'''<canvas id="world" aria-hidden="true"></canvas>
+<div class="emx-heat" aria-hidden="true"></div>
+<div class="emx-sub"><a href="live" data-i18n="emBack">← ALLE LIVE-REIHEN</a><span class="temp">HEAT <b id="temp">0600</b> °C</span></div>
+<div class="emx">
+  <section class="layer" id="ignite">
+    <span class="lbl series-line">HOSTED LIVE DJ SESSIONS · BY EAZr · MUNICH</span>
+    <h1 style="margin:0"><img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167"></h1>
+    <span class="claim">ALL THINGS HOUSE.</span>
+    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b>{EMBERS_DATE}</b></span><span><i data-i18n="emVenue">ORT</i><b>{EMBERS_VENUE}</b></span></div>
+    <span class="down" data-i18n="emDown">↓ KOMM NÄHER</span>
+  </section>
 
-  <div class="booking-box live-box event-promo">
-    <a class="event-poster" href="embers-001-poster.jpg" target="_blank" rel="noopener" aria-label="Plakat EMBERS 001 groß öffnen">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904">
-    </a>
-    <div class="event-info">
-    <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
-    {live_next}
-    {live_countdown}
-    <p style="margin:0" data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
-    <p style="margin:0" data-i18n="liveNextText"></p>
-    <div class="cta-row" style="justify-content:flex-start">
-      <a class="btn" href="{TWITCH}" target="_blank" rel="noopener" data-i18n="liveWatch">▶ Auf Twitch ansehen</a>
-      <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
-      <a class="btn ghost" href="{INSTA_EMBERS}" target="_blank" rel="noopener">@eazrembers ↗</a>
+  <section class="layer" id="gather">
+    <span class="lbl">01 · GATHER</span>
+    <h2 class="big">COME<br>CLOSER.</h2>
+    <p class="txt" data-i18n="emGather"></p>
+    <ul class="rules">
+      <li><b data-i18n="emDoors">EINLASS</b> 20:00</li>
+      <li><b>STREAM</b> <span data-i18n="emStreamAt">21:30 AUF TWITCH</span></li>
+      <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
+    </ul>
+  </section>
+
+  <section class="layer" id="glow">
+    <span class="lbl">02 · GLOW</span>
+    <h2 class="big">KEEP IT<br>BURNING.</h2>
+    <p class="txt" data-i18n="emGlow"></p>
+    <div class="facts">
+      <div><span>SOUND</span><b data-i18n="emSound">House in allen Spielarten</b></div>
+      <div><span>FORMAT</span><b data-i18n="emFormat">DJ-Session mit Host</b></div>
+      <div><span>STREAM</span><b>twitch.tv/eazrbeats</b></div>
     </div>
-    <p class="booking-note" data-i18n="livePlanB"></p>
+  </section>
+
+  <section class="layer" id="stream">
+    <span class="lbl">03 · STREAM</span>
+    <h2 class="big">CAN'T BE<br>THERE?</h2>
+    <p class="txt" data-i18n="emStream"></p>
+    {news_form('embers')}
+    <div class="cta">
+      <a class="ebtn" href="{TWITCH}" target="_blank" rel="noopener">▶ TWITCH ↗</a>
+      <a class="ebtn" href="{INSTA}" target="_blank" rel="noopener">@EAZRBEATS ↗</a>
     </div>
+  </section>
+
+  <div class="emx-foot" id="foot">
+    <span class="cool" aria-hidden="true"></span>
+    <span class="fbox" data-i18n="emFoot"></span>
   </div>
-{twitch_player}
-  <div class="cards" style="margin-top:14px">
-    <div class="card"><span class="kicker">01</span><h3 data-i18n="liveHowTitle">So bist du dabei</h3><p data-i18n="liveHowText"></p><a class="btn ghost" href="{TWITCH}" target="_blank" rel="noopener">twitch.tv/eazrbeats ↗</a></div>
-    <div class="card"><span class="kicker">02</span><h3>Crew</h3><p><b>NMB</b> · DJ<br><b>WIVI</b> · Host · MC</p><p data-i18n="liveCrewText"></p></div>
-    <div class="card"><span class="kicker">03</span><h3 data-i18n="liveArchiveTitle">Archiv</h3><p data-i18n="liveArchiveText"></p></div>
-  </div>
-</section>
 </div>
+<button class="emx-snd" id="snd" type="button" aria-pressed="false"><i aria-hidden="true"><b></b><b></b><b></b></i><span id="sndl">TAP FOR SOUND</span></button>
 '''
 
 # ---------------- live (overview of all live series, /live) ----------------
@@ -647,7 +664,7 @@ files = {
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'live.html': page('live', 'Live · EAZr Beats Collective', 'Live series by EAZr Beats Collective from Munich: EMBERS hosted live DJ sessions on Twitch, and more to come.', 'live', live),
-  'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['live.js'], og='og-embers.jpg'),
+  'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['embers.js'], og='og-embers.jpg', css=['embers.css'], immersive=True),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
