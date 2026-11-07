@@ -89,6 +89,11 @@ const T = {
     eventsPastEmptyText: 'Hier landen Fotos, Videos und Tracklists, sobald die ersten Abende gelaufen sind.',
     eventsNotify: 'Keine Termine verpassen: Neue Events kündigen wir zuerst auf Instagram an.',
 
+    embersBtn: 'Zu EMBERS →',
+    backLive: '← Alle Live-Reihen',
+    liveHubText: 'Unsere Live-Reihen. Jede hat ihre eigene Welt, ihren eigenen Sound und ihre eigene Seite.',
+    hubEmbersText: 'DJ-Sessions mit Host, direkt vom Pult, live aus München auf Twitch gestreamt.',
+    hubNextText: 'Die nächste Reihe ist in Arbeit. Name und Datum gibt es zuerst auf Instagram und im Newsletter.',
     // live (EMBERS)
     liveBtn: 'Zur Live-Seite →',
     liveText: 'EMBERS ist unser Live-Format: DJ-Sessions mit Host, direkt vom Pult, live aus München gestreamt. Jede Session bekommt eine Nummer.',
@@ -245,6 +250,11 @@ const T = {
     eventsPastEmptyText: "Photos, videos and tracklists will land here after our first nights.",
     eventsNotify: "Don't miss a date: new events go up on Instagram first.",
 
+    embersBtn: 'To EMBERS →',
+    backLive: '← All live series',
+    liveHubText: 'Our live series. Each one has its own world, its own sound and its own page.',
+    hubEmbersText: 'Hosted live DJ sessions, straight from the decks, streamed from Munich on Twitch.',
+    hubNextText: 'The next series is in the works. Name and date drop first on Instagram and in the newsletter.',
     // live (EMBERS)
     liveBtn: 'To the live page →',
     liveText: 'EMBERS is our live format: hosted live DJ sessions, straight from the decks, streamed from Munich. Every session gets a number.',
@@ -350,7 +360,8 @@ applyStaticI18n();
 // ---------------------------------------------------------------------
 const page = document.body.dataset.page;
 document.querySelectorAll('.nav-links a').forEach(a => {
-  if (a.dataset.page === page) a.setAttribute('aria-current', 'page');
+  // series pages (e.g. /embers) live under Live in the menu
+  if (a.dataset.page === ({ embers: 'live' }[page] || page)) a.setAttribute('aria-current', 'page');
 });
 
 const menuBtn = document.querySelector('.menu-btn');
