@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-02",
+ "exported": "2026-11-07",
  "tracks": [
+  {
+   "title": "Organ Belta",
+   "artist": "Jamie Roy",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-07",
+   "source": "DJ Mag",
+   "sourceUrl": "https://djmag.com/news/jamie-roys-organ-belta-reaches-no-1-beatport-house-charts-after-friends-and-fans-campaign",
+   "note": "Fans holten Jamie Roys Track posthum auf Platz 1.",
+   "noteEn": "Fans pushed Jamie Roy's track to No. 1 after his passing.",
+   "confirmations": [
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/jamie-roys-organ-belta-reaches-no-1-beatport-house-charts-after-friends-and-fans-campaign"
+    },
+    {
+     "source": "Mixmag",
+     "sourceUrl": "https://mixmag.net/read/jamie-roys-organ-belta-hits-no-1-on-beatports-house-charts-just-over-week-after-his-death-news"
+    }
+   ]
+  },
   {
    "title": "Don't Look Back",
    "artist": "ODF",
