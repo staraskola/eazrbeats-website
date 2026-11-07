@@ -1,6 +1,148 @@
 {
- "exported": "2026-10-31",
+ "exported": "2026-11-07",
  "tracks": [
+  {
+   "title": "We Come 1 (Adam Beyer Remix)",
+   "artist": "Faithless, Adam Beyer",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "Beatport Peak Time Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Ein Klassiker im Drumcode-Gewand, der jeden Peak trägt.",
+   "noteEn": "A classic in Drumcode clothing that carries any peak.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 100 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "1001Tracklists DJ Charts KW 43 (#7)",
+     "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html"
+    },
+    {
+     "source": "Beatportal: Drumcode 30 Jahre / Faithless Reworks",
+     "sourceUrl": "https://www.beatportal.com/articles/1651238-drumcode-celebrates-30-years-with-adam-beyer-and-kasia-remixes-of-faithless-classics"
+    }
+   ]
+  },
+  {
+   "title": "Synchronize",
+   "artist": "Adam Beyer, Mark Reeve",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "Beatport Peak Time Top 100 (#2)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Treibendes Drumcode-Werkzeug mit fiesem Gitarren-Riff, rollt ohne Pause.",
+   "noteEn": "Slick Drumcode roller with a nasty guitar riff, pure driving tool.",
+   "confirmations": [
+    {
+     "source": "Beatport Peak Time Top 100 (#2)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "Beatportal Review 'Do Our Thing' EP",
+     "sourceUrl": "https://www.beatportal.com/articles/1692976-adam-beyer-and-mark-reeve-revisit-drumcodes-rolling-roots-on-do-our-thing-ep"
+    },
+    {
+     "source": "1001Tracklists: Laura van Dam – Capture Radio 115 (01.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/23q3jun9/laura-van-dam-capture-radio-115-2026-11-01.html"
+    }
+   ]
+  },
+  {
+   "title": "Voodoo",
+   "artist": "Funk Tribu",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "Techno Airlines Top 5 der Woche (#1)",
+   "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
+   "note": "Trance-geprägter Peak-Time-Techno mit harter Kick und Hook, die hängen bleibt.",
+   "noteEn": "Trance-laced peak-time weapon, driving kick and a topline that sticks.",
+   "confirmations": [
+    {
+     "source": "Techno Airlines Top 5 der Woche (#1)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "1001Tracklists: Oliver Heldens – Heldeep Radio 644 (06.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/m8fjtj1/oliver-heldens-heldeep-radio-644-2026-11-06.html"
+    }
+   ]
+  },
+  {
+   "title": "Accelerate",
+   "artist": "Massano, Ekko",
+   "genre": "melodic-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "1001Tracklists DJ Charts KW 45 (#12)",
+   "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html",
+   "note": "Dunkler Afterlife-Druck mit Vocal, baut sich groß auf und schiebt nach vorn.",
+   "noteEn": "Dark, vocal-led Massano roller, huge build and full-on Afterlife pressure.",
+   "confirmations": [
+    {
+     "source": "1001Tracklists DJ Charts KW 45 (#12)",
+     "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html"
+    },
+    {
+     "source": "1001Tracklists: Innellea @ Klein Phönix Istanbul (31.10.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/298yq43t/innellea-klein-phonix-istanbul-turkey-2026-10-31.html"
+    },
+    {
+     "source": "1001Tracklists: Jon Thomas – Black Lemon Radio Show 126 (04.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/9ydk6j1/jon-thomas-black-lemon-radio-show-126-2026-11-04.html"
+    }
+   ]
+  },
+  {
+   "title": "Overclock",
+   "artist": "Kevin de Vries, DAMEN",
+   "genre": "melodic-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "1001Tracklists DJ Charts KW 45 (#25)",
+   "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html",
+   "note": "Schneller, synthlastiger Melodic-Techno mit kalter Maschinen-Energie.",
+   "noteEn": "Fast, synth-heavy melodic techno with cold machine energy.",
+   "confirmations": [
+    {
+     "source": "1001Tracklists DJ Charts KW 45 (#25)",
+     "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html"
+    },
+    {
+     "source": "1001Tracklists: Laura van Dam – Capture Radio 115 (01.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/23q3jun9/laura-van-dam-capture-radio-115-2026-11-01.html"
+    },
+    {
+     "source": "1001Tracklists: Quique Serra – Electronic Weekend Dance 546 (02.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/1bkglgtt/quique-serra-electronic-weekend-dance-546-2026-11-02.html"
+    }
+   ]
+  },
+  {
+   "title": "Beyond The Veil",
+   "artist": "Altinbas",
+   "genre": "raw-deep-hypnotic",
+   "tier": "weekly",
+   "dateAdded": "2026-11-07",
+   "source": "Beatport Best New Techno (R/D/H) November (Top 10)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92",
+   "note": "Hypnotischer Ostgut-Sog, tief, trocken und kompromisslos.",
+   "noteEn": "Hypnotic Ostgut tool, deep, dry and relentless.",
+   "confirmations": [
+    {
+     "source": "Beatport Best New Techno (R/D/H) November (Top 10)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92"
+    },
+    {
+     "source": "1001Tracklists: Hertz – Electronic Fridays (06.11.)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/117grds1/hertz-electronic-fridays-2026-11-06.html"
+    }
+   ]
+  },
   {
    "title": "Oh Baby",
    "artist": "Mathame",
@@ -173,31 +315,6 @@
     {
      "source": "1001Tracklists: Reprobeater – Generation Rave 91 (08.10.2026)",
      "sourceUrl": "https://www.1001tracklists.com/tracklist/1pqyh3xt/reprobeater-generation-rave-91-2026-10-08.html"
-    }
-   ]
-  },
-  {
-   "title": "We Come 1 (Adam Beyer Remix)",
-   "artist": "Faithless, Adam Beyer",
-   "genre": "peak-time-driving",
-   "tier": "weekly",
-   "dateAdded": "2026-10-24",
-   "source": "Beatport Peak Time Top 100 (#1)",
-   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
-   "note": "Ein Klassiker im Drumcode-Gewand, der jeden Peak trägt.",
-   "noteEn": "A classic in Drumcode clothing that carries any peak.",
-   "confirmations": [
-    {
-     "source": "Beatport Peak Time Top 100 (#1)",
-     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
-    },
-    {
-     "source": "1001Tracklists DJ Charts KW 43 (#7)",
-     "sourceUrl": "https://www.1001tracklists.com/charts/weekly/index.html"
-    },
-    {
-     "source": "Beatportal: Drumcode 30 Jahre / Faithless Reworks",
-     "sourceUrl": "https://www.beatportal.com/articles/1651238-drumcode-celebrates-30-years-with-adam-beyer-and-kasia-remixes-of-faithless-classics"
     }
    ]
   },
