@@ -222,7 +222,7 @@ start = f'''<section class="hero" id="top">
 <section class="sec" id="embers-001">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./next --session 001</span>
-    <h2>EMBERS 001</h2>
+    <h2 class="embers-title"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167"><span class="num">001</span><span class="by">by EAZr</span></h2>
   </div>
   <div class="event-promo">
     <a class="event-poster" href="embers" aria-label="EMBERS 001 · KW 1 2027 · Zu EMBERS">
@@ -325,7 +325,10 @@ start = f'''<section class="hero" id="top">
 '''
 
 # ---------------- about ----------------
-def crew(n, name, role_key, role, bio_key, bio, alias='', insta=''):
+# EMBERS brand mark: wherever EMBERS is named, the logo goes with it (Noah 07.11.2026: brand recognition).
+EMBERS_MARK = '<a class="embers-mark" href="embers" aria-label="EMBERS by EAZr"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy"><span>by EAZr</span></a>'
+
+def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
     ig = f'\n      <a class="crew-ig" href="{insta}" target="_blank" rel="noopener">@{insta.rstrip("/").rsplit("/", 1)[-1]} ↗</a>' if insta else ''
     h3 = f'{alias} <span class="real-name">· {name}</span>' if alias else name
     return f'''    <div class="card crew">
@@ -333,7 +336,7 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta=''):
       <span class="kicker">crew/0{n}</span>
       <h3>{h3}</h3>
       <span class="role" data-i18n="{role_key}">{role}</span>
-      <p data-i18n="{bio_key}">{bio}</p>{ig}
+      <p data-i18n="{bio_key}">{bio}</p>{extra}{ig}
     </div>
 '''
 about = f'''<div class="band first">
@@ -350,7 +353,7 @@ about = f'''<div class="band first">
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
   <div class="cards four">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI)}    <div class="card crew">
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}    <div class="card crew">
       <div class="avatar open" aria-hidden="true">?</div>
       <span class="kicker">crew/04</span>
       <h3 data-i18n="crewOpenTitle">Du?</h3>
