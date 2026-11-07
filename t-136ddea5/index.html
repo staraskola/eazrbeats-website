@@ -152,7 +152,7 @@ const trail=[];
 const G={g0:null,b0:null,gx:0,gy:0,gr:0};let GX=0,GY=0,GR=0;
 const cl=v=>Math.tanh(v); // soft limit: no hard jumps at the extremes
 function onTilt(e){if(e.gamma==null||e.beta==null)return;if(G.g0===null){G.g0=e.gamma;G.b0=e.beta}
-  G.g0+=(e.gamma-G.g0)*.006;G.b0+=(e.beta-G.b0)*.006;G.gx=cl((e.gamma-G.g0)/40);G.gy=cl((e.beta-G.b0)/40);G.gr=0}
+  G.g0+=(e.gamma-G.g0)*.006;G.b0+=(e.beta-G.b0)*.006;G.gx=cl((e.gamma-G.g0)/32);G.gy=cl((e.beta-G.b0)/32);G.gr=0}
 const DOE=window.DeviceOrientationEvent;
 if(DOE&&typeof DOE.requestPermission==='function'){const ask=()=>{removeEventListener('click',ask,true);removeEventListener('touchend',ask,true);
   DOE.requestPermission().then(st=>{if(st==='granted')addEventListener('deviceorientation',onTilt)}).catch(()=>{})};
@@ -183,7 +183,7 @@ function frame(now){
     r.z-=speed/60; if(r.z<=0.02){r.z+=1;r.hot=hotNext?1:0;hotNext=false}
     const s=1/(r.z*6), w=base*.5*s*(W/Math.max(W,H))*1.1, h=base*.5*s*(H/Math.max(W,H));
     if(w>W*1.6) continue;
-    const pz=(1-r.z)*(1-r.z), vx=cx+(W/2-cx)*(1-r.z)-GX*40*pz, vy=cy+(H/2-cy)*(1-r.z)-GY*24*pz;
+    const pz=(1-r.z)*(1-r.z), vx=cx+(W/2-cx)*(1-r.z)-GX*64*pz, vy=cy+(H/2-cy)*(1-r.z)-GY*38*pz;
     const near=1-r.z, a=Math.min(1,near*1.3)*(.22+kick*.6+flash*.5);
     const ang=r.z*.7+t*.035; // slow spiral twist, deeper rings turned further
     x.save();x.translate(vx,vy);x.rotate(ang-GR*(1-r.z));
@@ -196,7 +196,7 @@ function frame(now){
   x.shadowBlur=0;
   for(const m of motes){
     m.z-=speed/40; if(m.z<=.02){m.z=1;m.x=Math.random()*2-1;m.y=Math.random()*2-1}
-    const s=1/(m.z*4), mz=(1-m.z)*(1-m.z), mx=cx+m.x*W*.25*s-GX*40*mz, my=cy+m.y*H*.25*s-GY*24*mz;
+    const s=1/(m.z*4), mz=(1-m.z)*(1-m.z), mx=cx+m.x*W*.25*s-GX*64*mz, my=cy+m.y*H*.25*s-GY*38*mz;
     if(mx<0||mx>W||my<0||my>H) continue;
     x.fillStyle='rgba(230,246,255,'+((1-m.z)*.7).toFixed(3)+')';x.fillRect(mx,my,1.6,1.6);
   }
