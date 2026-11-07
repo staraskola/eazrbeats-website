@@ -18,7 +18,7 @@ const gl=cv.getContext('webgl',{antialias:false,alpha:false});
 if(!gl){cv.style.background='#050403 url(embers-glut.jpg) center/cover';cv.style.opacity=.5;return}
 const VS='attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
 const FS=`precision mediump float;
-uniform sampler2D T;uniform vec2 R,off;uniform float t,k,fl,br,ht;
+uniform sampler2D T;uniform vec2 R,off;uniform float t,k,fl,br,ht,ph,kk;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
@@ -32,19 +32,21 @@ void main(){
   vec3 c=texture2D(T,q+.5).rgb;
   float L=dot(c,vec3(.45,.45,.1));
   float wave=fbm(p*1.4+vec2(t*.03,-t*.11));        // heat wave wandering through the cracks
-  float I=L*(.35+ .9*wave*wave + .55*k + .9*fl)*br*ht;
+  float d=length(p);
+  float ring=exp(-pow((d-ph*1.25)*6.,2.))*(1.-ph)*kk;   // shock wave: every kick sends a ring of heat from the centre across the whole bed
+  float I=L*(.38+ .9*wave*wave + .95*k + 1.7*ring + .9*fl)*br*ht;
   vec3 col=mix(vec3(.10,.012,0.),vec3(.95,.25,.03),smoothstep(.02,.42,I));
   col=mix(col,vec3(1.,.62,.22),smoothstep(.42,.85,I));
   col=mix(col,vec3(1.,.9,.7),smoothstep(.85,1.3,I));
   col*=smoothstep(0.,.12,I)*.9+.1*L;
-  float v=smoothstep(1.15,.25,length(p*vec2(.9,1.)));
+  float v=mix(smoothstep(1.15,.25,length(p*vec2(.9,1.))),1.,.45*k+.3*fl); // the dark edges open up on the kick
   gl_FragColor=vec4(col*v,1.);
 }`;
 function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(s);return s}
 const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);gl.useProgram(pr);
 const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
 const al=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(al);gl.vertexAttribPointer(al,2,gl.FLOAT,false,0,0);
-const U={};['T','R','off','t','k','fl','br','ht'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+const U={};['T','R','off','t','k','fl','br','ht','ph','kk'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
 const tex=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tex);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,1,1,0,gl.RGB,gl.UNSIGNED_BYTE,new Uint8Array([10,2,0]));
 gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.MIRRORED_REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.MIRRORED_REPEAT);
 gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
@@ -61,6 +63,7 @@ function frame(now){
   gl.uniform1i(U.T,0);gl.uniform2f(U.R,cv.width,cv.height);
   gl.uniform2f(U.off,(px-.5)*.05-GX*.035,-GY*.022);
   gl.uniform1f(U.t,reduce?0:t);gl.uniform1f(U.k,kick);gl.uniform1f(U.fl,flash);gl.uniform1f(U.br,ready?brN:0);gl.uniform1f(U.ht,.85+scrollF*.45);
+  gl.uniform1f(U.ph,ph);gl.uniform1f(U.kk,ap?Math.min(1,ap.k*1.15)*kf:.35);
   gl.drawArrays(gl.TRIANGLES,0,3);
   root.setProperty('--k',(kick+flash*.6).toFixed(3));
   if(!reduce||!ready)requestAnimationFrame(frame);
@@ -82,7 +85,8 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
   try{if(navigator.audioSession)navigator.audioSession.type='playback'}catch(e){}
   function load(){if(loading)return loading;lbl.textContent='LOADING …';
     loading=fetch('embers-fire-in-the-soul.mp3').then(r=>r.arrayBuffer()).then(ab=>new Promise((ok,no)=>ctx.decodeAudioData(ab,ok,no))).then(b=>{buf=b;return b});return loading}
-  window.__emAudio=()=>{if(!on||!src)return null;const pos=((ctx.currentTime-startAt)%buf.duration+buf.duration)%buf.duration-T0;if(pos<0)return null;
+  window.__emAudio=()=>{if(!on||!src)return null;const lat=(ctx.outputLatency||0)+(ctx.baseLatency||0); // what you see must match what you hear, not what the audio engine is already computing
+    const pos=((ctx.currentTime-lat-startAt)%buf.duration+buf.duration)%buf.duration-T0;if(pos<0)return null;
     const i=Math.floor(pos/BEAT_S),voc=VOC.some(([a,b])=>pos+T0>=a&&pos+T0<b),k=voc?0:Math.max(BEAT[i]??0,(CLAP[i]??0)*.8);
     if(i!==lastIdx){const nx=Math.max(BEAT[i+1]??0,(CLAP[i+1]??0)*.8);quiet=(k<.3||nx<.3)?quiet+1:0;lastIdx=i} // single kicks pulse, but only a running groove counts as the beat coming back (flash)
     return {ph:(pos/BEAT_S)%1,brk:quiet>=6,k:k,voc:voc}};
