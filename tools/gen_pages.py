@@ -21,15 +21,15 @@ TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
 INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'
 INSTA_LAURA = 'https://www.instagram.com/laurajanevucak/'
 INSTA_NMB = 'https://www.instagram.com/nmb.muc/'
-INSTA_WIVI = 'https://www.instagram.com/_wjackowsky/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /live
-# Next EMBERS session shown on /live. Empty = 'date TBA' text from site.js.
+INSTA_WIVI = 'https://www.instagram.com/_wjackowsky/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /embers
+# Next EMBERS session shown on /embers and on the /live overview. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
 LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
-# Countdown on /live. Until the exact day is public it counts down to the start of KW 1.
+# Countdown on /embers. Until the exact day is public it counts down to the start of KW 1.
 # Once the date is announced, set the exact start, e.g. '2027-01-08T21:30:00+01:00'.
 LIVE_COUNTDOWN = '2027-01-04T00:00:00+01:00'
 LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
-# Embedded Twitch player on /live. Keep False until the Twitch channel is fully set up.
+# Embedded Twitch player on /embers. Keep False until the Twitch channel is fully set up.
 TWITCH_EMBED = False
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
@@ -223,7 +223,7 @@ start = f'''<section class="hero" id="top">
     <h2>EMBERS 001</h2>
   </div>
   <div class="event-promo">
-    <a class="event-poster" href="live" aria-label="EMBERS 001 · KW 1 2027 · Zur Live-Seite">
+    <a class="event-poster" href="embers" aria-label="EMBERS 001 · KW 1 2027 · Zu EMBERS">
       <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
     </a>
     <div class="event-info">
@@ -232,7 +232,7 @@ start = f'''<section class="hero" id="top">
       <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
       <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
       <div class="cta-row" style="justify-content:flex-start">
-        <a class="btn" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
+        <a class="btn" href="embers" data-i18n="embersBtn">Zu EMBERS →</a>
         <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
       </div>
     </div>
@@ -561,7 +561,7 @@ kontakt = f'''<div class="band first">
 </div>
 '''
 
-# ---------------- live (EMBERS) ----------------
+# ---------------- embers (EMBERS page, /embers) ----------------
 live_next = f'<h2 class="live-next" data-i18n="liveNextDate">{LIVE_NEXT}</h2>' if LIVE_NEXT else '<h2 class="live-next" data-i18n="liveNextTba"></h2>'
 live_countdown = (f'<p class="countdown" data-target="{LIVE_COUNTDOWN}" data-exact="{1 if LIVE_COUNTDOWN_EXACT else 0}" aria-live="off">'
                   '<span class="cd-label">T-MINUS</span> <span class="cd-val">··</span><span class="cursor">_</span></p>') if LIVE_COUNTDOWN else ''
@@ -569,9 +569,10 @@ twitch_player = ('''
   <div class="twitch-player">
     <iframe src="https://player.twitch.tv/?channel=eazrbeats&amp;parent=eazrbeats.de&amp;parent=www.eazrbeats.de&amp;muted=true" title="EMBERS live on Twitch" allowfullscreen loading="lazy"></iframe>
   </div>''') if TWITCH_EMBED else ''
-live = f'''<div class="embers-bg" aria-hidden="true"></div>
+embers = f'''<div class="embers-bg" aria-hidden="true"></div>
 <div class="band first">
-<section class="sec" id="live">
+<section class="sec" id="embers">
+  <a class="back-link" href="live" data-i18n="backLive">← Live</a>
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./stream --live</span>
     <h1 class="sr-only">EMBERS by EAZr · Hosted live DJ sessions from Munich</h1>
@@ -610,13 +611,43 @@ live = f'''<div class="embers-bg" aria-hidden="true"></div>
 </div>
 '''
 
+# ---------------- live (overview of all live series, /live) ----------------
+# One tile per series, each already glowing in its own look. A new series = a new tile + its own page.
+live = f'''<div class="band first">
+<section class="sec" id="live">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> ls ./live</span>
+    <h1>Live</h1>
+  </div>
+  <p class="lead" data-i18n="liveHubText"></p>
+  <div class="series">
+    <a class="series-tile s-embers" href="embers">
+      <span class="kicker"><span class="live-dot" aria-hidden="true"></span>01 · LIVE LOADING</span>
+      <img class="series-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy">
+      <span class="series-by">by EAZr</span>
+      <p data-i18n="hubEmbersText"></p>
+      <p class="series-next">{LIVE_NEXT or 'EMBERS 001 · SOON'}</p>
+      <span class="series-go" data-i18n="embersBtn">Zu EMBERS →</span>
+    </a>
+    <div class="series-tile s-next">
+      <span class="kicker">02 · SIGNAL LOADING</span>
+      <p class="series-mystery">???<span class="cursor">_</span></p>
+      <p data-i18n="hubNextText"></p>
+      <a class="series-go" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
+    </div>
+  </div>
+</section>
+</div>
+'''
+
 D = 'Munich house &amp; techno collective — new sets, sessions and shows dropping soon.'
 files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js', 'glitch.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
-  'live.html': page('live', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'live', live, ['live.js'], og='og-embers.jpg'),
+  'live.html': page('live', 'Live · EAZr Beats Collective', 'Live series by EAZr Beats Collective from Munich: EMBERS hosted live DJ sessions on Twitch, and more to come.', 'live', live),
+  'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. House &amp; techno, straight from the decks.', 'embers', embers, ['live.js'], og='og-embers.jpg'),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),

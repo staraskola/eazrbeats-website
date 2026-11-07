@@ -450,10 +450,10 @@
   @media (prefers-reduced-motion: reduce) { .vb-disk::before { animation: none; } }
 
   /* ---- EMBERS live page: same layout, ember orange instead of ice/pink, glow from below. ---- */
-  body[data-page="live"] { --glow: rgba(255,122,31,0.85); }
-  body[data-page="live"] .bg-video { display: none; }
-  body[data-page="live"] .page-scrim { background: #050403; }
-  body[data-page="live"] .band { background: transparent; }
+  body[data-page="embers"] { --glow: rgba(255,122,31,0.85); }
+  body[data-page="embers"] .bg-video { display: none; }
+  body[data-page="embers"] .page-scrim { background: #050403; }
+  body[data-page="embers"] .band { background: transparent; }
   .embers-bg { position: fixed; inset: 0; z-index: 1; pointer-events: none;
     background: radial-gradient(ellipse 120% 45% at 50% 115%, rgba(255,120,30,0.55), rgba(200,40,10,0.28) 40%, rgba(80,10,4,0.12) 65%, transparent 82%); }
   /* glowing cracks, pulsing slowly; dimmed at the top so text stays readable */
@@ -461,20 +461,42 @@
   .embers-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,4,3,0.82) 0%, rgba(5,4,3,0.55) 40%, rgba(5,4,3,0.2) 100%); }
   @keyframes embers-pulse { from { opacity: 0.32; } to { opacity: 0.58; } }
   @media (prefers-reduced-motion: reduce) { .embers-bg::before { animation: none; opacity: 0.45; } }
-  /* footer on /live: let the embers glow through instead of a flat black block */
-  body[data-page="live"] .site-footer { background: linear-gradient(180deg, rgba(5,4,3,0.35), rgba(5,4,3,0.65)); border-top: 1px solid rgba(255,122,31,0.35); color: rgba(255,170,110,0.85); }
-  body[data-page="live"] .site-footer .foot-name { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.7); }
-  body[data-page="live"] .site-footer a:hover { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.8); }
+  /* footer on /embers: let the embers glow through instead of a flat black block */
+  body[data-page="embers"] .site-footer { background: linear-gradient(180deg, rgba(5,4,3,0.35), rgba(5,4,3,0.65)); border-top: 1px solid rgba(255,122,31,0.35); color: rgba(255,170,110,0.85); }
+  body[data-page="embers"] .site-footer .foot-name { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.7); }
+  body[data-page="embers"] .site-footer a:hover { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.8); }
   .embers-head { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin: 6px 0 18px; }
   .embers-logo { width: min(560px, 100%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 22px rgba(255,122,31,0.35)); }
   .embers-by { color: #FF7A1F; letter-spacing: 0.14em; font-size: 15px; }
-  body[data-page="live"] .live-box { border-color: rgba(255,122,31,0.55); box-shadow: 0 0 24px rgba(255,122,31,0.12); }
-  body[data-page="live"] .live-box .btn:not(.ghost) { background: #FF7A1F; border-color: #FF7A1F; color: #050403; }
-  body[data-page="live"] .kicker { color: #FF7A1F; }
+  body[data-page="embers"] .live-box { border-color: rgba(255,122,31,0.55); box-shadow: 0 0 24px rgba(255,122,31,0.12); }
+  body[data-page="embers"] .live-box .btn:not(.ghost) { background: #FF7A1F; border-color: #FF7A1F; color: #050403; }
+  body[data-page="embers"] .kicker { color: #FF7A1F; }
   .live-next { margin: 4px 0 2px; font-size: clamp(22px, 4vw, 32px); text-shadow: 0 0 6px rgba(255,122,31,0.8), 0 0 20px rgba(255,122,31,0.35); }
   .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #FF7A1F; box-shadow: 0 0 8px #FF7A1F; margin-right: 8px; vertical-align: 1px; animation: live-blink 1.4s steps(2, start) infinite; }
   @keyframes live-blink { to { visibility: hidden; } }
   @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+
+/* /live overview: one tile per series, each glowing in its own look */
+.series { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.series-tile { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; text-decoration: none; color: inherit; min-height: 320px; }
+.series-tile p { margin: 0; font-size: 13px; line-height: 1.7; color: rgba(244,241,234,0.75); position: relative; }
+.series-tile .kicker, .series-logo, .series-by, .series-next, .series-go, .series-mystery { position: relative; }
+.series-go { margin-top: auto; font-size: 13px; letter-spacing: 0.12em; text-decoration: none; }
+.s-embers { border: 1px solid rgba(255,122,31,0.55); background: #050403; box-shadow: 0 0 26px rgba(255,122,31,0.14); transition: box-shadow .3s, border-color .3s; }
+.s-embers::before { content: ""; position: absolute; inset: 0; background: url(embers-cracks.jpg) center / cover; opacity: 0.3; }
+.s-embers::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,4,3,0.85) 0%, rgba(5,4,3,0.5) 60%, rgba(120,30,5,0.35) 100%); }
+.s-embers > * { z-index: 1; }
+.s-embers:hover, .s-embers:focus-visible { border-color: #FF7A1F; box-shadow: 0 0 40px rgba(255,122,31,0.35); outline: none; }
+.s-embers .kicker, .s-embers .series-by, .s-embers .series-go { color: #FF7A1F; }
+.s-embers .series-logo { width: min(320px, 100%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 18px rgba(255,122,31,0.35)); }
+.s-embers .series-by { letter-spacing: 0.14em; font-size: 13px; margin-top: -4px; }
+.s-embers .series-next { font-weight: 700; letter-spacing: 0.06em; color: #FFD9BC; text-shadow: 0 0 10px rgba(255,122,31,0.6); }
+.s-next { border: 1px dashed rgba(var(--accent-rgb),0.35); background: rgba(0,0,0,0.45); }
+.s-next .kicker { color: rgba(244,241,234,0.5); }
+.series-mystery { margin: 6px 0 4px !important; font-size: clamp(40px, 7vw, 64px) !important; font-weight: 700; letter-spacing: 0.08em; color: rgba(244,241,234,0.85) !important; }
+.s-next .series-go { color: var(--accent); }
+.back-link { display: inline-block; margin-bottom: 10px; font-size: 12px; letter-spacing: 0.12em; color: rgba(255,170,110,0.85); text-decoration: none; }
+.back-link:hover, .back-link:focus-visible { color: #FF7A1F; }
 
 /* EMBERS event poster */
 .event-promo { display: flex; gap: 28px; align-items: flex-start; }
