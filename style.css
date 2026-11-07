@@ -69,22 +69,43 @@
 
   /* ---- sticky top: terminal chrome bar + nav ---- */
   .topbar { position: sticky; top: 0; z-index: 20; }
+  /* terminal strip: dark glass, three LEDs in the logo colours (ice, pink, blue), glowing line, blinking cursor.
+     EMBERS gets its own ember tones via body[data-page="embers"]. */
   .chrome {
+    --led-a: #EFE9FF; --led-b: #FF4FD8; --led-c: #5B8CFF;
+    --chrome-line: linear-gradient(90deg, transparent, #FF4FD8 20%, #EFE9FF 50%, #5B8CFF 80%, transparent);
     position: relative;
     height: 34px;
-    background: #100d0a;
-    border-bottom: 1px solid rgba(var(--accent-rgb),0.18);
+    background: linear-gradient(rgba(5,4,3,0.86), rgba(5,4,3,0.6));
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
     display: flex; align-items: center;
     padding: 0 16px;
   }
+  .chrome::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+    background: var(--chrome-line); opacity: 0.7;
+  }
+  body[data-page="embers"] .chrome {
+    --led-a: #FF7A1F; --led-b: #C42A0A; --led-c: #5A0F02;
+    --chrome-line: linear-gradient(90deg, transparent, rgba(255,122,31,0.55) 20%, #FFD9A0 50%, rgba(255,122,31,0.55) 80%, transparent);
+  }
+  body[data-page="embers"] .chrome-title::after { background: #FF7A1F; }
+  body[data-page="embers"] .lang-toggle button.active { color: #FF7A1F; border-color: #FF7A1F; text-shadow: 0 0 6px rgba(255,122,31,0.8); }
   .dots { display: flex; gap: 7px; }
   .dot-btn { width: 9px; height: 9px; border-radius: 50%; }
-  .dot-btn.r { background: #ff5f56; }
-  .dot-btn.y { background: #ffbd2e; }
-  .dot-btn.g { background: #27c93f; }
+  .dot-btn.r { background: var(--led-a); box-shadow: 0 0 8px var(--led-a); animation: led-breathe 3.2s ease-in-out infinite alternate; }
+  .dot-btn.y { background: var(--led-b); opacity: 0.9; }
+  .dot-btn.g { background: var(--led-c); opacity: 0.85; }
+  @keyframes led-breathe { from { filter: brightness(0.75); } to { filter: brightness(1.35); box-shadow: 0 0 12px var(--led-a); } }
+  .chrome-title::after {
+    content: ""; display: inline-block; width: 0.6em; height: 1.05em; margin-left: 3px; vertical-align: -0.18em;
+    background: var(--led-b); animation: chrome-blink 1s steps(1) infinite;
+  }
+  @keyframes chrome-blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .dot-btn.r, .chrome-title::after { animation: none; } }
   .chrome-title {
     position: absolute; left: 0; right: 0; text-align: center; pointer-events: none;
-    font-size: clamp(9px, 1.4vw, 11px); letter-spacing: 1px; color: rgba(244,241,234,0.42);
+    font-size: clamp(9px, 1.4vw, 11px); letter-spacing: 1px; color: rgba(244,241,234,0.62);
   }
   .lang-toggle {
     position: relative; z-index: 1; margin-left: auto;
