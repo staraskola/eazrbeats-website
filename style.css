@@ -558,6 +558,108 @@ body[data-page="start"]:has(.hack-glitch.big) .bg-video { transform: translateX(
 .twitch-player { margin-top: 14px; position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(255,122,31,0.55); box-shadow: 0 0 24px rgba(255,122,31,0.15); background: #050403; }
 .twitch-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
+/* =====================================================================
+   v2 polish (Nov 2026): brings the main site up to the /embers level.
+   Outline neon headings, glass panels with a glowing top edge, glow-line
+   section dividers, calmer CRT (no flicker), soft scroll reveal.
+   /embers keeps its own look, so everything here skips it.
+   ===================================================================== */
+:root { --edge: linear-gradient(90deg, transparent, rgba(255,79,216,0.75) 22%, #EFE9FF 50%, rgba(91,140,255,0.75) 78%, transparent); }
+
+/* calmer CRT: no flicker anywhere, lighter scanlines (Noah: no flickering backgrounds) */
+.flicker { display: none; }
+.scanlines { opacity: 0.6; }
+
+/* section dividers: glowing line in the logo colours instead of a flat border */
+body:not([data-page="embers"]) .band { border-top: 0; background: rgba(5,3,4,0.5); }
+body:not([data-page="embers"]) .band.alt { background: rgba(5,3,4,0.68); }
+body:not([data-page="embers"]) .band:not(.first)::before {
+  content: ""; position: absolute; left: 50%; top: 0; width: min(720px, 86%); height: 1px; transform: translateX(-50%);
+  background: var(--edge); opacity: 0.55; box-shadow: 0 0 14px rgba(255,79,216,0.35);
+}
+body[data-page="void"] .band:not(.first)::before { opacity: 0.25; }
+body:not([data-page="embers"]) .sec { padding-top: clamp(72px, 11vh, 120px); padding-bottom: clamp(72px, 11vh, 120px); }
+
+/* page and section heads: centred like a chapter, big heading as a neon outline */
+body:not([data-page="embers"]) .sec-head { align-items: center; text-align: center; gap: 14px; margin-bottom: 40px; }
+body:not([data-page="embers"]) .sec-head .cmd-line {
+  font-size: 11px; letter-spacing: 0.08em; color: rgba(244,241,234,0.55);
+  padding: 6px 12px; border: 1px solid rgba(var(--accent-rgb),0.16); border-radius: 3px;
+  background: rgba(14,11,18,0.55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+body:not([data-page="embers"]) .sec-head .prompt { font-size: 11px; }
+body:not([data-page="embers"]) .sec-head h1, body:not([data-page="embers"]) .sec-head h2 {
+  font-size: clamp(40px, 8.5vw, 92px); line-height: 1.02; letter-spacing: 0.04em;
+  color: transparent; -webkit-text-stroke: 1.5px var(--accent);
+  text-shadow: none; filter: drop-shadow(0 0 3px rgba(255,79,216,0.85)) drop-shadow(0 0 18px rgba(255,79,216,0.45));
+  overflow-wrap: anywhere;
+}
+body:not([data-page="embers"]) .sec-head h1 span { color: transparent; }
+body:not([data-page="embers"]) .sec-head + .lead, body:not([data-page="embers"]) .sec > .lead {
+  margin-left: auto; margin-right: auto; text-align: center; max-width: 58ch;
+}
+.sub-h { text-align: center; letter-spacing: 0.3em; font-size: 11px; margin: 64px 0 20px; color: rgba(244,241,234,0.7); text-shadow: none; }
+.sub-h::before, .sub-h::after { content: "·"; color: #FF4FD8; margin: 0 10px; }
+.booking-box .sub-h { text-align: left; }
+.booking-box .sub-h::before, .booking-box .sub-h::after { content: none; }
+
+/* glass panels with a glowing top edge (same idea as the terminal strip) */
+body:not([data-page="embers"]) :is(.card, .pick, .dig-box, .booking-box, .s-next, .empty) {
+  position: relative; border-radius: 4px;
+  background: rgba(16,12,20,0.58); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--accent-rgb),0.14); box-shadow: 0 18px 40px -24px rgba(0,0,0,0.9);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+body:not([data-page="embers"]) :is(.card, .pick, .dig-box, .booking-box)::before {
+  content: ""; position: absolute; left: 12px; right: 12px; top: -1px; height: 1px;
+  background: var(--edge); opacity: 0.35; transition: opacity .25s ease;
+}
+body:not([data-page="embers"]) :is(.card, .pick):hover {
+  border-color: rgba(var(--accent-rgb),0.32); box-shadow: 0 0 30px -12px rgba(255,79,216,0.55), 0 18px 40px -24px rgba(0,0,0,0.9);
+  transform: translateY(-2px);
+}
+body:not([data-page="embers"]) :is(.card, .pick):hover::before { opacity: 0.9; }
+/* the highlighted box: brighter edge and a soft glow instead of a pink-filled block */
+body:not([data-page="embers"]) :is(.card.hot, .pick.hot, .booking-box) {
+  background: rgba(20,13,24,0.66); border-color: rgba(var(--accent-rgb),0.26);
+  box-shadow: 0 0 40px -18px rgba(255,79,216,0.6), 0 18px 40px -24px rgba(0,0,0,0.9);
+}
+body:not([data-page="embers"]) :is(.card.hot, .pick.hot, .booking-box)::before { opacity: 0.95; box-shadow: 0 0 10px rgba(255,79,216,0.6); }
+.card .kicker, .pick .kicker { letter-spacing: 0.22em; color: rgba(244,241,234,0.5); }
+.card .kicker::before, .pick .kicker::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 8px; vertical-align: 1px; background: #FF4FD8; box-shadow: 0 0 6px #FF4FD8; }
+.avatar { background: radial-gradient(circle at 30% 30%, rgba(255,79,216,0.22), rgba(16,12,20,0.7)); border-color: rgba(var(--accent-rgb),0.5); }
+
+/* buttons: glass, light fill on hover */
+.btn { border-radius: 2px; background: rgba(10,8,14,0.5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: background .2s ease, color .2s ease, box-shadow .2s ease; }
+.btn:hover { box-shadow: 0 0 22px -4px rgba(255,79,216,0.7); }
+.btn.ghost { border-color: rgba(var(--accent-rgb),0.3); }
+
+/* footer: glow line on top, see-through dark like /embers */
+body:not([data-page="embers"]) .site-footer {
+  background: linear-gradient(180deg, rgba(5,4,3,0.55), rgba(5,4,3,0.92)); border-top: 0; padding-top: 44px;
+}
+body:not([data-page="embers"]) .site-footer::before {
+  content: ""; position: absolute; left: 50%; top: 0; width: min(560px, 80%); height: 1px; transform: translateX(-50%);
+  background: var(--edge); opacity: 0.7; box-shadow: 0 0 16px rgba(255,79,216,0.45);
+}
+
+/* soft scroll reveal; only when site.js has switched it on, so content never stays hidden without JS */
+html.reveal-on .rv { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+html.reveal-on .rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-on .rv { opacity: 1; transform: none; transition: none; }
+  body:not([data-page="embers"]) :is(.card, .pick):hover { transform: none; }
+}
+
+/* EMBERS brand mark: the glitch logo goes wherever EMBERS is named */
+.embers-mark { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 4px; text-decoration: none; }
+.embers-mark img { height: 18px; width: auto; display: block; filter: drop-shadow(0 0 3px rgba(255,122,31,0.8)) drop-shadow(0 0 12px rgba(255,122,31,0.35)); }
+.embers-mark span { white-space: nowrap; font-size: 11px; letter-spacing: 0.14em; color: #FF7A1F; }
+.embers-mark:hover img { filter: drop-shadow(0 0 5px rgba(255,122,31,1)) drop-shadow(0 0 18px rgba(255,122,31,0.55)); }
+body:not([data-page="embers"]) .sec-head h2.embers-title { -webkit-text-stroke: 0; filter: none; display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0; }
+.embers-title img { width: min(560px, 86vw); height: auto; display: block; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 22px rgba(255,122,31,0.35)); }
+.embers-title .num { font-size: clamp(36px, 6vw, 64px); line-height: 1; letter-spacing: 0.08em; color: transparent; -webkit-text-stroke: 1.5px #FF7A1F; filter: drop-shadow(0 0 3px rgba(255,122,31,0.9)) drop-shadow(0 0 16px rgba(196,42,10,0.6)); }
+.embers-title .by { font-size: 13px; letter-spacing: 0.2em; color: #FF7A1F; text-transform: none; -webkit-text-stroke: 0; }
 /* EMBERS logo instead of plain text wherever EMBERS is named */
 .card-emb { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .card-emb img { width: min(200px, 70%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 14px rgba(255,122,31,0.35)); }

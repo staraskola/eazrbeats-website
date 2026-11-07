@@ -475,3 +475,23 @@ document.querySelectorAll('[data-news-form]').forEach(form => {
       .catch(() => { msg.textContent = T[lang].newsErr; btn.disabled = false; });
   });
 });
+
+// Soft scroll reveal (v2 look): heads and panels fade up as they come into view.
+// Off on /embers (own choreography) and with reduced motion; without JS everything just shows.
+(function () {
+  if (document.body.dataset.page === 'embers' || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.band .sec-head, .band .lead, .band .sub-h, .card, .pick, .dig-box, .booking-box, .series-tile, .event-promo');
+  if (!els.length) return;
+  document.documentElement.classList.add('reveal-on');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach((el, i) => {
+    el.classList.add('rv');
+    // small stagger for panels sitting next to each other
+    const sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    el.style.transitionDelay = Math.min(sib, 4) * 70 + 'ms';
+    io.observe(el);
+  });
+})();
