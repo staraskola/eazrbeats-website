@@ -76,7 +76,7 @@
     --chrome-line: linear-gradient(90deg, transparent, #FF4FD8 20%, #EFE9FF 50%, #5B8CFF 80%, transparent);
     position: relative;
     height: 34px;
-    background: linear-gradient(rgba(5,4,3,0.86), rgba(5,4,3,0.6));
+    background: rgba(5,4,3,0.94);
     -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
     display: flex; align-items: center;
     padding: 0 16px;
@@ -123,9 +123,9 @@
   .nav {
     display: flex; align-items: center; gap: 18px;
     height: 52px; padding: 0 16px;
-    background: rgba(5,3,4,0.82);
+    background: rgba(5,4,3,0.94);
     -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(var(--accent-rgb),0.14);
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.08);
   }
   .nav .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex: 0 0 auto; }
   .nav .brand img { height: 28px; width: auto; display: block; }
