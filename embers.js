@@ -9,11 +9,7 @@ addEventListener('pointermove',e=>{tx=e.clientX/innerWidth},{passive:true});
 const G={g0:null,b0:null,gx:0,gy:0};let GX=0,GY=0;
 function onTilt(e){if(e.gamma==null||e.beta==null)return;if(G.g0===null){G.g0=e.gamma;G.b0=e.beta}
   G.g0+=(e.gamma-G.g0)*.006;G.b0+=(e.beta-G.b0)*.006;G.gx=Math.tanh((e.gamma-G.g0)/32);G.gy=Math.tanh((e.beta-G.b0)/32)}
-const DOE=window.DeviceOrientationEvent;
-if(DOE&&typeof DOE.requestPermission==='function'){const ask=()=>{removeEventListener('click',ask,true);removeEventListener('touchend',ask,true);
-  DOE.requestPermission().then(st=>{if(st==='granted')addEventListener('deviceorientation',onTilt)}).catch(()=>{})};
-  addEventListener('click',ask,true);addEventListener('touchend',ask,true);}
-else if(DOE)addEventListener('deviceorientation',onTilt);
+// no phone tilt on EMBERS (Noah 07.11.): the magma drifts on its own, it does not sway with the phone
 const gl=cv.getContext('webgl',{antialias:false,alpha:false});
 if(!gl){cv.style.background='#050403 url(embers-glut.jpg) center/cover';cv.style.opacity=.5;return}
 const VS='attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
