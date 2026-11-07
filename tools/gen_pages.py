@@ -367,6 +367,9 @@ about = f'''<div class="band first">
 </div>
 '''
 
+EMBERS_DATE = 'KW 1 · 2027'   # DATE box on /embers
+EMBERS_VENUE = 'TBA'          # VENUE box on /embers
+
 # ---------------- events ----------------
 events = f'''<div class="band first">
 <section class="sec" id="events">
@@ -379,10 +382,10 @@ events = f'''<div class="band first">
       <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
-      <span class="kicker">KW 1 · 2027 · München</span>
+      <span class="kicker">{EMBERS_DATE} · München</span>
       <h3>EMBERS 001</h3>
       <p data-i18n="sessionsText"></p>
-      <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
+      <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
   </div>
 
@@ -413,7 +416,7 @@ mixes = f'''<div class="band first">
       <p data-i18n="mixesSoonText"></p>
     </div>
     <div class="card hot">
-      <span class="kicker">instagram · tue 19:00</span>
+      <span class="kicker">instagram · tue &amp; thu</span>
       <h3 data-i18n="mixesRoadTitle">Road to Live</h3>
       <p data-i18n="mixesRoadText"></p>
       <a class="btn" href="{INSTA}" target="_blank" rel="noopener" data-i18n="mixesRoadBtn">Auf Instagram ansehen ↗</a>
@@ -435,10 +438,10 @@ nextpage = f'''<div class="band first">
       <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
-      <span class="kicker" data-i18n="sessionsKicker">Format · in Arbeit</span>
-      <h3>EMBERS by EAZr</h3>
+      <span class="kicker">{EMBERS_DATE} · München</span>
+      <h3>EMBERS 001</h3>
       <p data-i18n="sessionsText"></p>
-      <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
+      <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
     <div class="card">
       <span class="kicker">mix/01</span>
@@ -447,7 +450,7 @@ nextpage = f'''<div class="band first">
       <p data-i18n="mixesSoonText"></p>
     </div>
     <div class="card">
-      <span class="kicker">instagram · tue 19:00</span>
+      <span class="kicker">instagram · tue &amp; thu</span>
       <h3 data-i18n="mixesRoadTitle">Road to Live</h3>
       <p data-i18n="mixesRoadText"></p>
       <a class="btn" href="{INSTA}" target="_blank" rel="noopener" data-i18n="mixesRoadBtn">Auf Instagram ansehen ↗</a>
@@ -457,6 +460,7 @@ nextpage = f'''<div class="band first">
   <div class="booking-box" style="margin-top:40px">
     <p class="lead" style="margin:0" data-i18n="eventsNotify"></p>
     <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
+    {news_form('next')}
   </div>
 </section>
 </div>
@@ -573,8 +577,6 @@ twitch_player = ('''
   </div>''') if TWITCH_EMBED else ''
 # Immersive page: fixed WebGL magma (embers.js) + a slow descent IGNITE -> GATHER -> GLOW -> STREAM.
 # Sound: "Fire in the Soul" by DreamsMaker (Pixabay Content License), loops after the first tap.
-EMBERS_DATE = 'KW 1 · 2027'   # DATE box on /embers
-EMBERS_VENUE = 'TBA'          # VENUE box on /embers
 embers = f'''<canvas id="world" aria-hidden="true"></canvas>
 <div class="emx-heat" aria-hidden="true"></div>
 <div class="emx-sub"><a href="live" data-i18n="emBack">← ALLE LIVE-REIHEN</a><span class="temp">HEAT <b id="temp">0600</b> °C</span></div>

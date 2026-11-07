@@ -72,7 +72,7 @@
     <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> ls ./next</span>
     <h1>Next</h1>
   </div>
-  <p class="lead" data-i18n="nextText">Was als Nächstes kommt: unsere eigenen Abende und die ersten Mixes.</p>
+  <p class="lead" data-i18n="nextText">Was als Nächstes kommt: EMBERS 001, unser Open Air und die ersten Mixes.</p>
   <!-- Neuer Mix: Karte "mix/01" ersetzen, Titel eintragen und den SoundCloud-Embed (iframe) in .mix-embed setzen. -->
   <div class="cards">
     <div class="card hot">
@@ -81,10 +81,10 @@
       <p data-i18n="openAirText">Unsere eigene Open-Air-Reihe: House, Tech House, Afro und Latin House unter freiem Himmel. Name, Datum und Ort folgen.</p>
     </div>
     <div class="card">
-      <span class="kicker" data-i18n="sessionsKicker">Format · in Arbeit</span>
-      <h3>EMBERS by EAZr</h3>
-      <p data-i18n="sessionsText">Unser Live-Format: Sets mit der Crowd direkt ums Pult, gefilmt und live auf Twitch gestreamt.</p>
-      <a class="btn ghost" href="live" data-i18n="liveBtn">Zur Live-Seite →</a>
+      <span class="kicker">KW 1 · 2027 · München</span>
+      <h3>EMBERS 001</h3>
+      <p data-i18n="sessionsText">Unsere House-Reihe: DJ-Sessions mit Host, alles, was House kann. 90 Minuten laufen live auf Twitch, die ganze Nacht gibt es nur vor Ort.</p>
+      <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
     <div class="card">
       <span class="kicker">mix/01</span>
@@ -93,16 +93,27 @@
       <p data-i18n="mixesSoonText">Der erste Mix kommt hier rein, sobald er fertig ist. Bis dahin: Road to Live auf Instagram.</p>
     </div>
     <div class="card">
-      <span class="kicker">instagram · tue 19:00</span>
+      <span class="kicker">instagram · tue &amp; thu</span>
       <h3 data-i18n="mixesRoadTitle">Road to Live</h3>
-      <p data-i18n="mixesRoadText">Jeden Dienstag auf Instagram: vom Üben im Zimmer bis zum ersten Gig.</p>
+      <p data-i18n="mixesRoadText">Jeden Dienstag und Donnerstag auf Instagram: vom Üben im Zimmer bis zum ersten Gig.</p>
       <a class="btn" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener" data-i18n="mixesRoadBtn">Auf Instagram ansehen ↗</a>
     </div>
   </div>
 
   <div class="booking-box" style="margin-top:40px">
-    <p class="lead" style="margin:0" data-i18n="eventsNotify">Keine Termine verpassen: Neue Events kündigen wir zuerst auf Instagram an.</p>
+    <p class="lead" style="margin:0" data-i18n="eventsNotify">Keine Termine verpassen: Neue Events gibt es zuerst auf Instagram und im Newsletter.</p>
     <a class="btn" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@eazrbeats</a>
+    <form class="news-form" action="https://271e78d8.sibforms.com/serve/MUIFAJSYStwrJDqLy42Ecrc5qfbu952H3tunCLqEOj2qNEo-uMQXekhmfnDc89IZYDDQvP3DT4KTqPFPZoBFeAFUcrWhE9eK-rjQWXlJhWRLPuFXXxIVjP0kBSRK1CL7qstSoJLpIOjHAXKMxRgxGYDAiAdfOyD74gIofvVEdhAnrJvCYAsvdI4UVkxunpNlYs7gao6sTT03_pbjiA==" method="POST" data-news-form>
+        <label class="sr-only" for="news-next" data-i18n="newsLabel">E-Mail-Adresse</label>
+        <div class="news-row">
+          <input type="email" id="news-next" name="EMAIL" required autocomplete="email" placeholder="name@mail.de">
+          <button class="btn" type="submit" data-i18n="joinNewsBtn">Anmelden</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="de">
+        <p class="news-msg" role="status" aria-live="polite"></p>
+        <p class="news-note" data-i18n="newsNote">Kein Spam, Abmelden jederzeit. Du bekommst erst eine Mail zum Bestätigen. <a href="datenschutz#newsletter">Datenschutz</a></p>
+      </form>
   </div>
 </section>
 </div>
@@ -128,5 +139,5 @@
   </div>
 </footer>
 
-<script src="site.js?v=7e0c7838"></script>
+<script src="site.js?v=cf505583"></script>
 </body></html>
