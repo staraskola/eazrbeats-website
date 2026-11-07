@@ -23,18 +23,24 @@ void main(){
   float z=.78-.035*sin(t*.42)-.025*k;            // breathing: slowly pulls in and out, a nudge on the kick
   vec2 q=p*z+off;
   vec2 w=vec2(fbm(q*2.2+vec2(0.,t*.05)),fbm(q*2.2+vec2(5.2,1.3-t*.04)));
-  q+= (w-.5)*.045;                                 // magma flow / heat shimmer
+  q+= (w-.5)*.045;                                 // magma flow
+  vec2 sp=p*vec2(14.,22.)+vec2(0.,-t*1.6);         // heat shimmer: fine, rising flicker like air over a fire, stronger on the kick
+  q+=(vec2(n(sp),n(sp+vec2(7.3,2.1)))-.5)*(.0035+.009*k);
   q.y-=t*.006;                                     // slow drift
   vec3 c=texture2D(T,q+.5).rgb;
   float L=dot(c,vec3(.45,.45,.1));
+  L=mix(L,.3,.12);                                // base glow: the dark parts of the bed never drop to dead black, the cracks stay visible
   float wave=fbm(p*1.4+vec2(t*.03,-t*.11));        // heat wave wandering through the cracks
   float d=length(p);
   float ring=exp(-pow((d-ph*1.25)*6.,2.))*(1.-ph)*kk;   // shock wave: every kick sends a ring of heat from the centre across the whole bed
-  float I=L*(.38+ .9*wave*wave + .95*k + 1.7*ring + .9*fl)*br*ht;
+  vec2 h1=vec2(sin(t*.11)*.55,cos(t*.083)*.32),h2=vec2(cos(t*.071+2.)*.6,sin(t*.097+1.)*.35);
+  float hot=exp(-dot(p-h1,p-h1)*3.)+exp(-dot(p-h2,p-h2)*3.)+.6*fbm(p*.9+vec2(t*.05,-t*.035)); // wandering hot spots: over time every corner gets its turn
+  float I=L*(.38+ .9*wave*wave + .95*k + 1.7*ring + .9*fl)*br*ht*(.72+.55*hot);
   vec3 col=mix(vec3(.10,.012,0.),vec3(.95,.25,.03),smoothstep(.02,.42,I));
   col=mix(col,vec3(1.,.62,.22),smoothstep(.42,.85,I));
   col=mix(col,vec3(1.,.9,.7),smoothstep(.85,1.3,I));
   col*=smoothstep(0.,.12,I)*.9+.1*L;
+  col=max(col,vec3(.15,.032,0.)*(.55+.45*wave)*br);  // embers smoulder everywhere, even between the flares
   float v=mix(smoothstep(1.15,.25,length(p*vec2(.9,1.))),1.,.45*k+.3*fl); // the dark edges open up on the kick
   gl_FragColor=vec4(col*v,1.);
 }`;
