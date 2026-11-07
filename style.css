@@ -557,3 +557,8 @@ body[data-page="start"]:has(.hack-glitch.big) .bg-video { transform: translateX(
 @media (prefers-reduced-motion: reduce) { .countdown .cursor { animation: none; } }
 .twitch-player { margin-top: 14px; position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(255,122,31,0.55); box-shadow: 0 0 24px rgba(255,122,31,0.15); background: #050403; }
 .twitch-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* EMBERS logo instead of plain text wherever EMBERS is named */
+.card-emb { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.card-emb img { width: min(200px, 70%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 14px rgba(255,122,31,0.35)); }
+.card-emb span { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.6); }
