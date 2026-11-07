@@ -584,7 +584,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     <h1 style="margin:0"><img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167"></h1>
     <span class="claim">ALL THINGS HOUSE.</span>
     <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b>{EMBERS_DATE}</b></span><span><i data-i18n="emVenue">ORT</i><b>{EMBERS_VENUE}</b></span></div>
-    <span class="down" data-i18n="emDown">↓ KOMM NÄHER</span>
+    <span class="down" data-i18n="emDown">↓ SCROLL</span>
   </section>
 
   <section class="layer" id="gather">
@@ -603,7 +603,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     <h2 class="big">KEEP IT<br>BURNING.</h2>
     <p class="txt" data-i18n="emGlow"></p>
     <div class="facts">
-      <div><span>SOUND</span><b data-i18n="emSound">House in allen Spielarten</b></div>
+      <div><span>SOUND</span><b data-i18n="emSound">All things house</b></div>
       <div><span>FORMAT</span><b data-i18n="emFormat">DJ-Session mit Host</b></div>
       <div><span>STREAM</span><b>twitch.tv/eazrbeats</b></div>
     </div>
