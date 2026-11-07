@@ -439,7 +439,7 @@ nextpage = f'''<div class="band first">
     </div>
     <div class="card">
       <span class="kicker">{EMBERS_DATE} · München</span>
-      <h3>EMBERS 001</h3>
+      <h3 class="card-emb"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy"><span>001</span></h3>
       <p data-i18n="sessionsText"></p>
       <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
