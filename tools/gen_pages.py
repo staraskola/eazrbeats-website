@@ -279,7 +279,7 @@ start = f'''<section class="hero" id="top">
     <div class="card hot">
       <span class="kicker">01</span>
       <h3 data-i18n="joinFollowTitle">Folgen</h3>
-      <p data-i18n="joinFollowText">Crate Picks jeden Sonntag, dazu Road to Live und München.</p>
+      <p data-i18n="joinFollowText"></p>
       <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
     </div>
     <div class="card">
@@ -346,14 +346,14 @@ about = f'''<div class="band first">
   <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
   <div class="cards four">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
-    <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutFormatsTitle">Eigene Formate</h3><p data-i18n="aboutFormatsText"></p></div>
+    <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutFormatsTitle">Eigene Formate</h3><p data-i18n="aboutFormatsText"></p>{EMBERS_MARK}<a class="btn ghost" href="next" data-i18n="teaserNextBtn">Was kommt →</a></div>
     <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
-    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate</h3><p data-i18n="aboutCrateText"></p><a class="btn ghost" href="crate" data-i18n="teaserCrateBtn">Zur Crate →</a></div>
+    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate &amp; The Void</h3><p data-i18n="aboutCrateText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a><a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a></div></div>
   </div>
 
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
   <div class="cards four">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}    <div class="card crew">
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}    <div class="card crew">
       <div class="avatar open" aria-hidden="true">?</div>
       <span class="kicker">crew/04</span>
       <h3 data-i18n="crewOpenTitle">Du?</h3>
@@ -380,15 +380,15 @@ events = f'''<div class="band first">
   <h2 class="sub-h" data-i18n="eventsUpcoming">Coming up</h2>
   <div class="cards">
     <div class="card hot">
+      <span class="kicker">{EMBERS_DATE} · München</span>
+      <h3 class="card-emb"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy"><span>001</span></h3>
+      <p data-i18n="sessionsText"></p>
+      <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
+    </div>
+    <div class="card">
       <span class="kicker" data-i18n="openAirKicker">Sommer 2027 · München</span>
       <h3>Open Air</h3>
       <p data-i18n="openAirText"></p>
-    </div>
-    <div class="card">
-      <span class="kicker">{EMBERS_DATE} · München</span>
-      <h3>EMBERS 001</h3>
-      <p data-i18n="sessionsText"></p>
-      <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
   </div>
 
@@ -436,15 +436,15 @@ nextpage = f'''<div class="band first">
   <!-- Neuer Mix: Karte "mix/01" ersetzen, Titel eintragen und den SoundCloud-Embed (iframe) in .mix-embed setzen. -->
   <div class="cards">
     <div class="card hot">
-      <span class="kicker" data-i18n="openAirKicker">Sommer 2027 · München</span>
-      <h3>Open Air</h3>
-      <p data-i18n="openAirText"></p>
-    </div>
-    <div class="card">
       <span class="kicker">{EMBERS_DATE} · München</span>
       <h3 class="card-emb"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy"><span>001</span></h3>
       <p data-i18n="sessionsText"></p>
       <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
+    </div>
+    <div class="card">
+      <span class="kicker" data-i18n="openAirKicker">Sommer 2027 · München</span>
+      <h3>Open Air</h3>
+      <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
       <span class="kicker">mix/01</span>
