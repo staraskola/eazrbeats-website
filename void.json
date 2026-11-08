@@ -1,6 +1,44 @@
 {
- "exported": "2026-11-07",
+ "exported": "2026-11-08",
  "tracks": [
+  {
+   "title": "Azadi",
+   "artist": "Charlotte de Witte, NAVA",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-08",
+   "source": "DJ Mag (EP-Ankündigung)",
+   "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava",
+   "note": "Harter KNTXT-Treiber mit persischer Vocal-Linie, groß und düster.",
+   "noteEn": "Relentless KNTXT roller with a haunting Persian vocal, built for the peak.",
+   "confirmations": [
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "Frieden",
+   "artist": "Klangkuenstler, LUVRE47",
+   "genre": "hard-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-08",
+   "source": "Beatport Hard Techno Top 100 (#1, laut Techno Airlines)",
+   "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
+   "note": "Schneller Hard-Techno-Brecher mit deutschem Rap-Vocal, roh und laut.",
+   "noteEn": "Breakneck hard techno smasher with a raw German rap vocal on top.",
+   "confirmations": [
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
   {
    "title": "We Come 1 (Adam Beyer Remix)",
    "artist": "Faithless, Adam Beyer",
