@@ -103,7 +103,7 @@ function renderWeeklyHtml(docs) {
 }
 
 function renderDailyHtml(docs) {
-  if (!docs.length) return emptyBlock(T[lang].dailyEmptyTitle, T[lang].dailyEmptyText);
+  if (!docs.length) return emptyBlock(T[lang].dailyEmptyTitle, T[lang][IS_VOID ? 'voidDailyEmptyText' : 'dailyEmptyText']);
   const { day: dayFmt } = fmts();
   const withDates = docs
     .map(d => ({ ...d, _date: parseISODate(d.dateAdded) }))
@@ -165,7 +165,7 @@ function render(docs) {
       <div class="section">
         <div class="prompt-line">
           <span class="prompt">${PROMPT}</span><span class="cmd">cat ${g.key}/daily-hot</span>
-          <span class="section-tag">${escapeHtml(T[lang].dailyTag)}</span>
+          <span class="section-tag">${escapeHtml(T[lang][IS_VOID ? 'voidDailyTag' : 'dailyTag'])}</span>
         </div>
         ${renderDailyHtml(daily)}
       </div>
