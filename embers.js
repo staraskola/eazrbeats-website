@@ -14,13 +14,13 @@ const gl=cv.getContext('webgl',{antialias:false,alpha:false});
 if(!gl){cv.style.background='#050403 url(embers-glut.jpg) center/cover';cv.style.opacity=.5;return}
 const VS='attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
 const FS=`precision mediump float;
-uniform sampler2D T;uniform vec2 R,off;uniform float t,k,fl,br,ht,ph,kk;
+uniform sampler2D T;uniform vec2 R,off;uniform float t,k,fl,br,ht,ph,kk,bd,bu,rr,rs;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
 void main(){
   vec2 uv=gl_FragCoord.xy/R;vec2 p=uv-.5;p.x*=R.x/R.y;
-  float z=.78-.035*sin(t*.42)-.025*k;            // breathing: slowly pulls in and out, a nudge on the kick
+  float z=.78-.035*sin(t*.42)-.06*k+.05*bd*bd-.08*bu;   // breathing; punches in on the kick, gets sucked back in the build, slams on the drop
   vec2 q=p*z+off;
   vec2 w=vec2(fbm(q*2.2+vec2(0.,t*.05)),fbm(q*2.2+vec2(5.2,1.3-t*.04)));
   q+= (w-.5)*.045;                                 // magma flow / heat shimmer
@@ -30,7 +30,20 @@ void main(){
   float wave=fbm(p*1.4+vec2(t*.03,-t*.11));        // heat wave wandering through the cracks
   float d=length(p);
   float ring=exp(-pow((d-ph*1.25)*6.,2.))*(1.-ph)*kk;   // shock wave: every kick sends a ring of heat from the centre across the whole bed
-  float I=L*(.38+ .9*wave*wave + .95*k + 1.7*ring + .9*fl)*br*ht;
+  float I=L*(.38+ .9*wave*wave + 1.1*k + 1.7*ring + .9*fl)*br*ht;
+  // FIRE RING around the centre: a band of flame with tongues licking outwards, pulsing on every kick.
+  // It tightens and heats up in the build-ups and blasts open on the drop.
+  float R0=rr*(1.+.08*k-.22*bd+.7*bu*bu);
+  float dd=d-R0;
+  vec2 fq=p*3.2;fq=vec2(fq.x*cos(rs)-fq.y*sin(rs),fq.x*sin(rs)+fq.y*cos(rs));   // the flames slowly turn (faster in the build)
+  float fn=fbm(fq+vec2(0.,-t*.9)+w*2.);                                     // flame noise, rising
+  float fn2=fbm(p*7.+vec2(t*.2,-t*1.6));
+  float th=.013+.012*k+.01*bd;
+  float band=exp(-pow(dd/th,2.));                                            // the hot core of the ring
+  float tongue=smoothstep(-.01,.02,dd)*exp(-max(dd,0.)/(.025+.06*fn*fn*(1.+1.2*k+1.2*bd+bu)))*smoothstep(.25,.75,fn+.25*fn2); // tongues
+  float inner=dd<0.?exp(-pow(dd/(.05+.04*bd),2.))*.35:0.;                    // soft glow on the inside edge
+  float fire=(band*(.9+.6*fn2)+tongue*1.4+inner)*(.5+.95*k+.7*bd+1.2*bu+.4*fl)*br;fire=fire*1.6/(1.+fire);   // soft cap: white-hot only in the thin core
+  I+=fire*(.85+.3*L)*mix(1.,.62,smoothstep(.15,.6,ht-.85));                // stays a bit calmer once you scroll into the text
   vec3 col=mix(vec3(.10,.012,0.),vec3(.95,.25,.03),smoothstep(.02,.42,I));
   col=mix(col,vec3(1.,.62,.22),smoothstep(.42,.85,I));
   col=mix(col,vec3(1.,.9,.7),smoothstep(.85,1.3,I));
@@ -42,24 +55,28 @@ function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.co
 const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,VS));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);gl.useProgram(pr);
 const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
 const al=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(al);gl.vertexAttribPointer(al,2,gl.FLOAT,false,0,0);
-const U={};['T','R','off','t','k','fl','br','ht','ph','kk'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
+const U={};['T','R','off','t','k','fl','br','ht','ph','kk','bd','bu','rr','rs'].forEach(n=>U[n]=gl.getUniformLocation(pr,n));
 const tex=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tex);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,1,1,0,gl.RGB,gl.UNSIGNED_BYTE,new Uint8Array([10,2,0]));
 gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.MIRRORED_REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.MIRRORED_REPEAT);
 gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
 let ready=false;const img=new Image();img.onload=()=>{gl.bindTexture(gl.TEXTURE_2D,tex);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,img);ready=true};img.crossOrigin='anonymous';img.src='embers-glut.jpg';
 function size(){const d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.round(innerWidth*d);cv.height=Math.round(innerHeight*d);gl.viewport(0,0,cv.width,cv.height)}
 size();addEventListener('resize',size);
-const root=document.documentElement.style;const BPM=126.41,beat=60/BPM;let t0=performance.now(),flash=0,lastBrk=false,brN=1,kf=1;
+const root=document.documentElement.style;const BPM=126.41,beat=60/BPM;let t0=performance.now(),flash=0,lastBrk=false,brN=1,kf=1,bdS=0,rot=0,lastT=0;
 function frame(now){
   const t=(now-t0)/1000;px+=(tx-px)*.03;GX+=(G.gx-GX)*.04;GY+=(G.gy-GY)*.04;
   const ap=window.__emAudio&&window.__emAudio();const ph=ap?ap.ph:(t%beat)/beat,brk=!!(ap&&ap.brk);
   {const v=ap&&ap.voc;kf+=((v?0:1)-kf)*(v?.05:.3)}                      // the vocal part: pulse fades out, the magma just flows
   const kick=ap?Math.pow(1-ph,4)*Math.max(.3,Math.min(1,ap.k*1.15))*kf:Math.pow(1-ph,4)*.35; // kicks + claps; soft heartbeat in breaks   // without sound: a soft heartbeat
   if(lastBrk&&!brk)flash=1;lastBrk=brk;flash*=.94;brN+=((brk?.75:1)-brN)*.02;
+  const bd0=ap?ap.bd:0,da=ap?ap.da:9;bdS+=(bd0-bdS)*.08;               // build-up 0..1 and seconds since the last drop
+  const bu=da<2.5?Math.exp(-da*1.6):0;if(da<.05)flash=1;               // the drop: the ring blasts open + warm flash
+  const dt=Math.min(.05,t-lastT);lastT=t;rot+=dt*(.05+bdS*.9+kick*.15);
   gl.uniform1i(U.T,0);gl.uniform2f(U.R,cv.width,cv.height);
   gl.uniform2f(U.off,(px-.5)*.05-GX*.035,-GY*.022);
   gl.uniform1f(U.t,reduce?0:t);gl.uniform1f(U.k,kick);gl.uniform1f(U.fl,flash);gl.uniform1f(U.br,ready?brN:0);gl.uniform1f(U.ht,.85+scrollF*.45);
-  gl.uniform1f(U.ph,ph);gl.uniform1f(U.kk,ap?Math.min(1,ap.k*1.15)*kf:.35);
+  gl.uniform1f(U.ph,ph);gl.uniform1f(U.bd,reduce?0:bdS);gl.uniform1f(U.bu,reduce?0:bu);gl.uniform1f(U.rs,reduce?0:rot);
+  gl.uniform1f(U.rr,Math.min(.36,.42*cv.width/cv.height));gl.uniform1f(U.kk,ap?Math.min(1,ap.k*1.15)*kf:.35);
   gl.drawArrays(gl.TRIANGLES,0,3);
   root.setProperty('--k',(kick+flash*.6).toFixed(3));
   if(!reduce||!ready)requestAnimationFrame(frame);
@@ -75,6 +92,7 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 (()=>{
   const BEAT=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.01, 0.0, 0.0, 0.01, 0.01, 0.01, 0.01, 0.02, 0.03, 0.07, 0.09, 0.1, 0.41, 0.24, 0.15, 0.02, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.01, 0.2, 0.15, 0.04, 0.06, 0.04, 0.02, 0.01, 0.04, 0.01, 0.01, 0.01, 0.03, 0.02, 0.01, 0.01, 0.04, 0.02, 0.02, 0.01, 0.03, 0.02, 0.01, 0.01, 0.02, 0.01, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.55, 0.66, 0.52, 0.61, 0.55, 0.78, 0.55, 0.8, 0.57, 0.8, 0.48, 0.85, 0.45, 0.81, 0.5, 0.85, 0.43, 0.84, 0.47, 0.76, 0.42, 0.8, 0.42, 0.81, 0.42, 0.72, 0.45, 0.76, 0.39, 0.7, 0.06, 0.01, 0.44, 0.64, 0.41, 0.63, 0.35, 0.65, 0.36, 0.56, 0.32, 0.45, 0.3, 0.42, 0.41, 0.57, 0.62, 0.78, 0.8, 0.86, 0.92, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.05, 0.01, 0.02, 0.01, 0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.53, 0.28, 0.08, 0.01, 0.0, 0.0, 0.0, 0.0, 0.52, 0.27, 0.09, 0.01, 0.01, 0.0, 0.0, 0.0, 0.51, 0.26, 0.07, 0.01, 0.0, 0.0, 0.0, 0.0, 0.45, 0.24, 0.06, 0.01, 0.0, 0.0, 0.0, 0.63, 0.74, 0.82, 0.9, 0.91, 1.0, 1.0, 0.03, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.95, 0.88, 0.77, 0.79, 0.74, 0.69, 0.63, 0.0, 0.7, 0.7, 0.66, 0.66, 0.67, 0.67, 0.62, 0.1, 0.64, 0.62, 0.62, 0.56, 0.62, 0.68, 0.6, 0.66, 0.57, 0.66, 0.54, 0.73, 0.52, 0.71, 0.48, 0.74, 0.46, 0.7, 0.42, 0.73, 0.47, 0.69, 0.44, 0.7, 0.46, 0.72, 0.42, 0.7, 0.41, 0.62, 0.38, 0.54, 0.22, 0.28, 0.18, 0.23, 0.15, 0.2, 0.12, 0.2, 0.07, 0.21, 0.08, 0.16, 0.13, 0.3, 0.33, 0.39, 0.43, 0.48, 0.63, 0.6, 0.66, 0.85, 0.83, 0.98, 0.99, 1.0, 0.96, 0.98, 1.0, 0.98, 0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.63, 0.58, 0.56, 0.58, 0.59, 0.58, 0.59, 0.54, 0.56, 0.55, 0.56, 0.65, 0.49, 0.69, 0.52, 0.73, 0.46, 0.73, 0.49, 0.72, 0.47, 0.69, 0.44, 0.77, 0.43, 0.71, 0.06, 0.04, 0.44, 0.72, 0.41, 0.69, 0.38, 0.71, 0.36, 0.54, 0.37, 0.64, 0.34, 0.55, 0.33, 0.51, 0.3, 0.49, 0.28, 0.46, 0.27, 0.45, 0.29, 0.44, 0.42, 0.57, 0.59, 0.6, 0.7, 0.75, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],BPM=126.41,T0=0.064,BEAT_S=60/BPM;
   const CLAP=[0.0,0.0,0.01,0.09,0.01,0.0,0.0,0.0,0.04,0.0,0.0,0.0,0.06,0.0,0.0,0.0,0.07,0.0,0.09,0.46,0.46,0.71,0.53,0.66,0.16,0.51,0.2,0.48,0.53,0.59,0.71,0.44,0.01,0.13,0.11,0.06,0.01,0.13,0.08,0.0,0.0,0.09,0.06,0.17,0.0,0.03,0.05,0.0,0.0,0.0,0.82,0.0,0.0,0.0,0.14,0.0,0.0,0.0,0.04,0.0,0.0,0.22,0.0,0.37,0.39,0.62,0.39,0.39,0.6,0.74,0.55,0.92,0.51,0.56,0.63,0.44,0.18,0.0,0.12,0.01,0.0,0.0,0.02,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.08,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.39,0.54,0.32,0.41,0.23,0.06,0.56,0.12,0.71,0.45,0.85,0.4,0.88,0.45,0.66,0.24,0.87,0.48,0.78,0.35,0.73,0.54,0.69,0.22,0.12,0.01,0.15,0.08,0.04,0.03,0.01,0.05,0.0,0.0,0.6,1.0,1.0,0.97,1.0,1.0,1.0,1.0,0.76,1.0,1.0,0.99,1.0,0.79,1.0,1.0,0.71,1.0,0.47,0.01,0.0,0.0,0.0,0.0,0.01,0.0,0.0,0.39,0.0,0.07,0.04,0.01,0.0,0.04,0.14,0.0,0.0,0.43,0.13,0.08,0.03,0.0,0.09,0.07,0.11,0.06,0.13,0.12,0.11,0.27,0.02,0.13,0.07,0.12,0.1,0.09,0.16,0.29,0.1,0.03,0.11,0.09,0.0,0.04,0.02,0.22,0.06,0.0,0.0,0.0,0.0,0.02,0.05,0.24,0.1,0.01,0.0,0.0,0.1,0.03,0.09,0.03,0.01,0.01,1.0,0.0,0.35,0.11,0.0,0.05,0.01,0.06,1.0,1.0,1.0,0.84,1.0,0.47,0.06,0.07,0.0,0.03,0.01,0.0,0.01,0.0,0.0,0.0,0.01,0.02,0.12,0.35,0.39,0.81,0.57,0.64,0.59,0.53,0.4,0.61,0.62,0.94,0.74,0.79,0.31,0.68,0.27,0.7,0.33,0.45,0.3,0.01,0.42,0.04,0.6,0.11,0.36,0.27,0.41,0.36,0.44,0.26,0.4,0.14,0.33,0.2,0.41,0.31,0.33,0.31,0.09,0.02,0.07,0.0,0.11,0.03,0.0,0.0,0.11,0.0,0.71,0.85,0.33,0.45,0.33,0.31,0.46,0.44,0.4,0.47,0.42,0.27,0.4,0.4,0.53,0.5,0.34,0.09,0.08,0.06,0.03,0.01,0.04,0.01,0.0,0.01,0.0,0.18,0.03,0.0,0.0,0.0,0.0,0.43,0.0,0.54,0.53,0.64,0.33,0.15,0.86,0.41,0.77,0.38,0.42,0.24,0.41,0.21,0.36,0.17,0.0,0.59,0.49,0.67,0.38,0.47,0.39,0.54,0.29,0.55,0.5,0.72,0.37,0.54,0.57,0.46,0.03,0.37,0.29,0.19,0.2,0.12,0.0,0.05,0.0,0.0,0.0,0.0,0.08,0.69,0.84,0.96,0.98,0.88,1.0,0.79,1.0,0.86,0.78,1.0,0.88,0.94,1.0,0.74,0.93,0.0,0.0,0.0,0.0,0.0,0.0]; // clap/percussion strength per beat (1.2-6 kHz onsets)
+  const BUILD=[[65.1,77.9],[108.8,116.3],[145.3,153.8],[178.5,186.1]],DROP=[49,116.4,159.5]; // seconds: risers and the drops they lead into
   const VOC=[[15.2,30.2],[78,93]]; // seconds: the vocal part where the magma stays still (times from Noah)
   const btn=document.getElementById('snd'),lbl=document.getElementById('sndl');
   let ctx=null,buf=null,src=null,gain=null,on=false,startAt=0,loading=null,quiet=0,lastIdx=-1;
@@ -85,7 +103,9 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
     const pos=((ctx.currentTime-lat-startAt)%buf.duration+buf.duration)%buf.duration-T0;if(pos<0)return null;
     const i=Math.floor(pos/BEAT_S),voc=VOC.some(([a,b])=>pos+T0>=a&&pos+T0<b),k=voc?0:Math.max(BEAT[i]??0,(CLAP[i]??0)*.8);
     if(i!==lastIdx){const nx=Math.max(BEAT[i+1]??0,(CLAP[i+1]??0)*.8);quiet=(k<.3||nx<.3)?quiet+1:0;lastIdx=i} // single kicks pulse, but only a running groove counts as the beat coming back (flash)
-    return {ph:(pos/BEAT_S)%1,brk:quiet>=6,k:k,voc:voc}};
+    const tt=pos+T0;let bd=0;for(const [a,b] of BUILD)if(tt>=a&&tt<b){const q=(tt-a)/(b-a);bd=q*q}
+    let da=9;for(const d of DROP)if(tt>=d&&tt-d<da)da=tt-d;
+    return {ph:(pos/BEAT_S)%1,brk:quiet>=6,k:k,voc:voc,bd:bd,da:da}};
   async function start(){
     if(!ctx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){lbl.textContent='NO AUDIO';return}ctx=new AC();gain=ctx.createGain();gain.gain.value=0;gain.connect(ctx.destination)}
     ctx.resume();on=true;btn.classList.add('on');btn.setAttribute('aria-pressed','true');
