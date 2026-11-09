@@ -516,6 +516,23 @@
 .s-next .kicker { color: rgba(244,241,234,0.5); }
 .series-mystery { margin: 6px 0 4px !important; font-size: clamp(40px, 7vw, 64px) !important; font-weight: 700; letter-spacing: 0.08em; color: rgba(244,241,234,0.85) !important; }
 .s-next .series-go { color: var(--accent); }
+/* locked next-series tile: terminal look, click = ACCESS DENIED */
+.s-locked { cursor: pointer; }
+.s-locked .series-mystery { font-size: clamp(24px, 3.6vw, 32px) !important; line-height: 1.25; letter-spacing: 0.1em; color: transparent !important; -webkit-text-stroke: 1.2px #EFE9FF; filter: drop-shadow(0 0 3px rgba(239,233,255,0.7)) drop-shadow(0 0 14px rgba(255,79,216,0.35)); }
+.s-locked .cursor.blk { -webkit-text-stroke: 0; color: #FF4FD8; margin-left: 6px; font-size: 0.8em; animation-duration: 1s; }
+.lock-bar { position: relative; display: block; height: 8px; border: 1px solid rgba(239,233,255,0.35); border-radius: 1px; overflow: hidden; }
+.lock-bar i { position: absolute; inset: 0 auto 0 0; width: 62%; background: repeating-linear-gradient(90deg, #FF4FD8 0 6px, transparent 6px 8px); box-shadow: 0 0 10px rgba(255,79,216,0.5); }
+.s-locked .lock-hint { color: #FF4FD8; letter-spacing: 0.06em; font-weight: 700; }
+.lock-path { position: relative; align-self: flex-start; font: inherit; font-size: 13px; color: rgba(244,241,234,0.85); background: rgba(0,0,0,0.35); border: 1px solid rgba(239,233,255,0.22); border-radius: 3px; padding: 6px 10px; cursor: pointer; transition: border-color .2s, color .2s; }
+.lock-path:hover, .lock-path:focus-visible { border-color: #FF4FD8; color: #fff; outline: none; }
+.lock-out { position: relative; margin: 0; min-height: 0; font: inherit; font-size: 12px; line-height: 1.7; white-space: pre-wrap; }
+.lock-out span { display: block; }
+.lock-out .l0 { color: rgba(244,241,234,0.6); }
+.lock-out .l1 { color: rgba(244,241,234,0.85); }
+.lock-out .l2 { color: #FF4FD8; font-weight: 700; letter-spacing: 0.06em; text-shadow: 0 0 10px rgba(255,79,216,0.6); }
+body:not([data-page="embers"]) .s-locked.denied { border-color: rgba(255,79,216,0.7); box-shadow: 0 0 30px -10px rgba(255,79,216,0.7), 0 18px 40px -24px rgba(0,0,0,0.9); animation: lock-shake .35s ease; }
+@keyframes lock-shake { 20% { transform: translateX(-5px); } 40% { transform: translateX(5px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(2px); } }
+@media (prefers-reduced-motion: reduce) { body:not([data-page="embers"]) .s-locked.denied { animation: none; } }
 .back-link { display: inline-block; margin-bottom: 10px; font-size: 12px; letter-spacing: 0.12em; color: rgba(255,170,110,0.85); text-decoration: none; }
 .back-link:hover, .back-link:focus-visible { color: #FF7A1F; }
 

@@ -651,10 +651,14 @@ live = f'''<div class="band first">
       <p class="series-next">{LIVE_NEXT or 'EMBERS 001 · SOON'}</p>
       <span class="series-go" data-i18n="embersBtn">Zu EMBERS →</span>
     </a>
-    <div class="series-tile s-next">
-      <span class="kicker">02 · SIGNAL LOADING</span>
-      <p class="series-mystery">???<span class="cursor">_</span></p>
+    <div class="series-tile s-next s-locked" id="next-lock">
+      <span class="kicker">02 · [LOCKED]</span>
+      <p class="series-mystery">NEXT SERIES<br>LOADING…<span class="cursor blk" aria-hidden="true">█</span></p>
+      <span class="lock-bar" aria-hidden="true"><i></i></span>
+      <p class="lock-hint">&gt; unlocks after EMBERS 001</p>
       <p data-i18n="hubNextText"></p>
+      <button type="button" class="lock-path" aria-controls="lock-out">$ cd ./live/next_series</button>
+      <pre class="lock-out" id="lock-out" role="status" aria-live="polite"></pre>
       <a class="series-go" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
     </div>
   </div>
