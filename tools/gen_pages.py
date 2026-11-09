@@ -666,8 +666,8 @@ D = 'Munich house &amp; techno collective — new sets, sessions and shows dropp
 files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js', 'glitch.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
-  'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, confirmed by two independent sources. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
-  'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, confirmed by two independent sources. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
+  'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, backed by two independent sources or one strong one. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
+  'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, backed by two independent sources or one strong one. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'live.html': page('live', 'Live · EAZr Beats Collective', 'Live series by EAZr Beats Collective from Munich: EMBERS hosted live DJ sessions on Twitch, and more to come.', 'live', live),
   'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['embers.js'], og='og-embers.jpg', css=['embers.css'], immersive=True),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),

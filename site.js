@@ -157,7 +157,7 @@ const T = {
     notFoundHome: 'Zur Startseite',
 
     // crate
-    crateSub: 'Tracks, die gerade in DJ-Sets laufen. Jeder Eintrag ist von mindestens zwei unabhängigen Quellen bestätigt.',
+    crateSub: 'Tracks, die gerade in DJ-Sets laufen. House, Melodic, Afro, Latin. Jeder Eintrag ist belegt: durch zwei unabhängige Quellen oder eine starke wie Beatport-Charts, mehrere DJ-Sets oder ein Feature in der Fachpresse.',
     crateFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
     crateUpdatedLabel: 'zuletzt aktualisiert:',
     crateSpotify: '▶ Playlist auf Spotify hören',
@@ -174,7 +174,7 @@ const T = {
     weeklyEmptyText: 'Die wöchentliche Kuratierung läuft sonntags. Schau danach wieder vorbei.',
     voidWeeklyEmptyText: 'Die wöchentliche Kuratierung läuft samstags. Schau danach wieder vorbei.',
     dailyEmptyTitle: 'Noch nichts, das die Schwelle genommen hat',
-    dailyEmptyText: 'Die tägliche Recherche läuft, trägt aber nur ein, was von mindestens zwei unabhängigen Quellen bestätigt wird.',
+    dailyEmptyText: 'Die tägliche Recherche läuft. Rein kommt nur, was durch zwei unabhängige Quellen oder eine starke Quelle belegt ist.',
     locale: 'de-DE',
     unbenannt: 'Unbenannt',
     quelle: 'Quelle',
@@ -325,7 +325,7 @@ const T = {
     notFoundText: "This page doesn't exist (anymore). Maybe an old link?",
     notFoundHome: 'Back to home',
 
-    crateSub: "Tracks getting played in DJ sets right now. Every entry is backed by at least two independent sources.",
+    crateSub: "Tracks getting played in DJ sets right now. House, melodic, afro, latin. Every entry is backed up: by two independent sources or one strong one like the Beatport charts, several DJ sets or a feature in the music press.",
     crateFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
     crateUpdatedLabel: 'last updated:',
     crateSpotify: '▶ Listen on Spotify',
@@ -342,7 +342,7 @@ const T = {
     weeklyEmptyText: "Weekly picks drop on Sundays. Check back then.",
     voidWeeklyEmptyText: "Weekly picks drop on Saturdays. Check back then.",
     dailyEmptyTitle: "Nothing has made the cut yet",
-    dailyEmptyText: "We check every day, but a track only gets in once two independent sources back it up.",
+    dailyEmptyText: "We check every day, but a track only gets in once two independent sources or one strong source back it up.",
     locale: 'en-GB',
     unbenannt: 'Untitled',
     quelle: 'Source',
