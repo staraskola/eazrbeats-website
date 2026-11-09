@@ -1,6 +1,65 @@
 {
- "exported": "2026-11-08",
+ "exported": "2026-11-09",
  "tracks": [
+  {
+   "title": "Do Our Thing",
+   "artist": "Adam Beyer, Mark Reeve",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-09",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Rollender Drumcode-Groove mit zwei Drops, gebaut für die Peak-Hour.",
+   "noteEn": "Rolling Drumcode groove with a double drop, built for peak hour.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6, via Techno Airlines 05.11.)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    },
+    {
+     "source": "Beatportal Review 'Do Our Thing' EP",
+     "sourceUrl": "https://www.beatportal.com/articles/1692976-adam-beyer-and-mark-reeve-revisit-drumcodes-rolling-roots-on-do-our-thing-ep"
+    }
+   ]
+  },
+  {
+   "title": "Taste of the Night",
+   "artist": "A.D.H.S., Kos:mo",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-09",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Dunkler, treibender Nachtläufer von der DC4-Compilation.",
+   "noteEn": "Dark, driving late-night roller off the DC4 comp.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8, via Techno Airlines 05.11.)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    },
+    {
+     "source": "Adam Beyer – Drumcode Radio DCR842 Tracklist",
+     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/adambeyer/dcr842-drumcode-radio"
+    }
+   ]
+  },
+  {
+   "title": "Feel Me",
+   "artist": "Kevin de Vries, Juan Elvadin",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-09",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#26)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Zweiter Chart-Treffer der Obsidian-EP, hart und hypnotisch nach vorne.",
+   "noteEn": "Second charting cut off the Obsidian EP, hard-hitting and hypnotic.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#26, via Techno Airlines 05.11.)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    }
+   ]
+  },
   {
    "title": "Azadi",
    "artist": "Charlotte de Witte, NAVA",
