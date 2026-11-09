@@ -102,7 +102,7 @@ const T = {
     emSound: 'All things house', emFormat: 'DJ-Session mit Host',
     emStream: '90 Minuten vom Set laufen live auf Twitch. Der Rest der Nacht bleibt im Raum. Datum, Ort und Gästeliste gibt es zuerst auf Instagram und im Newsletter.',
     emFoot: 'DAS FEUER GEHT AUS · DIE GLUT BLEIBT<br>EMBERS IST EINE REIHE VON EAZr BEATS COLLECTIVE · MÜNCHEN',
-    hubNextText: 'Die nächste Reihe ist in Arbeit. Name und Datum gibt es zuerst auf Instagram und im Newsletter.',
+    hubNextText: 'Die nächste Reihe ist noch gesperrt. Name und Look gibt es zur Ankündigung, zuerst auf Instagram und im Newsletter.',
     // live (EMBERS)
     liveBtn: 'Zur Live-Seite →',
     liveText: 'EMBERS ist unsere House-Reihe: DJ-Sessions mit Host, direkt vom Pult, live aus München gestreamt. Alles, was House kann, jede Session bekommt eine Nummer.',
@@ -274,7 +274,7 @@ const T = {
     emSound: 'All things house', emFormat: 'Hosted live DJ session',
     emStream: '90 minutes of the set stream live on Twitch. The rest of the night stays in the room. Date, venue and guest list drop first on Instagram and in the newsletter.',
     emFoot: 'THE FIRE GOES DOWN · THE GLOW STAYS<br>EMBERS IS A SERIES BY EAZr BEATS COLLECTIVE · MUNICH',
-    hubNextText: 'The next series is in the works. Name and date drop first on Instagram and in the newsletter.',
+    hubNextText: 'The next series is still locked. Name and look drop with the announcement, first on Instagram and in the newsletter.',
     // live (EMBERS)
     liveBtn: 'To the live page →',
     liveText: 'EMBERS is our house series: hosted live DJ sessions, straight from the decks, streamed from Munich. All things house, every session gets a number.',
@@ -498,4 +498,22 @@ document.querySelectorAll('[data-news-form]').forEach(form => {
     el.style.transitionDelay = Math.min(sib, 4) * 70 + 'ms';
     io.observe(el);
   });
+})();
+
+// /live: locked "next series" tile. Clicking it (or the path) prints a terminal error.
+(function () {
+  var tile = document.getElementById('next-lock');
+  if (!tile) return;
+  var out = tile.querySelector('.lock-out'), timers = [];
+  var lines = ['$ cd ./live/next_series', 'bash: next_series: Permission denied', 'ACCESS DENIED · unlocks after EMBERS 001'];
+  function deny() {
+    timers.forEach(clearTimeout); timers = [];
+    out.innerHTML = ''; tile.classList.remove('denied'); void tile.offsetWidth; tile.classList.add('denied');
+    lines.forEach(function (t, i) {
+      timers.push(setTimeout(function () {
+        var l = document.createElement('span'); l.className = 'l' + i; l.textContent = t; out.appendChild(l);
+      }, i * 260));
+    });
+  }
+  tile.addEventListener('click', function (e) { if (!e.target.closest('a')) deny(); });
 })();
