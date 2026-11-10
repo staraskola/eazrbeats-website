@@ -1,6 +1,90 @@
 {
- "exported": "2026-11-09",
+ "exported": "2026-11-10",
  "tracks": [
+  {
+   "title": "Mi Amor",
+   "artist": "7 SKIES, ARTBAT, Sadie Rose Van",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-10",
+   "source": "Beatport Melodic House & Techno Top 100 (#4)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "ARTBAT trifft 7 SKIES: melodischer Track mit Sadie Rose Van.",
+   "noteEn": "ARTBAT meets 7 SKIES: a melodic track with Sadie Rose Van.",
+   "confirmations": [
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/09/artbat-and-7-skies-join-forces-on-mi-amor-featuring-sadie-rose-van/"
+    },
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#4)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Promise",
+   "artist": "Ivory (IT), Auggië",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-10",
+   "source": "Beatport Melodic House & Techno Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Ivory und Auggië mit frischem Melodic-House-Release.",
+   "noteEn": "Ivory and Auggië with a fresh melodic house release.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "scnlog.me (Release-Katalog)",
+     "sourceUrl": "https://scnlog.me/music/ivory_it_x_auggie-promise-bls002-single-web-2026-yalla/"
+    }
+   ]
+  },
+  {
+   "title": "The Boss",
+   "artist": "James Brown, Elvis Guetta",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-10",
+   "source": "Beatport House Top 100 (#7)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Elvis Guettas Debüt: James Browns Vocal im Feelgood-House.",
+   "noteEn": "Elvis Guetta's debut: James Brown's vocal over feel-good house.",
+   "confirmations": [
+    {
+     "source": "Beatportal Curation Picks",
+     "sourceUrl": "https://www.beatportal.com/tracks/1713685-curation-picks-james-brown-elvis-guetta-the-boss"
+    },
+    {
+     "source": "Beatport House Top 100 (#7)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Saudade",
+   "artist": "Joseph Capriati",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-10",
+   "source": "Beatport House Top 100 (#8)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Capriati mit zeitlosem House-Groove, ein Beatport-Pick.",
+   "noteEn": "Capriati's timeless house groove, a Beatport staff pick.",
+   "confirmations": [
+    {
+     "source": "Beatportal Curation Picks",
+     "sourceUrl": "https://www.beatportal.com/tracks/1713670-curation-picks-joseph-capriati-saudade"
+    },
+    {
+     "source": "Beatport House Top 100 (#8)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
   {
    "title": "Organ Belta",
    "artist": "Jamie Roy",
