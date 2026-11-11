@@ -1,6 +1,57 @@
 {
- "exported": "2026-11-10",
+ "exported": "2026-11-11",
  "tracks": [
+  {
+   "title": "Feelings",
+   "artist": "Mark Knight, Junior Jack, James Hurr",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-11",
+   "source": "Beatport House Top 100 (#10, 09.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Knight, Junior Jack und Hurr: Clubtrack mit Soul-Vibe.",
+   "noteEn": "Knight, Junior Jack and Hurr team up on a soulful club track.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#10, 09.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Who Loves The Sun (Luch Remix)",
+   "artist": "Nu, Jo.Ke",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-11",
+   "source": "Beatport Melodic House & Techno Top 100 (#5, 09.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Luchs frischer Remix des Melodic-Klassikers, jetzt Top 5.",
+   "noteEn": "Luch's fresh remix of the melodic classic, now top 5.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#5, 09.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
+  {
+   "title": "So Fly",
+   "artist": "Riton, Kid Enigma, RUZE",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-11",
+   "source": "Beatport House Top 100 (#1, 09.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Frischer House-Banger, direkt auf Platz 1 bei Beatport.",
+   "noteEn": "Fresh house banger, straight to No. 1 on Beatport.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#1, 09.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
   {
    "title": "Mi Amor",
    "artist": "7 SKIES, ARTBAT, Sadie Rose Van",
