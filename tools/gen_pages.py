@@ -30,7 +30,7 @@ LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
 LIVE_COUNTDOWN = '2027-01-04T00:00:00+01:00'
 LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
 # Embedded Twitch player on /embers. Keep False until the Twitch channel is fully set up.
-TWITCH_EMBED = False
+TWITCH_EMBED = False  # Before switching on: add a Twitch embed section to datenschutz.html (an iframe sends data to Twitch on page load; the policy currently says "links only, nothing embedded").
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
