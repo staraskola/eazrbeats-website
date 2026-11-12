@@ -1,6 +1,65 @@
 {
- "exported": "2026-11-09",
+ "exported": "2026-11-12",
  "tracks": [
+  {
+   "title": "Disconnection",
+   "artist": "Amber Broos, Space 92",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-12",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6, via BeatTracker)",
+   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
+   "note": "Treibender Peak-Time-Roller mit dunklem Synth-Riff, klar für die Hauptzeit gebaut.",
+   "noteEn": "Driving peak-time roller with a dark synth riff, built for the main slot.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6, via BeatTracker)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (26.10.–01.11.2026, #3)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "Cello Tears",
+   "artist": "Boris Brejcha, Sascha Kid",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-12",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
+   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
+   "note": "Melancholische Cello-Linie über straffem Kick, hypnotisch und trotzdem drängend.",
+   "noteEn": "Melancholic cello line over a tight kick, hypnotic but still pushing hard.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (02.–08.11.2026, #4)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "Force Majeure",
+   "artist": "Chlär",
+   "genre": "raw-deep-hypnotic",
+   "tier": "daily",
+   "dateAdded": "2026-11-12",
+   "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#1, via BeatTracker)",
+   "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92",
+   "note": "Rohes, hypnotisches Primal-Instinct-Werkzeug mit verschachtelten Grooves.",
+   "noteEn": "Raw, hypnotic Primal Instinct tool with twisted, syncopated grooves.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#1, via BeatTracker)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    }
+   ]
+  },
   {
    "title": "Do Our Thing",
    "artist": "Adam Beyer, Mark Reeve",
