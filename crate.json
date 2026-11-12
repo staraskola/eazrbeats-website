@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-11",
+ "exported": "2026-11-12",
  "tracks": [
+  {
+   "title": "All The People",
+   "artist": "Shimza, Ayra Starr, Alok",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-12",
+   "source": "Beatport Afro House Top 100 (#7)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Großer Afro-House-Crossover mit viel Afrobeats-Energie.",
+   "noteEn": "A big afro house crossover with serious Afrobeats energy.",
+   "confirmations": [
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/09/shimza-ayra-starr-alok-all-the-people/"
+    },
+    {
+     "source": "Beatport Afro House Top 100 (#7)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    }
+   ]
+  },
   {
    "title": "Feelings",
    "artist": "Mark Knight, Junior Jack, James Hurr",
