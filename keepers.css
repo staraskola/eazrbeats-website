@@ -1,0 +1,38 @@
+/* /keepers: hidden Ember Keepers page (not in the menu, noindex). Reuses the .emx type styles from embers.css,
+   but instead of the WebGL world it sits on a still, dimmed ember photo. */
+body[data-page="keepers"]{--bg:#050403;--core:#FFE7C2;--glut:#FF7A1F;--red:#C42A0A;--deep:#5A0F02;--muted:#9A7A62;--line:rgba(255,122,31,.22);--mono:"Space Mono",ui-monospace,Menlo,monospace;background:#050403;overflow-x:hidden}
+body[data-page="keepers"] main{position:static}
+body[data-page="keepers"] .chrome,body[data-page="keepers"] .nav{background:#050403}
+body[data-page="keepers"] .chrome{--led-a:#FF7A1F;--led-b:#C42A0A;--led-c:#5A0F02;
+  --chrome-line:linear-gradient(90deg,transparent,rgba(255,122,31,.55) 20%,#FFD9A0 50%,rgba(255,122,31,.55) 80%,transparent)}
+body[data-page="keepers"] .chrome-title::after{background:#FF7A1F}
+body[data-page="keepers"] .lang-toggle button.active{color:#FF7A1F;border-color:#FF7A1F;text-shadow:0 0 6px rgba(255,122,31,.8)}
+body[data-page="keepers"] .site-footer{position:relative;z-index:2}
+.kp-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  linear-gradient(180deg,rgba(5,4,3,.92) 0%,rgba(5,4,3,.78) 45%,rgba(5,4,3,.55) 100%),url(embers-glut.jpg) center bottom/cover no-repeat}
+.kp{display:grid;justify-items:center;text-align:center;gap:0;padding-block:150px 0}
+.kp-hero{display:grid;justify-items:center;gap:18px;padding-bottom:40px}
+.kp .logo{width:min(420px,70vw)}
+.kp .big{-webkit-text-stroke:2px var(--glut);color:transparent;font-size:clamp(64px,15vw,150px);text-shadow:0 0 30px rgba(255,90,0,.55)}
+.kp-sec{display:grid;justify-items:center;gap:18px;padding-block:56px;width:min(760px,100%);border-top:1px solid var(--line)}
+.kp .mid{margin:0;font-weight:700;font-size:clamp(30px,6vw,52px);line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--core);text-shadow:0 0 18px rgba(255,122,31,.45)}
+.kp-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;width:100%}
+.kp-steps li{display:grid;justify-items:center;gap:8px;min-width:0}
+.kp-steps .disc{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:700;letter-spacing:.1em;color:#120700;
+  background:radial-gradient(circle at 50% 45%,#FF8A2A,#FF5A00 70%);box-shadow:0 0 14px rgba(255,90,0,.55)}
+.kp-steps .disc.hot{box-shadow:0 0 26px rgba(255,110,0,.95),0 0 6px #FFB070}
+.kp-steps b{color:var(--core);font-size:14px;letter-spacing:.04em}
+.kp-steps p{margin:0;color:#E2CBB4;font-size:13.5px;line-height:1.6}
+.kp .news-form{width:min(460px,100%);margin:0;text-align:left}
+.kp .kp-name{width:100%;font:14px var(--mono);color:var(--core);background:rgba(5,4,3,.7);border:1px solid var(--line);border-bottom:0;border-radius:0;padding:14px}
+.kp-faq{width:100%;text-align:left;display:grid;gap:8px}
+.kp-faq details{border:1px solid var(--line);background:rgba(5,4,3,.62);padding:0 16px}
+.kp-faq summary{cursor:pointer;padding:14px 0;color:var(--core);font-weight:700;font-size:14px;list-style:none}
+.kp-faq summary::-webkit-details-marker{display:none}
+.kp-faq summary::before{content:"+ ";color:var(--glut)}
+.kp-faq details[open] summary::before{content:"− "}
+.kp-faq summary:focus-visible{outline:1px solid var(--glut);outline-offset:4px}
+.kp-faq p{margin:0 0 14px;color:#E2CBB4;font-size:14px}
+.kp-foot{padding:40px 0 64px;font-size:11px;letter-spacing:.2em;color:var(--glut);line-height:2}
+.kp-foot .fbox{display:inline-block;max-width:100%;padding:14px 20px;background:rgba(5,4,3,.62);border:1px solid var(--line)}
+@media (max-width:620px){.kp-steps{grid-template-columns:1fr}.kp{padding-block:130px 0}}
