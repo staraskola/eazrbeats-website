@@ -1,6 +1,91 @@
 {
- "exported": "2026-11-12",
+ "exported": "2026-11-13",
  "tracks": [
+  {
+   "title": "Sambei",
+   "artist": "Eran Hersh, Aycond, NOTHANKYOU",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-13",
+   "source": "Beatport Afro House Top 100 (#3, 09.11.)",
+   "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/",
+   "note": "Treibender Afro-Groove, der sich stetig hochschraubt.",
+   "noteEn": "A driving afro groove that keeps building and building.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#3, 09.11.)",
+     "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Hey Dj (Tuk Tuk Taka)",
+   "artist": "Jesus Fernandez, Cele Arrabal",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-13",
+   "source": "Beatport Afro House Top 100 (#4, 09.11.)",
+   "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/",
+   "note": "Perkussiver Afro-Track mit spielerischem Ruf-Vocal.",
+   "noteEn": "Percussive afro track with a playful call-out vocal.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#4, 09.11.)",
+     "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Afro Revenge",
+   "artist": "Tom Enzy",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-13",
+   "source": "Beatport Afro House Top 100 (#6, 09.11.)",
+   "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/",
+   "note": "Tom Enzy mit Wumms: dunkler, tribal-lastiger Floorfiller.",
+   "noteEn": "Tom Enzy goes dark and tribal: a real floor filler.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#6, 09.11.)",
+     "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Mi Gente",
+   "artist": "UNIBĀL",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-13",
+   "source": "Beatport Afro House Top 100 (#9, 09.11.)",
+   "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/",
+   "note": "Warmer Afro-House-Groove mit catchy Vocal-Hook.",
+   "noteEn": "Warm afro house groove with a catchy vocal hook.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#9, 09.11.)",
+     "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Habibi Weinak",
+   "artist": "Wrigley, Aaron Sevilla, KOFA, Badrops",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-13",
+   "source": "Beatport Afro House Top 100 (#8, 09.11.)",
+   "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/",
+   "note": "Orientalische Vocals treffen auf treibenden Afro-Beat.",
+   "noteEn": "Middle-Eastern vocals meet a driving afro beat.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#8, 09.11.)",
+     "sourceUrl": "https://beachgrooves.com/chart/beatport-top-10-afro-house-02-apr-2026/"
+    }
+   ]
+  },
   {
    "title": "All The People",
    "artist": "Shimza, Ayra Starr, Alok",
