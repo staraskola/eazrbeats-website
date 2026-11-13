@@ -633,6 +633,73 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
 <button class="emx-snd" id="snd" type="button" aria-pressed="false"><i aria-hidden="true"><b></b><b></b><b></b></i><span id="sndl">TAP FOR SOUND</span></button>
 '''
 
+
+# ---------------- keepers (/keepers, Ember Keepers) ----------------
+# Hidden page: not in the menu, noindex, only reachable via the URL on the back of the Keeper card.
+# KEEPER_FORM: Brevo form URL of the separate "Keepers" form (Laura sets it up). Empty = presale access is not open yet,
+# the page shows the normal newsletter form instead. First Keeper presale: EMBERS 003.
+KEEPER_FORM = ''
+def keeper_form():
+    if not KEEPER_FORM:
+        return '<p class="txt" data-i18n="kpSoon"></p>\n    ' + news_form('keepers')
+    return f'''<form class="news-form" action="{KEEPER_FORM}" method="POST" data-news-form>
+        <label class="sr-only" for="kp-name" data-i18n="kpName">Name wie auf deinem Ticket</label>
+        <input class="kp-name" type="text" id="kp-name" name="FIRSTNAME" required autocomplete="name" placeholder="Name / name on ticket">
+        <label class="sr-only" for="news-keepers" data-i18n="newsLabel">E-Mail-Adresse</label>
+        <div class="news-row">
+          <input type="email" id="news-keepers" name="EMAIL" required autocomplete="email" placeholder="name@mail.de">
+          <button class="btn" type="submit" data-i18n="kpActivate">Aktivieren</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="de">
+        <p class="news-msg" role="status" aria-live="polite"></p>
+        <p class="news-note" data-i18n="newsNote"></p>
+      </form>'''
+
+keepers = f'''<div class="kp-bg" aria-hidden="true"></div>
+<div class="emx-sub"><a href="embers" data-i18n="kpBack">← EMBERS</a><span>EMBER KEEPERS</span></div>
+<div class="emx kp">
+  <section class="kp-hero">
+    <span class="lbl">EMBERS · BY EAZr</span>
+    <img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167">
+    <h1 class="big">KEEPER</h1>
+    <span class="claim">KEEP THE GLOW.</span>
+    <p class="txt" data-i18n="kpIntro"></p>
+  </section>
+
+  <section class="kp-sec">
+    <span class="lbl">01 · STAMPS</span>
+    <h2 class="mid" data-i18n="kpHowH"></h2>
+    <ol class="kp-steps">
+      <li><span class="disc">I</span><b data-i18n="kpS1h"></b><p data-i18n="kpS1"></p></li>
+      <li><span class="disc">II</span><b data-i18n="kpS2h"></b><p data-i18n="kpS2"></p></li>
+      <li><span class="disc hot">III</span><b data-i18n="kpS3h"></b><p data-i18n="kpS3"></p></li>
+    </ol>
+  </section>
+
+  <section class="kp-sec">
+    <span class="lbl">02 · PRESALE</span>
+    <h2 class="mid">48 H EARLY.</h2>
+    <p class="txt" data-i18n="kpPresale"></p>
+    {keeper_form()}
+  </section>
+
+  <section class="kp-sec">
+    <span class="lbl">03 · FAQ</span>
+    <h2 class="mid">FAQ</h2>
+    <div class="kp-faq">
+      <details><summary data-i18n="kpQ1"></summary><p data-i18n="kpA1"></p></details>
+      <details><summary data-i18n="kpQ2"></summary><p data-i18n="kpA2"></p></details>
+      <details><summary data-i18n="kpQ3"></summary><p data-i18n="kpA3"></p></details>
+      <details><summary data-i18n="kpQ4"></summary><p data-i18n="kpA4"></p></details>
+      <details><summary data-i18n="kpQ5"></summary><p data-i18n="kpA5"></p></details>
+    </div>
+  </section>
+
+  <div class="kp-foot"><span class="fbox" data-i18n="emFoot"></span></div>
+</div>
+'''
+
 # ---------------- live (overview of all live series, /live) ----------------
 # One tile per series, each already glowing in its own look. A new series = a new tile + its own page.
 live = f'''<div class="band first">
@@ -674,6 +741,7 @@ files = {
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, backed by two independent sources or one strong one. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'live.html': page('live', 'Live · EAZr Beats Collective', 'Live series by EAZr Beats Collective from Munich: EMBERS hosted live DJ sessions on Twitch, and more to come.', 'live', live),
   'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['embers.js'], og='og-embers.jpg', css=['embers.css'], immersive=True),
+  'keepers.html': page('keepers', 'Ember Keepers · EMBERS · EAZr Beats Collective', 'Ember Keepers: stamps, presale and the rules.', 'keepers', keepers, css=['embers.css', 'keepers.css'], immersive=True).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex">'),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),
