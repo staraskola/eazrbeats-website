@@ -65,6 +65,102 @@
    ]
   },
   {
+   "title": "Cello Tears",
+   "artist": "Boris Brejcha, Sascha Kid",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
+   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
+   "note": "Melancholische Cello-Linie über straffem Kick, hypnotisch und trotzdem drängend.",
+   "noteEn": "Melancholic cello line over a tight kick, hypnotic but still pushing hard.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (02.–08.11.2026, #4)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "Taste of the Night",
+   "artist": "A.D.H.S., Kos:mo",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Dunkler, treibender Nachtläufer von der DC4-Compilation.",
+   "noteEn": "Dark, driving late-night roller off the DC4 comp.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8, via Techno Airlines 05.11.)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    },
+    {
+     "source": "Adam Beyer – Drumcode Radio DCR842 Tracklist",
+     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/adambeyer/dcr842-drumcode-radio"
+    }
+   ]
+  },
+  {
+   "title": "Azadi",
+   "artist": "Charlotte de Witte, NAVA",
+   "genre": "peak-time-driving",
+   "tier": "weekly",
+   "dateAdded": "2026-11-14",
+   "source": "DJ Mag (EP-Ankündigung)",
+   "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava",
+   "note": "Harter KNTXT-Treiber mit persischer Vocal-Linie, groß und düster.",
+   "noteEn": "Relentless KNTXT roller with a haunting Persian vocal, built for the peak.",
+   "confirmations": [
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 Releases (#2, Azadi EP)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100-releases"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (02.–08.11.2026)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "Frieden",
+   "artist": "Klangkuenstler, LUVRE47",
+   "genre": "hard-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Hard Techno Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Schneller Hard-Techno-Brecher mit deutschem Rap-Vocal, roh und laut.",
+   "noteEn": "Breakneck hard techno smasher with a raw German rap vocal on top.",
+   "confirmations": [
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "Beatport Hard Techno Top 100 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "Beatport Best New Hard Techno: November 2026 (#1)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/charts"
+    }
+   ]
+  },
+  {
    "title": "Disconnection",
    "artist": "Amber Broos, Space 92",
    "genre": "peak-time-driving",
@@ -81,27 +177,6 @@
     },
     {
      "source": "Techno Airlines Top 5 Techno Tracks of the Week (26.10.–01.11.2026, #3)",
-     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
-    }
-   ]
-  },
-  {
-   "title": "Cello Tears",
-   "artist": "Boris Brejcha, Sascha Kid",
-   "genre": "peak-time-driving",
-   "tier": "daily",
-   "dateAdded": "2026-11-12",
-   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
-   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
-   "note": "Melancholische Cello-Linie über straffem Kick, hypnotisch und trotzdem drängend.",
-   "noteEn": "Melancholic cello line over a tight kick, hypnotic but still pushing hard.",
-   "confirmations": [
-    {
-     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#9, via BeatTracker)",
-     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
-    },
-    {
-     "source": "Techno Airlines Top 5 Techno Tracks of the Week (02.–08.11.2026, #4)",
      "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
     }
    ]
@@ -145,27 +220,6 @@
    ]
   },
   {
-   "title": "Taste of the Night",
-   "artist": "A.D.H.S., Kos:mo",
-   "genre": "peak-time-driving",
-   "tier": "daily",
-   "dateAdded": "2026-11-09",
-   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8)",
-   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
-   "note": "Dunkler, treibender Nachtläufer von der DC4-Compilation.",
-   "noteEn": "Dark, driving late-night roller off the DC4 comp.",
-   "confirmations": [
-    {
-     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8, via Techno Airlines 05.11.)",
-     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
-    },
-    {
-     "source": "Adam Beyer – Drumcode Radio DCR842 Tracklist",
-     "sourceUrl": "https://set79.com/tracklist/soundcloud.com/adambeyer/dcr842-drumcode-radio"
-    }
-   ]
-  },
-  {
    "title": "Feel Me",
    "artist": "Kevin de Vries, Juan Elvadin",
    "genre": "peak-time-driving",
@@ -179,44 +233,6 @@
     {
      "source": "Beatport Techno (Peak Time / Driving) Top 100 (#26, via Techno Airlines 05.11.)",
      "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
-    }
-   ]
-  },
-  {
-   "title": "Azadi",
-   "artist": "Charlotte de Witte, NAVA",
-   "genre": "peak-time-driving",
-   "tier": "daily",
-   "dateAdded": "2026-11-08",
-   "source": "DJ Mag (EP-Ankündigung)",
-   "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava",
-   "note": "Harter KNTXT-Treiber mit persischer Vocal-Linie, groß und düster.",
-   "noteEn": "Relentless KNTXT roller with a haunting Persian vocal, built for the peak.",
-   "confirmations": [
-    {
-     "source": "DJ Mag",
-     "sourceUrl": "https://djmag.com/news/charlotte-de-witte-announces-new-ep-azadi-featuring-ai-vocalist-nava"
-    },
-    {
-     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
-     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
-    }
-   ]
-  },
-  {
-   "title": "Frieden",
-   "artist": "Klangkuenstler, LUVRE47",
-   "genre": "hard-techno",
-   "tier": "daily",
-   "dateAdded": "2026-11-08",
-   "source": "Beatport Hard Techno Top 100 (#1, laut Techno Airlines)",
-   "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
-   "note": "Schneller Hard-Techno-Brecher mit deutschem Rap-Vocal, roh und laut.",
-   "noteEn": "Breakneck hard techno smasher with a raw German rap vocal on top.",
-   "confirmations": [
-    {
-     "source": "Techno Airlines Top 5 Techno Tracks of the Week",
-     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
     }
    ]
   },
