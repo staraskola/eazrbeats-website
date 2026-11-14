@@ -1,6 +1,69 @@
 {
- "exported": "2026-11-12",
+ "exported": "2026-11-14",
  "tracks": [
+  {
+   "title": "Santiago",
+   "artist": "Adam Beyer, Mark Reeve",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#20)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Druckvoller Drumcode-Closer, der zum Schluss richtig abhebt.",
+   "noteEn": "Punchy Drumcode closer that takes off and soars at the end.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#20, via Techno Airlines)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    },
+    {
+     "source": "Beatportal – Do Our Thing EP",
+     "sourceUrl": "https://www.beatportal.com/articles/1692976-adam-beyer-and-mark-reeve-revisit-drumcodes-rolling-roots-on-do-our-thing-ep"
+    }
+   ]
+  },
+  {
+   "title": "Frames",
+   "artist": "Adam Beyer, Mark Reeve",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#24)",
+   "sourceUrl": "https://www.technoairlines.com/label/drumcode-records",
+   "note": "Seidige Flächen über voller Percussion, klar für 4 Uhr morgens.",
+   "noteEn": "Silky layers over full-bodied percussion, pure 4am territory.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#24, via Techno Airlines)",
+     "sourceUrl": "https://www.technoairlines.com/label/drumcode-records"
+    },
+    {
+     "source": "Beatportal – Do Our Thing EP",
+     "sourceUrl": "https://www.beatportal.com/articles/1692976-adam-beyer-and-mark-reeve-revisit-drumcodes-rolling-roots-on-do-our-thing-ep"
+    }
+   ]
+  },
+  {
+   "title": "Tempest",
+   "artist": "Phil Berg",
+   "genre": "raw-deep-hypnotic",
+   "tier": "daily",
+   "dateAdded": "2026-11-14",
+   "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#5)",
+   "sourceUrl": "https://www.technoairlines.com/label/mutual-rytm",
+   "note": "Dunkler, rollender Mutual-Rytm-Tool aus der Dārin-EP.",
+   "noteEn": "Dark, rolling Mutual Rytm tool off the Dārin EP.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#5, via Techno Airlines)",
+     "sourceUrl": "https://www.technoairlines.com/label/mutual-rytm"
+    },
+    {
+     "source": "Mutual Rytm Bandcamp – Dārin",
+     "sourceUrl": "https://mutual-rytm.bandcamp.com/album/d-rin"
+    }
+   ]
+  },
   {
    "title": "Disconnection",
    "artist": "Amber Broos, Space 92",
