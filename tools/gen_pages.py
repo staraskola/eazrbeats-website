@@ -339,10 +339,28 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
       <p data-i18n="{bio_key}">{bio}</p>{extra}{ig}
     </div>
 '''
+
+# Story chapters (texts in site.js: st*). The log below grows with every milestone (Noah 15.11.2026):
+# add a new line to STORY_LOG (date, i18n key) and the texts in site.js, newest at the bottom.
+STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4')]
+STORY_NEXT = ('2027-W01', 'logNext')  # the upcoming milestone, shown with a blinking cursor
+def story_ch(n, extra=''):
+    return f'''    <div class="story-ch">
+      <span class="kicker">0{n}</span>
+      <h2 class="story-h" data-i18n="stT{n}"></h2>
+      <div class="story-p" data-i18n="stP{n}"></div>{extra}
+    </div>
+'''
+STORY = ('  <div class="story">\n' + ''.join(story_ch(i, EMBERS_MARK if i == 5 else '') for i in range(1, 6))
+  + '    <div class="story-end"><p class="story-big" data-i18n="stT6"></p><p data-i18n="stP6"></p></div>\n'
+  + '    <div class="story-log" aria-labelledby="log-h">\n      <div class="log-bar"><span class="prompt">eazr@collective:~$</span> <span id="log-h">tail story.log</span></div>\n      <ol>\n'
+  + ''.join(f'        <li><time>{d}</time><span data-i18n="{k}"></span></li>\n' for d, k in STORY_LOG)
+  + f'        <li class="next"><time>{STORY_NEXT[0]}</time><span><span data-i18n="{STORY_NEXT[1]}"></span><span class="cursor">_</span></span></li>\n'
+  + '      </ol>\n    </div>\n  </div>\n')
 about = f'''<div class="band first">
 <section class="sec" id="about">
-{head('whoami', 'About')}  <p class="lead" data-i18n="aboutText">EAZr Beats Collective ist ein Münchner House- und Techno-Kollektiv.</p>
-
+{head('whoami', 'About')}  <p class="lead" data-i18n="aboutText"></p>
+{STORY}
   <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
   <div class="cards four">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>

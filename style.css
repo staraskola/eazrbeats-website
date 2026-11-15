@@ -681,3 +681,32 @@ body:not([data-page="embers"]) .sec-head h2.embers-title { -webkit-text-stroke: 
 .card-emb { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .card-emb img { width: min(200px, 70%); height: auto; filter: drop-shadow(0 0 4px rgba(255,122,31,0.8)) drop-shadow(0 0 14px rgba(255,122,31,0.35)); }
 .card-emb span { color: #FF7A1F; text-shadow: 0 0 8px rgba(255,122,31,0.6); }
+
+/* about: story chapters + growing log (Noah 15.11.2026) */
+.story { max-width: 64ch; margin: 8px auto 0; }
+.story-ch { margin: 56px 0 0; }
+.story-ch .kicker { display: block; font-size: 10px; letter-spacing: 3px; color: #FF4FD8; text-shadow: 0 0 6px rgba(255,79,216,0.6); }
+.story-h { font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); text-shadow: 0 0 6px var(--glow); margin: 6px 0 16px; }
+.story-p p { font-size: 14px; line-height: 1.9; color: rgba(244,241,234,0.85); margin: 0 0 14px; }
+.story-p strong { color: var(--accent); font-weight: 700; }
+.story-ch .embers-mark { margin-top: 6px; }
+.story-end { text-align: center; margin: 72px 0 0; }
+.story-end p { font-size: 14px; line-height: 1.9; color: rgba(244,241,234,0.85); margin: 0; }
+.story-end .story-big {
+  font-size: clamp(30px, 6vw, 56px); line-height: 1.05; font-weight: 700; letter-spacing: 0.03em; margin: 0 0 14px;
+  color: transparent; -webkit-text-stroke: 1.2px var(--accent);
+  filter: drop-shadow(0 0 3px rgba(255,79,216,0.85)) drop-shadow(0 0 16px rgba(255,79,216,0.4));
+}
+.story-log {
+  margin: 64px 0 0; border: 1px solid rgba(var(--accent-rgb),0.16); border-radius: 4px;
+  background: rgba(10,8,14,0.7); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); overflow: hidden;
+}
+.story-log .log-bar { font-size: 11px; letter-spacing: 0.06em; color: rgba(244,241,234,0.55); padding: 10px 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.12); }
+.story-log ol { list-style: none; margin: 0; padding: 14px 16px 16px; }
+.story-log li { display: grid; grid-template-columns: 11ch 1fr; gap: 14px; font-size: 12.5px; line-height: 1.7; padding: 5px 0; color: rgba(244,241,234,0.8); }
+.story-log time { color: #FF4FD8; white-space: nowrap; }
+.story-log li.next { color: var(--accent); text-shadow: 0 0 6px var(--glow); }
+.story-log li.next .cursor { margin-left: 4px; }
+@media (max-width: 480px) {
+  .story-log li { grid-template-columns: 1fr; gap: 0; padding: 7px 0; }
+}
