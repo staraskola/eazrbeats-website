@@ -57,7 +57,7 @@ const T = {
     // about
     aboutText: 'EAZr Beats Collective ist ein Münchner House- und Techno-Kollektiv. Das hier ist unsere Geschichte, bis jetzt.',
     stT1: 'Sag es laut',
-    stP1: '<p>EAZr. Sprich es englisch aus, und du sagst Isar, den Fluss, der durch München fließt. Das ist Absicht. Wir sind Münchner Kindl, hier geboren, und haben schon überall in der Stadt gewohnt. Der Name soll sich einbrennen und nach Zuhause klingen, egal wer ihn ausspricht.</p>',
+    stP1: '<p>EAZr. Sprich es englisch aus, und du sagst Isar, wie der Fluss, der durch München fließt. Das ist Absicht. Wir sind Münchner Kindl, hier geboren, und haben schon überall in der Stadt gewohnt. Der Name soll sich einbrennen und nach Zuhause klingen, egal wer ihn ausspricht.</p>',
     stT2: 'Wie es anfing',
     stP2: '<p>Vor Jahren hat Noah Musik gemacht. Launchpads, Ableton Live, lange Nächte. Aber das Equipment, das er gebraucht hätte, war immer außer Reichweite, und irgendwann hat er nicht mehr daran geglaubt, dass daraus etwas wird. Also hat er nur noch Musik gehört. Viel. Aber nur zuhören stillt nicht den Drang, selbst etwas rauszugeben.</p><p>Dieses Jahr kam der Drang zurück. Erst ein DJ-Controller, Neuland für ihn, und viele Stunden Üben. Neu an den Decks, aber nicht in der Musik: Das Gespür für Tonarten, die zusammenpassen, und dafür, was ein Track mit Menschen macht, war immer da. Dann der Plan, aufzulegen, vielleicht irgendwo als Resident. Dann die größere Idee: nicht nur ein DJ, sondern etwas, von dem andere ein Teil sein können.</p><p>Vieles davon ist an der Isar entstanden, an heißen Sommerabenden, an denen wir Bock auf eine Party hatten und einfach nichts los war.</p>',
     stT3: 'Warum ein Kollektiv',
