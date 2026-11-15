@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-14",
+ "exported": "2026-11-15",
  "tracks": [
+  {
+   "title": "Conjure Dreams (Adam Beyer & Bart Skils Remix)",
+   "artist": "Maceo Plex",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-15",
+   "source": "Beatport Best New Techno (Peak Time / Driving): November 2026 (#2)",
+   "sourceUrl": "https://www.beatport.com/track/conjure-dreams/31162256",
+   "note": "Beyer und Skils machen aus Maceo Plex einen geraden Drumcode-Peak-Time-Roller.",
+   "noteEn": "Beyer and Skils turn Maceo Plex into a straight-up Drumcode peak-time roller.",
+   "confirmations": [
+    {
+     "source": "Beatport Best New Techno (Peak Time / Driving): November 2026 (#2)",
+     "sourceUrl": "https://www.beatport.com/track/conjure-dreams/31162256"
+    },
+    {
+     "source": "909originals: 30 Years of Drumcode (Vol. 2)",
+     "sourceUrl": "https://909originals.com/2026/11/08/drumcode-marks-30th-anniversary-with-20-track-compilation/"
+    }
+   ]
+  },
   {
    "title": "Santiago",
    "artist": "Adam Beyer, Mark Reeve",
