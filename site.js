@@ -57,7 +57,7 @@ const T = {
     // about
     aboutText: 'EAZr Beats Collective ist ein Münchner House- und Techno-Kollektiv. Das hier ist unsere Geschichte, bis jetzt.',
     stT1: 'Sag es laut',
-    stP1: '<p>EAZr. Sprich es englisch aus, und du sagst Isar, wie der Fluss, der durch München fließt. Das ist Absicht. Wir sind Münchner Kindl, hier geboren, und haben schon überall in der Stadt gewohnt. Der Name soll sich einbrennen und nach Zuhause klingen, egal wer ihn ausspricht.</p>',
+    stP1: '<p>EAZr <span class=ipa>[ˈiː.zɐ]</span>. Sprich es englisch aus, und du sagst Isar, wie der Fluss, der durch München fließt. Das ist Absicht. Wir sind Münchner Kindl, hier geboren, und haben schon überall in der Stadt gewohnt. Der Name soll sich einbrennen und nach Zuhause klingen, egal wer ihn ausspricht.</p>',
     stT2: 'Wie es anfing',
     stP2: '<p>Vor Jahren hat Noah Musik produziert. Launchpads, Ableton Live, lange Nächte. Aber das Equipment, das er gebraucht hätte, war immer außer Reichweite, und irgendwann hat er nicht mehr daran geglaubt, dass daraus etwas wird. Also hat er nur noch Musik gehört. Viel. Doch bloßes Zuhören stillt nicht den Drang, selbst etwas rauszugeben.</p><p>Dieses Jahr kam der Drang zurück. Erst ein DJ-Controller, Neuland für ihn, und unzählige Übungsstunden. Neu an den Decks, aber nicht in der Musik: Das Gespür für Tonarten, die zusammenpassen, und dafür, was ein Track mit Menschen macht, war immer da. Dann der Plan, aufzulegen, vielleicht irgendwo als Resident. Dann die größere Idee: nicht nur ein DJ, sondern etwas, von dem andere ein Teil sein können.</p><p>Vieles davon ist an der Isar entstanden, an heißen Sommerabenden, an denen wir Bock auf eine Party hatten und einfach nichts los war.</p>',
     stT3: 'Warum ein Kollektiv',
@@ -247,7 +247,7 @@ const T = {
 
     aboutText: "EAZr Beats Collective is a house and techno collective from Munich. This is our story so far.",
     stT1: 'Say it out loud',
-    stP1: "<p>EAZr. Say it in English and you're saying Isar, the river that runs through Munich. That's on purpose. We're Munich kids, born here, and we've lived all over this city. The name should burn in, and it should sound like home no matter who says it.</p>",
+    stP1: "<p>EAZr <span class=ipa>[ˈiː.zɐ]</span>. Say it in English and you're saying Isar, the river that runs through Munich. That's on purpose. We're Munich kids, born here, and we've lived all over this city. The name should burn in, and it should sound like home no matter who says it.</p>",
     stT2: 'Where it started',
     stP2: "<p>Years ago, Noah made music. Launchpads, Ableton Live, late nights. But the gear he needed was always out of reach, and somewhere along the way he stopped believing it could go anywhere. So he just listened. A lot. But listening never really scratches the itch to put something out there.</p><p>This year, that itch came back. First a DJ controller, something he'd never done before, and hours of practice. New to the decks, not to music: the ear for keys that fit and for what a track does to people was always there. Then the plan to play out, maybe land a residency. Then the bigger idea: not just one DJ, but something other people could be part of.</p><p>A lot of it was thought up by the Isar, on hot summer nights when we wanted a party and nothing was happening.</p>",
     stT3: 'Why a collective',
