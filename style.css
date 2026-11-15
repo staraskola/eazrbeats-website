@@ -722,3 +722,4 @@ body:not([data-page="embers"]) .sec-head h2.embers-title { -webkit-text-stroke: 
 @media (max-width: 480px) {
   .story-log li { grid-template-columns: 1fr; gap: 0; padding: 8px 0 8px 32px; }
 }
+.story-p .ipa { color: #FF4FD8; text-shadow: 0 0 6px rgba(255,79,216,0.5); letter-spacing: 0.02em; white-space: nowrap; }
