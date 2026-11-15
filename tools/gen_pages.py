@@ -24,10 +24,10 @@ INSTA_NMB = 'https://www.instagram.com/nmb.muc/'
 INSTA_WIVI = 'https://www.instagram.com/_wjackowsky/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /embers
 # Next EMBERS session shown on /embers and on the /live overview. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
-LIVE_NEXT = 'EMBERS 001 · KW 1 · 2027'
-# Countdown on /embers. Until the exact day is public it counts down to the start of KW 1.
+LIVE_NEXT = 'EMBERS 001 · Anfang 2027'
+# Countdown on /embers. Until the exact day is public it is off (LIVE_COUNTDOWN empty).
 # Once the date is announced, set the exact start, e.g. '2027-01-08T21:30:00+01:00'.
-LIVE_COUNTDOWN = '2027-01-04T00:00:00+01:00'
+LIVE_COUNTDOWN = ''  # off until the date is fixed (Noah 15.11.2026); e.g. '2027-01-23T21:30:00+01:00'
 LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
 # Embedded Twitch player on /embers. Keep False until the Twitch channel is fully set up.
 TWITCH_EMBED = False  # Before switching on: add a Twitch embed section to datenschutz.html (an iframe sends data to Twitch on page load; the policy currently says "links only, nothing embedded").
@@ -225,12 +225,12 @@ start = f'''<section class="hero" id="top">
     <h2 class="embers-title"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167"><span class="num">001</span><span class="by">by EAZr</span></h2>
   </div>
   <div class="event-promo">
-    <a class="event-poster" href="embers" aria-label="EMBERS 001 · KW 1 2027 · Zu EMBERS">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, KW 1 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
+    <a class="event-poster" href="embers" aria-label="EMBERS 001 · Anfang 2027 · Zu EMBERS">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, Anfang 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
     </a>
     <div class="event-info">
       <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
-      <h3 class="event-date" data-i18n="eventDate">KW 1 · 2027 · München</h3>
+      <h3 class="event-date" data-i18n="eventDate">Anfang 2027 · München</h3>
       <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
       <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
       <div class="cta-row" style="justify-content:flex-start">
@@ -343,7 +343,7 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
 # Story chapters (texts in site.js: st*). The log below grows with every milestone (Noah 15.11.2026):
 # add a new line to STORY_LOG (date, i18n key) and the texts in site.js, newest at the bottom.
 STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4')]
-STORY_NEXT = ('2027-W01', 'logNext')  # the upcoming milestone, shown with a blinking cursor
+STORY_NEXT = ('2027', 'logNext')  # the upcoming milestone, shown with a blinking cursor
 def story_ch(n, extra=''):
     return f'''    <div class="story-ch">
       <span class="kicker">0{n}</span>
@@ -388,7 +388,7 @@ about = f'''<div class="band first">
 </div>
 '''
 
-EMBERS_DATE = 'KW 1 · 2027'   # DATE box on /embers
+EMBERS_DATE = 'ANFANG 2027'   # DATE box on /embers
 EMBERS_VENUE = 'TBA'          # VENUE box on /embers
 
 # ---------------- events ----------------
