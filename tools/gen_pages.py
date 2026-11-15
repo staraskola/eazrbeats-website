@@ -344,14 +344,15 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
 # add a new line to STORY_LOG (date, i18n key) and the texts in site.js, newest at the bottom.
 STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4')]
 STORY_NEXT = ('2027', 'logNext')  # the upcoming milestone, shown with a blinking cursor
-def story_ch(n, extra=''):
+def story_ch(n, extra='', k=None):
+    k = k or n  # text key in site.js; chapter text stP4 'who we are' now lives on the crew cards
     return f'''    <div class="story-ch">
       <span class="kicker">0{n}</span>
-      <h2 class="story-h" data-i18n="stT{n}"></h2>
-      <div class="story-p" data-i18n="stP{n}"></div>{extra}
+      <h2 class="story-h" data-i18n="stT{k}"></h2>
+      <div class="story-p" data-i18n="stP{k}"></div>{extra}
     </div>
 '''
-STORY = ('  <div class="story">\n' + ''.join(story_ch(i, EMBERS_MARK if i == 5 else '') for i in range(1, 6))
+STORY = ('  <div class="story">\n' + ''.join(story_ch(n, EMBERS_MARK if k == 5 else '', k) for n, k in enumerate((1, 2, 3, 5), 1))
   + '    <div class="story-end"><p class="story-big" data-i18n="stT6"></p><p data-i18n="stP6"></p></div>\n'
   + '    <div class="story-log" aria-labelledby="log-h">\n      <div class="log-bar"><span class="prompt">eazr@collective:~$</span> <span id="log-h">tail story.log</span></div>\n      <ol>\n'
   + ''.join(f'        <li><time>{d}</time><span data-i18n="{k}"></span></li>\n' for d, k in STORY_LOG)
@@ -361,22 +362,15 @@ about = f'''<div class="band first">
 <section class="sec" id="about">
 {head('whoami', 'About')}  <p class="lead" data-i18n="aboutText"></p>
 {STORY}
-  <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
-  <div class="cards four">
-    <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
-    <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutFormatsTitle">Eigene Formate</h3><p data-i18n="aboutFormatsText"></p>{EMBERS_MARK}<a class="btn ghost" href="next" data-i18n="teaserNextBtn">Was kommt →</a></div>
-    <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
-    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate &amp; The Void</h3><p data-i18n="aboutCrateText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a><a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a></div></div>
-  </div>
-
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
-  <div class="cards four">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}    <div class="card crew">
-      <div class="avatar open" aria-hidden="true">?</div>
-      <span class="kicker">crew/04</span>
-      <h3 data-i18n="crewOpenTitle">Du?</h3>
-      <p data-i18n="crewOpenText"></p>
-    </div>
+  <div class="cards">
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}  </div>
+
+  <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
+  <div class="cards">
+    <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
+    <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
+    <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutCrateTitle">The Crate &amp; The Void</h3><p data-i18n="aboutCrateText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a><a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a></div></div>
   </div>
 
   <div class="booking-box" style="margin-top:40px">
