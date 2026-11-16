@@ -1,5 +1,5 @@
 {
- "exported": "2026-11-13",
+ "exported": "2026-11-16",
  "tracks": [
   {
    "title": "Sambei",
@@ -90,7 +90,7 @@
    "title": "All The People",
    "artist": "Shimza, Ayra Starr, Alok",
    "genre": "afro-house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-12",
    "source": "Beatport Afro House Top 100 (#7)",
    "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
@@ -111,7 +111,7 @@
    "title": "Feelings",
    "artist": "Mark Knight, Junior Jack, James Hurr",
    "genre": "house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-11",
    "source": "Beatport House Top 100 (#10, 09.11.)",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
@@ -121,6 +121,10 @@
     {
      "source": "Beatport House Top 100 (#10, 09.11.)",
      "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "Magnetic Magazine",
+     "sourceUrl": "https://magneticmag.com/2026/11/junior-jack-mark-knight-and-james-hurr-deliver-fresh-take-on-iconic-my-feeling/"
     }
    ]
   },
@@ -162,7 +166,7 @@
    "title": "Mi Amor",
    "artist": "7 SKIES, ARTBAT, Sadie Rose Van",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-10",
    "source": "Beatport Melodic House & Techno Top 100 (#4)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -183,7 +187,7 @@
    "title": "Promise",
    "artist": "Ivory (IT), Auggië",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-10",
    "source": "Beatport Melodic House & Techno Top 100 (#3)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -204,7 +208,7 @@
    "title": "The Boss",
    "artist": "James Brown, Elvis Guetta",
    "genre": "house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-10",
    "source": "Beatport House Top 100 (#7)",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
@@ -225,7 +229,7 @@
    "title": "Saudade",
    "artist": "Joseph Capriati",
    "genre": "house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-10",
    "source": "Beatport House Top 100 (#8)",
    "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
