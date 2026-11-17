@@ -1,6 +1,52 @@
 {
- "exported": "2026-11-15",
+ "exported": "2026-11-17",
  "tracks": [
+  {
+   "title": "Tom",
+   "artist": "Chris Avantgarde, Sama (US)",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-17",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Dunkler, treibender Melodic-Techno-Roller mit kühlen Synth-Flächen auf X Recordings.",
+   "noteEn": "Dark, driving melodic techno roller with icy synth pads, fresh on X Recordings.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (9–15 Nov)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "1001Tracklists (JES, Unleash The Beat 732)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/1w7sfgd9/jes-unleash-the-beat-mix-show-732-2026-11-12.html"
+    }
+   ]
+  },
+  {
+   "title": "Undertone",
+   "artist": "Miss Monique, Paradoks",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-17",
+   "source": "Techno Airlines Top 5 Techno Tracks of the Week (#2)",
+   "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
+   "note": "Hypnotische Melodic-Techno-Nummer, schon auf der Tomorrowland Freedom Stage getestet.",
+   "noteEn": "Hypnotic melodic techno weapon, already road-tested on Tomorrowland's Freedom Stage.",
+   "confirmations": [
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (#2)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/13/paradoks-miss-monique-undertone/"
+    }
+   ]
+  },
   {
    "title": "Conjure Dreams (Adam Beyer & Bart Skils Remix)",
    "artist": "Maceo Plex",
