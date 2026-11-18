@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-17",
+ "exported": "2026-11-18",
  "tracks": [
+  {
+   "title": "I Wanna Go Bang",
+   "artist": "NIKOLINA",
+   "genre": "hard-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-18",
+   "source": "Beatport Hard Techno Top 100 (#4)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Harter, stampfender Kick mit Rave-Vocal, gebaut für den Peak.",
+   "noteEn": "Pounding kicks and a rave vocal hook, built for peak-hour chaos.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#4)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (9–15 Nov 2026, #4)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
   {
    "title": "Tom",
    "artist": "Chris Avantgarde, Sama (US)",
