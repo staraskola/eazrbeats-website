@@ -832,6 +832,61 @@
      "sourceUrl": "https://www.edmtunes.com/2026/10/02/kuko-debut-album-catharsis/"
     }
    ]
+  },
+  {
+   "title": "Here In My Arms (Enjoy The Silence)",
+   "artist": "Armin van Buuren, Silver Panda",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-09-19",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Enjoy The Silence als Melodic-Techno-Rework.",
+   "noteEn": "Enjoy The Silence as a melodic techno rework.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Other Dimension (Extended Mix)",
+   "artist": "Volkoder, Anyma (ofc)",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-09-19",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Erster Release auf Anymas neuem Label ÆDEN.",
+   "noteEn": "First release on Anyma's new ÆDEN label.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Keep Up",
+   "artist": "Adam Beyer, Argy, Alok",
+   "genre": "melodic-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-09-14",
+   "source": "Beatport Melodic House & Techno Top 100",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Beyer, Argy und Alok: Techno-Kollab der Woche.",
+   "noteEn": "Beyer, Argy and Alok: the techno collab of the week.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#2)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/alok-adam-beyer-and-argy-link-new-single-keep"
+    }
+   ]
   }
  ]
 }
