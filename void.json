@@ -1,6 +1,35 @@
 {
- "exported": "2026-11-18",
+ "exported": "2026-11-20",
  "tracks": [
+  {
+   "title": "Can't Get Over",
+   "artist": "INNELLEA, Gorgon City",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-20",
+   "source": "EDMTunes",
+   "sourceUrl": "https://www.edmtunes.com/2026/11/12/innellea-gorgon-city-cant-get-over/",
+   "note": "Innellea trifft Gorgon City: dunkler, treibender Melodic-Techno-Team-up.",
+   "noteEn": "Innellea meets Gorgon City: a dark, driving melodic techno team-up.",
+   "confirmations": [
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/12/innellea-gorgon-city-cant-get-over/"
+    },
+    {
+     "source": "RaveJungle",
+     "sourceUrl": "https://www.ravejungle.com/2026/11/12/innellea-gorgon-city-cant-get-over/"
+    },
+    {
+     "source": "The Playground UK",
+     "sourceUrl": "https://theplayground.co.uk/innellea-and-gorgon-city-join-forces-on-new-collaboration-cant-get-over/"
+    },
+    {
+     "source": "Techno Airlines Top 5 (9.–15.11.)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
   {
    "title": "I Wanna Go Bang",
    "artist": "NIKOLINA",
