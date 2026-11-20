@@ -1,6 +1,65 @@
 {
- "exported": "2026-11-16",
+ "exported": "2026-11-20",
  "tracks": [
+  {
+   "title": "Running Out",
+   "artist": "Alex Wann, David Mackay, briqs",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-20",
+   "source": "Techno Airlines Top 5 (Beatport MH&T Top 10)",
+   "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
+   "note": "Warmer Vocal-Groove mit Gänsehaut-Melodie.",
+   "noteEn": "Warm vocal groove with a goosebump melody.",
+   "confirmations": [
+    {
+     "source": "Techno Airlines Top 5 (9.–15.11.): Beatport Melodic House & Techno Top 10",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
+  {
+   "title": "House Music Freak (Extended Mix)",
+   "artist": "Solardo",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-20",
+   "source": "Mixmag Caribbean",
+   "sourceUrl": "https://mixmagcaribbean.com/read/solardo-make-their-the-cross-debut-with-new-single-house-music-freak-music",
+   "note": "Solardos Debüt auf The Cross: roher, stampfender Clubtrack.",
+   "noteEn": "Solardo's debut on The Cross: raw, stomping club energy.",
+   "confirmations": [
+    {
+     "source": "Mixmag Caribbean",
+     "sourceUrl": "https://mixmagcaribbean.com/read/solardo-make-their-the-cross-debut-with-new-single-house-music-freak-music"
+    },
+    {
+     "source": "1001Tracklists – Kardon, Selection Episode 46/2026 (2026-11-14)",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/18pxuxlt/kardon-selection-episode-46slash2026-2026-11-14.html"
+    }
+   ]
+  },
+  {
+   "title": "Notorious Thugs (feat. Bone Thugs-n-Harmony) (Solomun Remix, Extended)",
+   "artist": "The Notorious B.I.G., Bone Thugs-n-Harmony, Solomun",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-20",
+   "source": "DJ Mag",
+   "sourceUrl": "https://djmag.com/news/listen-solomuns-remix-of-notorious-bigs-notorious-thugs",
+   "note": "Solomun macht aus dem Biggie-Klassiker groovigen Melodic House.",
+   "noteEn": "Solomun turns the Biggie classic into groovy melodic house.",
+   "confirmations": [
+    {
+     "source": "DJ Mag",
+     "sourceUrl": "https://djmag.com/news/listen-solomuns-remix-of-notorious-bigs-notorious-thugs"
+    },
+    {
+     "source": "Complex",
+     "sourceUrl": "https://www.complex.com/music/a/joel-dishan/solomun-biggie-notorious-thugs-official-remix"
+    }
+   ]
+  },
   {
    "title": "Sambei",
    "artist": "Eran Hersh, Aycond, NOTHANKYOU",
