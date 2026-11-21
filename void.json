@@ -1,6 +1,90 @@
 {
- "exported": "2026-11-20",
+ "exported": "2026-11-21",
  "tracks": [
+  {
+   "title": "Space Date (HNTR & KASIA Remix)",
+   "artist": "Adam Beyer, Green Velvet, Layton Giordani",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-21",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#4)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Drumcode-Klassiker, von HNTR und KASIA auf Peak-Time-Druck gebracht.",
+   "noteEn": "Drumcode classic, rewired by HNTR & KASIA into a full peak-time weapon.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#4)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "BeatTracker Beatport-Chart-Tracker (Stand 20.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    }
+   ]
+  },
+  {
+   "title": "BABYLON",
+   "artist": "A.D.H.S., Kos:mo",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-21",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#10)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100",
+   "note": "Dunkel, treibend, mit hypnotischem Lead, der sich festbeißt.",
+   "noteEn": "Dark, driving roller with a hypnotic lead that just won't let go.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#10)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6/top-100"
+    },
+    {
+     "source": "BeatTracker Beatport-Chart-Tracker (Stand 20.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    }
+   ]
+  },
+  {
+   "title": "Nacht (Extended Mix)",
+   "artist": "POLTERGST",
+   "genre": "hard-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-21",
+   "source": "Beatport Hard Techno Top 100 (#6)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Harter, düsterer Kick-Brecher für die späten Stunden.",
+   "noteEn": "Pounding, pitch-black hard techno built for the late hours.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#6)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "BeatTracker Beatport-Chart-Tracker (Stand 20.11.)",
+     "sourceUrl": "https://beattracker.com/categories/hard-techno/2"
+    }
+   ]
+  },
+  {
+   "title": "Threshold State",
+   "artist": "Lewis Fautzi",
+   "genre": "raw-deep-hypnotic",
+   "tier": "daily",
+   "dateAdded": "2026-11-21",
+   "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#7)",
+   "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92/top-100",
+   "note": "Hypnotischer Loop auf Mutual Rytm, der langsam in den Kopf kriecht.",
+   "noteEn": "Hypnotic Mutual Rytm loop that slowly crawls under your skin.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#7)",
+     "sourceUrl": "https://www.beatport.com/genre/techno-raw-deep-hypnotic/92/top-100"
+    },
+    {
+     "source": "BeatTracker Beatport-Chart-Tracker (Stand 20.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    }
+   ]
+  },
   {
    "title": "Can't Get Over",
    "artist": "INNELLEA, Gorgon City",
