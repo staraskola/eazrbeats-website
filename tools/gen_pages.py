@@ -8,6 +8,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 # Once the first event or mix is out: set SPLIT_NEXT = True to bring back
 # separate events.html and mixes.html pages (and menu entries) again.
 SPLIT_NEXT = False
+NEXT_PAGE = False  # Noah 21.11.2026: Next merged into Live (overlapped); next/events/mixes redirect to /live
 cur = open('index.html').read()
 footer = re.search(r'<footer class="site-footer">.*?</footer>\n', cur, re.S).group(0)
 crate_sec = open('crate.html').read()
@@ -107,7 +108,7 @@ def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg', css=(), 
     nav = [('about', 'about', 'navAbout', 'About')]
     nav += ([('events', 'events', 'navEvents', 'Events'),
              ('mixes', 'mixes', 'navMixes', 'Mixes')] if SPLIT_NEXT else
-            [('next', 'next', 'navNext', 'Next')])
+            [('next', 'next', 'navNext', 'Next')] if NEXT_PAGE else [])
     nav += [('crate', 'crate', None, 'Crate'),
            ('void', 'void', None, 'VOID'),
            ('live', 'live', None, 'Live'),
@@ -394,7 +395,7 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
 
 # Story chapters (texts in site.js: st*). The log below grows with every milestone (Noah 15.11.2026):
 # add a new line to STORY_LOG (date, i18n key) and the texts in site.js, newest at the bottom.
-STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4')]
+STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4'), ('2026-11', 'log5')]
 STORY_NEXT = ('2027', 'logNext')  # the upcoming milestone, shown with a blinking cursor
 def story_ch(n, extra='', k=None):
     k = k or n  # text key in site.js; chapter text stP4 'who we are' now lives on the crew cards
@@ -419,10 +420,11 @@ about = f'''<div class="band first">
 {crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}  </div>
 
   <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
-  <div class="cards">
+  <div class="cards two">
     <div class="card"><span class="kicker">01</span><h3 data-i18n="aboutSetsTitle">DJ-Sets</h3><p data-i18n="aboutSetsText"></p></div>
-    <div class="card"><span class="kicker">02</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
-    <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutCrateTitle">The Crate &amp; The Void</h3><p data-i18n="aboutCrateText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a><a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a></div></div>
+    <div class="card"><span class="kicker">02</span><h3>Road to Live</h3><p data-i18n="aboutRtlText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="{YOUTUBE}" target="_blank" rel="noopener">YouTube ↗</a></div></div>
+    <div class="card"><span class="kicker">03</span><h3 data-i18n="aboutTracksTitle">Eigene Tracks</h3><p data-i18n="aboutTracksText"></p></div>
+    <div class="card"><span class="kicker">04</span><h3 data-i18n="aboutCrateTitle">The Crate &amp; The Void</h3><p data-i18n="aboutCrateText"></p><div class="cta-row" style="justify-content:flex-start"><a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a><a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a></div></div>
   </div>
 
   <div class="booking-box" style="margin-top:40px">
@@ -763,6 +765,9 @@ if SPLIT_NEXT:
     files['events.html'] = page('events', 'Events · EAZr Beats Collective', 'Upcoming and past EAZr Beats Collective events in Munich.', 'events', events)
     files['mixes.html'] = page('mixes', 'Mixes · EAZr Beats Collective', 'Sets, recordings and studio sessions by EAZr Beats Collective.', 'mixes', mixes)
     files['next.html'] = redirect('events', 'Events · EAZr Beats Collective')
+elif not NEXT_PAGE:
+    for f in ('next.html', 'events.html', 'mixes.html'):
+        files[f] = redirect('live', 'Live · EAZr Beats Collective')
 else:
     files['next.html'] = page('next', 'Next · EAZr Beats Collective', 'What is next for EAZr Beats Collective: our own events in Munich and the first mixes.', 'next', nextpage)
     files['events.html'] = redirect('next', 'Next · EAZr Beats Collective')
