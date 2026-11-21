@@ -208,14 +208,14 @@ void_sec = f'''<div class="void-bg" aria-hidden="true">
 
 # ---------------- start ----------------
 # Road to Live on the start page: newest first. Covers live in img/home/ (432x768).
-# Add a new episode at the front; keep about 5.
-RTL_COUNT = 12   # episodes released so far (shown in the hero stats)
+# Add a new episode at the front, drop the last one, and set RTL_LATEST.
+RTL_LATEST = '10'   # newest published episode (#06 was never posted, so no count)
 RTL_EPISODES = [
-    ('12', 'Breakdown → Drop', 'One take'),
-    ('11', 'Bass Swap', ''),
-    ('10', 'Echo Out', 'Kream, Alixa → Charlotte de Witte, Ceres'),
-    ('09', 'Loop · Hot Cue', 'CELE ARRABAL, Jesus Fernández → Jerry Ropero, HUGEL'),
-    ('08', 'First Drop', 'James Hype, Volkoder → Camelphat, Josh Gigante'),
+    ('10', 'Echo Out', 'Kream, Alika → Charlotte de Witte, Ceres'),
+    ('09', 'Loop · Hot Cue', 'CELE ARRABAL, Jesús Fernández → Jerry Ropero, HUGEL'),
+    ('08', 'Hot Cues', 'James Hype, Volkoder → CamelPhat, Josh Gigante'),
+    ('07', 'Bass Swap', 'ARTBAT, Pete Tong → Kream'),
+    ('05', 'Live Edit', 'James Hype, Volkoder'),
 ]
 # Artist reposts: shown as a small, factual tag on the episode card (only with Noah's OK).
 RTL_REPOSTS = {'09': 'CELE'}
@@ -242,7 +242,7 @@ start = f'''<section class="hero" id="top">
   <div class="stats" aria-label="Stand">
     <span class="prompt">eazr@beats:~$ status</span>
     <div class="stats-row">
-      <span><b>{RTL_COUNT}</b> <span data-i18n="statRtl">× Road to Live</span></span>
+      <span><b>#{RTL_LATEST}</b> <span data-i18n="statRtl">Road to Live</span></span>
       <span><b id="stat-crate">–</b> <span data-i18n="statCrate">Tracks in der Crate</span></span>
       <span><b id="stat-void">–</b> <span data-i18n="statVoid">Tracks im Void</span></span>
       <span><b>001</b> <span data-i18n="statEmbers">EMBERS · Anfang 2027</span></span>
