@@ -584,12 +584,29 @@ booking = f'''<div class="band first">
       </div>
     </div>
     <div class="card">
+      <span class="kicker">press/embers</span>
+      <h3>EMBERS by EAZr</h3>
+      <img class="press-logo" src="press/embers-logo-1080.png" alt="EMBERS by EAZr Logo" width="1080" height="1080" loading="lazy">
+      <p data-i18n="pressEmbersText"></p>
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn ghost" href="press/embers-logo-1080.png" download data-i18n="pressLogoDark"></a>
+        <a class="btn ghost" href="press/embers-logo-transparent.png" download data-i18n="pressLogoClear"></a>
+      </div>
+    </div>
+  </div>
+  <div class="cards" style="margin-top:14px">
+    <div class="card">
       <span class="kicker">press/bio</span>
       <h3 data-i18n="pressBio"></h3>
       <p id="press-bio" data-i18n="pressBioText"></p>
       <button type="button" class="btn ghost" data-copy-from="press-bio" data-i18n="pressCopy"></button>
       <span class="kicker" style="margin-top:22px">press/photos</span>
       <p data-i18n="pressPhotosText"></p>
+    </div>
+    <div class="card">
+      <span class="kicker">press/facts</span>
+      <h3 data-i18n="pressFacts"></h3>
+      <dl class="press-facts" data-i18n="pressFactsList"></dl>
     </div>
   </div>
 </section>
