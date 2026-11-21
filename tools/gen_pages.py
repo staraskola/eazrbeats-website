@@ -385,7 +385,7 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra='', ph
     ig = f'\n      <a class="crew-ig" href="{insta}" target="_blank" rel="noopener">@{insta.rstrip("/").rsplit("/", 1)[-1]} ↗</a>' if insta else ''
     h3 = f'{alias} <span class="real-name">· {name}</span>' if alias else name
     return f'''    <div class="card crew">
-      {f'<img class="crew-photo" src="{photo}" alt="{alias or name} live an den Decks" width="720" height="900" loading="lazy">' if photo else f'<div class="avatar" aria-hidden="true">{name[0]}</div>'}
+      {f'<img class="avatar avatar-photo" src="{photo}" alt="{alias or name} live an den Decks" width="240" height="240" loading="lazy">' if photo else f'<div class="avatar" aria-hidden="true">{name[0]}</div>'}
       <span class="kicker">crew/0{n}</span>
       <h3>{h3}</h3>
       <span class="role" data-i18n="{role_key}">{role}</span>
@@ -603,7 +603,7 @@ booking = f'''<div class="band first">
       <p id="press-bio" data-i18n="pressBioText"></p>
       <button type="button" class="btn ghost" data-copy-from="press-bio" data-i18n="pressCopy"></button>
       <span class="kicker" style="margin-top:22px">press/photos</span>
-      <img class="press-photo" src="img/crew/noah.jpg" alt="NMB live an den Decks" width="720" height="900" loading="lazy">
+      <img class="press-photo" src="press/nmb-live.jpg" alt="NMB live an den Decks" width="1086" height="1448" loading="lazy">
       <p data-i18n="pressPhotosText"></p>
       <a class="btn ghost" href="press/nmb-live.jpg" download data-i18n="pressPhotoBtn"></a>
     </div>
