@@ -66,7 +66,7 @@ const T = {
     newsSending: 'Wird gesendet …',
     teaserAboutText: 'Münchner House- und Techno-Kollektiv. Wer wir sind und was wir vorhaben.',
     teaserAboutBtn: 'Über uns →',
-    teaserEventsText: 'EMBERS 001 Anfang 2027, dazu unsere Open-Air-Reihe, geplant für Sommer 2027.',
+    teaserEventsText: 'EMBERS 001 Anfang 2027, danach weitere Formate.',
     teaserEventsBtn: 'Zu den Events →',
     teaserNextBtn: 'Was kommt →',
 
@@ -113,8 +113,9 @@ const T = {
 
     // events
     eventsUpcoming: 'Coming up',
-    openAirKicker: 'Sommer 2027 · München',
-    openAirText: 'Geplant für Sommer 2027: unsere eigene Open-Air-Reihe mit House, Tech House, Afro und Latin House unter freiem Himmel. Name, Datum und Ort folgen.',
+    openAirTitle: 'Mehr kommt',
+    openAirKicker: '2027 · München',
+    openAirText: 'Nach EMBERS 001 geht es weiter. Weitere Formate sind in Arbeit, was genau, erfahrt ihr zuerst auf Instagram und im Newsletter.',
     sessionsKicker: 'Format · in Arbeit',
     sessionsText: 'Unsere House-Reihe: DJ-Sessions mit Host, alles, was House kann. 90 Minuten laufen live auf Twitch, die ganze Nacht gibt es nur vor Ort.',
     emCardBtn: 'Zur EMBERS-Seite →',
@@ -154,7 +155,7 @@ const T = {
     liveArchiveTitle: 'Archiv',
     liveArchiveText: 'Jede Session wird aufgenommen. Die ganzen Sets und Clips landen nach und nach hier.',
     // next (events + mixes)
-    nextText: 'Was als Nächstes kommt: EMBERS 001 Anfang 2027, unser Open Air im Sommer 2027 und die ersten Mixes.',
+    nextText: 'Was als Nächstes kommt: EMBERS 001 Anfang 2027, weitere Formate und die ersten Mixes.',
     // mixes
     mixesText: 'Sets, Mitschnitte und Studio-Sessions. Die ersten Mixes sind in Arbeit.',
     mixesSoonTitle: 'Mix 01 · in Arbeit',
@@ -183,7 +184,7 @@ const T = {
     pressLogoDark: 'Logo dunkel ↓',
     pressLogoClear: 'Logo freigestellt ↓',
     pressBio: 'Kurzbio',
-    pressBioText: 'EAZr Beats Collective ist ein House- und Techno-Kollektiv aus München, gegründet von Noah und Laura. Die Crew spielt House und Techno, mit Wiktor als Host und MC. Aktuell läuft EMBERS by EAZr, die House-Reihe des Kollektivs mit DJ-Sessions mit Host, live auf Twitch. Geplant: eine eigene Open-Air-Reihe im Sommer 2027.',
+    pressBioText: 'EAZr Beats Collective ist ein House- und Techno-Kollektiv aus München, gegründet von Noah und Laura. Die Crew spielt House und Techno, mit Wiktor als Host und MC. Aktuell läuft EMBERS by EAZr, die House-Reihe des Kollektivs mit DJ-Sessions mit Host, live auf Twitch.',
     pressCopy: 'Bio kopieren',
     pressPhotosText: 'Crew- und Eventfotos folgen.',
     notFoundText: 'Diese Seite gibt es nicht (mehr). Vielleicht ein alter Link?',
@@ -273,7 +274,7 @@ const T = {
     newsSending: 'Sending …',
     teaserAboutText: "A house and techno collective from Munich. Who we are and what we're building.",
     teaserAboutBtn: 'About us →',
-    teaserEventsText: 'EMBERS 001 in early 2027, plus our own open air series, planned for summer 2027.',
+    teaserEventsText: 'EMBERS 001 in early 2027, more formats after that.',
     teaserEventsBtn: 'See events →',
     teaserNextBtn: "What's next →",
 
@@ -318,8 +319,9 @@ const T = {
     joinCrewBtn: "Get in touch",
 
     eventsUpcoming: 'Coming up',
-    openAirKicker: 'Summer 2027 · Munich',
-    openAirText: "Planned for summer 2027: our own open air series with house, tech house, afro and latin house under the open sky. Name, date and venue TBA.",
+    openAirTitle: 'More to come',
+    openAirKicker: '2027 · Munich',
+    openAirText: "After EMBERS 001 we keep going. More formats are in the works, and you will hear about them first on Instagram and in the newsletter.",
     sessionsKicker: 'Format · in the works',
     sessionsText: "Our house series: hosted live DJ sessions, all things house. 90 minutes stream live on Twitch, the full night is only in the room.",
     emCardBtn: 'To the EMBERS page →',
@@ -358,7 +360,7 @@ const T = {
     liveCrewText: 'Guest DJs join from time to time.',
     liveArchiveTitle: 'Archive',
     liveArchiveText: 'Every session gets recorded. Full sets and clips will land here over time.',
-    nextText: "What's coming up: EMBERS 001 in early 2027, our open air in summer 2027 and the first mixes.",
+    nextText: "What's coming up: EMBERS 001 in early 2027, more formats and the first mixes.",
     mixesText: 'Sets, recordings and studio sessions. The first mixes are in the works.',
     mixesSoonTitle: 'Mix 01 · in the works',
     mixesSoonText: "Our first mix lands here once it's done. Until then, catch Road to Live on Instagram.",
@@ -385,7 +387,7 @@ const T = {
     pressLogoDark: 'Logo dark ↓',
     pressLogoClear: 'Logo transparent ↓',
     pressBio: 'Short bio',
-    pressBioText: "EAZr Beats Collective is a house and techno collective from Munich, founded by Noah and Laura. The crew plays house and techno, with Wiktor on the mic as host and MC. Live right now: EMBERS by EAZr, the collective's house series of hosted live DJ sessions, streamed on Twitch. Planned: an open air series in summer 2027.",
+    pressBioText: "EAZr Beats Collective is a house and techno collective from Munich, founded by Noah and Laura. The crew plays house and techno, with Wiktor on the mic as host and MC. Live right now: EMBERS by EAZr, the collective's house series of hosted live DJ sessions, streamed on Twitch.",
     pressCopy: 'Copy bio',
     pressPhotosText: 'Crew and event photos coming soon.',
     notFoundText: "This page doesn't exist (anymore). Maybe an old link?",

@@ -210,20 +210,20 @@ void_sec = f'''<div class="void-bg" aria-hidden="true">
 # Road to Live on the start page: newest first. Covers live in img/home/ (432x768).
 # Add a new episode at the front, drop the last one, and set RTL_LATEST.
 RTL_LATEST = '10'   # newest published episode (#06 was never posted, so no count)
-RTL_EPISODES = [
-    ('10', 'Echo Out', 'Kream, Alika → Charlotte de Witte, Ceres'),
-    ('09', 'Loop · Hot Cue', 'CELE ARRABAL, Jesús Fernández → Jerry Ropero, HUGEL'),
-    ('08', 'Hot Cues', 'James Hype, Volkoder → CamelPhat, Josh Gigante'),
-    ('07', 'Bass Swap', 'ARTBAT, Pete Tong → Kream'),
-    ('05', 'Live Edit', 'James Hype, Volkoder'),
+RTL_EPISODES = [   # (number, move, YouTube Short URL or '' for the Shorts overview)
+    ('10', 'Echo Out', 'https://youtube.com/shorts/EV69IoPA8js'),
+    ('09', 'Loop Tension', 'https://youtube.com/shorts/8NX3lii4PQg'),
+    ('08', 'Hot Cue', 'https://youtube.com/shorts/W2RPgeBsiQY'),
+    ('07', 'Long Blend', 'https://youtube.com/shorts/g9aQMDV4PnU'),
+    ('05', 'Live Edit', ''),
 ]
 # Artist reposts: shown as a small, factual tag on the episode card (only with Noah's OK).
 RTL_REPOSTS = {'09': 'CELE'}
 
-def rtl_card(n, move, tracks):
+def rtl_card(n, move, url):
     rp = RTL_REPOSTS.get(n)
     tag = f'<span class="rtl-repost">↻ <span data-i18n="rtlRepost">geteilt von</span> {rp}</span>' if rp else ''
-    return f'''      <a class="rtl-card" href="{YOUTUBE}/shorts" target="_blank" rel="noopener">
+    return f'''      <a class="rtl-card" href="{url or YOUTUBE + '/shorts'}" target="_blank" rel="noopener">
         <img src="img/home/rtl-{n}.jpg" alt="Road to Live {n}: {move}" width="432" height="768" loading="lazy">
         <span class="rtl-num">#{n}</span>{tag}
         <span class="rtl-move">{move}</span>
@@ -450,8 +450,8 @@ events = f'''<div class="band first">
       <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
     <div class="card">
-      <span class="kicker" data-i18n="openAirKicker">Sommer 2027 · München</span>
-      <h3>Open Air</h3>
+      <span class="kicker" data-i18n="openAirKicker">2027 · München</span>
+      <h3 data-i18n="openAirTitle">Mehr kommt</h3>
       <p data-i18n="openAirText"></p>
     </div>
   </div>
@@ -506,8 +506,8 @@ nextpage = f'''<div class="band first">
       <a class="btn ghost" href="embers" data-i18n="emCardBtn">Zur EMBERS-Seite →</a>
     </div>
     <div class="card">
-      <span class="kicker" data-i18n="openAirKicker">Sommer 2027 · München</span>
-      <h3>Open Air</h3>
+      <span class="kicker" data-i18n="openAirKicker">2027 · München</span>
+      <h3 data-i18n="openAirTitle">Mehr kommt</h3>
       <p data-i18n="openAirText"></p>
     </div>
     <div class="card">
@@ -730,7 +730,7 @@ live = f'''<div class="band first">
 </div>
 '''
 
-D = 'Munich house &amp; techno collective — new sets, sessions and shows dropping soon.'
+D = 'House &amp; techno collective from Munich: Road to Live, The Crate, THE VOID and EMBERS, our hosted house night.'
 files = {
   'index.html': page('start', 'EAZr Beats Collective · House &amp; Techno aus München', D, '', start, ['home.js', 'glitch.js']),
   'about.html': page('about', 'About · EAZr Beats Collective', 'Who we are: a house and techno collective from Munich.', 'about', about),
