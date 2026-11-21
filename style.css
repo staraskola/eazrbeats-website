@@ -786,3 +786,4 @@ body:not([data-page="embers"]) .sec-head h2.embers-title { -webkit-text-stroke: 
 @media (max-width: 420px) { .box { grid-template-columns: 1fr; } .box-pick { width: 100%; max-height: 260px; aspect-ratio: auto; object-position: center 30%; } }
 #story .lead { max-width: 640px; font-size: 15px; line-height: 1.8; }
 @media (max-width: 480px) { .stats-row { display: grid; grid-template-columns: 1fr 1fr; width: 100%; max-width: 340px; } .stats-row > span { font-size: 9px; padding: 8px; } }
+html.reveal-on .rtl-card.rv.in:hover { transform: translateY(-4px); }
