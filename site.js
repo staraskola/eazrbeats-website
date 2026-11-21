@@ -88,6 +88,8 @@ const T = {
     log2: 'Die ersten Crate Picks und Road-to-Live-Clips gehen raus.',
     log3: 'Erster Livestream an Halloween. Instagram bricht ihn mitten im Set ab.',
     log4: 'Wir ziehen zu Twitch. EMBERS by EAZr ist geboren.',
+    log5: 'Road to Live läuft zweimal pro Woche, der YouTube-Kanal startet.',
+    aboutRtlText: 'Zweimal pro Woche ein echter Übergang direkt vom Pult, ohne Schnitt und mit Fehlern. Auf YouTube, TikTok und Instagram.',
     logNext: 'EMBERS 001. Die erste Nacht in einem Raum voller Leute.',
     aboutWhatTitle: 'Was wir machen',
     aboutSetsTitle: 'DJ-Sets',
@@ -108,7 +110,7 @@ const T = {
     crewOpenTitle: 'Du?',
     crewOpenText: 'Wir suchen DJs aus München. Schick uns deinen Mix an kontakt@eazrbeats.de.',
     joinCrewTitle: 'Mitmachen',
-    joinCrewText: 'Wir suchen DJs, Leute für Foto und Video und Orte mit Außenfläche. Schreib uns einfach.',
+    joinCrewText: 'Wir suchen DJs, Leute für Foto und Video und Orte. Schreib uns einfach.',
     joinCrewBtn: 'Mail schreiben',
 
     // events
@@ -194,11 +196,11 @@ const T = {
     notFoundHome: 'Zur Startseite',
 
     // crate
-    crateSub: 'Tracks, die gerade in DJ-Sets laufen. House, Melodic, Afro, Latin. Jeder Eintrag ist belegt: durch zwei unabhängige Quellen oder eine starke wie Beatport-Charts, mehrere DJ-Sets oder ein Feature in der Fachpresse.',
+    crateSub: 'House, der gerade in DJ-Sets läuft. Jeder Track ist belegt, durch Charts, DJ-Sets oder Fachpresse.',
     crateFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Sonntag neu kuratiert',
     crateUpdatedLabel: 'zuletzt aktualisiert:',
     crateSpotify: '▶ Playlist auf Spotify hören',
-    voidSub: 'Die dunkle Seite der Crate: Techno, der gerade in DJ-Sets läuft. Peak Time, Melodic, Raw, Hypnotic, Hard. Jeder Eintrag ist belegt: durch zwei unabhängige Quellen oder eine starke wie Beatport-Charts, mehrere DJ-Sets oder ein Feature in der Fachpresse.',
+    voidSub: 'Die dunkle Seite der Crate: Techno, der gerade in DJ-Sets läuft. Jeder Track ist belegt, durch Charts, DJ-Sets oder Fachpresse.',
     voidDailyTag: 'täglich geprüft, belegt durch Charts, Sets oder Presse',
     voidDailyEmptyText: 'Die tägliche Recherche läuft. Rein kommt nur, was durch zwei unabhängige Quellen oder eine starke Quelle belegt ist.',
     voidFooter: 'Automatisch gepflegt · Daily Hot täglich geprüft · Weekly Hot jeden Samstag neu kuratiert',
@@ -298,6 +300,8 @@ const T = {
     log2: 'First Crate Picks and Road to Live clips go out.',
     log3: 'First live stream, on Halloween. Instagram cuts it mid-set.',
     log4: 'We move to Twitch. EMBERS by EAZr is born.',
+    log5: 'Road to Live runs twice a week, the YouTube channel goes live.',
+    aboutRtlText: 'Twice a week, one real transition straight from the decks, no cuts, mistakes included. On YouTube, TikTok and Instagram.',
     logNext: 'EMBERS 001. First night in a room full of people.',
     aboutWhatTitle: 'What we do',
     aboutSetsTitle: 'DJ sets',
@@ -318,7 +322,7 @@ const T = {
     crewOpenTitle: 'You?',
     crewOpenText: "We're looking for DJs in Munich. Send your mix to kontakt@eazrbeats.de.",
     joinCrewTitle: "Join us",
-    joinCrewText: "We're looking for DJs, photo and video people, and venues with outdoor space. Just drop us a line.",
+    joinCrewText: "We're looking for DJs, photo and video people, and venues. Just drop us a line.",
     joinCrewBtn: "Get in touch",
 
     eventsUpcoming: 'Coming up',
@@ -399,11 +403,11 @@ const T = {
     notFoundText: "This page doesn't exist (anymore). Maybe an old link?",
     notFoundHome: 'Back to home',
 
-    crateSub: "Tracks getting played in DJ sets right now. House, melodic, afro, latin. Every entry is backed up: by two independent sources or one strong one like the Beatport charts, several DJ sets or a feature in the music press.",
+    crateSub: "House getting played in DJ sets right now. Every track is backed up by charts, DJ sets or the music press.",
     crateFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Sunday",
     crateUpdatedLabel: 'last updated:',
     crateSpotify: '▶ Listen on Spotify',
-    voidSub: "The dark side of the Crate: techno getting played in DJ sets right now. Peak time, melodic, raw, hypnotic, hard. Every entry is backed up: by two independent sources or one strong one like the Beatport charts, several DJ sets or a feature in the music press.",
+    voidSub: "The dark side of the Crate: techno getting played in DJ sets right now. Every track is backed up by charts, DJ sets or the music press.",
     voidDailyTag: "checked daily, backed by charts, sets or press",
     voidDailyEmptyText: "We check every day, but a track only gets in once two independent sources or one strong source back it up.",
     voidFooter: "Updated automatically · Daily Hot checked every day · Weekly Hot curated every Saturday",
@@ -428,6 +432,9 @@ try { if (localStorage.getItem('eazr-lang') === 'en') lang = 'en'; } catch (e) {
 
 // Pages with dynamic content set this to re-render on language change.
 window.onLangChange = null;
+
+// footer year counts along by itself
+T.de.footerCopy = T.en.footerCopy = '© ' + new Date().getFullYear() + ' EAZR BEATS COLLECTIVE';
 
 function applyStaticI18n() {
   document.documentElement.lang = lang;
