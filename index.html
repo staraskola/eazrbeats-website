@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=e6e647b7">
+<link rel="stylesheet" href="style.css?v=e7b47da8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -99,16 +99,66 @@
 <section class="hero" id="top">
   <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
   <div class="badge"><span data-i18n="badgeComingSoon">LIVE LOADING</span><span class="cursor">_</span></div>
-  <p class="tagline" data-i18n="heroTagline">MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.</p>
-  <span class="prompt">eazr@beats:~$ follow --instagram</span>
+  <p class="tagline" data-i18n="heroTagline">HOUSE &amp; TECHNO AUS MÜNCHEN.</p>
   <div class="cta-row">
-    <a class="btn" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@eazrbeats</a>
+    <a class="btn" href="#road" data-i18n="ctaRoad">▶ Road to Live</a>
     <a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a>
     <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
+  </div>
+  <div class="stats" aria-label="Stand">
+    <span class="prompt">eazr@beats:~$ status</span>
+    <div class="stats-row">
+      <span><b>#10</b> <span data-i18n="statRtl">Road to Live</span></span>
+      <span><b id="stat-crate">–</b> <span data-i18n="statCrate">Tracks in der Crate</span></span>
+      <span><b id="stat-void">–</b> <span data-i18n="statVoid">Tracks im Void</span></span>
+      <span><b>001</b> <span data-i18n="statEmbers">EMBERS · Anfang 2027</span></span>
+    </div>
   </div>
 </section>
 
 <div class="band">
+<section class="sec" id="road">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@road:~$</span> ls -t ./road-to-live</span>
+    <h2>Road to Live</h2>
+  </div>
+  <p class="lead" data-i18n="rtlText">Vom Pult zu Hause auf die Bühne, und ihr schaut zu. Jeden Dienstag und Donnerstag ein Übergang, ein Trick, ein Moment. Fehler bleiben drin.</p>
+  <div class="rtl-row">
+      <a class="rtl-card" href="https://www.youtube.com/@eazrbeats/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-10.jpg" alt="Road to Live 10: Echo Out" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#10</span>
+        <span class="rtl-move">Echo Out</span>
+      </a>
+      <a class="rtl-card" href="https://www.youtube.com/@eazrbeats/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-09.jpg" alt="Road to Live 09: Loop · Hot Cue" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#09</span><span class="rtl-repost">↻ <span data-i18n="rtlRepost">geteilt von</span> CELE</span>
+        <span class="rtl-move">Loop · Hot Cue</span>
+      </a>
+      <a class="rtl-card" href="https://www.youtube.com/@eazrbeats/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-08.jpg" alt="Road to Live 08: Hot Cues" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#08</span>
+        <span class="rtl-move">Hot Cues</span>
+      </a>
+      <a class="rtl-card" href="https://www.youtube.com/@eazrbeats/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-07.jpg" alt="Road to Live 07: Bass Swap" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#07</span>
+        <span class="rtl-move">Bass Swap</span>
+      </a>
+      <a class="rtl-card" href="https://www.youtube.com/@eazrbeats/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-05.jpg" alt="Road to Live 05: Live Edit" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#05</span>
+        <span class="rtl-move">Live Edit</span>
+      </a>
+  </div>
+  <div class="cta-row" style="justify-content:flex-start">
+    <a class="btn" href="https://www.youtube.com/@eazrbeats" target="_blank" rel="noopener">YouTube ↗</a>
+    <a class="btn ghost" href="https://www.tiktok.com/@eazrbeats" target="_blank" rel="noopener">TikTok ↗</a>
+    <a class="btn ghost" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">Instagram ↗</a>
+  </div>
+</section>
+</div>
+
+<div class="band alt">
 <section class="sec" id="embers-001">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./next --session 001</span>
@@ -121,11 +171,11 @@
     <div class="event-info">
       <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
       <h3 class="event-date" data-i18n="eventDate">Anfang 2027 · München</h3>
-      <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
+      <p data-i18n="embersHomeText">Unsere House-Nacht: DJ-Sessions mit Host, live auf Twitch. Ein Raum, eine Nacht, und alle sind Teil davon.</p>
       <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
       <div class="cta-row" style="justify-content:flex-start">
         <a class="btn" href="embers" data-i18n="embersBtn">Zu EMBERS →</a>
-        <a class="btn ghost" href="https://www.instagram.com/eazrbeats/" target="_blank" rel="noopener">@eazrbeats ↗</a>
+        <a class="btn ghost" href="#join" data-i18n="embersNewsBtn">Newsletter</a>
       </div>
     </div>
   </div>
@@ -135,27 +185,49 @@
 <div class="band">
 <section class="sec" id="dig">
   <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> shuf -n1</span>
-    <h2>Dig the Crate</h2>
+    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> ls ./crate ./void</span>
+    <h2 data-i18n="boxesTitle">Zwei Kisten</h2>
   </div>
-  <p class="lead" data-i18n="digText">Genre wählen, Knopf drücken, neuen Track entdecken.</p>
-  <div class="dig-box">
-    <div class="genre-tabs dig-tabs" id="dig-tabs" role="group" aria-label="Genre"></div>
-    <div class="dig-out" id="dig-out" aria-live="polite"></div>
-    <button type="button" class="btn dig-btn" id="dig-btn"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+  <p class="lead" data-i18n="boxesText">Wir graben jede Woche: House landet in der Crate, Techno im Void. Beide wachsen mit und laufen auf Spotify.</p>
+  <div class="boxes">
+    <div class="box box-crate">
+      <img class="box-pick" src="img/home/crate-pick-04.jpg" alt="Crate Pick 04: R3HAB &amp; Korolova – Hi Hello" width="432" height="768" loading="lazy">
+      <div class="box-body">
+        <span class="kicker">House · <span id="n-crate">–</span> Tracks</span>
+        <h3 class="box-title">THE CRATE</h3>
+        <p data-i18n="boxCrateText">Melodic, Afro, Latin und klassischer House. Jeden Sonntag ein Crate Pick.</p>
+        <div class="box-dig" id="dig-crate" aria-live="polite"></div>
+        <div class="box-btns">
+          <button type="button" class="btn ghost" data-dig="crate"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+          <a class="btn" href="crate" data-i18n="ctaCrate">The Crate →</a>
+        </div>
+      </div>
+    </div>
+    <div class="box box-void">
+      <img class="box-pick" src="img/home/void-pick-05.jpg" alt="Void Pick 05: Charlotte de Witte &amp; NAVA – Azadi" width="432" height="768" loading="lazy">
+      <div class="box-body">
+        <span class="kicker">Techno · <span id="n-void">–</span> Tracks</span>
+        <h3 class="box-title">THE <span class="hollow">VOID</span></h3>
+        <p data-i18n="boxVoidText">Von melodisch bis Peak Time, roh und hypnotisch. Jeden Samstag ein Void Pick.</p>
+        <div class="box-dig" id="dig-void" aria-live="polite"></div>
+        <div class="box-btns">
+          <button type="button" class="btn ghost" data-dig="void"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+          <a class="btn" href="void" data-i18n="ctaVoid">The Void →</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </div>
 
 <div class="band alt">
-<section class="sec" id="fresh-sec">
+<section class="sec" id="story">
   <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> ls -t ./weekly-hot | head</span>
-    <h2 data-i18n="freshTitle">Frisch in der Crate</h2>
+    <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> tail -3 story.log</span>
+    <h2 data-i18n="homeStoryTitle">Wer wir sind</h2>
   </div>
-  <p class="lead" data-i18n="freshText">Die neuesten Weekly-Hot-Picks aus allen vier Genres.</p>
-  <div class="picks" id="fresh"></div>
-  <a class="btn ghost more" href="crate" data-i18n="freshAll">Ganze Crate →</a>
+  <p class="lead" data-i18n="homeStoryText">EAZr spricht man wie die Isar. Wir sind Münchner Kindl, die nicht länger auf die perfekte Nacht warten wollten. Also bauen wir sie selbst, Schritt für Schritt, und nehmen alle mit.</p>
+  <a class="btn ghost" href="about" data-i18n="homeStoryBtn">Unsere Geschichte →</a>
 </section>
 </div>
 
@@ -203,25 +275,6 @@
   </div>
 </section>
 </div>
-
-<div class="band alt">
-<section class="sec" id="more">
-  <div class="cards">
-    <div class="card">
-      <span class="kicker">whoami</span>
-      <h3>About</h3>
-      <p data-i18n="teaserAboutText">Münchner House- und Techno-Kollektiv. Wer wir sind und was wir vorhaben.</p>
-      <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
-    </div>
-    <div class="card">
-      <span class="kicker">ls ./next</span>
-      <h3>Next</h3>
-      <p data-i18n="teaserEventsText">Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.</p>
-      <a class="btn ghost" href="next" data-i18n="teaserNextBtn">Was kommt →</a>
-    </div>
-  </div>
-</section>
-</div>
 </main>
 
 <footer class="site-footer">
@@ -245,7 +298,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=f073b897"></script>
-<script src="home.js?v=38e1cd8b"></script>
+<script src="site.js?v=3b548855"></script>
+<script src="home.js?v=46a8a578"></script>
 <script src="glitch.js?v=62f97df7"></script>
 </body></html>

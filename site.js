@@ -18,7 +18,23 @@ const T = {
     footerKontakt: "KONTAKT",
     kontaktTitle: "Kontakt",
     badgeComingSoon: 'LIVE LOADING',
-    heroTagline: 'MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.',
+    heroTagline: 'HOUSE &amp; TECHNO AUS MÜNCHEN. WIR ÜBEN ÖFFENTLICH, GRABEN NACH TRACKS UND BAUEN UNSERE EIGENE NACHT.',
+    ctaRoad: '▶ Road to Live',
+    statRtl: 'Road to Live',
+    statCrate: 'Tracks in der Crate',
+    statVoid: 'Tracks im Void',
+    statEmbers: 'EMBERS · Anfang 2027',
+    rtlText: 'Vom Pult zu Hause auf die Bühne, und ihr schaut zu. Jeden Dienstag und Donnerstag ein Übergang, ein Trick, ein Moment. Fehler bleiben drin.',
+    rtlRepost: 'geteilt von',
+    embersHomeText: 'Unsere House-Nacht: DJ-Sessions mit Host, live auf Twitch. Ein Raum, eine Nacht, und alle sind Teil davon.',
+    embersNewsBtn: 'Newsletter ↓',
+    boxesTitle: 'Zwei Kisten',
+    boxesText: 'Wir graben jede Woche: House landet in der Crate, Techno im Void. Beide wachsen mit und laufen auf Spotify.',
+    boxCrateText: 'Melodic, Afro, Latin und klassischer House. Jeden Sonntag ein Crate Pick.',
+    boxVoidText: 'Von melodisch bis Peak Time, roh und hypnotisch. Jeden Samstag ein Void Pick.',
+    homeStoryTitle: 'Wer wir sind',
+    homeStoryText: 'EAZr spricht man wie die Isar. Wir sind Münchner Kindl, die nicht länger auf die perfekte Nacht warten wollten. Also bauen wir sie selbst, Schritt für Schritt, und nehmen alle mit.',
+    homeStoryBtn: 'Unsere Geschichte →',
     ctaCrate: 'The Crate →',
 
     // start page
@@ -210,7 +226,23 @@ const T = {
     footerKontakt: "CONTACT",
     kontaktTitle: "Contact",
     badgeComingSoon: 'LIVE LOADING',
-    heroTagline: "MUNICH HOUSE &amp; TECHNO — NEW SETS, SESSIONS AND SHOWS DROPPING SOON.",
+    heroTagline: "HOUSE &amp; TECHNO FROM MUNICH. WE PRACTICE IN PUBLIC, DIG FOR TRACKS AND BUILD OUR OWN NIGHT.",
+    ctaRoad: '▶ Road to Live',
+    statRtl: 'Road to Live',
+    statCrate: 'tracks in the Crate',
+    statVoid: 'tracks in the Void',
+    statEmbers: 'EMBERS · early 2027',
+    rtlText: 'From the home setup to the stage, and you get to watch. Every Tuesday and Thursday one transition, one trick, one moment. Mistakes stay in.',
+    rtlRepost: 'shared by',
+    embersHomeText: 'Our house night: hosted live DJ sessions, streamed on Twitch. One room, one night, and everyone is part of it.',
+    embersNewsBtn: 'Newsletter ↓',
+    boxesTitle: 'Two crates',
+    boxesText: 'We dig every week: house goes into the Crate, techno into the Void. Both keep growing and play on Spotify.',
+    boxCrateText: 'Melodic, Afro, Latin and classic house. A new Crate Pick every Sunday.',
+    boxVoidText: 'From melodic to peak time, raw and hypnotic. A new Void Pick every Saturday.',
+    homeStoryTitle: 'Who we are',
+    homeStoryText: "Say EAZr in English and you say Isar, Munich's river. We're Munich kids who got tired of waiting for the perfect night. So we're building it ourselves, step by step, and bringing everyone along.",
+    homeStoryBtn: 'Our story →',
     ctaCrate: 'The Crate →',
 
     freshTitle: 'Fresh in the Crate',
@@ -519,7 +551,7 @@ document.querySelectorAll('[data-news-form]').forEach(form => {
 (function () {
   if (document.body.dataset.page === 'embers' || !('IntersectionObserver' in window)) return;
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.band .sec-head, .band .lead, .band .sub-h, .card, .pick, .dig-box, .booking-box, .series-tile, .event-promo');
+  const els = document.querySelectorAll('.band .sec-head, .band .lead, .band .sub-h, .card, .pick, .dig-box, .booking-box, .series-tile, .event-promo, .rtl-card, .box');
   if (!els.length) return;
   document.documentElement.classList.add('reveal-on');
   const io = new IntersectionObserver(entries => {
