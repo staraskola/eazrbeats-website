@@ -295,7 +295,7 @@ start = f'''<section class="hero" id="top">
 <section class="sec" id="dig">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> ls ./crate ./void</span>
-    <h2 data-i18n="boxesTitle">Zwei Kisten</h2>
+    <h2 data-i18n="boxesTitle">Crate &amp; Void</h2>
   </div>
   <p class="lead" data-i18n="boxesText"></p>
   <div class="boxes">
