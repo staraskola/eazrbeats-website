@@ -207,19 +207,67 @@ void_sec = f'''<div class="void-bg" aria-hidden="true">
 '''
 
 # ---------------- start ----------------
+# Road to Live on the start page: newest first. Covers live in img/home/ (432x768).
+# Add a new episode at the front; keep about 5.
+RTL_COUNT = 12   # episodes released so far (shown in the hero stats)
+RTL_EPISODES = [
+    ('12', 'Breakdown → Drop', 'One take'),
+    ('11', 'Bass Swap', ''),
+    ('10', 'Echo Out', 'Kream, Alixa → Charlotte de Witte, Ceres'),
+    ('09', 'Loop · Hot Cue', 'CELE ARRABAL, Jesus Fernández → Jerry Ropero, HUGEL'),
+    ('08', 'First Drop', 'James Hype, Volkoder → Camelphat, Josh Gigante'),
+]
+# Artist reposts: shown as a small, factual tag on the episode card (only with Noah's OK).
+RTL_REPOSTS = {'09': 'CELE'}
+
+def rtl_card(n, move, tracks):
+    rp = RTL_REPOSTS.get(n)
+    tag = f'<span class="rtl-repost">↻ <span data-i18n="rtlRepost">geteilt von</span> {rp}</span>' if rp else ''
+    return f'''      <a class="rtl-card" href="{YOUTUBE}/shorts" target="_blank" rel="noopener">
+        <img src="img/home/rtl-{n}.jpg" alt="Road to Live {n}: {move}" width="432" height="768" loading="lazy">
+        <span class="rtl-num">#{n}</span>{tag}
+        <span class="rtl-move">{move}</span>
+      </a>
+'''
+
 start = f'''<section class="hero" id="top">
   <h1 class="sr-only">EAZr Beats Collective · House &amp; Techno aus München</h1>
   <div class="badge"><span data-i18n="badgeComingSoon">LIVE LOADING</span><span class="cursor">_</span></div>
-  <p class="tagline" data-i18n="heroTagline">MÜNCHNER HOUSE &amp; TECHNO — NEUE SETS, SESSIONS UND SHOWS FOLGEN BALD.</p>
-  <span class="prompt">eazr@beats:~$ follow --instagram</span>
+  <p class="tagline" data-i18n="heroTagline">HOUSE &amp; TECHNO AUS MÜNCHEN.</p>
   <div class="cta-row">
-    <a class="btn" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats</a>
+    <a class="btn" href="#road" data-i18n="ctaRoad">▶ Road to Live</a>
     <a class="btn ghost" href="crate" data-i18n="ctaCrate">The Crate →</a>
     <a class="btn ghost" href="void" data-i18n="ctaVoid">The Void →</a>
+  </div>
+  <div class="stats" aria-label="Stand">
+    <span class="prompt">eazr@beats:~$ status</span>
+    <div class="stats-row">
+      <span><b>{RTL_COUNT}</b> <span data-i18n="statRtl">× Road to Live</span></span>
+      <span><b id="stat-crate">–</b> <span data-i18n="statCrate">Tracks in der Crate</span></span>
+      <span><b id="stat-void">–</b> <span data-i18n="statVoid">Tracks im Void</span></span>
+      <span><b>001</b> <span data-i18n="statEmbers">EMBERS · Anfang 2027</span></span>
+    </div>
   </div>
 </section>
 
 <div class="band">
+<section class="sec" id="road">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@road:~$</span> ls -t ./road-to-live</span>
+    <h2>Road to Live</h2>
+  </div>
+  <p class="lead" data-i18n="rtlText"></p>
+  <div class="rtl-row">
+{''.join(rtl_card(*e) for e in RTL_EPISODES)}  </div>
+  <div class="cta-row" style="justify-content:flex-start">
+    <a class="btn" href="{YOUTUBE}" target="_blank" rel="noopener">YouTube ↗</a>
+    <a class="btn ghost" href="{TIKTOK}" target="_blank" rel="noopener">TikTok ↗</a>
+    <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">Instagram ↗</a>
+  </div>
+</section>
+</div>
+
+<div class="band alt">
 <section class="sec" id="embers-001">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@embers:~$</span> ./next --session 001</span>
@@ -232,11 +280,11 @@ start = f'''<section class="hero" id="top">
     <div class="event-info">
       <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
       <h3 class="event-date" data-i18n="eventDate">Anfang 2027 · München</h3>
-      <p data-i18n="eventTimes">Einlass 20:00 · Stream ab 21:30 auf Twitch</p>
+      <p data-i18n="embersHomeText"></p>
       <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
       <div class="cta-row" style="justify-content:flex-start">
         <a class="btn" href="embers" data-i18n="embersBtn">Zu EMBERS →</a>
-        <a class="btn ghost" href="{INSTA}" target="_blank" rel="noopener">@eazrbeats ↗</a>
+        <a class="btn ghost" href="#join" data-i18n="embersNewsBtn">Newsletter</a>
       </div>
     </div>
   </div>
@@ -246,27 +294,49 @@ start = f'''<section class="hero" id="top">
 <div class="band">
 <section class="sec" id="dig">
   <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> shuf -n1</span>
-    <h2>Dig the Crate</h2>
+    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> ls ./crate ./void</span>
+    <h2 data-i18n="boxesTitle">Zwei Kisten</h2>
   </div>
-  <p class="lead" data-i18n="digText">Genre wählen, Knopf drücken, neuen Track entdecken.</p>
-  <div class="dig-box">
-    <div class="genre-tabs dig-tabs" id="dig-tabs" role="group" aria-label="Genre"></div>
-    <div class="dig-out" id="dig-out" aria-live="polite"></div>
-    <button type="button" class="btn dig-btn" id="dig-btn"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+  <p class="lead" data-i18n="boxesText"></p>
+  <div class="boxes">
+    <div class="box box-crate">
+      <img class="box-pick" src="img/home/crate-pick-04.jpg" alt="Crate Pick 04: R3HAB &amp; Korolova – Hi Hello" width="432" height="768" loading="lazy">
+      <div class="box-body">
+        <span class="kicker">House · <span id="n-crate">–</span> Tracks</span>
+        <h3 class="box-title">THE CRATE</h3>
+        <p data-i18n="boxCrateText"></p>
+        <div class="box-dig" id="dig-crate" aria-live="polite"></div>
+        <div class="box-btns">
+          <button type="button" class="btn ghost" data-dig="crate"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+          <a class="btn" href="crate" data-i18n="ctaCrate">The Crate →</a>
+        </div>
+      </div>
+    </div>
+    <div class="box box-void">
+      <img class="box-pick" src="img/home/void-pick-05.jpg" alt="Void Pick 05: Charlotte de Witte &amp; NAVA – Azadi" width="432" height="768" loading="lazy">
+      <div class="box-body">
+        <span class="kicker">Techno · <span id="n-void">–</span> Tracks</span>
+        <h3 class="box-title">THE <span class="hollow">VOID</span></h3>
+        <p data-i18n="boxVoidText"></p>
+        <div class="box-dig" id="dig-void" aria-live="polite"></div>
+        <div class="box-btns">
+          <button type="button" class="btn ghost" data-dig="void"><span data-i18n="digBtn">Shuffle</span> ⟳</button>
+          <a class="btn" href="void" data-i18n="ctaVoid">The Void →</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 </div>
 
 <div class="band alt">
-<section class="sec" id="fresh-sec">
+<section class="sec" id="story">
   <div class="sec-head">
-    <span class="cmd-line"><span class="prompt">eazr@crate:~$</span> ls -t ./weekly-hot | head</span>
-    <h2 data-i18n="freshTitle">Frisch in der Crate</h2>
+    <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> tail -3 story.log</span>
+    <h2 data-i18n="homeStoryTitle">Wer wir sind</h2>
   </div>
-  <p class="lead" data-i18n="freshText">Die neuesten Weekly-Hot-Picks aus allen vier Genres.</p>
-  <div class="picks" id="fresh"></div>
-  <a class="btn ghost more" href="crate" data-i18n="freshAll">Ganze Crate →</a>
+  <p class="lead" data-i18n="homeStoryText"></p>
+  <a class="btn ghost" href="about" data-i18n="homeStoryBtn">Unsere Geschichte →</a>
 </section>
 </div>
 
@@ -300,25 +370,6 @@ start = f'''<section class="hero" id="top">
       <h3>Newsletter</h3>
       <p data-i18n="joinNewsText"></p>
       {news_form('home')}
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="band alt">
-<section class="sec" id="more">
-  <div class="cards">
-    <div class="card">
-      <span class="kicker">whoami</span>
-      <h3>About</h3>
-      <p data-i18n="teaserAboutText">Münchner House- und Techno-Kollektiv. Wer wir sind und was wir vorhaben.</p>
-      <a class="btn ghost" href="about" data-i18n="teaserAboutBtn">Über uns →</a>
-    </div>
-    <div class="card">
-      <span class="kicker">{'ls ./events' if SPLIT_NEXT else 'ls ./next'}</span>
-      <h3>{'Events' if SPLIT_NEXT else 'Next'}</h3>
-      <p data-i18n="teaserEventsText">Eigene Open-Air-Reihe ab Sommer 2027, dazu gefilmte Sessions.</p>
-      <a class="btn ghost" href="{'events' if SPLIT_NEXT else 'next'}" data-i18n="{'teaserEventsBtn' if SPLIT_NEXT else 'teaserNextBtn'}"></a>
     </div>
   </div>
 </section>
