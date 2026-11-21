@@ -191,7 +191,8 @@ const T = {
     pressFacts: 'Steckbrief',
     pressFactsList: '<dt>Aus</dt><dd>München</dd><dt>Sound</dt><dd>Melodic, Afro, Latin und Tech House, dazu Techno von melodisch bis Peak Time</dd><dt>Formate</dt><dd>Road to Live · The Crate · THE VOID · EMBERS</dd><dt>Crew</dt><dd>Laura (Gründerin, Promo) · NMB (Gründer, DJ) · WIVI (Host, MC)</dd><dt>Kanäle</dt><dd>Instagram · TikTok · YouTube · Twitch · Spotify</dd>',
     pressEmbersText: 'Logo unserer House-Reihe, auf dunklem Grund und freigestellt. EMBERS immer mit diesem Logo zeigen.',
-    pressPhotosText: 'Crew- und Eventfotos folgen.',
+    pressPhotosText: 'NMB live an den Decks. Weitere Crew- und Eventfotos folgen.',
+    pressPhotoBtn: 'Foto NMB ↓',
     notFoundText: 'Diese Seite gibt es nicht (mehr). Vielleicht ein alter Link?',
     notFoundHome: 'Zur Startseite',
 
@@ -399,7 +400,8 @@ const T = {
     pressFacts: 'Fact sheet',
     pressFactsList: '<dt>From</dt><dd>Munich</dd><dt>Sound</dt><dd>Melodic, Afro, Latin and tech house, plus techno from melodic to peak time</dd><dt>Formats</dt><dd>Road to Live · The Crate · THE VOID · EMBERS</dd><dt>Crew</dt><dd>Laura (founder, promo) · NMB (founder, DJ) · WIVI (host, MC)</dd><dt>Channels</dt><dd>Instagram · TikTok · YouTube · Twitch · Spotify</dd>',
     pressEmbersText: 'Logo of our house series, on dark and transparent. Please always show EMBERS with this logo.',
-    pressPhotosText: 'Crew and event photos coming soon.',
+    pressPhotosText: 'NMB live on the decks. More crew and event photos coming soon.',
+    pressPhotoBtn: 'Photo NMB ↓',
     notFoundText: "This page doesn't exist (anymore). Maybe an old link?",
     notFoundHome: 'Back to home',
 

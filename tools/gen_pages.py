@@ -381,11 +381,11 @@ start = f'''<section class="hero" id="top">
 # EMBERS brand mark: wherever EMBERS is named, the logo goes with it (Noah 07.11.2026: brand recognition).
 EMBERS_MARK = '<a class="embers-mark" href="embers" aria-label="EMBERS by EAZr"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy"><span>by EAZr</span></a>'
 
-def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra=''):
+def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra='', photo=''):
     ig = f'\n      <a class="crew-ig" href="{insta}" target="_blank" rel="noopener">@{insta.rstrip("/").rsplit("/", 1)[-1]} ↗</a>' if insta else ''
     h3 = f'{alias} <span class="real-name">· {name}</span>' if alias else name
     return f'''    <div class="card crew">
-      <div class="avatar" aria-hidden="true">{name[0]}</div>
+      {f'<img class="crew-photo" src="{photo}" alt="{alias or name} live an den Decks" width="720" height="900" loading="lazy">' if photo else f'<div class="avatar" aria-hidden="true">{name[0]}</div>'}
       <span class="kicker">crew/0{n}</span>
       <h3>{h3}</h3>
       <span class="role" data-i18n="{role_key}">{role}</span>
@@ -417,7 +417,7 @@ about = f'''<div class="band first">
 {STORY}
   <h2 class="sub-h" data-i18n="crewTitle">Crew</h2>
   <div class="cards">
-{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK)}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}  </div>
+{crew(1, 'Laura', 'roleLaura', 'Gründerin · Social Media · Promo', 'bioLaura', '', '', INSTA_LAURA)}{crew(2, 'Noah', 'roleNoah', 'Gründer · DJ · Design', 'bioNoah', '', 'NMB', INSTA_NMB, EMBERS_MARK, 'img/crew/noah.jpg')}{crew(3, 'Wiktor', 'roleWiktor', 'Host · MC · Live', 'bioWiktor', '', 'WIVI', INSTA_WIVI, EMBERS_MARK)}  </div>
 
   <h2 class="sub-h" data-i18n="aboutWhatTitle">Was wir machen</h2>
   <div class="cards two">
@@ -603,7 +603,9 @@ booking = f'''<div class="band first">
       <p id="press-bio" data-i18n="pressBioText"></p>
       <button type="button" class="btn ghost" data-copy-from="press-bio" data-i18n="pressCopy"></button>
       <span class="kicker" style="margin-top:22px">press/photos</span>
+      <img class="press-photo" src="img/crew/noah.jpg" alt="NMB live an den Decks" width="720" height="900" loading="lazy">
       <p data-i18n="pressPhotosText"></p>
+      <a class="btn ghost" href="press/nmb-live.jpg" download data-i18n="pressPhotoBtn"></a>
     </div>
     <div class="card">
       <span class="kicker">press/facts</span>
