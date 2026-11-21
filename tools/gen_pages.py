@@ -18,6 +18,7 @@ SPOTIFY = 'https://open.spotify.com/playlist/4KcjtXLWTB6lq4JP8tt04K'  # The Crat
 SPOTIFY_VOID = 'https://open.spotify.com/playlist/4YOP1Gd9jrWMfuIGG2Y8Sl'  # THE VOID playlist
 TIKTOK = 'https://www.tiktok.com/@eazrbeats'  # profile URL, goes into the search-engine profile list once set
 TWITCH = 'https://www.twitch.tv/eazrbeats'  # EMBERS live streams
+YOUTUBE = 'https://www.youtube.com/@eazrbeats'  # Road to Live videos + Shorts
 INSTA_EMBERS = 'https://www.instagram.com/eazrembers/'
 INSTA_LAURA = 'https://www.instagram.com/laurajanevucak/'
 INSTA_NMB = 'https://www.instagram.com/nmb.muc/'
@@ -53,7 +54,7 @@ def news_form(uid):
 
 # Structured data for search engines (start page only): who we are and where else we are.
 # Google uses sameAs to connect the site with the social profiles.
-SAME_AS = [u for u in (INSTA, TIKTOK, TWITCH, SPOTIFY, SPOTIFY_VOID) if u]
+SAME_AS = [u for u in (INSTA, TIKTOK, TWITCH, YOUTUBE, SPOTIFY, SPOTIFY_VOID) if u]
 SCHEMA = '''<script type="application/ld+json">
 {
   "@context": "https://schema.org",
