@@ -1,6 +1,78 @@
 {
- "exported": "2026-11-21",
+ "exported": "2026-11-22",
  "tracks": [
+  {
+   "title": "All Gas",
+   "artist": "ARVIII, HMR(kz), Fifty(kz)",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-22",
+   "source": "Beatport Afro House Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Treibender Afro-Groove, schon auf Platz 3.",
+   "noteEn": "Driving afro groove, already at number three.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#3, via BeatTracker, 21.11.)",
+     "sourceUrl": "https://beattracker.com/categories/afro-house/89"
+    }
+   ]
+  },
+  {
+   "title": "Feel The Power",
+   "artist": "IDEMI",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-22",
+   "source": "Beatport House Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Treibender House-Opener, aktuell Top 3 bei Beatport.",
+   "noteEn": "Driving house opener, currently top 3 on Beatport.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#3, via BeatTracker, 21.11.)",
+     "sourceUrl": "https://beattracker.com/categories/house/5"
+    }
+   ]
+  },
+  {
+   "title": "Jaleo",
+   "artist": "Javi Torres, El Chuape, MichaelBM",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-22",
+   "source": "Beatport Latin Electronic Top 100 (#1)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Ganz oben in Latin Electronic: perkussiver Floor-Hit.",
+   "noteEn": "Top of Latin Electronic right now: a percussive floor hit.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#1, via BeatTracker, 21.11.)",
+     "sourceUrl": "https://beattracker.com/categories/latin-electronic/111"
+    }
+   ]
+  },
+  {
+   "title": "O Superman",
+   "artist": "M.A.N.D.Y., Booka Shade, Laurie Anderson",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-22",
+   "source": "Beatport Melodic House & Techno Top 100 (#10)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Laurie Andersons Klassiker, neu als Melodic House.",
+   "noteEn": "Laurie Anderson's classic, reborn as melodic house.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#10, via BeatTracker, 20.11.)",
+     "sourceUrl": "https://beattracker.com/categories/melodic-house-techno/90"
+    },
+    {
+     "source": "Resident Advisor (M.A.N.D.Y. vs. Booka Shade – O Superman Remixes)",
+     "sourceUrl": "https://ra.co/reviews/5566"
+    }
+   ]
+  },
   {
    "title": "Hold On",
    "artist": "Frankey & Sandrino",
@@ -26,7 +98,7 @@
    "title": "Running Out",
    "artist": "Alex Wann, David Mackay, briqs",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-20",
    "source": "Techno Airlines Top 5 (Beatport MH&T Top 10)",
    "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week",
@@ -36,6 +108,10 @@
     {
      "source": "Techno Airlines Top 5 (9.–15.11.): Beatport Melodic House & Techno Top 10",
      "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#3, 20.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
     }
    ]
   },
