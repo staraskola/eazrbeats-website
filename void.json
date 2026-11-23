@@ -1,6 +1,95 @@
 {
- "exported": "2026-11-21",
+ "exported": "2026-11-23",
  "tracks": [
+  {
+   "title": "DON'T BELIEVE IT (Colyn Extended Remix)",
+   "artist": "Absolutely, John Summit, Colyn",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "EDMTunes",
+   "sourceUrl": "https://www.edmtunes.com/2026/11/20/john-summit-dont-believe-it-remixes-package/",
+   "note": "Colyns Remix macht aus dem Summit-Hit hypnotischen Melodic Techno.",
+   "noteEn": "Colyn turns the Summit hit into hypnotic melodic techno.",
+   "confirmations": [
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/20/john-summit-dont-believe-it-remixes-package/"
+    },
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#19, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/melodic-house-techno/90"
+    }
+   ]
+  },
+  {
+   "title": "The Afterlife (Extended Mix)",
+   "artist": "Seth Troxler, Joseph Capriati, TB-203",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6)",
+   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
+   "note": "Frisch eingestiegen: rollender Peak-Time-Groove mit Old-School-Seele.",
+   "noteEn": "Fresh entry: rolling peak-time groove with old-school soul.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#6, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    }
+   ]
+  },
+  {
+   "title": "Dontcha",
+   "artist": "Victor Ruiz, HNGT",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8)",
+   "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6",
+   "note": "Drumcode-Neuheit, die direkt nach vorne drückt.",
+   "noteEn": "Fresh Drumcode weapon that pushes straight ahead.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Top 100 (#8, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-peak-time-driving/6"
+    }
+   ]
+  },
+  {
+   "title": "Whisper",
+   "artist": "Alaricø",
+   "genre": "raw-deep-hypnotic",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#5)",
+   "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92",
+   "note": "Klockworks-Trance im Tunnel: leise, hypnotisch, unaufhaltsam.",
+   "noteEn": "Klockworks tunnel trance: hushed, hypnotic, relentless.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Raw / Deep / Hypnotic) Top 100 (#5, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/techno-raw-deep-hypnotic/92"
+    }
+   ]
+  },
+  {
+   "title": "Memories (Schranz Rework)",
+   "artist": "Circo",
+   "genre": "hard-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Hard Techno Top 100 (#3)",
+   "sourceUrl": "https://beattracker.com/categories/hard-techno/2",
+   "note": "Schranz-Rework, das gnadenlos durchprügelt.",
+   "noteEn": "Schranz rework that hammers without mercy.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (#3, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/hard-techno/2"
+    }
+   ]
+  },
   {
    "title": "Space Date (HNTR & KASIA Remix)",
    "artist": "Adam Beyer, Green Velvet, Layton Giordani",
