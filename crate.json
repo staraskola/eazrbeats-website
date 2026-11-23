@@ -1,6 +1,61 @@
 {
- "exported": "2026-11-22",
+ "exported": "2026-11-23",
  "tracks": [
+  {
+   "title": "Lost (In All The Lights)",
+   "artist": "Cassian",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Melodic House & Techno Top 100 (#9)",
+   "sourceUrl": "https://beattracker.com/categories/melodic-house-techno/90",
+   "note": "Dunkel-träumerischer Melodic House, ganz frisch.",
+   "noteEn": "Dark, dreamy melodic house, fresh off the press.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#9, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/melodic-house-techno/90"
+    },
+    {
+     "source": "Hit Channel (EDM New Music Friday, 20.11.)",
+     "sourceUrl": "https://hit-channel.com/edm-new-music-friday-20-11-2026/"
+    }
+   ]
+  },
+  {
+   "title": "Burn",
+   "artist": "RBØR",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Afro House Top 100 (#5)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Treibender Afro-House, frisch in den Top 5.",
+   "noteEn": "Driving afro house, fresh in the top five.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#5, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/afro-house/89"
+    }
+   ]
+  },
+  {
+   "title": "BOOM",
+   "artist": "Wrigley, Badrops, DAVEE (DE)",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-23",
+   "source": "Beatport Afro House Top 100 (#6)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Drei Produzenten, ein Afro-Banger in den Top 10.",
+   "noteEn": "Three producers, one afro banger in the top ten.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#6, via BeatTracker, 22.11.)",
+     "sourceUrl": "https://beattracker.com/categories/afro-house/89"
+    }
+   ]
+  },
   {
    "title": "All Gas",
    "artist": "ARVIII, HMR(kz), Fifty(kz)",
@@ -56,7 +111,7 @@
    "title": "O Superman",
    "artist": "M.A.N.D.Y., Booka Shade, Laurie Anderson",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-22",
    "source": "Beatport Melodic House & Techno Top 100 (#10)",
    "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
@@ -70,6 +125,27 @@
     {
      "source": "Resident Advisor (M.A.N.D.Y. vs. Booka Shade – O Superman Remixes)",
      "sourceUrl": "https://ra.co/reviews/5566"
+    }
+   ]
+  },
+  {
+   "title": "In the Moment (Adriatique Extended Remix)",
+   "artist": "RÜFÜS DU SOL, Adriatique",
+   "genre": "melodic-house-techno",
+   "tier": "weekly",
+   "dateAdded": "2026-11-22",
+   "source": "Beatport Melodic House & Techno Top 100 (#17)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Adriatique machen aus RÜFÜS DU SOL groovigen Melodic House.",
+   "noteEn": "Adriatique turn RÜFÜS DU SOL into groovy melodic house.",
+   "confirmations": [
+    {
+     "source": "Beatportal",
+     "sourceUrl": "https://www.beatportal.com/articles/887950-rufus-du-sol-inhale-exhale-remix-album-adriatique"
+    },
+    {
+     "source": "When We Dip",
+     "sourceUrl": "https://whenwedip.com/2025/04/review-adriatique-rufus-du-sol-remix/"
     }
    ]
   },
@@ -119,7 +195,7 @@
    "title": "House Music Freak (Extended Mix)",
    "artist": "Solardo",
    "genre": "house",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-20",
    "source": "Mixmag Caribbean",
    "sourceUrl": "https://mixmagcaribbean.com/read/solardo-make-their-the-cross-debut-with-new-single-house-music-freak-music",
@@ -140,7 +216,7 @@
    "title": "Notorious Thugs (feat. Bone Thugs-n-Harmony) (Solomun Remix, Extended)",
    "artist": "The Notorious B.I.G., Bone Thugs-n-Harmony, Solomun",
    "genre": "melodic-house-techno",
-   "tier": "daily",
+   "tier": "weekly",
    "dateAdded": "2026-11-20",
    "source": "DJ Mag",
    "sourceUrl": "https://djmag.com/news/listen-solomuns-remix-of-notorious-bigs-notorious-thugs",
