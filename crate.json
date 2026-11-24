@@ -1,6 +1,69 @@
 {
- "exported": "2026-11-23",
+ "exported": "2026-11-24",
  "tracks": [
+  {
+   "title": "In The Light",
+   "artist": "HILLS (US)",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-24",
+   "source": "Beatport House Top 100 (#12)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Insomniac-Signing mit warmem, treibendem House-Vibe.",
+   "noteEn": "Insomniac signing with a warm, driving house vibe.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#12)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "FindYourSounds",
+     "sourceUrl": "https://findyoursounds.com/hills-releases-new-single-in-the-light-via-insomniac-records/"
+    }
+   ]
+  },
+  {
+   "title": "Motel Room (feat. jasper.wav)",
+   "artist": "JUNO (DE), jasper.wav",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-24",
+   "source": "Beatport Afro House Top 100 (#9)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Spinnin'-Deep-Release, groovy und tanzbar.",
+   "noteEn": "Spinnin' Deep release, groovy and danceable.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#9)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    },
+    {
+     "source": "Tanzgemeinschaft",
+     "sourceUrl": "https://www.tanzgemeinschaft.com/juno-de-lands-on-spinnin-deep-with-motel-room-ft-jasper-wav-33656"
+    }
+   ]
+  },
+  {
+   "title": "El Trompetista (Radio Edit)",
+   "artist": "Toni Gómez, dddancos",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-24",
+   "source": "Beatport Latin Electronic Top 100 (#3)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Trompeten-Hook über treibendem Latin-House-Groove.",
+   "noteEn": "Trumpet hook over a driving Latin house groove.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100"
+    },
+    {
+     "source": "Beatport Track Page (Nervous Records)",
+     "sourceUrl": "https://www.beatport.com/track/el-trompetista/29740709"
+    }
+   ]
+  },
   {
    "title": "Lost (In All The Lights)",
    "artist": "Cassian",
