@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-23",
+ "exported": "2026-11-24",
  "tracks": [
+  {
+   "title": "Love Parade (Extended Mix)",
+   "artist": "Da Hool, Cassian, YOTTO",
+   "genre": "melodic-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-24",
+   "source": "Beatport Melodic House & Techno Top 100 (#24, Afterlife Records)",
+   "sourceUrl": "https://www.beatport.com/track/love-parade/21774346",
+   "note": "Loveparade-Klassiker als dunkler Afterlife-Rework.",
+   "noteEn": "The Loveparade classic reworked into dark Afterlife style.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#24)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    },
+    {
+     "source": "Beatport Track Page (Afterlife Records)",
+     "sourceUrl": "https://www.beatport.com/track/love-parade/21774346"
+    }
+   ]
+  },
   {
    "title": "DON'T BELIEVE IT (Colyn Extended Remix)",
    "artist": "Absolutely, John Summit, Colyn",
