@@ -1,6 +1,56 @@
 {
- "exported": "2026-11-24",
+ "exported": "2026-11-25",
  "tracks": [
+  {
+   "title": "Feel That Bass (Extended Mix)",
+   "artist": "Patrick Scuro, Superstrobe, Alex Xandra",
+   "genre": "peak-time-driving",
+   "tier": "daily",
+   "dateAdded": "2026-11-25",
+   "source": "Beatport Techno (Peak Time / Driving) Hype Top 10",
+   "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6",
+   "note": "Animarum-Brecher mit Bassline, die direkt in die Magengrube geht.",
+   "noteEn": "Animarum roller with a bassline that hits right in the gut.",
+   "confirmations": [
+    {
+     "source": "Beatport Techno (Peak Time / Driving) Hype Top 10",
+     "sourceUrl": "https://www.beatport.com/genre/techno-peak-time-driving/6"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (16–22 Nov 2026) #4, Beatport P/D Top 20",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "1001Tracklists: Patrick Scuro @ 5 Years Animarum, VOID Club Berlin",
+     "sourceUrl": "https://www.1001tracklists.com/tracklist/vndp6x1/patrick-scuro-5-years-animarum-void-club-berlin-germany-2026-09-25.html"
+    }
+   ]
+  },
+  {
+   "title": "Rings Of Light",
+   "artist": "Sven Väth, Roman Flügel",
+   "genre": "raw-deep-hypnotic",
+   "tier": "daily",
+   "dateAdded": "2026-11-25",
+   "source": "Resident Advisor News (Time Warp Records TWR001)",
+   "sourceUrl": "https://ra.co/news/86384",
+   "note": "Hypnotischer Orgel-Strudel mit rauer Spoken-Word-Stimme.",
+   "noteEn": "Hypnotic organ spiral with gravelly spoken word, pure late-night tunnel.",
+   "confirmations": [
+    {
+     "source": "Resident Advisor News",
+     "sourceUrl": "https://ra.co/news/86384"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks of the Week (16–22 Nov 2026) #1",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    },
+    {
+     "source": "EDMTunes",
+     "sourceUrl": "https://www.edmtunes.com/2026/11/20/time-warp-launches-new-label-sven-vath-roman-flugel-rings-of-light/"
+    }
+   ]
+  },
   {
    "title": "Love Parade (Extended Mix)",
    "artist": "Da Hool, Cassian, YOTTO",
