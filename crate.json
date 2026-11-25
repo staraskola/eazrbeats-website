@@ -1,6 +1,57 @@
 {
- "exported": "2026-11-24",
+ "exported": "2026-11-25",
  "tracks": [
+  {
+   "title": "BocaBoca",
+   "artist": "Freebot, Aieri",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-25",
+   "source": "Beatport Latin Electronic Top 100 (#7, via BeatTracker, 23.11.)",
+   "sourceUrl": "https://beattracker.com/categories/latin-electronic/111",
+   "note": "Freebot und Aieri mit perkussivem Latin-House-Groove.",
+   "noteEn": "Freebot and Aieri serve up a percussive Latin house groove.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#7)",
+     "sourceUrl": "https://beattracker.com/categories/latin-electronic/111"
+    }
+   ]
+  },
+  {
+   "title": "Shawang",
+   "artist": "Jamie Jones, Emmanuel Jal",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-25",
+   "source": "Beatport Afro House Top 100 (#10, via BeatTracker, 23.11.)",
+   "sourceUrl": "https://beattracker.com/categories/afro-house/89",
+   "note": "Jamie Jones trifft Emmanuel Jal in treibendem Afro-Groove.",
+   "noteEn": "Jamie Jones meets Emmanuel Jal in a driving afro groove.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#10)",
+     "sourceUrl": "https://beattracker.com/categories/afro-house/89"
+    }
+   ]
+  },
+  {
+   "title": "Personal",
+   "artist": "Rampa, Nafe Smallz, Jaden Thompson",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-25",
+   "source": "Beatport House Top 100 (#13, via BeatTracker, 24.11.)",
+   "sourceUrl": "https://beattracker.com/categories/house/5",
+   "note": "Rampa mit soulig-groovigem Vocal-House-Track.",
+   "noteEn": "Rampa delivers a soulful, vocal-driven house groove.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#13)",
+     "sourceUrl": "https://beattracker.com/categories/house/5"
+    }
+   ]
+  },
   {
    "title": "In The Light",
    "artist": "HILLS (US)",
