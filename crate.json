@@ -1,6 +1,61 @@
 {
- "exported": "2026-11-25",
+ "exported": "2026-11-26",
  "tracks": [
+  {
+   "title": "Dangerous",
+   "artist": "CHRIS STASSY, Interplanetary Criminal",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-26",
+   "source": "Beatport House Top 100 (#16, via BeatTracker, 25.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Bass-lastiger UK-Garage-Groove von zwei Shootingstars.",
+   "noteEn": "Bassy UK garage groove from two rising names.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#16)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    },
+    {
+     "source": "DJ Mag (Dangerous EP announcement)",
+     "sourceUrl": "https://djmag.com/news/chris-stassy-and-interplanetary-criminal-join-forces-dangerous-ep"
+    }
+   ]
+  },
+  {
+   "title": "Sorryé",
+   "artist": "Delon, Nes Mburu, Cristian De Rosa",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-26",
+   "source": "Beatport Afro House Top 100 (#16, via BeatTracker, 25.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Treibender Afro-Groove, frisch in den Top 20.",
+   "noteEn": "Driving afro groove, fresh in the top twenty.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#16)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Sunpetal",
+   "artist": "Main Phase",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-26",
+   "source": "Beatport Latin Electronic Top 100 (#3, via BeatTracker, 25.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Main Phase ganz oben: perkussiver Latin-Groove.",
+   "noteEn": "Main Phase near the top: a percussive Latin groove.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#3)",
+     "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100"
+    }
+   ]
+  },
   {
    "title": "BocaBoca",
    "artist": "Freebot, Aieri",
