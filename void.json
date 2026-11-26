@@ -1,6 +1,27 @@
 {
- "exported": "2026-11-25",
+ "exported": "2026-11-26",
  "tracks": [
+  {
+   "title": "Ephore",
+   "artist": "Vlace, Skryption, BLACKWORKS",
+   "genre": "hard-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-26",
+   "source": "Beatport Hard Techno Top 100 (Top 20, Release-Woche)",
+   "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100",
+   "note": "Harter, schneller Druck mit rauer Industrial-Kante.",
+   "noteEn": "Relentless, fast-paced pressure with a raw industrial edge.",
+   "confirmations": [
+    {
+     "source": "Beatport Hard Techno Top 100 (Top 20)",
+     "sourceUrl": "https://www.beatport.com/genre/hard-techno/2/top-100"
+    },
+    {
+     "source": "Techno Airlines Top 5 Techno Tracks (16.–22.11.2026)",
+     "sourceUrl": "https://www.technoairlines.com/blog/top-5-techno-tracks-of-the-week"
+    }
+   ]
+  },
   {
    "title": "Feel That Bass (Extended Mix)",
    "artist": "Patrick Scuro, Superstrobe, Alex Xandra",
