@@ -210,13 +210,13 @@ void_sec = f'''<div class="void-bg" aria-hidden="true">
 # ---------------- start ----------------
 # Road to Live on the start page: newest first. Covers live in img/home/ (432x768).
 # Add a new episode at the front, drop the last one, and set RTL_LATEST.
-RTL_LATEST = '11'   # newest published episode (#06 was never posted, so no count)
+RTL_LATEST = '12'   # newest published episode (#06 was never posted, so no count)
 RTL_EPISODES = [   # (number, move, YouTube Short URL or '' for the Shorts overview)
+    ('12', 'High-Pass Blend', 'https://youtube.com/shorts/-Q36w5hGILg'),
     ('11', 'Echo Out', 'https://youtube.com/shorts/1_FzkOQ_tdw'),
     ('10', 'Echo Out', 'https://youtube.com/shorts/EV69IoPA8js'),
     ('09', 'Loop Tension', 'https://youtube.com/shorts/8NX3lii4PQg'),
     ('08', 'Hot Cue', 'https://youtube.com/shorts/W2RPgeBsiQY'),
-    ('07', 'Long Blend', 'https://youtube.com/shorts/g9aQMDV4PnU'),
 ]
 # Artist reposts: shown as a small, factual tag on the episode card (only with Noah's OK).
 RTL_REPOSTS = {'09': 'CELE'}
