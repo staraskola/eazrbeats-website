@@ -22,7 +22,7 @@
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css?v=ea7828b4">
-<link rel="stylesheet" href="embers.css?v=a2ea7510">
+<link rel="stylesheet" href="embers.css?v=8cb45b5c">
 </head>
 <body data-page="embers">
 
@@ -96,10 +96,12 @@
   <section class="layer" id="soundcheck">
     <span class="lbl">03 · SOUNDCHECK</span>
     <h2 class="big">SOUND<br>CHECK.</h2>
-    <p class="txt" data-i18n="emSoundcheck">Ein Takt pro Richtung, quer durch alles, was House kann. So klingt 001.', emSoundcheckBtn: 'MIT TON ANSEHEN ↗</p>
-    <figure class="sc-frame">
-      <video class="sc-video" src="embers-soundcheck.mp4?v=83ed2b14" poster="embers-soundcheck.jpg?v=01d6f96f" muted loop playsinline preload="none" width="720" height="1280" aria-label="EMBERS Soundcheck: all things house, ein Takt pro Richtung"></video>
+    <p class="txt" data-i18n="emSoundcheck">Ein Takt pro Richtung, quer durch alles, was House kann. So klingt 001.', emScPlay: 'MIT TON ABSPIELEN', emScNote: 'Beim Abspielen lädt YouTube (Google) das Video, dabei werden Daten an Google übertragen. <a href="datenschutz#youtube">Datenschutz</a> · <a href="https://youtube.com/shorts/zlIbZjSF-IA" target="_blank" rel="noopener">Direkt auf YouTube ↗</a></p>
+    <figure class="sc-frame" data-yt="zlIbZjSF-IA">
+      <video class="sc-video" src="embers-soundcheck.mp4?v=83ed2b14" poster="embers-soundcheck.jpg?v=01d6f96f" muted loop playsinline preload="none" width="720" height="1280" aria-hidden="true"></video>
+      <button class="sc-play" type="button"><i aria-hidden="true">▶</i><span data-i18n="emScPlay">MIT TON ABSPIELEN</span></button>
     </figure>
+    <p class="sc-note" data-i18n="emScNote"></p>
   </section>
 
   <section class="layer" id="stream">
@@ -152,6 +154,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=5a3fd2d3"></script>
-<script src="embers.js?v=2deaeb26"></script>
+<script src="site.js?v=557fb704"></script>
+<script src="embers.js?v=c91b4610"></script>
 </body></html>

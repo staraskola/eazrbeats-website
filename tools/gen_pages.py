@@ -37,7 +37,8 @@ TWITCH_EMBED = False  # Before switching on: add a Twitch embed section to daten
 # so the site only shows the picture). To swap in a new version: replace embers-soundcheck.mp4 (720x1280,
 # no audio, ffmpeg -an) and embers-soundcheck.jpg (poster), then run this generator. SOUNDCHECK = False hides it.
 SOUNDCHECK = True
-SOUNDCHECK_SOUND_URL = ''  # link to the posted reel ("with sound"), e.g. the Instagram reel URL; empty = no button
+SOUNDCHECK_YT = 'zlIbZjSF-IA'  # YouTube Short with sound. Click-to-load: YouTube only loads after a click (DSGVO, see datenschutz#youtube).
+# With sound only via YouTube: YouTube holds the GEMA licence, our own server never plays the tracks.
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -668,16 +669,16 @@ twitch_player = ('''
   <div class="twitch-player">
     <iframe src="https://player.twitch.tv/?channel=eazrbeats&amp;parent=eazrbeats.de&amp;parent=www.eazrbeats.de&amp;muted=true" title="EMBERS live on Twitch" allowfullscreen loading="lazy"></iframe>
   </div>''') if TWITCH_EMBED else ''
-soundcheck_btn = (f'''
-    <div class="cta"><a class="ebtn" href="{SOUNDCHECK_SOUND_URL}" target="_blank" rel="noopener" data-i18n="emSoundcheckBtn">MIT TON ANSEHEN ↗</a></div>''') if SOUNDCHECK_SOUND_URL else ''
 soundcheck_sec = (f'''
   <section class="layer" id="soundcheck">
     <span class="lbl">03 · SOUNDCHECK</span>
     <h2 class="big">SOUND<br>CHECK.</h2>
     <p class="txt" data-i18n="emSoundcheck"></p>
-    <figure class="sc-frame">
-      <video class="sc-video" src="{v('embers-soundcheck.mp4')}" poster="{v('embers-soundcheck.jpg')}" muted loop playsinline preload="none" width="720" height="1280" aria-label="EMBERS Soundcheck: all things house, ein Takt pro Richtung"></video>
-    </figure>{soundcheck_btn}
+    <figure class="sc-frame" data-yt="{SOUNDCHECK_YT}">
+      <video class="sc-video" src="{v('embers-soundcheck.mp4')}" poster="{v('embers-soundcheck.jpg')}" muted loop playsinline preload="none" width="720" height="1280" aria-hidden="true"></video>
+      <button class="sc-play" type="button"><i aria-hidden="true">▶</i><span data-i18n="emScPlay">MIT TON ABSPIELEN</span></button>
+    </figure>
+    <p class="sc-note" data-i18n="emScNote"></p>
   </section>
 ''') if SOUNDCHECK else ''
 # Immersive page: fixed WebGL magma (embers.js) + a slow descent IGNITE -> GATHER -> GLOW -> STREAM.

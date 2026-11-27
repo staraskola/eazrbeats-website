@@ -123,12 +123,20 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
   addEventListener('pointerdown',first,true);addEventListener('keydown',first,true);
 })();
 
-// SOUNDCHECK reel: muted loop, loads and plays only while on screen (saves data on phones).
+// SOUNDCHECK reel: muted loop (picture only), plays only while on screen. Sound only via YouTube,
+// and YouTube loads only after a click on the play button (click-to-load, DSGVO).
 (()=>{
   const vid=document.querySelector('.sc-video');if(!vid)return;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){vid.controls=true;return;}
+  const fr=vid.closest('.sc-frame'),play=fr.querySelector('.sc-play');
+  play.addEventListener('click',e=>{e.stopPropagation();
+    const snd=document.getElementById('snd');if(snd&&snd.classList.contains('on'))snd.click(); // page loop off, the reel brings its own sound
+    const f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+fr.dataset.yt+'?autoplay=1&playsinline=1&rel=0&loop=1&playlist='+fr.dataset.yt;
+    f.title='EMBERS 001 Soundcheck';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+    vid.pause();fr.replaceChildren(f);});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return; // poster only
   if(!('IntersectionObserver' in window)){vid.autoplay=true;vid.play().catch(()=>{});return;}
   new IntersectionObserver(es=>{for(const e of es){
-    if(e.isIntersecting){vid.preload='auto';vid.play().catch(()=>{vid.controls=true;});}else vid.pause();
+    if(e.isIntersecting){vid.preload='auto';vid.play().catch(()=>{});}else if(vid.isConnected)vid.pause();
   }},{threshold:.25}).observe(vid);
 })();
