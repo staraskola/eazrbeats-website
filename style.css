@@ -808,3 +808,4 @@ html.reveal-on .rtl-card.rv.in:hover { transform: translateY(-4px); }
 .floor-sign { margin: 22px 0 0; font-weight: 700; font-size: 15px; color: var(--accent); }
 .floor-sign span { display: block; margin-top: 4px; font-weight: 400; font-size: 11px; letter-spacing: 0.18em; color: rgba(244,241,234,0.5); }
 @media (max-width: 700px) { .floor { grid-template-columns: 1fr; } }
+.floor-kick { margin: 18px 0 -6px; font-size: 12px; font-weight: 700; letter-spacing: 0.4em; color: #FF4FD8; text-shadow: 0 0 8px rgba(255,79,216,0.5); }
