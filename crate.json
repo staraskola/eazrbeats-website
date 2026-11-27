@@ -1,6 +1,74 @@
 {
- "exported": "2026-11-26",
+ "exported": "2026-11-27",
  "tracks": [
+  {
+   "title": "SABAH",
+   "artist": "Aldo, Andres Matheus, Dos Rios",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-27",
+   "source": "Beatport Afro House Top 100 (#5, via BeatTracker, 26.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Treibender Afro-Groove, schon in den Top 5.",
+   "noteEn": "Driving afro groove, already in the top five.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#5, via BeatTracker, 26.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    }
+   ]
+  },
+  {
+   "title": "The Calling",
+   "artist": "Aytiwan, ANTICALM",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-27",
+   "source": "Beatport Afro House Top 100 (#11, via BeatTracker, 26.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Hypnotischer Afro-House-Ruf zum Reinziehen.",
+   "noteEn": "A hypnotic afro house call that pulls you in.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#11, via BeatTracker, 26.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Firecracker",
+   "artist": "Mellizos",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-27",
+   "source": "Beatport House Top 100 (#15, via BeatTracker, 26.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Funkiger House-Banger, der grad in den Charts zündet.",
+   "noteEn": "A funky house banger lighting up the charts right now.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#15, via BeatTracker, 26.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Undertone",
+   "artist": "Miss Monique, Paradoks",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-27",
+   "source": "Beatport Melodic House & Techno Top 100 (#1, via BeatTracker, 26.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Miss Moniques neue Nummer 1, dunkel-melodisch.",
+   "noteEn": "Miss Monique's new No. 1, dark and melodic.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#1, via BeatTracker, 26.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
   {
    "title": "Dangerous",
    "artist": "CHRIS STASSY, Interplanetary Criminal",
