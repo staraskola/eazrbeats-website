@@ -720,6 +720,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     <span class="claim">ALL THINGS HOUSE.</span>
     <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b data-i18n="emDateVal">{EMBERS_DATE}</b></span><span><i data-i18n="emVenue">ORT</i><b>{EMBERS_VENUE}</b></span></div>
     <span class="where" data-i18n="emWhere">SECRET LOCATION · 80337 MÜNCHEN · ADRESSE NUR FÜR GÄSTE</span>
+    <span class="cap" data-i18n="emCap">EIN RAUM. 100 LEUTE. EINE NACHT.</span>
     {live_countdown}
     <span class="down" data-i18n="emDown">↓ SCROLL</span>
   </section>
@@ -734,6 +735,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
       <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
       <li><b>CAMERA ZONE</b> <span data-i18n="emCam">VOR DEN DECKS, 21:30 BIS 23:00</span></li>
       <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF, KEINE ABENDKASSE</span></li>
+      <li><b>MAX. 100</b> <span data-i18n="emCapRoom">LEUTE IM RAUM. WEG IST WEG.</span></li>
     </ul>
     <p class="txt" data-i18n="emCamText"></p>
   </section>
