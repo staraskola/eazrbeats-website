@@ -698,7 +698,7 @@ twitch_player = ('''
   </div>''') if TWITCH_EMBED else ''
 soundcheck_sec = (f'''
   <section class="layer" id="soundcheck">
-    <span class="lbl">03 · SOUNDCHECK</span>
+    <span class="lbl">04 · SOUNDCHECK</span>
     <h2 class="big">SOUND<br>CHECK.</h2>
     <p class="txt" data-i18n="emSoundcheck"></p>
     <figure class="sc-frame" data-yt="{SOUNDCHECK_YT}">
@@ -734,14 +734,23 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
       <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
       <li><b>CAMERA ZONE</b> <span data-i18n="emCam">VOR DEN DECKS, 21:30 BIS 23:00</span></li>
       <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF, KEINE ABENDKASSE</span></li>
-      <li><b>ENTRY</b> 15 € &nbsp;·&nbsp; <b>EMBERS + FUEL</b> 45 € <span data-i18n="emFuel">(INKL. GETRÄNKE-FLAT)</span></li>
     </ul>
-    <p class="txt" data-i18n="emFuelText"></p>
     <p class="txt" data-i18n="emCamText"></p>
   </section>
 
+  <section class="layer" id="fuel">
+    <span class="lbl">02 · FUEL</span>
+    <h2 class="big">STAY<br>FUELED.</h2>
+    <p class="txt" data-i18n="emFuelText"></p>
+    <div class="facts">
+      <div><span>EMBERS · ENTRY</span><b>15 €</b></div>
+      <div><span>EMBERS + FUEL</span><b>45 €</b></div>
+      <div><span>FUEL</span><b data-i18n="emFuel">Drinks + Shots inklusive</b></div>
+    </div>
+  </section>
+
   <section class="layer" id="glow">
-    <span class="lbl">02 · GLOW</span>
+    <span class="lbl">03 · GLOW</span>
     <h2 class="big">KEEP IT<br>BURNING.</h2>
     <p class="txt" data-i18n="emGlow"></p>
     <div class="facts">
@@ -753,7 +762,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
 
 {soundcheck_sec}
   <section class="layer" id="stream">
-    <span class="lbl">{'04' if SOUNDCHECK else '03'} · STREAM</span>
+    <span class="lbl">{'05' if SOUNDCHECK else '04'} · STREAM</span>
     <h2 class="big">CAN'T BE<br>THERE?</h2>
     <p class="txt" data-i18n="emStream"></p>
     {news_form('embers')}
