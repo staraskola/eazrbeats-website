@@ -26,11 +26,11 @@ INSTA_NMB = 'https://www.instagram.com/nmb.muc/'
 INSTA_WIVI = 'https://www.instagram.com/_wjackowsky/'  # Noah's personal DJ account, linked on his crew card  # EMBERS sub-account, linked on /embers
 # Next EMBERS session shown on /embers and on the /live overview. Empty = 'date TBA' text from site.js.
 # Example: LIVE_NEXT = 'EMBERS 001 · Fr 16.01.2027 · 21:00'
-LIVE_NEXT = 'EMBERS 001 · Anfang 2027'
+LIVE_NEXT = 'EMBERS 001 · Sa 06.02.2027'  # date confirmed by the venue, public since 27.11.2026 (Noah)
 # Countdown on /embers. Until the exact day is public it is off (LIVE_COUNTDOWN empty).
 # Once the date is announced, set the exact start, e.g. '2027-01-08T21:30:00+01:00'.
-LIVE_COUNTDOWN = ''  # off until the date is fixed (Noah 15.11.2026); e.g. '2027-01-23T21:30:00+01:00'
-LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
+LIVE_COUNTDOWN = '2027-02-06T20:00:00+01:00'  # doors EMBERS 001 (Noah 27.11.2026). '' switches it off.
+LIVE_COUNTDOWN_EXACT = True  # True = show days/hours/min/sec to the stream start
 # Embedded Twitch player on /embers. Keep False until the Twitch channel is fully set up.
 TWITCH_EMBED = False  # Before switching on: add a Twitch embed section to datenschutz.html (an iframe sends data to Twitch on page load; the policy currently says "links only, nothing embedded").
 # Soundcheck reel on /embers (muted loop, no audio track: the reel uses snippets of other artists' tracks,
@@ -94,6 +94,33 @@ SCHEMA = '''<script type="application/ld+json">
 </script>
 '''
 
+# Structured data on /embers: EMBERS 001 as an event. The venue stays secret (only postcode + city), the address goes to guests only.
+EVENT_SCHEMA = '''<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "EMBERS 001 · All Things House",
+  "description": "EMBERS by EAZr: hosted live DJ session, all things house. Doors 20:00, live on Twitch from 21:30. Secret location in Munich, exact address for guests only. Tickets presale only.",
+  "url": "https://eazrbeats.de/embers",
+  "image": "https://eazrbeats.de/embers-001-poster.jpg",
+  "startDate": "2027-02-06T20:00:00+01:00",
+  "endDate": "2027-02-07T02:00:00+01:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+  "location": [
+    {"@type": "Place", "name": "Secret Location", "address": {"@type": "PostalAddress", "postalCode": "80337", "addressLocality": "München", "addressCountry": "DE"}},
+    {"@type": "VirtualLocation", "url": "''' + TWITCH + '''"}
+  ],
+  "organizer": {"@type": "MusicGroup", "name": "EAZr Beats Collective", "url": "https://eazrbeats.de/"},
+  "performer": [{"@type": "Person", "name": "NMB"}, {"@type": "Person", "name": "WIVI"}],
+  "offers": [
+    {"@type": "Offer", "name": "EMBERS · Entry", "price": "15", "priceCurrency": "EUR", "url": "https://eazrbeats.de/embers"},
+    {"@type": "Offer", "name": "EMBERS + FUEL", "price": "45", "priceCurrency": "EUR", "url": "https://eazrbeats.de/embers"}
+  ]
+}
+</script>
+'''
+
 # Cache busting: browsers keep style.css and scripts for a while, so new pages could
 # load with old CSS. Each reference gets ?v=<content hash> and changes with the file.
 import hashlib
@@ -148,7 +175,7 @@ def page(name, title, desc, canon, body, scripts=(), og='og-image.jpg', css=(), 
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{v('style.css')}">
-{''.join(f'<link rel="stylesheet" href="{v(c)}">' + chr(10) for c in css)}{SCHEMA if name == 'start' else ''}</head>
+{''.join(f'<link rel="stylesheet" href="{v(c)}">' + chr(10) for c in css)}{SCHEMA if name == 'start' else EVENT_SCHEMA if name == 'embers' else ''}</head>
 <body data-page="{name}">
 {'' if immersive else BG_LAYERS}{'<div class="hack-glitch" aria-hidden="true"><div class="grain"></div><canvas></canvas><div class="ember"></div><img class="elogo" src="embers-logo.png" alt=""></div>' if name == 'start' else ''}
 
@@ -252,7 +279,7 @@ start = f'''<section class="hero" id="top">
       <span><b>#{RTL_LATEST}</b> <span data-i18n="statRtl">Road to Live</span></span>
       <span><b id="stat-crate">–</b> <span data-i18n="statCrate">Tracks in der Crate</span></span>
       <span><b id="stat-void">–</b> <span data-i18n="statVoid">Tracks im Void</span></span>
-      <span><b>001</b> <span data-i18n="statEmbers">EMBERS · Anfang 2027</span></span>
+      <span><b>001</b> <span data-i18n="statEmbers">EMBERS · 06.02.2027</span></span>
     </div>
   </div>
 </section>
@@ -281,14 +308,14 @@ start = f'''<section class="hero" id="top">
     <h2 class="embers-title"><img src="embers-logo.png" alt="EMBERS" width="1000" height="167"><span class="num">001</span><span class="by">by EAZr</span></h2>
   </div>
   <div class="event-promo">
-    <a class="event-poster" href="embers" aria-label="EMBERS 001 · Anfang 2027 · Zu EMBERS">
-      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, Anfang 2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
+    <a class="event-poster" href="embers" aria-label="EMBERS 001 · Sa 06.02.2027 · Zu EMBERS">
+      <img src="embers-001-poster-sm.jpg" srcset="embers-001-poster-sm.jpg 640w, embers-001-poster.jpg 1200w" sizes="(max-width: 700px) 90vw, 380px" alt="Plakat EMBERS 001: Hosted live DJ session, Sa 06.02.2027, Doors 20:00, Stream 21:30, München" width="640" height="904" loading="lazy">
     </a>
     <div class="event-info">
       <span class="kicker"><span class="live-dot" aria-hidden="true"></span>LIVE LOADING</span>
-      <h3 class="event-date" data-i18n="eventDate">Anfang 2027 · München</h3>
+      <h3 class="event-date" data-i18n="eventDate">Sa 06.02.2027 · München</h3>
       <p data-i18n="embersHomeText"></p>
-      <p data-i18n="eventMore">Location, Tickets und Gästeliste folgen auf Instagram und im Newsletter.</p>
+      <p data-i18n="eventMore"></p>
       <div class="cta-row" style="justify-content:flex-start">
         <a class="btn" href="embers" data-i18n="embersBtn">Zu EMBERS →</a>
         <a class="btn ghost" href="#join" data-i18n="embersNewsBtn">Newsletter</a>
@@ -402,7 +429,7 @@ def crew(n, name, role_key, role, bio_key, bio, alias='', insta='', extra='', ph
 # Story chapters (texts in site.js: st*). The log below grows with every milestone (Noah 15.11.2026):
 # add a new line to STORY_LOG (date, i18n key) and the texts in site.js, newest at the bottom.
 STORY_LOG = [('2026', 'log1'), ('2026-10', 'log2'), ('2026-10-31', 'log3'), ('2026-11-01', 'log4'), ('2026-11', 'log5')]
-STORY_NEXT = ('2027', 'logNext')  # the upcoming milestone, shown with a blinking cursor
+STORY_NEXT = ('2027-02-06', 'logNext')  # the upcoming milestone, shown with a blinking cursor
 def story_ch(n, extra='', k=None):
     k = k or n  # text key in site.js; chapter text stP4 'who we are' now lives on the crew cards
     return f'''    <div class="story-ch">
@@ -442,8 +469,8 @@ about = f'''<div class="band first">
 </div>
 '''
 
-EMBERS_DATE = 'ANFANG 2027'   # DATE box on /embers
-EMBERS_VENUE = 'TBA'          # VENUE box on /embers
+EMBERS_DATE = 'SA 06.02.27'  # DATE box on /embers (EN via emDateVal in site.js)
+EMBERS_VENUE = 'SECRET'       # VENUE box on /embers. Never name the venue: only 'Secret Location · 80337' (address for guests only).
 
 # ---------------- events ----------------
 events = f'''<div class="band first">
@@ -691,7 +718,9 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     <span class="lbl series-line">HOSTED LIVE DJ SESSIONS · BY EAZr · MUNICH</span>
     <h1 style="margin:0"><img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167"></h1>
     <span class="claim">ALL THINGS HOUSE.</span>
-    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b>{EMBERS_DATE}</b></span><span><i data-i18n="emVenue">ORT</i><b>{EMBERS_VENUE}</b></span></div>
+    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b data-i18n="emDateVal">{EMBERS_DATE}</b></span><span><i data-i18n="emVenue">ORT</i><b>{EMBERS_VENUE}</b></span></div>
+    <span class="where" data-i18n="emWhere">SECRET LOCATION · 80337 MÜNCHEN · ADRESSE NUR FÜR GÄSTE</span>
+    {live_countdown}
     <span class="down" data-i18n="emDown">↓ SCROLL</span>
   </section>
 
@@ -703,7 +732,11 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
       <li><b data-i18n="emDoors">EINLASS</b> 20:00</li>
       <li><b>STREAM</b> <span data-i18n="emStreamAt">21:30 AUF TWITCH</span></li>
       <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
+      <li><b>CAMERA ZONE</b> <span data-i18n="emCam">VOR DEN DECKS, 21:30 BIS 23:00</span></li>
+      <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF, KEINE ABENDKASSE</span></li>
+      <li><b>ENTRY</b> 15 € &nbsp;·&nbsp; <b>EMBERS + FUEL</b> 45 € <span data-i18n="emFuel">(INKL. GETRÄNKE-FLAT)</span></li>
     </ul>
+    <p class="txt" data-i18n="emCamText"></p>
   </section>
 
   <section class="layer" id="glow">
@@ -752,7 +785,7 @@ live = f'''<div class="band first">
       <img class="series-logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167" loading="lazy">
       <span class="series-by">by EAZr</span>
       <p data-i18n="hubEmbersText"></p>
-      <p class="series-next">{LIVE_NEXT or 'EMBERS 001 · SOON'}</p>
+      <p class="series-next"{' data-i18n="liveNextDate"' if LIVE_NEXT else ''}>{LIVE_NEXT or 'EMBERS 001 · SOON'}</p>
       <span class="series-go" data-i18n="embersBtn">Zu EMBERS →</span>
     </a>
     <div class="series-tile s-next s-locked" id="next-lock">
@@ -800,7 +833,7 @@ files = {
   'crate.html': page('crate', "The Crate · EAZr Beats Collective", "Selector's log: tracks running in DJ sets right now, backed by two independent sources or one strong one. House, Melodic House &amp; Techno, Afro House, Latin House.", 'crate', crate_sec, ['crate.js']),
   'void.html': page('void', "The Void · EAZr Beats Collective", "Signal log: techno running in DJ sets right now, backed by two independent sources or one strong one. Peak Time / Driving, Melodic Techno, Raw / Deep / Hypnotic, Hard Techno.", 'void', void_sec, ['crate.js']),
   'live.html': page('live', 'Live · EAZr Beats Collective', 'Live series by EAZr Beats Collective from Munich: EMBERS hosted live DJ sessions on Twitch, and more to come.', 'live', live),
-  'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['embers.js'], og='og-embers.jpg', css=['embers.css'], immersive=True),
+  'embers.html': page('embers', 'EMBERS · Live · EAZr Beats Collective', 'EMBERS by EAZr: hosted live DJ sessions from Munich, streamed on Twitch. All things house, straight from the decks.', 'embers', embers, ['embers.js', 'live.js'], og='og-embers.jpg', css=['embers.css'], immersive=True),
   'kontakt.html': page('kontakt', 'Kontakt · EAZr Beats Collective', 'Contact EAZr Beats Collective, Munich.', 'kontakt', kontakt),
   '404.html': page('404', '404 · EAZr Beats Collective', 'Page not found.', '', notfound).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<base href="/">\n<meta name="robots" content="noindex">'),
   'booking.html': page('booking', 'Booking · EAZr Beats Collective', 'Book EAZr Beats Collective for clubs, bars, open airs and private events in Munich.', 'booking', booking),

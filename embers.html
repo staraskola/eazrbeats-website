@@ -22,7 +22,31 @@
 <link rel="preload" href="fonts/space-mono-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/space-mono-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css?v=e7a3ec15">
-<link rel="stylesheet" href="embers.css?v=8cb45b5c">
+<link rel="stylesheet" href="embers.css?v=ec127947">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "EMBERS 001 · All Things House",
+  "description": "EMBERS by EAZr: hosted live DJ session, all things house. Doors 20:00, live on Twitch from 21:30. Secret location in Munich, exact address for guests only. Tickets presale only.",
+  "url": "https://eazrbeats.de/embers",
+  "image": "https://eazrbeats.de/embers-001-poster.jpg",
+  "startDate": "2027-02-06T20:00:00+01:00",
+  "endDate": "2027-02-07T02:00:00+01:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+  "location": [
+    {"@type": "Place", "name": "Secret Location", "address": {"@type": "PostalAddress", "postalCode": "80337", "addressLocality": "München", "addressCountry": "DE"}},
+    {"@type": "VirtualLocation", "url": "https://www.twitch.tv/eazrbeats"}
+  ],
+  "organizer": {"@type": "MusicGroup", "name": "EAZr Beats Collective", "url": "https://eazrbeats.de/"},
+  "performer": [{"@type": "Person", "name": "NMB"}, {"@type": "Person", "name": "WIVI"}],
+  "offers": [
+    {"@type": "Offer", "name": "EMBERS · Entry", "price": "15", "priceCurrency": "EUR", "url": "https://eazrbeats.de/embers"},
+    {"@type": "Offer", "name": "EMBERS + FUEL", "price": "45", "priceCurrency": "EUR", "url": "https://eazrbeats.de/embers"}
+  ]
+}
+</script>
 </head>
 <body data-page="embers">
 
@@ -66,7 +90,9 @@
     <span class="lbl series-line">HOSTED LIVE DJ SESSIONS · BY EAZr · MUNICH</span>
     <h1 style="margin:0"><img class="logo" src="embers-logo.png" alt="EMBERS" width="1000" height="167"></h1>
     <span class="claim">ALL THINGS HOUSE.</span>
-    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b>ANFANG 2027</b></span><span><i data-i18n="emVenue">ORT</i><b>TBA</b></span></div>
+    <div class="next"><span>SESSION<b>001</b></span><span><i data-i18n="emDate">DATUM</i><b data-i18n="emDateVal">SA 06.02.27</b></span><span><i data-i18n="emVenue">ORT</i><b>SECRET</b></span></div>
+    <span class="where" data-i18n="emWhere">SECRET LOCATION · 80337 MÜNCHEN · ADRESSE NUR FÜR GÄSTE</span>
+    <p class="countdown" data-target="2027-02-06T20:00:00+01:00" data-exact="1" aria-live="off"><span class="cd-label">T-MINUS</span> <span class="cd-val">··</span><span class="cursor">_</span></p>
     <span class="down" data-i18n="emDown">↓ SCROLL</span>
   </section>
 
@@ -78,7 +104,11 @@
       <li><b data-i18n="emDoors">EINLASS</b> 20:00</li>
       <li><b>STREAM</b> <span data-i18n="emStreamAt">21:30 AUF TWITCH</span></li>
       <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
+      <li><b>CAMERA ZONE</b> <span data-i18n="emCam">VOR DEN DECKS, 21:30 BIS 23:00</span></li>
+      <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF, KEINE ABENDKASSE</span></li>
+      <li><b>ENTRY</b> 15 € &nbsp;·&nbsp; <b>EMBERS + FUEL</b> 45 € <span data-i18n="emFuel">(INKL. GETRÄNKE-FLAT)</span></li>
     </ul>
+    <p class="txt" data-i18n="emCamText">Von 21:30 bis 23:00 läuft der Stream. Die Kamera zeigt die Decks und den Floor direkt davor. Wer nicht in den Stream will, bleibt in der Zeit an der Bar. Davor und danach: keine Kamera.</p>
   </section>
 
   <section class="layer" id="glow">
@@ -107,7 +137,7 @@
   <section class="layer" id="stream">
     <span class="lbl">04 · STREAM</span>
     <h2 class="big">CAN'T BE<br>THERE?</h2>
-    <p class="txt" data-i18n="emStream">90 Minuten vom Set laufen live auf Twitch. Der Rest der Nacht bleibt im Raum. Datum, Ort und Gästeliste gibt es zuerst auf Instagram und im Newsletter.</p>
+    <p class="txt" data-i18n="emStream">90 Minuten vom Set laufen live auf Twitch. Der Rest der Nacht bleibt im Raum. Ticket-Start und alles Neue gibt es zuerst auf Instagram und im Newsletter.</p>
     <form class="news-form" action="https://271e78d8.sibforms.com/serve/MUIFAJSYStwrJDqLy42Ecrc5qfbu952H3tunCLqEOj2qNEo-uMQXekhmfnDc89IZYDDQvP3DT4KTqPFPZoBFeAFUcrWhE9eK-rjQWXlJhWRLPuFXXxIVjP0kBSRK1CL7qstSoJLpIOjHAXKMxRgxGYDAiAdfOyD74gIofvVEdhAnrJvCYAsvdI4UVkxunpNlYs7gao6sTT03_pbjiA==" method="POST" data-news-form>
         <label class="sr-only" for="news-embers" data-i18n="newsLabel">E-Mail-Adresse</label>
         <div class="news-row">
@@ -154,6 +184,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=2142ebc3"></script>
+<script src="site.js?v=4c00d70b"></script>
 <script src="embers.js?v=c91b4610"></script>
+<script src="live.js?v=bedca3c9"></script>
 </body></html>
