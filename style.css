@@ -794,3 +794,17 @@ html.reveal-on .rtl-card.rv.in:hover { transform: translateY(-4px); }
 .crew-photo { display: block; width: calc(100% + 40px); max-width: none; margin: -20px -20px 14px; aspect-ratio: 4 / 5; height: auto; max-height: 340px; object-fit: cover; object-position: center 30%; border-radius: 8px 8px 0 0; border-bottom: 1px solid rgba(255,79,216,0.35); filter: saturate(1.05); }
 .press-photo { display: block; width: 100%; max-width: 220px; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: 6px; margin: 6px 0 10px; border: 1px solid rgba(239,233,255,0.15); }
 .avatar.avatar-photo { display: block; object-fit: cover; padding: 0; box-shadow: 0 0 14px rgba(255,79,216,0.35); }
+
+/* ---- /live: Our Floor (code of ethics, same 8 rules as the print poster) ---- */
+.floor { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.floor li { border-top: 1px solid rgba(var(--accent-rgb),0.22); padding: 18px 0 20px; min-width: 0; }
+.floor .fl-n { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #FF4FD8; }
+.floor h3 { margin: 6px 0 8px; font-size: 15px; letter-spacing: 0.04em; color: var(--accent); }
+.floor p { margin: 0; font-size: 13px; line-height: 1.7; color: rgba(244,241,234,0.75); }
+.floor-line { margin-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 24px; padding: 18px 22px; border: 1px solid #FF4FD8; border-radius: 6px; background: rgba(5,3,4,0.55); box-shadow: 0 0 22px rgba(255,79,216,0.22); }
+.floor-line p { margin: 0; }
+.floor-line .fl-out { font-weight: 700; font-size: 16px; color: var(--accent); }
+.floor-line .fl-help { font-size: 13px; color: rgba(244,241,234,0.8); }
+.floor-sign { margin: 22px 0 0; font-weight: 700; font-size: 15px; color: var(--accent); }
+.floor-sign span { display: block; margin-top: 4px; font-weight: 400; font-size: 11px; letter-spacing: 0.18em; color: rgba(244,241,234,0.5); }
+@media (max-width: 700px) { .floor { grid-template-columns: 1fr; } }
