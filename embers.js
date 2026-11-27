@@ -122,3 +122,13 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
   const first=e=>{if(touched)return;touched=true;if(!e.target.closest('a,input,button'))start();removeEventListener('pointerdown',first,true);removeEventListener('keydown',first,true)};
   addEventListener('pointerdown',first,true);addEventListener('keydown',first,true);
 })();
+
+// SOUNDCHECK reel: muted loop, loads and plays only while on screen (saves data on phones).
+(()=>{
+  const vid=document.querySelector('.sc-video');if(!vid)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){vid.controls=true;return;}
+  if(!('IntersectionObserver' in window)){vid.autoplay=true;vid.play().catch(()=>{});return;}
+  new IntersectionObserver(es=>{for(const e of es){
+    if(e.isIntersecting){vid.preload='auto';vid.play().catch(()=>{vid.controls=true;});}else vid.pause();
+  }},{threshold:.25}).observe(vid);
+})();

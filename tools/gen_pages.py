@@ -33,6 +33,11 @@ LIVE_COUNTDOWN = ''  # off until the date is fixed (Noah 15.11.2026); e.g. '2027
 LIVE_COUNTDOWN_EXACT = False  # True = show days/hours/min/sec to the stream start
 # Embedded Twitch player on /embers. Keep False until the Twitch channel is fully set up.
 TWITCH_EMBED = False  # Before switching on: add a Twitch embed section to datenschutz.html (an iframe sends data to Twitch on page load; the policy currently says "links only, nothing embedded").
+# Soundcheck reel on /embers (muted loop, no audio track: the reel uses snippets of other artists' tracks,
+# so the site only shows the picture). To swap in a new version: replace embers-soundcheck.mp4 (720x1280,
+# no audio, ffmpeg -an) and embers-soundcheck.jpg (poster), then run this generator. SOUNDCHECK = False hides it.
+SOUNDCHECK = True
+SOUNDCHECK_SOUND_URL = ''  # link to the posted reel ("with sound"), e.g. the Instagram reel URL; empty = no button
 BOOKING = 'booking@eazrbeats.de'  # nur hinter dem Booking-Button, nie sichtbar
 KONTAKT = 'kontakt@eazrbeats.de'
 NEWS = 'news@eazrbeats.de'
@@ -663,6 +668,18 @@ twitch_player = ('''
   <div class="twitch-player">
     <iframe src="https://player.twitch.tv/?channel=eazrbeats&amp;parent=eazrbeats.de&amp;parent=www.eazrbeats.de&amp;muted=true" title="EMBERS live on Twitch" allowfullscreen loading="lazy"></iframe>
   </div>''') if TWITCH_EMBED else ''
+soundcheck_btn = (f'''
+    <div class="cta"><a class="ebtn" href="{SOUNDCHECK_SOUND_URL}" target="_blank" rel="noopener" data-i18n="emSoundcheckBtn">MIT TON ANSEHEN ↗</a></div>''') if SOUNDCHECK_SOUND_URL else ''
+soundcheck_sec = (f'''
+  <section class="layer" id="soundcheck">
+    <span class="lbl">03 · SOUNDCHECK</span>
+    <h2 class="big">SOUND<br>CHECK.</h2>
+    <p class="txt" data-i18n="emSoundcheck"></p>
+    <figure class="sc-frame">
+      <video class="sc-video" src="{v('embers-soundcheck.mp4')}" poster="{v('embers-soundcheck.jpg')}" muted loop playsinline preload="none" width="720" height="1280" aria-label="EMBERS Soundcheck: zehn Richtungen House, je ein Takt"></video>
+    </figure>{soundcheck_btn}
+  </section>
+''') if SOUNDCHECK else ''
 # Immersive page: fixed WebGL magma (embers.js) + a slow descent IGNITE -> GATHER -> GLOW -> STREAM.
 # Sound: "Fire in the Soul" by DreamsMaker (Pixabay Content License), loops after the first tap.
 embers = f'''<canvas id="world" aria-hidden="true"></canvas>
@@ -699,8 +716,9 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     </div>
   </section>
 
+{soundcheck_sec}
   <section class="layer" id="stream">
-    <span class="lbl">03 · STREAM</span>
+    <span class="lbl">{'04' if SOUNDCHECK else '03'} · STREAM</span>
     <h2 class="big">CAN'T BE<br>THERE?</h2>
     <p class="txt" data-i18n="emStream"></p>
     {news_form('embers')}
