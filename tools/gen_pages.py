@@ -736,6 +736,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
       <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF, KEINE ABENDKASSE</span></li>
       <li><b>ENTRY</b> 15 € &nbsp;·&nbsp; <b>EMBERS + FUEL</b> 45 € <span data-i18n="emFuel">(INKL. GETRÄNKE-FLAT)</span></li>
     </ul>
+    <p class="txt" data-i18n="emFuelText"></p>
     <p class="txt" data-i18n="emCamText"></p>
   </section>
 
