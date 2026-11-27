@@ -676,7 +676,7 @@ soundcheck_sec = (f'''
     <h2 class="big">SOUND<br>CHECK.</h2>
     <p class="txt" data-i18n="emSoundcheck"></p>
     <figure class="sc-frame">
-      <video class="sc-video" src="{v('embers-soundcheck.mp4')}" poster="{v('embers-soundcheck.jpg')}" muted loop playsinline preload="none" width="720" height="1280" aria-label="EMBERS Soundcheck: zehn Richtungen House, je ein Takt"></video>
+      <video class="sc-video" src="{v('embers-soundcheck.mp4')}" poster="{v('embers-soundcheck.jpg')}" muted loop playsinline preload="none" width="720" height="1280" aria-label="EMBERS Soundcheck: all things house, ein Takt pro Richtung"></video>
     </figure>{soundcheck_btn}
   </section>
 ''') if SOUNDCHECK else ''
