@@ -773,6 +773,7 @@ live = f'''<div class="band first">
 <section class="sec" id="our-floor">
   <div class="sec-head">
     <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> cat ./our-floor.txt</span>
+    <p class="floor-kick">CODE OF CONDUCT</p>
     <h2>Our Floor</h2>
   </div>
   <p class="lead" data-i18n="floorLead"></p>
