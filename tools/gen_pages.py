@@ -768,6 +768,28 @@ live = f'''<div class="band first">
   </div>
 </section>
 </div>
+
+<div class="band">
+<section class="sec" id="our-floor">
+  <div class="sec-head">
+    <span class="cmd-line"><span class="prompt">eazr@collective:~$</span> cat ./our-floor.txt</span>
+    <h2>Our Floor</h2>
+  </div>
+  <p class="lead" data-i18n="floorLead"></p>
+  <ol class="floor">
+    <li><span class="fl-n">01</span><h3>RESPECT EVERYONE</h3><p data-i18n="fl1"></p></li>
+    <li><span class="fl-n">02</span><h3>ASK FIRST</h3><p data-i18n="fl2"></p></li>
+    <li><span class="fl-n">03</span><h3>GIVE SPACE</h3><p data-i18n="fl3"></p></li>
+    <li><span class="fl-n">04</span><h3>LOOK OUT FOR EACH OTHER</h3><p data-i18n="fl4"></p></li>
+    <li><span class="fl-n">05</span><h3>THE FLOOR, NOT THE FEED</h3><p data-i18n="fl5"></p></li>
+    <li><span class="fl-n">06</span><h3>NOBODY GETS A ROPE</h3><p data-i18n="fl6"></p></li>
+    <li><span class="fl-n">07</span><h3>TAKE CARE OF YOURSELF</h3><p data-i18n="fl7"></p></li>
+    <li><span class="fl-n">08</span><h3>RESPECT THE ROOM</h3><p data-i18n="fl8"></p></li>
+  </ol>
+  <div class="floor-line"><p class="fl-out" data-i18n="floorOut"></p><p class="fl-help" data-i18n="floorHelp"></p></div>
+  <p class="floor-sign">The room is the point. <span>— THE EAZr CREW</span></p>
+</section>
+</div>
 '''
 
 D = 'House &amp; techno collective from Munich: Road to Live, The Crate, THE VOID and EMBERS, our hosted house night.'
