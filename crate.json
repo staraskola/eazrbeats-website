@@ -1,6 +1,74 @@
 {
- "exported": "2026-11-27",
+ "exported": "2026-11-28",
  "tracks": [
+  {
+   "title": "Vortex",
+   "artist": "Bailey Gray",
+   "genre": "latin-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-28",
+   "source": "Beatport Latin Electronic Top 100 (#11, via BeatTracker, 27.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100",
+   "note": "Perkussiver Latin-Groove, frisch in den Top 15.",
+   "noteEn": "Percussive Latin groove, fresh in the top fifteen.",
+   "confirmations": [
+    {
+     "source": "Beatport Latin Electronic Top 100 (#11, via BeatTracker, 27.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/latin-electronic/111/top-100"
+    }
+   ]
+  },
+  {
+   "title": "On My Own",
+   "artist": "Dyzen, Ewerseen",
+   "genre": "melodic-house-techno",
+   "tier": "daily",
+   "dateAdded": "2026-11-28",
+   "source": "Beatport Melodic House & Techno Top 100 (#9, via BeatTracker, 27.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100",
+   "note": "Groovy Melodic House, klettert gerade ganz von selbst.",
+   "noteEn": "Groovy melodic house, climbing the charts on its own.",
+   "confirmations": [
+    {
+     "source": "Beatport Melodic House & Techno Top 100 (#9, via BeatTracker, 27.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/melodic-house-techno/90/top-100"
+    }
+   ]
+  },
+  {
+   "title": "With Me",
+   "artist": "Mari Krasso, BENJAMIN BLUES, SERGO FEFE",
+   "genre": "afro-house",
+   "tier": "daily",
+   "dateAdded": "2026-11-28",
+   "source": "Beatport Afro House Top 100 (#16, via BeatTracker, 27.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100",
+   "note": "Warmer Afro-Groove, frisch in die Top 20 gerutscht.",
+   "noteEn": "Warm afro groove, fresh in the top twenty.",
+   "confirmations": [
+    {
+     "source": "Beatport Afro House Top 100 (#16, via BeatTracker, 27.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/afro-house/89/top-100"
+    }
+   ]
+  },
+  {
+   "title": "Ready For It (feat. Crystal Waters)",
+   "artist": "Wh0, Crystal Waters, Sam Frandisco",
+   "genre": "house",
+   "tier": "daily",
+   "dateAdded": "2026-11-28",
+   "source": "Beatport House Top 100 (#16, via BeatTracker, 26.11.)",
+   "sourceUrl": "https://www.beatport.com/genre/house/5/top-100",
+   "note": "Crystal Waters' Stimme über frischem Wh0-Groove.",
+   "noteEn": "Crystal Waters' voice over a fresh Wh0 groove.",
+   "confirmations": [
+    {
+     "source": "Beatport House Top 100 (#16, via BeatTracker, 26.11.)",
+     "sourceUrl": "https://www.beatport.com/genre/house/5/top-100"
+    }
+   ]
+  },
   {
    "title": "SABAH",
    "artist": "Aldo, Andres Matheus, Dos Rios",
