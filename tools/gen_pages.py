@@ -747,7 +747,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
     <div class="facts">
       <div><span>EMBERS · ENTRY</span><b>15 €</b></div>
       <div><span>EMBERS + FUEL</span><b>45 €</b></div>
-      <div><span>FUEL</span><b data-i18n="emFuel">Drinks + Shots inklusive</b></div>
+      <div><span>FUEL</span><b data-i18n="emFuel">Alle Drinks inklusive</b></div>
     </div>
   </section>
 
