@@ -100,7 +100,7 @@ EVENT_SCHEMA = '''<script type="application/ld+json">
   "@context": "https://schema.org",
   "@type": "MusicEvent",
   "name": "EMBERS 001 · All Things House",
-  "description": "EMBERS by EAZr: hosted live DJ session, all things house. Doors 20:00, live on Twitch from 21:30. Secret location in Munich, exact address for guests only. Tickets presale only, on sale from 01.12.2026.",
+  "description": "EMBERS by EAZr: hosted live DJ session, all things house. Doors 20:00, live on Twitch from 21:30. Secret location in Munich, exact address for guests only. Tickets presale only via Eventbrite, link drops 01.12.2026.",
   "url": "https://eazrbeats.de/embers",
   "image": "https://eazrbeats.de/embers-001-poster.jpg",
   "startDate": "2027-02-06T20:00:00+01:00",
@@ -734,7 +734,7 @@ embers = f'''<canvas id="world" aria-hidden="true"></canvas>
       <li><b>STREAM</b> <span data-i18n="emStreamAt">21:30 AUF TWITCH</span></li>
       <li><b>NMB</b> · DJ &nbsp;·&nbsp; <b>WIVI</b> · HOST</li>
       <li><b>CAMERA ZONE</b> <span data-i18n="emCam">VOR DEN DECKS, 21:30 BIS 23:00</span></li>
-      <li><b>TICKETS</b> <span data-i18n="emPresale">VORVERKAUF AB 01.12., KEINE ABENDKASSE</span></li>
+      <li><b>TICKETS</b> <span data-i18n="emPresale">NUR VORVERKAUF ÜBER EVENTBRITE, LINK AM 01.12., KEINE ABENDKASSE</span></li>
       <li><b>MAX. 100</b> <span data-i18n="emCapRoom">LEUTE IM RAUM. WEG IST WEG.</span></li>
     </ul>
     <p class="txt" data-i18n="emCamText"></p>
