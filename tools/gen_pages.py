@@ -636,9 +636,9 @@ booking = f'''<div class="band first">
       <p id="press-bio" data-i18n="pressBioText"></p>
       <button type="button" class="btn ghost" data-copy-from="press-bio" data-i18n="pressCopy"></button>
       <span class="kicker" style="margin-top:22px">press/photos</span>
-      <img class="press-photo" src="press/nmb-live.jpg" alt="NMB live an den Decks" width="1086" height="1448" loading="lazy">
+      <img class="press-photo" src="press/nmb-profil.jpg" alt="Profilfoto NMB" width="1000" height="1000" loading="lazy">
       <p data-i18n="pressPhotosText"></p>
-      <a class="btn ghost" href="press/nmb-live.jpg" download data-i18n="pressPhotoBtn"></a>
+      <a class="btn ghost" href="press/nmb-profil.jpg" download data-i18n="pressPhotoBtn"></a>
     </div>
     <div class="card">
       <span class="kicker">press/facts</span>
